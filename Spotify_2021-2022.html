@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.237">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Fergus Fettes">
+
+<title>Fergus Fettes - Spotify Data</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>
+    .quarto-title-block .quarto-title-banner {
+      color: white;
+background: pink;
+    }
+    </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Fergus Fettes</span>
+    </a>
+  </div>
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Reviews</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-reviews">    
+        <li class="dropdown-header">Cities</li>
+        <li>
+    <a class="dropdown-item" href="./Reviews/Spaces/Urban/index.qmd">
+ <span class="dropdown-text"></span></a>
+  </li>  
+        <li class="dropdown-header">Media</li>
+        <li>
+    <a class="dropdown-item" href="./Review/Media/index.qmd">
+ <span class="dropdown-text"></span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-toggle-container">
+                <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+            </div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title">Spotify Data</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+            <p class="subtitle lead">A look at my Spotify data (initial Quarto test)</p>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Fergus Fettes </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">Oct 26, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  <div>
+    <div class="abstract">
+      <div class="abstract-title">Abstract</div>
+      First experiment with doing data analysis in Quarto, using Spotify listening data for the past year.
+    </div>
+  </div>
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#imports-and-variables" id="toc-imports-and-variables" class="nav-link active" data-scroll-target="#imports-and-variables">Imports and Variables</a></li>
+  <li><a href="#preamble" id="toc-preamble" class="nav-link" data-scroll-target="#preamble">Preamble</a></li>
+  <li><a href="#search-history" id="toc-search-history" class="nav-link" data-scroll-target="#search-history">Search History</a></li>
+  <li><a href="#listening-history" id="toc-listening-history" class="nav-link" data-scroll-target="#listening-history">Listening History</a>
+  <ul class="collapse">
+  <li><a href="#top-artists" id="toc-top-artists" class="nav-link" data-scroll-target="#top-artists">Top Artists</a>
+  <ul class="collapse">
+  <li><a href="#podcasts" id="toc-podcasts" class="nav-link" data-scroll-target="#podcasts">Podcasts</a></li>
+  </ul></li>
+  <li><a href="#top-tracks" id="toc-top-tracks" class="nav-link" data-scroll-target="#top-tracks">Top Tracks</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
+
+
+
+<section id="imports-and-variables" class="level1 hidden">
+<h1 class="hidden">Imports and Variables</h1>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>DATA_DIR <span class="op">=</span> <span class="st">'/p/my-quarto-site/_data'</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>DATE_FORMAT <span class="op">=</span> <span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st">T%H:%M:%S.</span><span class="sc">%f</span><span class="st">Z[UTC]'</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sort_df_by_artist_time(df):</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Group by by_</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  df <span class="op">=</span> df.groupby([<span class="st">'Artist'</span>]).<span class="bu">sum</span>().reset_index()</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Sort by listening time</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  df.sort_values(<span class="st">'msPlayed'</span>, ascending<span class="op">=</span><span class="va">False</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Format the listening time</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  df[<span class="st">'Time'</span>] <span class="op">=</span> df[<span class="st">'msPlayed'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: datetime.timedelta(seconds<span class="op">=</span><span class="bu">round</span>(x<span class="op">/</span><span class="dv">1000</span>)))</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  df[<span class="st">'Time'</span>] <span class="op">=</span> df[<span class="st">'Time'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="ss">f'</span><span class="sc">{</span>x<span class="sc">.</span>days<span class="op">*</span><span class="dv">24</span> <span class="op">+</span> x<span class="sc">.</span>seconds<span class="op">//</span><span class="dv">3600</span><span class="sc">}</span><span class="ss">h:</span><span class="sc">{</span>x<span class="sc">.</span>seconds<span class="op">//</span><span class="dv">60</span><span class="op">%</span><span class="dv">60</span><span class="sc">}</span><span class="ss">m'</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  df.drop(<span class="st">'msPlayed'</span>, axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> df</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sort_df_by_track(df):</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Group by by_</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  df <span class="op">=</span> df.groupby([<span class="st">'Artist'</span>, <span class="st">'Track'</span>]).<span class="bu">sum</span>().reset_index()</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Sort by listening time</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  df.sort_values(<span class="st">'msPlayed'</span>, ascending<span class="op">=</span><span class="va">False</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Format the listening time</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  df[<span class="st">'Time'</span>] <span class="op">=</span> df[<span class="st">'msPlayed'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: datetime.timedelta(seconds<span class="op">=</span><span class="bu">round</span>(x<span class="op">/</span><span class="dv">1000</span>)))</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  df[<span class="st">'Time'</span>] <span class="op">=</span> df[<span class="st">'Time'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="ss">f'</span><span class="sc">{</span>x<span class="sc">.</span>days<span class="op">*</span><span class="dv">24</span> <span class="op">+</span> x<span class="sc">.</span>seconds<span class="op">//</span><span class="dv">3600</span><span class="sc">}</span><span class="ss">h:</span><span class="sc">{</span>x<span class="sc">.</span>seconds<span class="op">//</span><span class="dv">60</span><span class="op">%</span><span class="dv">60</span><span class="sc">}</span><span class="ss">m'</span>)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  df.drop(<span class="st">'msPlayed'</span>, axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="preamble" class="level1">
+<h1>Preamble</h1>
+<p>Spotify is my main source for music. I used it from 2011-2013, then I was using my mums account until about 2020, when I got my own. Since then I have been using it all the time, and I recently downloaded my data– lets see how it looks.</p>
+</section>
+<section id="search-history" class="level1 page-columns page-full">
+<h1>Search History</h1>
+<p>The first things that springs to my attention is the json file for the search history. It seems to contain a lot of half-complete or misspelled searchs, aka:</p>
+<blockquote class="blockquote">
+<p>scalr scalrat scarlatti</p>
+</blockquote>
+<p>or</p>
+<blockquote class="blockquote">
+<p>f fa fay faye faye faye f f fa fa fay faye faye faye</p>
+</blockquote>
+<p>Apparently I can’t spell <em><a href="W!">Scarlatti</a></em>? And, while I can spell <em><a href="W!">Faye Wong’s</a></em> name, I can’t write it very fast. I wonder what the timeout on this is.</p>
+<p>This dataset was actually surprisingly small. I’m not sure if they are keeping some of it back, or if I really don’t search very often. In any case, here is a tag cloud of all the successful searches I had, aka searches that ended in me selecting something.</p>
+<div class="cell page-columns page-full" data-execution_count="2">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>search_json <span class="op">=</span> os.path.join(DATA_DIR, <span class="st">'SearchQueries.json'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>search_df <span class="op">=</span> pd.read_json(search_json)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>search_df[<span class="st">'searchTime'</span>] <span class="op">=</span> pd.to_datetime(search_df[<span class="st">'searchTime'</span>], <span class="bu">format</span><span class="op">=</span>DATE_FORMAT)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop the 'platform' column, as it is always 'web'</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>search_df.drop(<span class="st">'platform'</span>, axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Select only columns with a non-empty list in 'searchInteractionURIs'</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>search_df <span class="op">=</span> search_df[search_df[<span class="st">'searchInteractionURIs'</span>].<span class="bu">map</span>(<span class="bu">len</span>) <span class="op">&gt;</span> <span class="dv">0</span>]</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Display as a tag cloud</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> wordcloud <span class="im">import</span> WordCloud</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>wordcloud <span class="op">=</span> WordCloud(width<span class="op">=</span><span class="dv">800</span>, height<span class="op">=</span><span class="dv">400</span>, background_color<span class="op">=</span><span class="st">'white'</span>).generate(<span class="st">' '</span>.join(search_df[<span class="st">'searchQuery'</span>]))</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">10</span>))</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>plt.imshow(wordcloud)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>plt.axis(<span class="st">"off"</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display column-page">
+<p><img src="Spotify_2021-2022_files/figure-html/cell-3-output-1.png" width="1498" height="758"></p>
+</div>
+</div>
+<p>Quite a funny cloud of nonsense– I’ll help you out with some gueses– ‘xiu’ and ‘xiux’ are searches for <em><a href="W!">XiuXiu</a></em>, ‘pussy’ was presumably just before <em><a href="W!">Pussy Riot</a></em> were in town and I was thinking of going to see them– though I would say that, wouldn’t I? ‘Barber’ is presumably <em>Caterina Barbieri</em>, though it could just as easily be the <em>Barber of Seville</em> for all I know.</p>
+<p>All in all a rather sparse and uninteresting dataset. I do like the big ‘lana’ and ‘faye’ banners though– unfortunately there is not enough repetition in the dataset for the sizes to be based on anything, so it’s just order. I wish I listened to <em>Faye Wong</em> and <em>Lana Del Ray</em> so disproportionately though, that would be a better world.</p>
+</section>
+<section id="listening-history" class="level1 page-columns page-full">
+<h1>Listening History</h1>
+<p>The listening history looks more interesting.</p>
+<div class="cell" data-execution_count="3">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>listening_json_0 <span class="op">=</span> os.path.join(DATA_DIR, <span class="st">'StreamingHistory0.json'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>listening_json_1 <span class="op">=</span> os.path.join(DATA_DIR, <span class="st">'StreamingHistory1.json'</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>listening_json <span class="op">=</span> [listening_json_0, listening_json_1]</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>listening_df <span class="op">=</span> pd.concat([pd.read_json(json) <span class="cf">for</span> json <span class="kw">in</span> listening_json])</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>listening_df[<span class="st">'endTime'</span>] <span class="op">=</span> pd.to_datetime(listening_df[<span class="st">'endTime'</span>])</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename 'artistName' to 'Artist' and 'trackName' to 'Track'</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>listening_df.rename(columns<span class="op">=</span>{<span class="st">'artistName'</span>: <span class="st">'Artist'</span>, <span class="st">'trackName'</span>: <span class="st">'Track'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop entries with less than 5s of listening time</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>listening_df <span class="op">=</span> listening_df[listening_df[<span class="st">'msPlayed'</span>] <span class="op">&gt;</span> <span class="dv">5000</span>]</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Seperate podcasts into a seperate df</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>podcasts <span class="op">=</span> [</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">"80,000 Hours Podcast with Rob Wiblin"</span>,</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Conversations with Tyler"</span>,</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="st">"The Ezra Klein Show"</span>,</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Dan Carlin's Hardcore History"</span>,</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="st">"The Lunar Society"</span>,</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Lex Fridman Podcast"</span>,</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Sean Carroll's Mindscape: Science, Society, Philosophy, Culture, Arts, and Ideas"</span>,</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>podcast_df <span class="op">=</span> listening_df[listening_df[<span class="st">'Artist'</span>].isin(podcasts)]</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>listening_df <span class="op">=</span> listening_df[<span class="op">~</span>listening_df[<span class="st">'Artist'</span>].isin(podcasts)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="top-artists" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="top-artists">Top Artists</h2>
+<div class="cell page-columns page-full" data-execution_count="4">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> sort_df_by_artist_time(listening_df)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">100</span>).style.hide_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+<div class="no-row-height column-margin column-container"><div class="cell-output cell-output-display" data-execution_count="4">
+
+<style type="text/css">
+</style>
+<table id="T_8cf74">
+  <thead>
+    <tr>
+      <th id="T_8cf74_level0_col0" class="col_heading level0 col0">Artist</th>
+      <th id="T_8cf74_level0_col1" class="col_heading level0 col1">Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="T_8cf74_row0_col0" class="data row0 col0">Franz Liszt</td>
+      <td id="T_8cf74_row0_col1" class="data row0 col1">33h:48m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row1_col0" class="data row1 col0">John Cale</td>
+      <td id="T_8cf74_row1_col1" class="data row1 col1">21h:24m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row2_col0" class="data row2 col0">Franz Schubert</td>
+      <td id="T_8cf74_row2_col1" class="data row2 col1">21h:6m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row3_col0" class="data row3 col0">Domenico Scarlatti</td>
+      <td id="T_8cf74_row3_col1" class="data row3 col1">18h:39m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row4_col0" class="data row4 col0">Sergei Prokofiev</td>
+      <td id="T_8cf74_row4_col1" class="data row4 col1">17h:13m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row5_col0" class="data row5 col0">Orchestre Poly-Rythmo de Cotonou</td>
+      <td id="T_8cf74_row5_col1" class="data row5 col1">16h:26m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row6_col0" class="data row6 col0">Antonio Vivaldi</td>
+      <td id="T_8cf74_row6_col1" class="data row6 col1">16h:19m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row7_col0" class="data row7 col0">Antonín Dvořák</td>
+      <td id="T_8cf74_row7_col1" class="data row7 col1">15h:43m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row8_col0" class="data row8 col0">Johann Sebastian Bach</td>
+      <td id="T_8cf74_row8_col1" class="data row8 col1">14h:43m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row9_col0" class="data row9 col0">Sun City Girls</td>
+      <td id="T_8cf74_row9_col1" class="data row9 col1">12h:57m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row10_col0" class="data row10 col0">Johannes Brahms</td>
+      <td id="T_8cf74_row10_col1" class="data row10 col1">12h:41m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row11_col0" class="data row11 col0">Matmos</td>
+      <td id="T_8cf74_row11_col1" class="data row11 col1">12h:28m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row12_col0" class="data row12 col0">Dmitri Shostakovich</td>
+      <td id="T_8cf74_row12_col1" class="data row12 col1">11h:14m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row13_col0" class="data row13 col0">Amara Touré</td>
+      <td id="T_8cf74_row13_col1" class="data row13 col1">11h:3m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row14_col0" class="data row14 col0">Karol Szymanowski</td>
+      <td id="T_8cf74_row14_col1" class="data row14 col1">10h:41m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row15_col0" class="data row15 col0">Abdel Halim Hafez</td>
+      <td id="T_8cf74_row15_col1" class="data row15 col1">10h:10m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row16_col0" class="data row16 col0">Charlie Megira</td>
+      <td id="T_8cf74_row16_col1" class="data row16 col1">9h:58m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row17_col0" class="data row17 col0">Delroy Edwards</td>
+      <td id="T_8cf74_row17_col1" class="data row17 col1">9h:58m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row18_col0" class="data row18 col0">Slauson Malone</td>
+      <td id="T_8cf74_row18_col1" class="data row18 col1">9h:32m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row19_col0" class="data row19 col0">Scott Walker</td>
+      <td id="T_8cf74_row19_col1" class="data row19 col1">9h:17m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row20_col0" class="data row20 col0">Anadol</td>
+      <td id="T_8cf74_row20_col1" class="data row20 col1">9h:13m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row21_col0" class="data row21 col0">Müzeyyen Senar</td>
+      <td id="T_8cf74_row21_col1" class="data row21 col1">9h:13m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row22_col0" class="data row22 col0">Meridian Brothers</td>
+      <td id="T_8cf74_row22_col1" class="data row22 col1">9h:6m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row23_col0" class="data row23 col0">Brian Eno</td>
+      <td id="T_8cf74_row23_col1" class="data row23 col1">8h:42m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row24_col0" class="data row24 col0">Ludwig van Beethoven</td>
+      <td id="T_8cf74_row24_col1" class="data row24 col1">8h:31m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row25_col0" class="data row25 col0">Shin Joong Hyun</td>
+      <td id="T_8cf74_row25_col1" class="data row25 col1">8h:28m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row26_col0" class="data row26 col0">Jean Sibelius</td>
+      <td id="T_8cf74_row26_col1" class="data row26 col1">8h:23m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row27_col0" class="data row27 col0">Giacinto Scelsi</td>
+      <td id="T_8cf74_row27_col1" class="data row27 col1">8h:19m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row28_col0" class="data row28 col0">Dona Dumitru Siminica</td>
+      <td id="T_8cf74_row28_col1" class="data row28 col1">8h:18m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row29_col0" class="data row29 col0">Leopold Godowsky</td>
+      <td id="T_8cf74_row29_col1" class="data row29 col1">8h:16m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row30_col0" class="data row30 col0">Cem Karaca</td>
+      <td id="T_8cf74_row30_col1" class="data row30 col1">8h:13m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row31_col0" class="data row31 col0">Tom Waits</td>
+      <td id="T_8cf74_row31_col1" class="data row31 col1">8h:12m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row32_col0" class="data row32 col0">Attarazat Addahabia</td>
+      <td id="T_8cf74_row32_col1" class="data row32 col1">8h:4m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row33_col0" class="data row33 col0">Pyotr Ilyich Tchaikovsky</td>
+      <td id="T_8cf74_row33_col1" class="data row33 col1">8h:2m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row34_col0" class="data row34 col0">Hailu Mergia</td>
+      <td id="T_8cf74_row34_col1" class="data row34 col1">7h:49m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row35_col0" class="data row35 col0">Beak&gt;</td>
+      <td id="T_8cf74_row35_col1" class="data row35 col1">7h:39m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row36_col0" class="data row36 col0">Joseph-Nicolas-Pancrace Royer</td>
+      <td id="T_8cf74_row36_col1" class="data row36 col1">7h:29m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row37_col0" class="data row37 col0">Maurice Ravel</td>
+      <td id="T_8cf74_row37_col1" class="data row37 col1">7h:3m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row38_col0" class="data row38 col0">Eartheater</td>
+      <td id="T_8cf74_row38_col1" class="data row38 col1">6h:55m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row39_col0" class="data row39 col0">Niccolò Paganini</td>
+      <td id="T_8cf74_row39_col1" class="data row39 col1">6h:53m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row40_col0" class="data row40 col0">Tsegue-Maryam Guebrou</td>
+      <td id="T_8cf74_row40_col1" class="data row40 col1">6h:53m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row41_col0" class="data row41 col0">Hagihara Yoshiaki</td>
+      <td id="T_8cf74_row41_col1" class="data row41 col1">6h:48m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row42_col0" class="data row42 col0">Lingua Ignota</td>
+      <td id="T_8cf74_row42_col1" class="data row42 col1">6h:46m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row43_col0" class="data row43 col0">The Body</td>
+      <td id="T_8cf74_row43_col1" class="data row43 col1">6h:35m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row44_col0" class="data row44 col0">Ziad Rahbani</td>
+      <td id="T_8cf74_row44_col1" class="data row44 col1">6h:27m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row45_col0" class="data row45 col0">Nikolai Medtner</td>
+      <td id="T_8cf74_row45_col1" class="data row45 col1">6h:24m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row46_col0" class="data row46 col0">Getatchew Mekurya</td>
+      <td id="T_8cf74_row46_col1" class="data row46 col1">6h:22m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row47_col0" class="data row47 col0">Wolfgang Amadeus Mozart</td>
+      <td id="T_8cf74_row47_col1" class="data row47 col1">6h:21m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row48_col0" class="data row48 col0">Michael Robinson</td>
+      <td id="T_8cf74_row48_col1" class="data row48 col1">6h:5m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row49_col0" class="data row49 col0">Gabriel Fauré</td>
+      <td id="T_8cf74_row49_col1" class="data row49 col1">5h:59m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row50_col0" class="data row50 col0">Kikagaku Moyo</td>
+      <td id="T_8cf74_row50_col1" class="data row50 col1">5h:54m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row51_col0" class="data row51 col0">Fritz Kreisler</td>
+      <td id="T_8cf74_row51_col1" class="data row51 col1">5h:47m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row52_col0" class="data row52 col0">Akofa Akoussah</td>
+      <td id="T_8cf74_row52_col1" class="data row52 col1">5h:17m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row53_col0" class="data row53 col0">Olivier Messiaen</td>
+      <td id="T_8cf74_row53_col1" class="data row53 col1">4h:51m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row54_col0" class="data row54 col0">Maria Tănase</td>
+      <td id="T_8cf74_row54_col1" class="data row54 col1">4h:45m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row55_col0" class="data row55 col0">Inade</td>
+      <td id="T_8cf74_row55_col1" class="data row55 col1">4h:36m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row56_col0" class="data row56 col0">The Black Angels</td>
+      <td id="T_8cf74_row56_col1" class="data row56 col1">4h:35m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row57_col0" class="data row57 col0">Cucina Povera</td>
+      <td id="T_8cf74_row57_col1" class="data row57 col1">4h:33m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row58_col0" class="data row58 col0">Julee Cruise</td>
+      <td id="T_8cf74_row58_col1" class="data row58 col1">4h:32m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row59_col0" class="data row59 col0">Sofia Gubaidulina</td>
+      <td id="T_8cf74_row59_col1" class="data row59 col1">4h:30m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row60_col0" class="data row60 col0">Kandia Kouyate</td>
+      <td id="T_8cf74_row60_col1" class="data row60 col1">4h:25m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row61_col0" class="data row61 col0">Hala Strana</td>
+      <td id="T_8cf74_row61_col1" class="data row61 col1">4h:25m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row62_col0" class="data row62 col0">Henry Purcell</td>
+      <td id="T_8cf74_row62_col1" class="data row62 col1">4h:17m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row63_col0" class="data row63 col0">Harry Partch</td>
+      <td id="T_8cf74_row63_col1" class="data row63 col1">4h:17m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row64_col0" class="data row64 col0">Claudio Monteverdi</td>
+      <td id="T_8cf74_row64_col1" class="data row64 col1">4h:17m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row65_col0" class="data row65 col0">Terry Riley</td>
+      <td id="T_8cf74_row65_col1" class="data row65 col1">4h:16m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row66_col0" class="data row66 col0">Philip Glass</td>
+      <td id="T_8cf74_row66_col1" class="data row66 col1">4h:16m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row67_col0" class="data row67 col0">Karlheinz Stockhausen</td>
+      <td id="T_8cf74_row67_col1" class="data row67 col1">4h:14m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row68_col0" class="data row68 col0">Sergei Rachmaninoff</td>
+      <td id="T_8cf74_row68_col1" class="data row68 col1">4h:13m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row69_col0" class="data row69 col0">Dariush</td>
+      <td id="T_8cf74_row69_col1" class="data row69 col1">4h:13m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row70_col0" class="data row70 col0">George Enescu</td>
+      <td id="T_8cf74_row70_col1" class="data row70 col1">4h:11m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row71_col0" class="data row71 col0">Ali Farka Touré</td>
+      <td id="T_8cf74_row71_col1" class="data row71 col1">4h:9m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row72_col0" class="data row72 col0">Miho Hazama</td>
+      <td id="T_8cf74_row72_col1" class="data row72 col1">4h:6m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row73_col0" class="data row73 col0">Opinion</td>
+      <td id="T_8cf74_row73_col1" class="data row73 col1">4h:0m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row74_col0" class="data row74 col0">Enrique Granados</td>
+      <td id="T_8cf74_row74_col1" class="data row74 col1">3h:55m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row75_col0" class="data row75 col0">Tuxedomoon</td>
+      <td id="T_8cf74_row75_col1" class="data row75 col1">3h:54m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row76_col0" class="data row76 col0">Müslüm Gürses</td>
+      <td id="T_8cf74_row76_col1" class="data row76 col1">3h:48m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row77_col0" class="data row77 col0">Alfred Schnittke</td>
+      <td id="T_8cf74_row77_col1" class="data row77 col1">3h:46m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row78_col0" class="data row78 col0">Fennesz</td>
+      <td id="T_8cf74_row78_col1" class="data row78 col1">3h:39m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row79_col0" class="data row79 col0">Vítězslav Novák</td>
+      <td id="T_8cf74_row79_col1" class="data row79 col1">3h:37m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row80_col0" class="data row80 col0">Yves Tumor</td>
+      <td id="T_8cf74_row80_col1" class="data row80 col1">3h:32m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row81_col0" class="data row81 col0">Jean-Philippe Rameau</td>
+      <td id="T_8cf74_row81_col1" class="data row81 col1">3h:32m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row82_col0" class="data row82 col0">Ildebrando Pizzetti</td>
+      <td id="T_8cf74_row82_col1" class="data row82 col1">3h:29m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row83_col0" class="data row83 col0">Phillip Nangle</td>
+      <td id="T_8cf74_row83_col1" class="data row83 col1">3h:28m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row84_col0" class="data row84 col0">Diamanda Galás</td>
+      <td id="T_8cf74_row84_col1" class="data row84 col1">3h:21m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row85_col0" class="data row85 col0">Backxwash</td>
+      <td id="T_8cf74_row85_col1" class="data row85 col1">3h:21m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row86_col0" class="data row86 col0">Thee Oh Sees</td>
+      <td id="T_8cf74_row86_col1" class="data row86 col1">3h:18m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row87_col0" class="data row87 col0">Hans Werner Henze</td>
+      <td id="T_8cf74_row87_col1" class="data row87 col1">3h:13m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row88_col0" class="data row88 col0">Astor Piazzolla</td>
+      <td id="T_8cf74_row88_col1" class="data row88 col1">3h:5m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row89_col0" class="data row89 col0">Psychic TV</td>
+      <td id="T_8cf74_row89_col1" class="data row89 col1">3h:5m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row90_col0" class="data row90 col0">Jon Hopkins</td>
+      <td id="T_8cf74_row90_col1" class="data row90 col1">3h:0m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row91_col0" class="data row91 col0">Harold Budd</td>
+      <td id="T_8cf74_row91_col1" class="data row91 col1">3h:0m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row92_col0" class="data row92 col0">Dean Blunt</td>
+      <td id="T_8cf74_row92_col1" class="data row92 col1">2h:58m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row93_col0" class="data row93 col0">Giovanni Battista Pergolesi</td>
+      <td id="T_8cf74_row93_col1" class="data row93 col1">2h:57m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row94_col0" class="data row94 col0">Mark Turner</td>
+      <td id="T_8cf74_row94_col1" class="data row94 col1">2h:57m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row95_col0" class="data row95 col0">François Couperin</td>
+      <td id="T_8cf74_row95_col1" class="data row95 col1">2h:51m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row96_col0" class="data row96 col0">Armand Hammer</td>
+      <td id="T_8cf74_row96_col1" class="data row96 col1">2h:48m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row97_col0" class="data row97 col0">Jang Hyun</td>
+      <td id="T_8cf74_row97_col1" class="data row97 col1">2h:46m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row98_col0" class="data row98 col0">Pablo de Sarasate</td>
+      <td id="T_8cf74_row98_col1" class="data row98 col1">2h:45m</td>
+    </tr>
+    <tr>
+      <td id="T_8cf74_row99_col0" class="data row99 col0">Kate Bush</td>
+      <td id="T_8cf74_row99_col1" class="data row99 col1">2h:42m</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+<p>Well there you go (sidebar ==&gt;). It’s actually quite different from what I expected. I mean I know I listen to a lot of solo piano music, but that is a little absurd. And how did John Cale get in there as second!</p>
+<p>The more I look at that list the more perplexing I find it. I guess I did download a lot of music this year and listen to it on my laptop, so the numbers are quite a bit skewed by that. But that still means that I have listened to 16h or the Polyrythmic Orchestra of Cotonou!</p>
+<p>The only thing I find totally unrealistic is the 12h of Brahms and the 8h of Beethoven– they must both be from the <a href="https://www.allmusic.com/album/the-menuhin-century-mw0002926727?1666723440528">Menuhin Century</a> album– the ‘Virtuoso and Landmark Recordings’ CDs are full of Brahms and Beethoven, and I listen to it regularly. But in my defense I’m mostly in it for the Menuhin– those two plus the Shostakovich– and maybe even the Rachmaninoff? I think there are a few names on there because of that album.</p>
+<section id="podcasts" class="level3">
+<h3 class="anchored" data-anchor-id="podcasts">Podcasts</h3>
+<p>Here are the top podcast times:</p>
+<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Podcasts
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell" data-execution_count="5">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> sort_df_by_artist_time(podcast_df)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">30</span>).style.hide_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="5">
+
+<style type="text/css">
+</style>
+<table id="T_34cb3">
+  <thead>
+    <tr>
+      <th id="T_34cb3_level0_col0" class="col_heading level0 col0">Artist</th>
+      <th id="T_34cb3_level0_col1" class="col_heading level0 col1">Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="T_34cb3_row0_col0" class="data row0 col0">80,000 Hours Podcast with Rob Wiblin</td>
+      <td id="T_34cb3_row0_col1" class="data row0 col1">23h:20m</td>
+    </tr>
+    <tr>
+      <td id="T_34cb3_row1_col0" class="data row1 col0">Conversations with Tyler</td>
+      <td id="T_34cb3_row1_col1" class="data row1 col1">17h:21m</td>
+    </tr>
+    <tr>
+      <td id="T_34cb3_row2_col0" class="data row2 col0">The Ezra Klein Show</td>
+      <td id="T_34cb3_row2_col1" class="data row2 col1">10h:30m</td>
+    </tr>
+    <tr>
+      <td id="T_34cb3_row3_col0" class="data row3 col0">Dan Carlin's Hardcore History</td>
+      <td id="T_34cb3_row3_col1" class="data row3 col1">10h:12m</td>
+    </tr>
+    <tr>
+      <td id="T_34cb3_row4_col0" class="data row4 col0">The Lunar Society</td>
+      <td id="T_34cb3_row4_col1" class="data row4 col1">4h:12m</td>
+    </tr>
+    <tr>
+      <td id="T_34cb3_row5_col0" class="data row5 col0">Sean Carroll's Mindscape: Science, Society, Philosophy, Culture, Arts, and Ideas</td>
+      <td id="T_34cb3_row5_col1" class="data row5 col1">1h:57m</td>
+    </tr>
+    <tr>
+      <td id="T_34cb3_row6_col0" class="data row6 col0">Lex Fridman Podcast</td>
+      <td id="T_34cb3_row6_col1" class="data row6 col1">1h:26m</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="top-tracks" class="level2">
+<h2 class="anchored" data-anchor-id="top-tracks">Top Tracks</h2>
+<p>Okay, now things are starting to fall into place. A lot of the hours that Liszt has racked up are due to the album ‘Harmonies poétiques et religieuses’, which, I have to admit, has failed to really hit home with me. I spent many hours with the album, as you can see, because I have had good luck with other long Liszt suites (such as the Annees), just by listening to them again and again until they start to sink in. But the Harmonies still haven’t settled in, in fact I hardly remember them, which is why I was so surprised that Liszt was so high on the numbers for the last year.</p>
+<p>Lo-Pacific by the Sun City Girls is great, but is an entire album as a single track so is cheating a little bit.</p>
+<p>What is Kansas by Opinion? I have never heard of that. Apparently it is on a playlist I created though, so apparently I listened to it and liked it once upon a time– or rather, 4 times upon a time, since it is 30 mins long. I’ll drop it too.</p>
+<p>If I remove the classical stuff and Lo-Pacific, then the top tracks looks like this:</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Top Tracks (All)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Top Tracks (Non-Classical)</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell" data-execution_count="6">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> sort_df_by_track(listening_df)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Show columns in the order 'Track', 'Artist', 'Time'</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[[<span class="st">'Track'</span>, <span class="st">'Artist'</span>, <span class="st">'Time'</span>]]</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">30</span>).style.hide_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="6">
+
+<style type="text/css">
+</style>
+<table id="T_9307a">
+  <thead>
+    <tr>
+      <th id="T_9307a_level0_col0" class="col_heading level0 col0">Track</th>
+      <th id="T_9307a_level0_col1" class="col_heading level0 col1">Artist</th>
+      <th id="T_9307a_level0_col2" class="col_heading level0 col2">Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="T_9307a_row0_col0" class="data row0 col0">"J" Blues 72</td>
+      <td id="T_9307a_row0_col1" class="data row0 col1">Shin Joong Hyun</td>
+      <td id="T_9307a_row0_col2" class="data row0 col2">3h:36m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row1_col0" class="data row1 col0">Harmonies poétiques et religieuses, S. 173: III. Bénédiction de Dieu dans la solitude</td>
+      <td id="T_9307a_row1_col1" class="data row1 col1">Franz Liszt</td>
+      <td id="T_9307a_row1_col2" class="data row1 col2">3h:20m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row2_col0" class="data row2 col0">Noude Ma Gnin Tche De Me</td>
+      <td id="T_9307a_row2_col1" class="data row2 col1">Orchestre Poly-Rythmo de Cotonou</td>
+      <td id="T_9307a_row2_col2" class="data row2 col2">2h:48m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row3_col0" class="data row3 col0">Harmonies poétiques et religieuses, S. 173: I. Invocation</td>
+      <td id="T_9307a_row3_col1" class="data row3 col1">Franz Liszt</td>
+      <td id="T_9307a_row3_col2" class="data row3 col2">2h:37m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row4_col0" class="data row4 col0">Gan Tche Kpo</td>
+      <td id="T_9307a_row4_col1" class="data row4 col1">Orchestre Poly-Rythmo de Cotonou</td>
+      <td id="T_9307a_row4_col2" class="data row4 col2">2h:27m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row5_col0" class="data row5 col0">Harmonies poétiques et religieuses, S. 173: IV. Pensée des morts</td>
+      <td id="T_9307a_row5_col1" class="data row5 col1">Franz Liszt</td>
+      <td id="T_9307a_row5_col2" class="data row5 col2">2h:21m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row6_col0" class="data row6 col0">Kansas</td>
+      <td id="T_9307a_row6_col1" class="data row6 col1">Opinion</td>
+      <td id="T_9307a_row6_col2" class="data row6 col2">2h:17m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row7_col0" class="data row7 col0">Lo-Pacific</td>
+      <td id="T_9307a_row7_col1" class="data row7 col1">Sun City Girls</td>
+      <td id="T_9307a_row7_col2" class="data row7 col2">2h:13m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row8_col0" class="data row8 col0">Wagner - Tannhauser: Overture, S442/R275</td>
+      <td id="T_9307a_row8_col1" class="data row8 col1">Franz Liszt</td>
+      <td id="T_9307a_row8_col2" class="data row8 col2">2h:10m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row9_col0" class="data row9 col0">Gun</td>
+      <td id="T_9307a_row9_col1" class="data row9 col1">John Cale</td>
+      <td id="T_9307a_row9_col2" class="data row9 col2">2h:10m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row10_col0" class="data row10 col0">Concerto in one movement for violin and orchestra transcribed from the 1st movement of the Concerto No.1 in D Major by Niccolò Paganini</td>
+      <td id="T_9307a_row10_col1" class="data row10 col1">Fritz Kreisler</td>
+      <td id="T_9307a_row10_col2" class="data row10 col2">2h:6m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row11_col0" class="data row11 col0">Ohoi</td>
+      <td id="T_9307a_row11_col1" class="data row11 col1">Giacinto Scelsi</td>
+      <td id="T_9307a_row11_col2" class="data row11 col2">2h:1m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row12_col0" class="data row12 col0">Chromatic Fantasy and Fugue in D Minor, BWV 903</td>
+      <td id="T_9307a_row12_col1" class="data row12 col1">Johann Sebastian Bach</td>
+      <td id="T_9307a_row12_col2" class="data row12 col2">1h:59m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row13_col0" class="data row13 col0">Sonata in E Minor ‘Night Wind’, Op. 25 No. 2: Introduzione: Andante - Allegro</td>
+      <td id="T_9307a_row13_col1" class="data row13 col1">Nikolai Medtner</td>
+      <td id="T_9307a_row13_col2" class="data row13 col2">1h:59m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row14_col0" class="data row14 col0">Beautiful Rivers and Mountains</td>
+      <td id="T_9307a_row14_col1" class="data row14 col1">Shin Joong Hyun &amp; The Men</td>
+      <td id="T_9307a_row14_col2" class="data row14 col2">1h:58m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row15_col0" class="data row15 col0">The Man Who Must Leave</td>
+      <td id="T_9307a_row15_col1" class="data row15 col1">Kim Sun</td>
+      <td id="T_9307a_row15_col2" class="data row15 col2">1h:56m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row16_col0" class="data row16 col0">Harmonies poétiques et religieuses, S. 173: II. Ave Maria</td>
+      <td id="T_9307a_row16_col1" class="data row16 col1">Franz Liszt</td>
+      <td id="T_9307a_row16_col2" class="data row16 col2">1h:53m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row17_col0" class="data row17 col0">The Four Seasons, Violin Concerto No. 2 in G Minor, RV 315 "L'estate": I. Allegro - Allegro non molto</td>
+      <td id="T_9307a_row17_col1" class="data row17 col1">Antonio Vivaldi</td>
+      <td id="T_9307a_row17_col2" class="data row17 col2">1h:53m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row18_col0" class="data row18 col0">Szymanowski: Notturno e Tarantella, Op. 28</td>
+      <td id="T_9307a_row18_col1" class="data row18 col1">Karol Szymanowski</td>
+      <td id="T_9307a_row18_col2" class="data row18 col2">1h:52m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row19_col0" class="data row19 col0">Mede Ma Gnin Messe</td>
+      <td id="T_9307a_row19_col1" class="data row19 col1">Orchestre Poly-Rythmo de Cotonou</td>
+      <td id="T_9307a_row19_col2" class="data row19 col2">1h:52m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row20_col0" class="data row20 col0">Salamouti</td>
+      <td id="T_9307a_row20_col1" class="data row20 col1">Amara Touré</td>
+      <td id="T_9307a_row20_col2" class="data row20 col2">1h:50m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row21_col0" class="data row21 col0">Ay Çürüdü</td>
+      <td id="T_9307a_row21_col1" class="data row21 col1">Anadol</td>
+      <td id="T_9307a_row21_col2" class="data row21 col2">1h:44m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row22_col0" class="data row22 col0">The Sun</td>
+      <td id="T_9307a_row22_col1" class="data row22 col1">Kim Jung Mi</td>
+      <td id="T_9307a_row22_col2" class="data row22 col2">1h:42m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row23_col0" class="data row23 col0">Görünmez Hava</td>
+      <td id="T_9307a_row23_col1" class="data row23 col1">Anadol</td>
+      <td id="T_9307a_row23_col2" class="data row23 col2">1h:42m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row24_col0" class="data row24 col0">Albaki</td>
+      <td id="T_9307a_row24_col1" class="data row24 col1">Attarazat Addahabia</td>
+      <td id="T_9307a_row24_col2" class="data row24 col2">1h:40m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row25_col0" class="data row25 col0">Afalago</td>
+      <td id="T_9307a_row25_col1" class="data row25 col1">Amara Touré</td>
+      <td id="T_9307a_row25_col2" class="data row25 col2">1h:38m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row26_col0" class="data row26 col0">Ravel: Tzigane, M. 76</td>
+      <td id="T_9307a_row26_col1" class="data row26 col1">Maurice Ravel</td>
+      <td id="T_9307a_row26_col2" class="data row26 col2">1h:38m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row27_col0" class="data row27 col0">Harmonies poétiques et religieuses, S. 173: VII. Funérailles</td>
+      <td id="T_9307a_row27_col1" class="data row27 col1">Franz Liszt</td>
+      <td id="T_9307a_row27_col2" class="data row27 col2">1h:37m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row28_col0" class="data row28 col0">Dying On The Vine</td>
+      <td id="T_9307a_row28_col1" class="data row28 col1">John Cale</td>
+      <td id="T_9307a_row28_col2" class="data row28 col2">1h:32m</td>
+    </tr>
+    <tr>
+      <td id="T_9307a_row29_col0" class="data row29 col0">Embuwa Bey Lamitu</td>
+      <td id="T_9307a_row29_col1" class="data row29 col1">Hailu Mergia</td>
+      <td id="T_9307a_row29_col2" class="data row29 col2">1h:29m</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell" data-execution_count="7">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> sort_df_by_track(listening_df)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop classical and Lo-Pacific</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>drop_artists <span class="op">=</span> [</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Franz Liszt"</span>,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Fritz Kreisler"</span>,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Giacinto Scelsi"</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Nikolai Medtner"</span>,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Antonio Vivaldi"</span>,</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Karol Szymanowski"</span>,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Maurice Ravel"</span>,</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Henryk Wieniawski"</span>,</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Niccolò Paganini"</span>,</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Johann Sebastian Bach"</span>,</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Ludwig van Beethoven"</span>,</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>drop_tracks <span class="op">=</span> [</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Lo-Pacific"</span>,</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Kansas"</span>,</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[<span class="op">~</span>df[<span class="st">'Artist'</span>].isin(drop_artists)]</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[<span class="op">~</span>df[<span class="st">'Track'</span>].isin(drop_tracks)]</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Show columns in the order 'Track', 'Artist', 'Time'</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[[<span class="st">'Track'</span>, <span class="st">'Artist'</span>, <span class="st">'Time'</span>]]</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">30</span>).style.hide_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="7">
+
+<style type="text/css">
+</style>
+<table id="T_19d73">
+  <thead>
+    <tr>
+      <th id="T_19d73_level0_col0" class="col_heading level0 col0">Track</th>
+      <th id="T_19d73_level0_col1" class="col_heading level0 col1">Artist</th>
+      <th id="T_19d73_level0_col2" class="col_heading level0 col2">Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="T_19d73_row0_col0" class="data row0 col0">"J" Blues 72</td>
+      <td id="T_19d73_row0_col1" class="data row0 col1">Shin Joong Hyun</td>
+      <td id="T_19d73_row0_col2" class="data row0 col2">3h:36m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row1_col0" class="data row1 col0">Noude Ma Gnin Tche De Me</td>
+      <td id="T_19d73_row1_col1" class="data row1 col1">Orchestre Poly-Rythmo de Cotonou</td>
+      <td id="T_19d73_row1_col2" class="data row1 col2">2h:48m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row2_col0" class="data row2 col0">Gan Tche Kpo</td>
+      <td id="T_19d73_row2_col1" class="data row2 col1">Orchestre Poly-Rythmo de Cotonou</td>
+      <td id="T_19d73_row2_col2" class="data row2 col2">2h:27m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row3_col0" class="data row3 col0">Gun</td>
+      <td id="T_19d73_row3_col1" class="data row3 col1">John Cale</td>
+      <td id="T_19d73_row3_col2" class="data row3 col2">2h:10m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row4_col0" class="data row4 col0">Beautiful Rivers and Mountains</td>
+      <td id="T_19d73_row4_col1" class="data row4 col1">Shin Joong Hyun &amp; The Men</td>
+      <td id="T_19d73_row4_col2" class="data row4 col2">1h:58m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row5_col0" class="data row5 col0">The Man Who Must Leave</td>
+      <td id="T_19d73_row5_col1" class="data row5 col1">Kim Sun</td>
+      <td id="T_19d73_row5_col2" class="data row5 col2">1h:56m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row6_col0" class="data row6 col0">Mede Ma Gnin Messe</td>
+      <td id="T_19d73_row6_col1" class="data row6 col1">Orchestre Poly-Rythmo de Cotonou</td>
+      <td id="T_19d73_row6_col2" class="data row6 col2">1h:52m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row7_col0" class="data row7 col0">Salamouti</td>
+      <td id="T_19d73_row7_col1" class="data row7 col1">Amara Touré</td>
+      <td id="T_19d73_row7_col2" class="data row7 col2">1h:50m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row8_col0" class="data row8 col0">Ay Çürüdü</td>
+      <td id="T_19d73_row8_col1" class="data row8 col1">Anadol</td>
+      <td id="T_19d73_row8_col2" class="data row8 col2">1h:44m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row9_col0" class="data row9 col0">The Sun</td>
+      <td id="T_19d73_row9_col1" class="data row9 col1">Kim Jung Mi</td>
+      <td id="T_19d73_row9_col2" class="data row9 col2">1h:42m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row10_col0" class="data row10 col0">Görünmez Hava</td>
+      <td id="T_19d73_row10_col1" class="data row10 col1">Anadol</td>
+      <td id="T_19d73_row10_col2" class="data row10 col2">1h:42m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row11_col0" class="data row11 col0">Albaki</td>
+      <td id="T_19d73_row11_col1" class="data row11 col1">Attarazat Addahabia</td>
+      <td id="T_19d73_row11_col2" class="data row11 col2">1h:40m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row12_col0" class="data row12 col0">Afalago</td>
+      <td id="T_19d73_row12_col1" class="data row12 col1">Amara Touré</td>
+      <td id="T_19d73_row12_col2" class="data row12 col2">1h:38m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row13_col0" class="data row13 col0">Dying On The Vine</td>
+      <td id="T_19d73_row13_col1" class="data row13 col1">John Cale</td>
+      <td id="T_19d73_row13_col2" class="data row13 col2">1h:32m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row14_col0" class="data row14 col0">Embuwa Bey Lamitu</td>
+      <td id="T_19d73_row14_col1" class="data row14 col1">Hailu Mergia</td>
+      <td id="T_19d73_row14_col2" class="data row14 col2">1h:29m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row15_col0" class="data row15 col0">Aflana</td>
+      <td id="T_19d73_row15_col1" class="data row15 col1">Attarazat Addahabia</td>
+      <td id="T_19d73_row15_col2" class="data row15 col2">1h:27m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row16_col0" class="data row16 col0">Baed Aeh</td>
+      <td id="T_19d73_row16_col1" class="data row16 col1">Abdel Halim Hafez</td>
+      <td id="T_19d73_row16_col2" class="data row16 col2">1h:26m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row17_col0" class="data row17 col0">Spring Rain</td>
+      <td id="T_19d73_row17_col1" class="data row17 col1">Park In Soo</td>
+      <td id="T_19d73_row17_col2" class="data row17 col2">1h:25m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row18_col0" class="data row18 col0">Sintayehu</td>
+      <td id="T_19d73_row18_col1" class="data row18 col1">Hailu Mergia</td>
+      <td id="T_19d73_row18_col2" class="data row18 col2">1h:20m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row19_col0" class="data row19 col0">The Girl Who Was Frightened of Ashtrays</td>
+      <td id="T_19d73_row19_col1" class="data row19 col1">Charlie Megira</td>
+      <td id="T_19d73_row19_col2" class="data row19 col2">1h:18m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row20_col0" class="data row20 col0">Ya Evde Korksan</td>
+      <td id="T_19d73_row20_col1" class="data row20 col1">Anadol</td>
+      <td id="T_19d73_row20_col2" class="data row20 col2">1h:18m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row21_col0" class="data row21 col0">N'nijo</td>
+      <td id="T_19d73_row21_col1" class="data row21 col1">Amara Touré</td>
+      <td id="T_19d73_row21_col2" class="data row21 col2">1h:17m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row22_col0" class="data row22 col0">Tela</td>
+      <td id="T_19d73_row22_col1" class="data row22 col1">Amara Touré</td>
+      <td id="T_19d73_row22_col2" class="data row22 col2">1h:16m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row23_col0" class="data row23 col0">Side X</td>
+      <td id="T_19d73_row23_col1" class="data row23 col1">Standing On The Corner</td>
+      <td id="T_19d73_row23_col2" class="data row23 col2">1h:15m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row24_col0" class="data row24 col0">Al Hadaoui</td>
+      <td id="T_19d73_row24_col1" class="data row24 col1">Attarazat Addahabia</td>
+      <td id="T_19d73_row24_col2" class="data row24 col2">1h:13m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row25_col0" class="data row25 col0">Sonata in B Minor, K. 87: Andante</td>
+      <td id="T_19d73_row25_col1" class="data row25 col1">Domenico Scarlatti</td>
+      <td id="T_19d73_row25_col2" class="data row25 col2">1h:13m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row26_col0" class="data row26 col0">You Know Me More Than I Know</td>
+      <td id="T_19d73_row26_col1" class="data row26 col1">John Cale</td>
+      <td id="T_19d73_row26_col2" class="data row26 col2">1h:13m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row27_col0" class="data row27 col0">Spirit Lady</td>
+      <td id="T_19d73_row27_col1" class="data row27 col1">Michael Robinson</td>
+      <td id="T_19d73_row27_col2" class="data row27 col2">1h:11m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row28_col0" class="data row28 col0">The Sleeper</td>
+      <td id="T_19d73_row28_col1" class="data row28 col1">John Cale</td>
+      <td id="T_19d73_row28_col2" class="data row28 col2">1h:10m</td>
+    </tr>
+    <tr>
+      <td id="T_19d73_row29_col0" class="data row29 col0">Yemanesh Ayinama</td>
+      <td id="T_19d73_row29_col1" class="data row29 col1">Hailu Mergia</td>
+      <td id="T_19d73_row29_col2" class="data row29 col2">1h:10m</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>And there you have it! This list makes sense to me now– a great South Korean psychedelic rock song, some voodoo music from Benin, <em>‘Gun’</em> by <em>John Cale</em>, some <em>Amara Touré</em>, some Ethiopian and Arab crooners. All good stuff.</p>
+<p>Apparently Spotify will be delivering my full listening history in all it’s gory detail sometime soon. Lets see what I make of it when it gets here.</p>
+
+
+<!-- -->
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Generic</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Fergus Fettes"</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="an">updated:</span><span class="co"> today</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="an">date-format:</span><span class="co"> "MMM D, YYYY"</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="an">title-block-banner:</span><span class="co"> pink</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="an">title-block-banner-color:</span><span class="co"> white</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co"># date-format: iso</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="an">jupyter:</span><span class="co"> python3</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> true       # Table of Contents</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="an">reference-location:</span><span class="co"> margin</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co">    citations-hover: true                     # &lt;===========!!!!!!!!!!!</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co">    footnotes-hover: true</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Specific</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Spotify Data</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "A look at my Spotify data (initial Quarto test)"</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="an">abstract:</span><span class="co"> First experiment with doing data analysis in Quarto, using Spotify listening data for the past year.</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2022-10-26</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>{{&lt; include _spotify_funcs.qmd &gt;}}</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="fu"># Preamble</span></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>Spotify is my main source for music. I used it from 2011-2013, then I was using my mums account until about 2020, when I got my own. Since then I have been using it all the time, and I recently downloaded my data-- lets see how it looks.</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a><span class="fu"># Search History</span></span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>The first things that springs to my attention is the json file for the search history. It seems to contain a lot of half-complete or misspelled searchs, aka:</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;scalr</span></span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a><span class="at">scalrat</span></span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a><span class="at">scarlatti</span></span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>or</span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; f</span></span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a><span class="at">fa</span></span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a><span class="at">fay</span></span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a><span class="at">faye</span></span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a><span class="at">faye</span></span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a><span class="at">faye</span></span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a><span class="at">f</span></span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a><span class="at">f</span></span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a><span class="at">fa</span></span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a><span class="at">fa</span></span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a><span class="at">fay</span></span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a><span class="at">faye</span></span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a><span class="at">faye</span></span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a><span class="at">faye</span></span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>Apparently I can't spell _[Scarlatti](W!)_? And, while I can spell _[Faye Wong's](W!)_ name, I can't write it very fast. I wonder what the timeout on this is.</span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>This dataset was actually surprisingly small. I'm not sure if they are keeping some of it back, or if I really don't search very often. In any case, here is a tag cloud of all the successful searches I had, aka searches that ended in me selecting something.</span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a><span class="co">#| column: page</span></span>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>search_json <span class="op">=</span> os.path.join(DATA_DIR, <span class="st">'SearchQueries.json'</span>)</span>
+<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a>search_df <span class="op">=</span> pd.read_json(search_json)</span>
+<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a>search_df[<span class="st">'searchTime'</span>] <span class="op">=</span> pd.to_datetime(search_df[<span class="st">'searchTime'</span>], <span class="bu">format</span><span class="op">=</span>DATE_FORMAT)</span>
+<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop the 'platform' column, as it is always 'web'</span></span>
+<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>search_df.drop(<span class="st">'platform'</span>, axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a><span class="co"># Select only columns with a non-empty list in 'searchInteractionURIs'</span></span>
+<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a>search_df <span class="op">=</span> search_df[search_df[<span class="st">'searchInteractionURIs'</span>].<span class="bu">map</span>(<span class="bu">len</span>) <span class="op">&gt;</span> <span class="dv">0</span>]</span>
+<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a><span class="co"># Display as a tag cloud</span></span>
+<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> wordcloud <span class="im">import</span> WordCloud</span>
+<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>wordcloud <span class="op">=</span> WordCloud(width<span class="op">=</span><span class="dv">800</span>, height<span class="op">=</span><span class="dv">400</span>, background_color<span class="op">=</span><span class="st">'white'</span>).generate(<span class="st">' '</span>.join(search_df[<span class="st">'searchQuery'</span>]))</span>
+<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">10</span>))</span>
+<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a>plt.imshow(wordcloud)</span>
+<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a>plt.axis(<span class="st">"off"</span>)</span>
+<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a>Quite a funny cloud of nonsense-- I'll help you out with some gueses-- 'xiu' and 'xiux' are searches for _[XiuXiu](W!)_, 'pussy' was presumably just before _[Pussy Riot](W!)_ were in town and I was thinking of going to see them-- though I would say that, wouldn't I? 'Barber' is presumably _Caterina Barbieri_, though it could just as easily be the _Barber of Seville_ for all I know.</span>
+<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a>All in all a rather sparse and uninteresting dataset. I do like the big 'lana' and 'faye' banners though-- unfortunately there is not enough repetition in the dataset for the sizes to be based on anything, so it's just order. I wish I listened to _Faye Wong_ and _Lana Del Ray_ so disproportionately though, that would be a better world.</span>
+<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a><span class="fu"># Listening History</span></span>
+<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a>The listening history looks more interesting.</span>
+<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb8-97"><a href="#cb8-97" aria-hidden="true" tabindex="-1"></a>listening_json_0 <span class="op">=</span> os.path.join(DATA_DIR, <span class="st">'StreamingHistory0.json'</span>)</span>
+<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a>listening_json_1 <span class="op">=</span> os.path.join(DATA_DIR, <span class="st">'StreamingHistory1.json'</span>)</span>
+<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a>listening_json <span class="op">=</span> [listening_json_0, listening_json_1]</span>
+<span id="cb8-100"><a href="#cb8-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-101"><a href="#cb8-101" aria-hidden="true" tabindex="-1"></a>listening_df <span class="op">=</span> pd.concat([pd.read_json(json) <span class="cf">for</span> json <span class="kw">in</span> listening_json])</span>
+<span id="cb8-102"><a href="#cb8-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a>listening_df[<span class="st">'endTime'</span>] <span class="op">=</span> pd.to_datetime(listening_df[<span class="st">'endTime'</span>])</span>
+<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename 'artistName' to 'Artist' and 'trackName' to 'Track'</span></span>
+<span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a>listening_df.rename(columns<span class="op">=</span>{<span class="st">'artistName'</span>: <span class="st">'Artist'</span>, <span class="st">'trackName'</span>: <span class="st">'Track'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop entries with less than 5s of listening time</span></span>
+<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a>listening_df <span class="op">=</span> listening_df[listening_df[<span class="st">'msPlayed'</span>] <span class="op">&gt;</span> <span class="dv">5000</span>]</span>
+<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a><span class="co"># Seperate podcasts into a seperate df</span></span>
+<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a>podcasts <span class="op">=</span> [</span>
+<span id="cb8-113"><a href="#cb8-113" aria-hidden="true" tabindex="-1"></a>  <span class="st">"80,000 Hours Podcast with Rob Wiblin"</span>,</span>
+<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Conversations with Tyler"</span>,</span>
+<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a>  <span class="st">"The Ezra Klein Show"</span>,</span>
+<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Dan Carlin's Hardcore History"</span>,</span>
+<span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a>  <span class="st">"The Lunar Society"</span>,</span>
+<span id="cb8-118"><a href="#cb8-118" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Lex Fridman Podcast"</span>,</span>
+<span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Sean Carroll's Mindscape: Science, Society, Philosophy, Culture, Arts, and Ideas"</span>,</span>
+<span id="cb8-120"><a href="#cb8-120" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb8-121"><a href="#cb8-121" aria-hidden="true" tabindex="-1"></a>podcast_df <span class="op">=</span> listening_df[listening_df[<span class="st">'Artist'</span>].isin(podcasts)]</span>
+<span id="cb8-122"><a href="#cb8-122" aria-hidden="true" tabindex="-1"></a>listening_df <span class="op">=</span> listening_df[<span class="op">~</span>listening_df[<span class="st">'Artist'</span>].isin(podcasts)]</span>
+<span id="cb8-123"><a href="#cb8-123" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-124"><a href="#cb8-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-125"><a href="#cb8-125" aria-hidden="true" tabindex="-1"></a><span class="fu">## Top Artists</span></span>
+<span id="cb8-126"><a href="#cb8-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-129"><a href="#cb8-129" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb8-130"><a href="#cb8-130" aria-hidden="true" tabindex="-1"></a><span class="co">#| column: margin</span></span>
+<span id="cb8-131"><a href="#cb8-131" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb8-132"><a href="#cb8-132" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> sort_df_by_artist_time(listening_df)</span>
+<span id="cb8-133"><a href="#cb8-133" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">100</span>).style.hide_index()</span>
+<span id="cb8-134"><a href="#cb8-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-135"><a href="#cb8-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-136"><a href="#cb8-136" aria-hidden="true" tabindex="-1"></a>Well there you go (sidebar ==&gt;). It's actually quite different from what I expected. I mean I know I listen to a lot of solo piano music, but that is a little absurd. And how did John Cale get in there as second!</span>
+<span id="cb8-137"><a href="#cb8-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-138"><a href="#cb8-138" aria-hidden="true" tabindex="-1"></a>The more I look at that list the more perplexing I find it. I guess I did download a lot of music this year and listen to it on my laptop, so the numbers are quite a bit skewed by that. But that still means that I have listened to 16h or the Polyrythmic Orchestra of Cotonou!</span>
+<span id="cb8-139"><a href="#cb8-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-140"><a href="#cb8-140" aria-hidden="true" tabindex="-1"></a>The only thing I find totally unrealistic is the 12h of Brahms and the 8h of Beethoven-- they must both be from the <span class="co">[</span><span class="ot">Menuhin Century</span><span class="co">](https://www.allmusic.com/album/the-menuhin-century-mw0002926727?1666723440528)</span> album-- the 'Virtuoso and Landmark Recordings' CDs are full of Brahms and Beethoven, and I listen to it regularly. But in my defense I'm mostly in it for the Menuhin-- those two plus the Shostakovich-- and maybe even the Rachmaninoff? I think there are a few names on there because of that album.</span>
+<span id="cb8-141"><a href="#cb8-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-142"><a href="#cb8-142" aria-hidden="true" tabindex="-1"></a><span class="fu">### Podcasts</span></span>
+<span id="cb8-143"><a href="#cb8-143" aria-hidden="true" tabindex="-1"></a>Here are the top podcast times:</span>
+<span id="cb8-144"><a href="#cb8-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-145"><a href="#cb8-145" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false collapse=true}</span>
+<span id="cb8-146"><a href="#cb8-146" aria-hidden="true" tabindex="-1"></a><span class="fu">## Podcasts</span></span>
+<span id="cb8-149"><a href="#cb8-149" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb8-150"><a href="#cb8-150" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb8-151"><a href="#cb8-151" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> sort_df_by_artist_time(podcast_df)</span>
+<span id="cb8-152"><a href="#cb8-152" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">30</span>).style.hide_index()</span>
+<span id="cb8-153"><a href="#cb8-153" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-154"><a href="#cb8-154" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb8-155"><a href="#cb8-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-156"><a href="#cb8-156" aria-hidden="true" tabindex="-1"></a><span class="fu">## Top Tracks</span></span>
+<span id="cb8-157"><a href="#cb8-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-158"><a href="#cb8-158" aria-hidden="true" tabindex="-1"></a>Okay, now things are starting to fall into place. A lot of the hours that Liszt has racked up are due to the album 'Harmonies poétiques et religieuses', which, I have to admit, has failed to really hit home with me. I spent many hours with the album, as you can see, because I have had good luck with other long Liszt suites (such as the Annees), just by listening to them again and again until they start to sink in. But the Harmonies still haven't settled in, in fact I hardly remember them, which is why I was so surprised that Liszt was so high on the numbers for the last year.</span>
+<span id="cb8-159"><a href="#cb8-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-160"><a href="#cb8-160" aria-hidden="true" tabindex="-1"></a>Lo-Pacific by the Sun City Girls is great, but is an entire album as a single track so is cheating a little bit.</span>
+<span id="cb8-161"><a href="#cb8-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-162"><a href="#cb8-162" aria-hidden="true" tabindex="-1"></a>What is Kansas by Opinion? I have never heard of that. Apparently it is on a playlist I created though, so apparently I listened to it and liked it once upon a time-- or rather, 4 times upon a time, since it is 30 mins long. I'll drop it too.</span>
+<span id="cb8-163"><a href="#cb8-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-164"><a href="#cb8-164" aria-hidden="true" tabindex="-1"></a>If I remove the classical stuff and Lo-Pacific, then the top tracks looks like this:</span>
+<span id="cb8-165"><a href="#cb8-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-166"><a href="#cb8-166" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb8-167"><a href="#cb8-167" aria-hidden="true" tabindex="-1"></a><span class="fu">## Top Tracks (All)</span></span>
+<span id="cb8-168"><a href="#cb8-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-171"><a href="#cb8-171" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb8-172"><a href="#cb8-172" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb8-173"><a href="#cb8-173" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> sort_df_by_track(listening_df)</span>
+<span id="cb8-174"><a href="#cb8-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-175"><a href="#cb8-175" aria-hidden="true" tabindex="-1"></a><span class="co"># Show columns in the order 'Track', 'Artist', 'Time'</span></span>
+<span id="cb8-176"><a href="#cb8-176" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[[<span class="st">'Track'</span>, <span class="st">'Artist'</span>, <span class="st">'Time'</span>]]</span>
+<span id="cb8-177"><a href="#cb8-177" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">30</span>).style.hide_index()</span>
+<span id="cb8-178"><a href="#cb8-178" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-179"><a href="#cb8-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-180"><a href="#cb8-180" aria-hidden="true" tabindex="-1"></a><span class="fu">## Top Tracks (Non-Classical)</span></span>
+<span id="cb8-183"><a href="#cb8-183" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb8-184"><a href="#cb8-184" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb8-185"><a href="#cb8-185" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> sort_df_by_track(listening_df)</span>
+<span id="cb8-186"><a href="#cb8-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-187"><a href="#cb8-187" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop classical and Lo-Pacific</span></span>
+<span id="cb8-188"><a href="#cb8-188" aria-hidden="true" tabindex="-1"></a>drop_artists <span class="op">=</span> [</span>
+<span id="cb8-189"><a href="#cb8-189" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Franz Liszt"</span>,</span>
+<span id="cb8-190"><a href="#cb8-190" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Fritz Kreisler"</span>,</span>
+<span id="cb8-191"><a href="#cb8-191" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Giacinto Scelsi"</span>,</span>
+<span id="cb8-192"><a href="#cb8-192" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Nikolai Medtner"</span>,</span>
+<span id="cb8-193"><a href="#cb8-193" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Antonio Vivaldi"</span>,</span>
+<span id="cb8-194"><a href="#cb8-194" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Karol Szymanowski"</span>,</span>
+<span id="cb8-195"><a href="#cb8-195" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Maurice Ravel"</span>,</span>
+<span id="cb8-196"><a href="#cb8-196" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Henryk Wieniawski"</span>,</span>
+<span id="cb8-197"><a href="#cb8-197" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Niccolò Paganini"</span>,</span>
+<span id="cb8-198"><a href="#cb8-198" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Johann Sebastian Bach"</span>,</span>
+<span id="cb8-199"><a href="#cb8-199" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Ludwig van Beethoven"</span>,</span>
+<span id="cb8-200"><a href="#cb8-200" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb8-201"><a href="#cb8-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-202"><a href="#cb8-202" aria-hidden="true" tabindex="-1"></a>drop_tracks <span class="op">=</span> [</span>
+<span id="cb8-203"><a href="#cb8-203" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Lo-Pacific"</span>,</span>
+<span id="cb8-204"><a href="#cb8-204" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Kansas"</span>,</span>
+<span id="cb8-205"><a href="#cb8-205" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb8-206"><a href="#cb8-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-207"><a href="#cb8-207" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[<span class="op">~</span>df[<span class="st">'Artist'</span>].isin(drop_artists)]</span>
+<span id="cb8-208"><a href="#cb8-208" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[<span class="op">~</span>df[<span class="st">'Track'</span>].isin(drop_tracks)]</span>
+<span id="cb8-209"><a href="#cb8-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-210"><a href="#cb8-210" aria-hidden="true" tabindex="-1"></a><span class="co"># Show columns in the order 'Track', 'Artist', 'Time'</span></span>
+<span id="cb8-211"><a href="#cb8-211" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[[<span class="st">'Track'</span>, <span class="st">'Artist'</span>, <span class="st">'Time'</span>]]</span>
+<span id="cb8-212"><a href="#cb8-212" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">30</span>).style.hide_index()</span>
+<span id="cb8-213"><a href="#cb8-213" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-214"><a href="#cb8-214" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb8-215"><a href="#cb8-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-216"><a href="#cb8-216" aria-hidden="true" tabindex="-1"></a>And there you have it! This list makes sense to me now-- a great South Korean psychedelic rock song, some voodoo music from Benin, _'Gun'_ by _John Cale_, some _Amara Touré_, some Ethiopian and Arab crooners. All good stuff.</span>
+<span id="cb8-217"><a href="#cb8-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-218"><a href="#cb8-218" aria-hidden="true" tabindex="-1"></a>Apparently Spotify will be delivering my full listening history in all it's gory detail sometime soon. Lets see what I make of it when it gets here.</span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">This blog is built with ❤️ and <a href="https://www.quarto.org">Quarto</a> by Fergus Fettes.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/FergusFettes">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
