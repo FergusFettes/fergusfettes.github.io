@@ -1,0 +1,995 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/ffettes/personal/site-backend/ffettes/fergusfettes.github.io/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/5d506a1a/
+0	search.json	/^  {$/;"	o
+1	search.json	/^  {$/;"	o
+10	search.json	/^  {$/;"	o
+11	search.json	/^  {$/;"	o
+12	search.json	/^  {$/;"	o
+13	search.json	/^  {$/;"	o
+14	search.json	/^  {$/;"	o
+15	search.json	/^  {$/;"	o
+16	search.json	/^  {$/;"	o
+2	search.json	/^  {$/;"	o
+3	search.json	/^  {$/;"	o
+4	search.json	/^  {$/;"	o
+5	search.json	/^  {$/;"	o
+6	search.json	/^  {$/;"	o
+7	search.json	/^  {$/;"	o
+8	search.json	/^  {$/;"	o
+9	search.json	/^  {$/;"	o
+Aberdeen	Reviews/Cities.html	/^<h1>Aberdeen<\/h1>$/;"	h
+About	about.html	/^<h1 class="title">About<\/h1>$/;"	h
+Beijing	Reviews/Cities.html	/^<h1>Beijing<\/h1>$/;"	h
+Berlin Alexanderplatz Review	Reviews/Media/BerlinAlexanderplatz.html	/^<h1 class="title">Berlin Alexanderplatz Review<\/h1>$/;"	h
+Bibliography	Reviews/Megacities.html	/^<h1>Bibliography<\/h1>$/;"	h
+Bike kitchen, Goldschlagstrasse Thursday 8pm	Reviews/Cities.html	/^<h3 class="anchored" data-anchor-id="bike-kitchen-goldschlagstrasse-thursday-8pm">Bike kitchen, /;"	j
+Book	Reviews/Media/BerlinAlexanderplatz.html	/^<h1>Book<\/h1>$/;"	h
+City Reviews	Reviews/Cities.html	/^<h1 class="title">City Reviews<\/h1>$/;"	h
+Conclusions	Reviews/Megacities.html	/^<h1>Conclusions<\/h1>$/;"	h
+Conflict [0.6]	Reviews/Ideas/Reasons-To-Kill.html	/^<h1>Conflict [0.6]<\/h1>$/;"	h
+Fergus Fettes - About	about.html	/^<title>Fergus Fettes - About<\/title>$/;"	j
+Fergus Fettes - Berlin Alexanderplatz Review	Reviews/Media/BerlinAlexanderplatz.html	/^<title>Fergus Fettes - Berlin Alexanderplatz Review<\/title>$/;"	j
+Fergus Fettes - City Reviews	Reviews/Cities.html	/^<title>Fergus Fettes - City Reviews<\/title>$/;"	j
+Fergus Fettes - Home!	index.html	/^<title>Fergus Fettes - Home!<\/title>$/;"	j
+Fergus Fettes - Karaoke bars	Reviews/Venues.html	/^<title>Fergus Fettes - Karaoke bars<\/title>$/;"	j
+Fergus Fettes - Kites	Reviews/Kites.html	/^<title>Fergus Fettes - Kites<\/title>$/;"	j
+Fergus Fettes - Literature	Reviews/Literature.html	/^<title>Fergus Fettes - Literature<\/title>$/;"	j
+Fergus Fettes - Megacity Reviews	Reviews/Megacities.html	/^<title>Fergus Fettes - Megacity Reviews<\/title>$/;"	j
+Fergus Fettes - Page Not Found	404.html	/^<title>Fergus Fettes - Page Not Found<\/title>$/;"	j
+Fergus Fettes - Reasons to Kill	Reviews/Ideas/Reasons-To-Kill.html	/^<title>Fergus Fettes - Reasons to Kill<\/title>$/;"	j
+Fergus Fettes - Run to Prague 7	Runs/2022-26-10.html	/^<title>Fergus Fettes - Run to Prague 7<\/title>$/;"	j
+Fergus Fettes - Spotify Data	Spotify_2021-2022.html	/^<title>Fergus Fettes - Spotify Data<\/title>$/;"	j
+Film	Reviews/Media/BerlinAlexanderplatz.html	/^<h1>Film<\/h1>$/;"	h
+First Reading	Reviews/Media/BerlinAlexanderplatz.html	/^<h2 class="anchored" data-anchor-id="first-reading">First Reading<\/h2>$/;"	i
+Footnotes	Reviews/Cities.html	/^<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end/;"	i
+Footnotes	Reviews/Ideas/Reasons-To-Kill.html	/^<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end/;"	i
+Footnotes	Reviews/Megacities.html	/^<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end/;"	i
+Gestalt	Reviews/Cities.html	/^<h1>Gestalt<\/h1>$/;"	h
+Group Participation	Reviews/Venues.html	/^<h1>Group Participation<\/h1>$/;"	h
+Home!	index.html	/^<h1 class="title">Home!<\/h1>$/;"	h
+Imports and Variables	Spotify_2021-2022.html	/^<h1 class="hidden">Imports and Variables<\/h1>$/;"	h
+Industry	Reviews/Ideas/Reasons-To-Kill.html	/^<h1>Industry<\/h1>$/;"	h
+Jakarta [memories]	Reviews/Megacities.html	/^<h1>Jakarta [memories]<\/h1>$/;"	h
+Karaoke	Reviews/Venues.html	/^<h1>Karaoke<\/h1>$/;"	h
+Karaoke bars	Reviews/Venues.html	/^<h1 class="title">Karaoke bars<\/h1>$/;"	h
+Kites	Reviews/Kites.html	/^<h1 class="title">Kites<\/h1>$/;"	h
+Leipzig	Reviews/Cities.html	/^<h1>Leipzig<\/h1>$/;"	h
+Leipzig Apartments	Reviews/Cities.html	/^<h2 class="anchored" data-anchor-id="leipzig-apartments">Leipzig Apartments<\/h2>$/;"	i
+Listening History	Spotify_2021-2022.html	/^<h1>Listening History<\/h1>$/;"	h
+Literature	Reviews/Literature.html	/^<h1 class="title">Literature<\/h1>$/;"	h
+Low Participation	Reviews/Venues.html	/^<h1>Low Participation<\/h1>$/;"	h
+Megacity Reviews	Reviews/Megacities.html	/^<h1 class="title">Megacity Reviews<\/h1>$/;"	h
+Mysticism	Reviews/Literature.html	/^<h1>Mysticism<\/h1>$/;"	h
+On this page	Reviews/Cities.html	/^    <h2 id="toc-title">On this page<\/h2>$/;"	i
+On this page	Reviews/Ideas/Reasons-To-Kill.html	/^    <h2 id="toc-title">On this page<\/h2>$/;"	i
+On this page	Reviews/Literature.html	/^    <h2 id="toc-title">On this page<\/h2>$/;"	i
+On this page	Reviews/Media/BerlinAlexanderplatz.html	/^    <h2 id="toc-title">On this page<\/h2>$/;"	i
+On this page	Reviews/Megacities.html	/^    <h2 id="toc-title">On this page<\/h2>$/;"	i
+On this page	Reviews/Venues.html	/^    <h2 id="toc-title">On this page<\/h2>$/;"	i
+On this page	Spotify_2021-2022.html	/^    <h2 id="toc-title">On this page<\/h2>$/;"	i
+On this page	index.html	/^    <h2 id="toc-title">On this page<\/h2>$/;"	i
+Open Participation	Reviews/Venues.html	/^<h1>Open Participation<\/h1>$/;"	h
+Page Not Found	404.html	/^<h1 class="title">Page Not Found<\/h1>$/;"	h
+Philipino Bands Singing in English	Reviews/Venues.html	/^<h1>Philipino Bands Singing in English<\/h1>$/;"	h
+Pizzalab, George Schwartz Str.	Reviews/Cities.html	/^<h3 class="anchored" data-anchor-id="pizzalab-george-schwartz-str.">Pizzalab, George Schwartz St/;"	j
+Podcasts	Spotify_2021-2022.html	/^<h3 class="anchored" data-anchor-id="podcasts">Podcasts<\/h3>$/;"	j
+Preamble	Spotify_2021-2022.html	/^<h1>Preamble<\/h1>$/;"	h
+Preference [0.001]	Reviews/Ideas/Reasons-To-Kill.html	/^<h1>Preference [0.001]<\/h1>$/;"	h
+Reading List	Reviews/Literature.html	/^<h2 class="anchored" data-anchor-id="reading-list">Reading List<\/h2>$/;"	i
+Reasons to Kill	Reviews/Ideas/Reasons-To-Kill.html	/^<div class="quarto-title-block"><div><h1 class="title">Reasons to Kill<\/h1><button type="button/;"	h
+Research [???]	Reviews/Ideas/Reasons-To-Kill.html	/^<h1>Research [???]<\/h1>$/;"	h
+Reviews	index.html	/^<h1>Reviews<\/h1>$/;"	h
+Run to Prague 7	Runs/2022-26-10.html	/^      <div class="quarto-title-block"><div><h1 class="title">Run to Prague 7<\/h1><button type="/;"	h
+Runs	index.html	/^<h1>Runs<\/h1>$/;"	h
+Search History	Spotify_2021-2022.html	/^<h1>Search History<\/h1>$/;"	h
+See Also	Reviews/Venues.html	/^<h1>See Also<\/h1>$/;"	h
+Shelter [0.01]	Reviews/Ideas/Reasons-To-Kill.html	/^<h1>Shelter [0.01]<\/h1>$/;"	h
+Sport	Reviews/Ideas/Reasons-To-Kill.html	/^<h1>Sport<\/h1>$/;"	h
+Spotify Data	Spotify_2021-2022.html	/^      <div class="quarto-title-block"><div><h1 class="title">Spotify Data<\/h1><button type="but/;"	h
+Still to do in Vienna	Reviews/Cities.html	/^<h2 class="anchored" data-anchor-id="still-to-do-in-vienna">Still to do in Vienna<\/h2>$/;"	i
+Sustenance [0.1]	Reviews/Ideas/Reasons-To-Kill.html	/^<h1>Sustenance [0.1]<\/h1>$/;"	h
+TOC	Reviews/Cities.html	/^        <nav id="TOC" role="doc-toc" class="toc-active">$/;"	I
+TOC	Reviews/Ideas/Reasons-To-Kill.html	/^        <nav id="TOC" role="doc-toc" class="toc-active">$/;"	I
+TOC	Reviews/Literature.html	/^        <nav id="TOC" role="doc-toc" class="toc-active">$/;"	I
+TOC	Reviews/Media/BerlinAlexanderplatz.html	/^        <nav id="TOC" role="doc-toc" class="toc-active">$/;"	I
+TOC	Reviews/Megacities.html	/^        <nav id="TOC" role="doc-toc" class="toc-active">$/;"	I
+TOC	Reviews/Venues.html	/^        <nav id="TOC" role="doc-toc" class="toc-active">$/;"	I
+TOC	Spotify_2021-2022.html	/^        <nav id="TOC" role="doc-toc" class="toc-active">$/;"	I
+TOC	index.html	/^        <nav id="TOC" role="doc-toc" class="toc-active">$/;"	I
+T_19d73	Spotify_2021-2022.html	/^<table id="T_19d73">$/;"	I
+T_19d73_level0_col0	Spotify_2021-2022.html	/^      <th id="T_19d73_level0_col0" class="col_heading level0 col0">Track<\/th>$/;"	I
+T_19d73_level0_col1	Spotify_2021-2022.html	/^      <th id="T_19d73_level0_col1" class="col_heading level0 col1">Artist<\/th>$/;"	I
+T_19d73_level0_col2	Spotify_2021-2022.html	/^      <th id="T_19d73_level0_col2" class="col_heading level0 col2">Time<\/th>$/;"	I
+T_19d73_row0_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row0_col0" class="data row0 col0">"J" Blues 72<\/td>$/;"	I
+T_19d73_row0_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row0_col1" class="data row0 col1">Shin Joong Hyun<\/td>$/;"	I
+T_19d73_row0_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row0_col2" class="data row0 col2">3h:36m<\/td>$/;"	I
+T_19d73_row10_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row10_col0" class="data row10 col0">Görünmez Hava<\/td>$/;"	I
+T_19d73_row10_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row10_col1" class="data row10 col1">Anadol<\/td>$/;"	I
+T_19d73_row10_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row10_col2" class="data row10 col2">1h:42m<\/td>$/;"	I
+T_19d73_row11_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row11_col0" class="data row11 col0">Albaki<\/td>$/;"	I
+T_19d73_row11_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row11_col1" class="data row11 col1">Attarazat Addahabia<\/td>$/;"	I
+T_19d73_row11_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row11_col2" class="data row11 col2">1h:40m<\/td>$/;"	I
+T_19d73_row12_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row12_col0" class="data row12 col0">Afalago<\/td>$/;"	I
+T_19d73_row12_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row12_col1" class="data row12 col1">Amara Touré<\/td>$/;"	I
+T_19d73_row12_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row12_col2" class="data row12 col2">1h:38m<\/td>$/;"	I
+T_19d73_row13_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row13_col0" class="data row13 col0">Dying On The Vine<\/td>$/;"	I
+T_19d73_row13_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row13_col1" class="data row13 col1">John Cale<\/td>$/;"	I
+T_19d73_row13_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row13_col2" class="data row13 col2">1h:32m<\/td>$/;"	I
+T_19d73_row14_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row14_col0" class="data row14 col0">Embuwa Bey Lamitu<\/td>$/;"	I
+T_19d73_row14_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row14_col1" class="data row14 col1">Hailu Mergia<\/td>$/;"	I
+T_19d73_row14_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row14_col2" class="data row14 col2">1h:29m<\/td>$/;"	I
+T_19d73_row15_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row15_col0" class="data row15 col0">Aflana<\/td>$/;"	I
+T_19d73_row15_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row15_col1" class="data row15 col1">Attarazat Addahabia<\/td>$/;"	I
+T_19d73_row15_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row15_col2" class="data row15 col2">1h:27m<\/td>$/;"	I
+T_19d73_row16_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row16_col0" class="data row16 col0">Baed Aeh<\/td>$/;"	I
+T_19d73_row16_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row16_col1" class="data row16 col1">Abdel Halim Hafez<\/td>$/;"	I
+T_19d73_row16_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row16_col2" class="data row16 col2">1h:26m<\/td>$/;"	I
+T_19d73_row17_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row17_col0" class="data row17 col0">Spring Rain<\/td>$/;"	I
+T_19d73_row17_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row17_col1" class="data row17 col1">Park In Soo<\/td>$/;"	I
+T_19d73_row17_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row17_col2" class="data row17 col2">1h:25m<\/td>$/;"	I
+T_19d73_row18_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row18_col0" class="data row18 col0">Sintayehu<\/td>$/;"	I
+T_19d73_row18_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row18_col1" class="data row18 col1">Hailu Mergia<\/td>$/;"	I
+T_19d73_row18_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row18_col2" class="data row18 col2">1h:20m<\/td>$/;"	I
+T_19d73_row19_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row19_col0" class="data row19 col0">The Girl Who Was Frightened of Ashtray/;"	I
+T_19d73_row19_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row19_col1" class="data row19 col1">Charlie Megira<\/td>$/;"	I
+T_19d73_row19_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row19_col2" class="data row19 col2">1h:18m<\/td>$/;"	I
+T_19d73_row1_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row1_col0" class="data row1 col0">Noude Ma Gnin Tche De Me<\/td>$/;"	I
+T_19d73_row1_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row1_col1" class="data row1 col1">Orchestre Poly-Rythmo de Cotonou<\/td>$/;"	I
+T_19d73_row1_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row1_col2" class="data row1 col2">2h:48m<\/td>$/;"	I
+T_19d73_row20_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row20_col0" class="data row20 col0">Ya Evde Korksan<\/td>$/;"	I
+T_19d73_row20_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row20_col1" class="data row20 col1">Anadol<\/td>$/;"	I
+T_19d73_row20_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row20_col2" class="data row20 col2">1h:18m<\/td>$/;"	I
+T_19d73_row21_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row21_col0" class="data row21 col0">N'nijo<\/td>$/;"	I
+T_19d73_row21_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row21_col1" class="data row21 col1">Amara Touré<\/td>$/;"	I
+T_19d73_row21_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row21_col2" class="data row21 col2">1h:17m<\/td>$/;"	I
+T_19d73_row22_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row22_col0" class="data row22 col0">Tela<\/td>$/;"	I
+T_19d73_row22_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row22_col1" class="data row22 col1">Amara Touré<\/td>$/;"	I
+T_19d73_row22_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row22_col2" class="data row22 col2">1h:16m<\/td>$/;"	I
+T_19d73_row23_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row23_col0" class="data row23 col0">Side X<\/td>$/;"	I
+T_19d73_row23_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row23_col1" class="data row23 col1">Standing On The Corner<\/td>$/;"	I
+T_19d73_row23_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row23_col2" class="data row23 col2">1h:15m<\/td>$/;"	I
+T_19d73_row24_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row24_col0" class="data row24 col0">Al Hadaoui<\/td>$/;"	I
+T_19d73_row24_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row24_col1" class="data row24 col1">Attarazat Addahabia<\/td>$/;"	I
+T_19d73_row24_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row24_col2" class="data row24 col2">1h:13m<\/td>$/;"	I
+T_19d73_row25_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row25_col0" class="data row25 col0">Sonata in B Minor, K. 87: Andante<\/td/;"	I
+T_19d73_row25_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row25_col1" class="data row25 col1">Domenico Scarlatti<\/td>$/;"	I
+T_19d73_row25_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row25_col2" class="data row25 col2">1h:13m<\/td>$/;"	I
+T_19d73_row26_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row26_col0" class="data row26 col0">You Know Me More Than I Know<\/td>$/;"	I
+T_19d73_row26_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row26_col1" class="data row26 col1">John Cale<\/td>$/;"	I
+T_19d73_row26_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row26_col2" class="data row26 col2">1h:13m<\/td>$/;"	I
+T_19d73_row27_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row27_col0" class="data row27 col0">Spirit Lady<\/td>$/;"	I
+T_19d73_row27_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row27_col1" class="data row27 col1">Michael Robinson<\/td>$/;"	I
+T_19d73_row27_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row27_col2" class="data row27 col2">1h:11m<\/td>$/;"	I
+T_19d73_row28_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row28_col0" class="data row28 col0">The Sleeper<\/td>$/;"	I
+T_19d73_row28_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row28_col1" class="data row28 col1">John Cale<\/td>$/;"	I
+T_19d73_row28_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row28_col2" class="data row28 col2">1h:10m<\/td>$/;"	I
+T_19d73_row29_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row29_col0" class="data row29 col0">Yemanesh Ayinama<\/td>$/;"	I
+T_19d73_row29_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row29_col1" class="data row29 col1">Hailu Mergia<\/td>$/;"	I
+T_19d73_row29_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row29_col2" class="data row29 col2">1h:10m<\/td>$/;"	I
+T_19d73_row2_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row2_col0" class="data row2 col0">Gan Tche Kpo<\/td>$/;"	I
+T_19d73_row2_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row2_col1" class="data row2 col1">Orchestre Poly-Rythmo de Cotonou<\/td>$/;"	I
+T_19d73_row2_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row2_col2" class="data row2 col2">2h:27m<\/td>$/;"	I
+T_19d73_row3_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row3_col0" class="data row3 col0">Gun<\/td>$/;"	I
+T_19d73_row3_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row3_col1" class="data row3 col1">John Cale<\/td>$/;"	I
+T_19d73_row3_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row3_col2" class="data row3 col2">2h:10m<\/td>$/;"	I
+T_19d73_row4_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row4_col0" class="data row4 col0">Beautiful Rivers and Mountains<\/td>$/;"	I
+T_19d73_row4_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row4_col1" class="data row4 col1">Shin Joong Hyun &amp; The Men<\/td>$/;"	I
+T_19d73_row4_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row4_col2" class="data row4 col2">1h:58m<\/td>$/;"	I
+T_19d73_row5_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row5_col0" class="data row5 col0">The Man Who Must Leave<\/td>$/;"	I
+T_19d73_row5_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row5_col1" class="data row5 col1">Kim Sun<\/td>$/;"	I
+T_19d73_row5_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row5_col2" class="data row5 col2">1h:56m<\/td>$/;"	I
+T_19d73_row6_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row6_col0" class="data row6 col0">Mede Ma Gnin Messe<\/td>$/;"	I
+T_19d73_row6_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row6_col1" class="data row6 col1">Orchestre Poly-Rythmo de Cotonou<\/td>$/;"	I
+T_19d73_row6_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row6_col2" class="data row6 col2">1h:52m<\/td>$/;"	I
+T_19d73_row7_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row7_col0" class="data row7 col0">Salamouti<\/td>$/;"	I
+T_19d73_row7_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row7_col1" class="data row7 col1">Amara Touré<\/td>$/;"	I
+T_19d73_row7_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row7_col2" class="data row7 col2">1h:50m<\/td>$/;"	I
+T_19d73_row8_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row8_col0" class="data row8 col0">Ay Çürüdü<\/td>$/;"	I
+T_19d73_row8_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row8_col1" class="data row8 col1">Anadol<\/td>$/;"	I
+T_19d73_row8_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row8_col2" class="data row8 col2">1h:44m<\/td>$/;"	I
+T_19d73_row9_col0	Spotify_2021-2022.html	/^      <td id="T_19d73_row9_col0" class="data row9 col0">The Sun<\/td>$/;"	I
+T_19d73_row9_col1	Spotify_2021-2022.html	/^      <td id="T_19d73_row9_col1" class="data row9 col1">Kim Jung Mi<\/td>$/;"	I
+T_19d73_row9_col2	Spotify_2021-2022.html	/^      <td id="T_19d73_row9_col2" class="data row9 col2">1h:42m<\/td>$/;"	I
+T_34cb3	Spotify_2021-2022.html	/^<table id="T_34cb3">$/;"	I
+T_34cb3_level0_col0	Spotify_2021-2022.html	/^      <th id="T_34cb3_level0_col0" class="col_heading level0 col0">Artist<\/th>$/;"	I
+T_34cb3_level0_col1	Spotify_2021-2022.html	/^      <th id="T_34cb3_level0_col1" class="col_heading level0 col1">Time<\/th>$/;"	I
+T_34cb3_row0_col0	Spotify_2021-2022.html	/^      <td id="T_34cb3_row0_col0" class="data row0 col0">80,000 Hours Podcast with Rob Wiblin<\/t/;"	I
+T_34cb3_row0_col1	Spotify_2021-2022.html	/^      <td id="T_34cb3_row0_col1" class="data row0 col1">23h:20m<\/td>$/;"	I
+T_34cb3_row1_col0	Spotify_2021-2022.html	/^      <td id="T_34cb3_row1_col0" class="data row1 col0">Conversations with Tyler<\/td>$/;"	I
+T_34cb3_row1_col1	Spotify_2021-2022.html	/^      <td id="T_34cb3_row1_col1" class="data row1 col1">17h:21m<\/td>$/;"	I
+T_34cb3_row2_col0	Spotify_2021-2022.html	/^      <td id="T_34cb3_row2_col0" class="data row2 col0">The Ezra Klein Show<\/td>$/;"	I
+T_34cb3_row2_col1	Spotify_2021-2022.html	/^      <td id="T_34cb3_row2_col1" class="data row2 col1">10h:30m<\/td>$/;"	I
+T_34cb3_row3_col0	Spotify_2021-2022.html	/^      <td id="T_34cb3_row3_col0" class="data row3 col0">Dan Carlin's Hardcore History<\/td>$/;"	I
+T_34cb3_row3_col1	Spotify_2021-2022.html	/^      <td id="T_34cb3_row3_col1" class="data row3 col1">10h:12m<\/td>$/;"	I
+T_34cb3_row4_col0	Spotify_2021-2022.html	/^      <td id="T_34cb3_row4_col0" class="data row4 col0">The Lunar Society<\/td>$/;"	I
+T_34cb3_row4_col1	Spotify_2021-2022.html	/^      <td id="T_34cb3_row4_col1" class="data row4 col1">4h:12m<\/td>$/;"	I
+T_34cb3_row5_col0	Spotify_2021-2022.html	/^      <td id="T_34cb3_row5_col0" class="data row5 col0">Sean Carroll's Mindscape: Science, Socie/;"	I
+T_34cb3_row5_col1	Spotify_2021-2022.html	/^      <td id="T_34cb3_row5_col1" class="data row5 col1">1h:57m<\/td>$/;"	I
+T_34cb3_row6_col0	Spotify_2021-2022.html	/^      <td id="T_34cb3_row6_col0" class="data row6 col0">Lex Fridman Podcast<\/td>$/;"	I
+T_34cb3_row6_col1	Spotify_2021-2022.html	/^      <td id="T_34cb3_row6_col1" class="data row6 col1">1h:26m<\/td>$/;"	I
+T_8cf74	Spotify_2021-2022.html	/^<table id="T_8cf74">$/;"	I
+T_8cf74_level0_col0	Spotify_2021-2022.html	/^      <th id="T_8cf74_level0_col0" class="col_heading level0 col0">Artist<\/th>$/;"	I
+T_8cf74_level0_col1	Spotify_2021-2022.html	/^      <th id="T_8cf74_level0_col1" class="col_heading level0 col1">Time<\/th>$/;"	I
+T_8cf74_row0_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row0_col0" class="data row0 col0">Franz Liszt<\/td>$/;"	I
+T_8cf74_row0_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row0_col1" class="data row0 col1">33h:48m<\/td>$/;"	I
+T_8cf74_row10_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row10_col0" class="data row10 col0">Johannes Brahms<\/td>$/;"	I
+T_8cf74_row10_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row10_col1" class="data row10 col1">12h:41m<\/td>$/;"	I
+T_8cf74_row11_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row11_col0" class="data row11 col0">Matmos<\/td>$/;"	I
+T_8cf74_row11_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row11_col1" class="data row11 col1">12h:28m<\/td>$/;"	I
+T_8cf74_row12_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row12_col0" class="data row12 col0">Dmitri Shostakovich<\/td>$/;"	I
+T_8cf74_row12_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row12_col1" class="data row12 col1">11h:14m<\/td>$/;"	I
+T_8cf74_row13_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row13_col0" class="data row13 col0">Amara Touré<\/td>$/;"	I
+T_8cf74_row13_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row13_col1" class="data row13 col1">11h:3m<\/td>$/;"	I
+T_8cf74_row14_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row14_col0" class="data row14 col0">Karol Szymanowski<\/td>$/;"	I
+T_8cf74_row14_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row14_col1" class="data row14 col1">10h:41m<\/td>$/;"	I
+T_8cf74_row15_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row15_col0" class="data row15 col0">Abdel Halim Hafez<\/td>$/;"	I
+T_8cf74_row15_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row15_col1" class="data row15 col1">10h:10m<\/td>$/;"	I
+T_8cf74_row16_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row16_col0" class="data row16 col0">Charlie Megira<\/td>$/;"	I
+T_8cf74_row16_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row16_col1" class="data row16 col1">9h:58m<\/td>$/;"	I
+T_8cf74_row17_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row17_col0" class="data row17 col0">Delroy Edwards<\/td>$/;"	I
+T_8cf74_row17_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row17_col1" class="data row17 col1">9h:58m<\/td>$/;"	I
+T_8cf74_row18_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row18_col0" class="data row18 col0">Slauson Malone<\/td>$/;"	I
+T_8cf74_row18_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row18_col1" class="data row18 col1">9h:32m<\/td>$/;"	I
+T_8cf74_row19_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row19_col0" class="data row19 col0">Scott Walker<\/td>$/;"	I
+T_8cf74_row19_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row19_col1" class="data row19 col1">9h:17m<\/td>$/;"	I
+T_8cf74_row1_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row1_col0" class="data row1 col0">John Cale<\/td>$/;"	I
+T_8cf74_row1_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row1_col1" class="data row1 col1">21h:24m<\/td>$/;"	I
+T_8cf74_row20_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row20_col0" class="data row20 col0">Anadol<\/td>$/;"	I
+T_8cf74_row20_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row20_col1" class="data row20 col1">9h:13m<\/td>$/;"	I
+T_8cf74_row21_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row21_col0" class="data row21 col0">Müzeyyen Senar<\/td>$/;"	I
+T_8cf74_row21_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row21_col1" class="data row21 col1">9h:13m<\/td>$/;"	I
+T_8cf74_row22_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row22_col0" class="data row22 col0">Meridian Brothers<\/td>$/;"	I
+T_8cf74_row22_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row22_col1" class="data row22 col1">9h:6m<\/td>$/;"	I
+T_8cf74_row23_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row23_col0" class="data row23 col0">Brian Eno<\/td>$/;"	I
+T_8cf74_row23_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row23_col1" class="data row23 col1">8h:42m<\/td>$/;"	I
+T_8cf74_row24_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row24_col0" class="data row24 col0">Ludwig van Beethoven<\/td>$/;"	I
+T_8cf74_row24_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row24_col1" class="data row24 col1">8h:31m<\/td>$/;"	I
+T_8cf74_row25_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row25_col0" class="data row25 col0">Shin Joong Hyun<\/td>$/;"	I
+T_8cf74_row25_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row25_col1" class="data row25 col1">8h:28m<\/td>$/;"	I
+T_8cf74_row26_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row26_col0" class="data row26 col0">Jean Sibelius<\/td>$/;"	I
+T_8cf74_row26_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row26_col1" class="data row26 col1">8h:23m<\/td>$/;"	I
+T_8cf74_row27_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row27_col0" class="data row27 col0">Giacinto Scelsi<\/td>$/;"	I
+T_8cf74_row27_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row27_col1" class="data row27 col1">8h:19m<\/td>$/;"	I
+T_8cf74_row28_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row28_col0" class="data row28 col0">Dona Dumitru Siminica<\/td>$/;"	I
+T_8cf74_row28_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row28_col1" class="data row28 col1">8h:18m<\/td>$/;"	I
+T_8cf74_row29_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row29_col0" class="data row29 col0">Leopold Godowsky<\/td>$/;"	I
+T_8cf74_row29_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row29_col1" class="data row29 col1">8h:16m<\/td>$/;"	I
+T_8cf74_row2_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row2_col0" class="data row2 col0">Franz Schubert<\/td>$/;"	I
+T_8cf74_row2_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row2_col1" class="data row2 col1">21h:6m<\/td>$/;"	I
+T_8cf74_row30_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row30_col0" class="data row30 col0">Cem Karaca<\/td>$/;"	I
+T_8cf74_row30_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row30_col1" class="data row30 col1">8h:13m<\/td>$/;"	I
+T_8cf74_row31_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row31_col0" class="data row31 col0">Tom Waits<\/td>$/;"	I
+T_8cf74_row31_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row31_col1" class="data row31 col1">8h:12m<\/td>$/;"	I
+T_8cf74_row32_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row32_col0" class="data row32 col0">Attarazat Addahabia<\/td>$/;"	I
+T_8cf74_row32_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row32_col1" class="data row32 col1">8h:4m<\/td>$/;"	I
+T_8cf74_row33_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row33_col0" class="data row33 col0">Pyotr Ilyich Tchaikovsky<\/td>$/;"	I
+T_8cf74_row33_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row33_col1" class="data row33 col1">8h:2m<\/td>$/;"	I
+T_8cf74_row34_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row34_col0" class="data row34 col0">Hailu Mergia<\/td>$/;"	I
+T_8cf74_row34_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row34_col1" class="data row34 col1">7h:49m<\/td>$/;"	I
+T_8cf74_row35_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row35_col0" class="data row35 col0">Beak&gt;<\/td>$/;"	I
+T_8cf74_row35_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row35_col1" class="data row35 col1">7h:39m<\/td>$/;"	I
+T_8cf74_row36_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row36_col0" class="data row36 col0">Joseph-Nicolas-Pancrace Royer<\/td>$/;"	I
+T_8cf74_row36_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row36_col1" class="data row36 col1">7h:29m<\/td>$/;"	I
+T_8cf74_row37_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row37_col0" class="data row37 col0">Maurice Ravel<\/td>$/;"	I
+T_8cf74_row37_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row37_col1" class="data row37 col1">7h:3m<\/td>$/;"	I
+T_8cf74_row38_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row38_col0" class="data row38 col0">Eartheater<\/td>$/;"	I
+T_8cf74_row38_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row38_col1" class="data row38 col1">6h:55m<\/td>$/;"	I
+T_8cf74_row39_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row39_col0" class="data row39 col0">Niccolò Paganini<\/td>$/;"	I
+T_8cf74_row39_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row39_col1" class="data row39 col1">6h:53m<\/td>$/;"	I
+T_8cf74_row3_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row3_col0" class="data row3 col0">Domenico Scarlatti<\/td>$/;"	I
+T_8cf74_row3_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row3_col1" class="data row3 col1">18h:39m<\/td>$/;"	I
+T_8cf74_row40_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row40_col0" class="data row40 col0">Tsegue-Maryam Guebrou<\/td>$/;"	I
+T_8cf74_row40_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row40_col1" class="data row40 col1">6h:53m<\/td>$/;"	I
+T_8cf74_row41_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row41_col0" class="data row41 col0">Hagihara Yoshiaki<\/td>$/;"	I
+T_8cf74_row41_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row41_col1" class="data row41 col1">6h:48m<\/td>$/;"	I
+T_8cf74_row42_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row42_col0" class="data row42 col0">Lingua Ignota<\/td>$/;"	I
+T_8cf74_row42_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row42_col1" class="data row42 col1">6h:46m<\/td>$/;"	I
+T_8cf74_row43_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row43_col0" class="data row43 col0">The Body<\/td>$/;"	I
+T_8cf74_row43_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row43_col1" class="data row43 col1">6h:35m<\/td>$/;"	I
+T_8cf74_row44_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row44_col0" class="data row44 col0">Ziad Rahbani<\/td>$/;"	I
+T_8cf74_row44_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row44_col1" class="data row44 col1">6h:27m<\/td>$/;"	I
+T_8cf74_row45_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row45_col0" class="data row45 col0">Nikolai Medtner<\/td>$/;"	I
+T_8cf74_row45_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row45_col1" class="data row45 col1">6h:24m<\/td>$/;"	I
+T_8cf74_row46_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row46_col0" class="data row46 col0">Getatchew Mekurya<\/td>$/;"	I
+T_8cf74_row46_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row46_col1" class="data row46 col1">6h:22m<\/td>$/;"	I
+T_8cf74_row47_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row47_col0" class="data row47 col0">Wolfgang Amadeus Mozart<\/td>$/;"	I
+T_8cf74_row47_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row47_col1" class="data row47 col1">6h:21m<\/td>$/;"	I
+T_8cf74_row48_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row48_col0" class="data row48 col0">Michael Robinson<\/td>$/;"	I
+T_8cf74_row48_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row48_col1" class="data row48 col1">6h:5m<\/td>$/;"	I
+T_8cf74_row49_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row49_col0" class="data row49 col0">Gabriel Fauré<\/td>$/;"	I
+T_8cf74_row49_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row49_col1" class="data row49 col1">5h:59m<\/td>$/;"	I
+T_8cf74_row4_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row4_col0" class="data row4 col0">Sergei Prokofiev<\/td>$/;"	I
+T_8cf74_row4_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row4_col1" class="data row4 col1">17h:13m<\/td>$/;"	I
+T_8cf74_row50_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row50_col0" class="data row50 col0">Kikagaku Moyo<\/td>$/;"	I
+T_8cf74_row50_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row50_col1" class="data row50 col1">5h:54m<\/td>$/;"	I
+T_8cf74_row51_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row51_col0" class="data row51 col0">Fritz Kreisler<\/td>$/;"	I
+T_8cf74_row51_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row51_col1" class="data row51 col1">5h:47m<\/td>$/;"	I
+T_8cf74_row52_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row52_col0" class="data row52 col0">Akofa Akoussah<\/td>$/;"	I
+T_8cf74_row52_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row52_col1" class="data row52 col1">5h:17m<\/td>$/;"	I
+T_8cf74_row53_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row53_col0" class="data row53 col0">Olivier Messiaen<\/td>$/;"	I
+T_8cf74_row53_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row53_col1" class="data row53 col1">4h:51m<\/td>$/;"	I
+T_8cf74_row54_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row54_col0" class="data row54 col0">Maria Tănase<\/td>$/;"	I
+T_8cf74_row54_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row54_col1" class="data row54 col1">4h:45m<\/td>$/;"	I
+T_8cf74_row55_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row55_col0" class="data row55 col0">Inade<\/td>$/;"	I
+T_8cf74_row55_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row55_col1" class="data row55 col1">4h:36m<\/td>$/;"	I
+T_8cf74_row56_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row56_col0" class="data row56 col0">The Black Angels<\/td>$/;"	I
+T_8cf74_row56_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row56_col1" class="data row56 col1">4h:35m<\/td>$/;"	I
+T_8cf74_row57_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row57_col0" class="data row57 col0">Cucina Povera<\/td>$/;"	I
+T_8cf74_row57_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row57_col1" class="data row57 col1">4h:33m<\/td>$/;"	I
+T_8cf74_row58_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row58_col0" class="data row58 col0">Julee Cruise<\/td>$/;"	I
+T_8cf74_row58_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row58_col1" class="data row58 col1">4h:32m<\/td>$/;"	I
+T_8cf74_row59_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row59_col0" class="data row59 col0">Sofia Gubaidulina<\/td>$/;"	I
+T_8cf74_row59_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row59_col1" class="data row59 col1">4h:30m<\/td>$/;"	I
+T_8cf74_row5_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row5_col0" class="data row5 col0">Orchestre Poly-Rythmo de Cotonou<\/td>$/;"	I
+T_8cf74_row5_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row5_col1" class="data row5 col1">16h:26m<\/td>$/;"	I
+T_8cf74_row60_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row60_col0" class="data row60 col0">Kandia Kouyate<\/td>$/;"	I
+T_8cf74_row60_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row60_col1" class="data row60 col1">4h:25m<\/td>$/;"	I
+T_8cf74_row61_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row61_col0" class="data row61 col0">Hala Strana<\/td>$/;"	I
+T_8cf74_row61_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row61_col1" class="data row61 col1">4h:25m<\/td>$/;"	I
+T_8cf74_row62_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row62_col0" class="data row62 col0">Henry Purcell<\/td>$/;"	I
+T_8cf74_row62_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row62_col1" class="data row62 col1">4h:17m<\/td>$/;"	I
+T_8cf74_row63_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row63_col0" class="data row63 col0">Harry Partch<\/td>$/;"	I
+T_8cf74_row63_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row63_col1" class="data row63 col1">4h:17m<\/td>$/;"	I
+T_8cf74_row64_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row64_col0" class="data row64 col0">Claudio Monteverdi<\/td>$/;"	I
+T_8cf74_row64_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row64_col1" class="data row64 col1">4h:17m<\/td>$/;"	I
+T_8cf74_row65_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row65_col0" class="data row65 col0">Terry Riley<\/td>$/;"	I
+T_8cf74_row65_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row65_col1" class="data row65 col1">4h:16m<\/td>$/;"	I
+T_8cf74_row66_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row66_col0" class="data row66 col0">Philip Glass<\/td>$/;"	I
+T_8cf74_row66_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row66_col1" class="data row66 col1">4h:16m<\/td>$/;"	I
+T_8cf74_row67_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row67_col0" class="data row67 col0">Karlheinz Stockhausen<\/td>$/;"	I
+T_8cf74_row67_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row67_col1" class="data row67 col1">4h:14m<\/td>$/;"	I
+T_8cf74_row68_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row68_col0" class="data row68 col0">Sergei Rachmaninoff<\/td>$/;"	I
+T_8cf74_row68_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row68_col1" class="data row68 col1">4h:13m<\/td>$/;"	I
+T_8cf74_row69_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row69_col0" class="data row69 col0">Dariush<\/td>$/;"	I
+T_8cf74_row69_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row69_col1" class="data row69 col1">4h:13m<\/td>$/;"	I
+T_8cf74_row6_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row6_col0" class="data row6 col0">Antonio Vivaldi<\/td>$/;"	I
+T_8cf74_row6_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row6_col1" class="data row6 col1">16h:19m<\/td>$/;"	I
+T_8cf74_row70_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row70_col0" class="data row70 col0">George Enescu<\/td>$/;"	I
+T_8cf74_row70_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row70_col1" class="data row70 col1">4h:11m<\/td>$/;"	I
+T_8cf74_row71_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row71_col0" class="data row71 col0">Ali Farka Touré<\/td>$/;"	I
+T_8cf74_row71_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row71_col1" class="data row71 col1">4h:9m<\/td>$/;"	I
+T_8cf74_row72_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row72_col0" class="data row72 col0">Miho Hazama<\/td>$/;"	I
+T_8cf74_row72_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row72_col1" class="data row72 col1">4h:6m<\/td>$/;"	I
+T_8cf74_row73_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row73_col0" class="data row73 col0">Opinion<\/td>$/;"	I
+T_8cf74_row73_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row73_col1" class="data row73 col1">4h:0m<\/td>$/;"	I
+T_8cf74_row74_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row74_col0" class="data row74 col0">Enrique Granados<\/td>$/;"	I
+T_8cf74_row74_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row74_col1" class="data row74 col1">3h:55m<\/td>$/;"	I
+T_8cf74_row75_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row75_col0" class="data row75 col0">Tuxedomoon<\/td>$/;"	I
+T_8cf74_row75_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row75_col1" class="data row75 col1">3h:54m<\/td>$/;"	I
+T_8cf74_row76_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row76_col0" class="data row76 col0">Müslüm Gürses<\/td>$/;"	I
+T_8cf74_row76_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row76_col1" class="data row76 col1">3h:48m<\/td>$/;"	I
+T_8cf74_row77_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row77_col0" class="data row77 col0">Alfred Schnittke<\/td>$/;"	I
+T_8cf74_row77_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row77_col1" class="data row77 col1">3h:46m<\/td>$/;"	I
+T_8cf74_row78_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row78_col0" class="data row78 col0">Fennesz<\/td>$/;"	I
+T_8cf74_row78_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row78_col1" class="data row78 col1">3h:39m<\/td>$/;"	I
+T_8cf74_row79_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row79_col0" class="data row79 col0">Vítězslav Novák<\/td>$/;"	I
+T_8cf74_row79_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row79_col1" class="data row79 col1">3h:37m<\/td>$/;"	I
+T_8cf74_row7_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row7_col0" class="data row7 col0">Antonín Dvořák<\/td>$/;"	I
+T_8cf74_row7_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row7_col1" class="data row7 col1">15h:43m<\/td>$/;"	I
+T_8cf74_row80_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row80_col0" class="data row80 col0">Yves Tumor<\/td>$/;"	I
+T_8cf74_row80_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row80_col1" class="data row80 col1">3h:32m<\/td>$/;"	I
+T_8cf74_row81_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row81_col0" class="data row81 col0">Jean-Philippe Rameau<\/td>$/;"	I
+T_8cf74_row81_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row81_col1" class="data row81 col1">3h:32m<\/td>$/;"	I
+T_8cf74_row82_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row82_col0" class="data row82 col0">Ildebrando Pizzetti<\/td>$/;"	I
+T_8cf74_row82_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row82_col1" class="data row82 col1">3h:29m<\/td>$/;"	I
+T_8cf74_row83_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row83_col0" class="data row83 col0">Phillip Nangle<\/td>$/;"	I
+T_8cf74_row83_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row83_col1" class="data row83 col1">3h:28m<\/td>$/;"	I
+T_8cf74_row84_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row84_col0" class="data row84 col0">Diamanda Galás<\/td>$/;"	I
+T_8cf74_row84_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row84_col1" class="data row84 col1">3h:21m<\/td>$/;"	I
+T_8cf74_row85_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row85_col0" class="data row85 col0">Backxwash<\/td>$/;"	I
+T_8cf74_row85_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row85_col1" class="data row85 col1">3h:21m<\/td>$/;"	I
+T_8cf74_row86_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row86_col0" class="data row86 col0">Thee Oh Sees<\/td>$/;"	I
+T_8cf74_row86_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row86_col1" class="data row86 col1">3h:18m<\/td>$/;"	I
+T_8cf74_row87_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row87_col0" class="data row87 col0">Hans Werner Henze<\/td>$/;"	I
+T_8cf74_row87_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row87_col1" class="data row87 col1">3h:13m<\/td>$/;"	I
+T_8cf74_row88_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row88_col0" class="data row88 col0">Astor Piazzolla<\/td>$/;"	I
+T_8cf74_row88_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row88_col1" class="data row88 col1">3h:5m<\/td>$/;"	I
+T_8cf74_row89_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row89_col0" class="data row89 col0">Psychic TV<\/td>$/;"	I
+T_8cf74_row89_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row89_col1" class="data row89 col1">3h:5m<\/td>$/;"	I
+T_8cf74_row8_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row8_col0" class="data row8 col0">Johann Sebastian Bach<\/td>$/;"	I
+T_8cf74_row8_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row8_col1" class="data row8 col1">14h:43m<\/td>$/;"	I
+T_8cf74_row90_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row90_col0" class="data row90 col0">Jon Hopkins<\/td>$/;"	I
+T_8cf74_row90_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row90_col1" class="data row90 col1">3h:0m<\/td>$/;"	I
+T_8cf74_row91_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row91_col0" class="data row91 col0">Harold Budd<\/td>$/;"	I
+T_8cf74_row91_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row91_col1" class="data row91 col1">3h:0m<\/td>$/;"	I
+T_8cf74_row92_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row92_col0" class="data row92 col0">Dean Blunt<\/td>$/;"	I
+T_8cf74_row92_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row92_col1" class="data row92 col1">2h:58m<\/td>$/;"	I
+T_8cf74_row93_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row93_col0" class="data row93 col0">Giovanni Battista Pergolesi<\/td>$/;"	I
+T_8cf74_row93_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row93_col1" class="data row93 col1">2h:57m<\/td>$/;"	I
+T_8cf74_row94_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row94_col0" class="data row94 col0">Mark Turner<\/td>$/;"	I
+T_8cf74_row94_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row94_col1" class="data row94 col1">2h:57m<\/td>$/;"	I
+T_8cf74_row95_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row95_col0" class="data row95 col0">François Couperin<\/td>$/;"	I
+T_8cf74_row95_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row95_col1" class="data row95 col1">2h:51m<\/td>$/;"	I
+T_8cf74_row96_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row96_col0" class="data row96 col0">Armand Hammer<\/td>$/;"	I
+T_8cf74_row96_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row96_col1" class="data row96 col1">2h:48m<\/td>$/;"	I
+T_8cf74_row97_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row97_col0" class="data row97 col0">Jang Hyun<\/td>$/;"	I
+T_8cf74_row97_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row97_col1" class="data row97 col1">2h:46m<\/td>$/;"	I
+T_8cf74_row98_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row98_col0" class="data row98 col0">Pablo de Sarasate<\/td>$/;"	I
+T_8cf74_row98_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row98_col1" class="data row98 col1">2h:45m<\/td>$/;"	I
+T_8cf74_row99_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row99_col0" class="data row99 col0">Kate Bush<\/td>$/;"	I
+T_8cf74_row99_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row99_col1" class="data row99 col1">2h:42m<\/td>$/;"	I
+T_8cf74_row9_col0	Spotify_2021-2022.html	/^      <td id="T_8cf74_row9_col0" class="data row9 col0">Sun City Girls<\/td>$/;"	I
+T_8cf74_row9_col1	Spotify_2021-2022.html	/^      <td id="T_8cf74_row9_col1" class="data row9 col1">12h:57m<\/td>$/;"	I
+T_9307a	Spotify_2021-2022.html	/^<table id="T_9307a">$/;"	I
+T_9307a_level0_col0	Spotify_2021-2022.html	/^      <th id="T_9307a_level0_col0" class="col_heading level0 col0">Track<\/th>$/;"	I
+T_9307a_level0_col1	Spotify_2021-2022.html	/^      <th id="T_9307a_level0_col1" class="col_heading level0 col1">Artist<\/th>$/;"	I
+T_9307a_level0_col2	Spotify_2021-2022.html	/^      <th id="T_9307a_level0_col2" class="col_heading level0 col2">Time<\/th>$/;"	I
+T_9307a_row0_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row0_col0" class="data row0 col0">"J" Blues 72<\/td>$/;"	I
+T_9307a_row0_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row0_col1" class="data row0 col1">Shin Joong Hyun<\/td>$/;"	I
+T_9307a_row0_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row0_col2" class="data row0 col2">3h:36m<\/td>$/;"	I
+T_9307a_row10_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row10_col0" class="data row10 col0">Concerto in one movement for violin an/;"	I
+T_9307a_row10_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row10_col1" class="data row10 col1">Fritz Kreisler<\/td>$/;"	I
+T_9307a_row10_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row10_col2" class="data row10 col2">2h:6m<\/td>$/;"	I
+T_9307a_row11_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row11_col0" class="data row11 col0">Ohoi<\/td>$/;"	I
+T_9307a_row11_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row11_col1" class="data row11 col1">Giacinto Scelsi<\/td>$/;"	I
+T_9307a_row11_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row11_col2" class="data row11 col2">2h:1m<\/td>$/;"	I
+T_9307a_row12_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row12_col0" class="data row12 col0">Chromatic Fantasy and Fugue in D Minor/;"	I
+T_9307a_row12_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row12_col1" class="data row12 col1">Johann Sebastian Bach<\/td>$/;"	I
+T_9307a_row12_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row12_col2" class="data row12 col2">1h:59m<\/td>$/;"	I
+T_9307a_row13_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row13_col0" class="data row13 col0">Sonata in E Minor ‘Night Wind’, Op/;"	I
+T_9307a_row13_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row13_col1" class="data row13 col1">Nikolai Medtner<\/td>$/;"	I
+T_9307a_row13_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row13_col2" class="data row13 col2">1h:59m<\/td>$/;"	I
+T_9307a_row14_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row14_col0" class="data row14 col0">Beautiful Rivers and Mountains<\/td>$/;"	I
+T_9307a_row14_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row14_col1" class="data row14 col1">Shin Joong Hyun &amp; The Men<\/td>$/;"	I
+T_9307a_row14_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row14_col2" class="data row14 col2">1h:58m<\/td>$/;"	I
+T_9307a_row15_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row15_col0" class="data row15 col0">The Man Who Must Leave<\/td>$/;"	I
+T_9307a_row15_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row15_col1" class="data row15 col1">Kim Sun<\/td>$/;"	I
+T_9307a_row15_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row15_col2" class="data row15 col2">1h:56m<\/td>$/;"	I
+T_9307a_row16_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row16_col0" class="data row16 col0">Harmonies poétiques et religieuses, S/;"	I
+T_9307a_row16_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row16_col1" class="data row16 col1">Franz Liszt<\/td>$/;"	I
+T_9307a_row16_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row16_col2" class="data row16 col2">1h:53m<\/td>$/;"	I
+T_9307a_row17_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row17_col0" class="data row17 col0">The Four Seasons, Violin Concerto No. /;"	I
+T_9307a_row17_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row17_col1" class="data row17 col1">Antonio Vivaldi<\/td>$/;"	I
+T_9307a_row17_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row17_col2" class="data row17 col2">1h:53m<\/td>$/;"	I
+T_9307a_row18_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row18_col0" class="data row18 col0">Szymanowski: Notturno e Tarantella, Op/;"	I
+T_9307a_row18_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row18_col1" class="data row18 col1">Karol Szymanowski<\/td>$/;"	I
+T_9307a_row18_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row18_col2" class="data row18 col2">1h:52m<\/td>$/;"	I
+T_9307a_row19_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row19_col0" class="data row19 col0">Mede Ma Gnin Messe<\/td>$/;"	I
+T_9307a_row19_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row19_col1" class="data row19 col1">Orchestre Poly-Rythmo de Cotonou<\/td>$/;"	I
+T_9307a_row19_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row19_col2" class="data row19 col2">1h:52m<\/td>$/;"	I
+T_9307a_row1_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row1_col0" class="data row1 col0">Harmonies poétiques et religieuses, S. /;"	I
+T_9307a_row1_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row1_col1" class="data row1 col1">Franz Liszt<\/td>$/;"	I
+T_9307a_row1_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row1_col2" class="data row1 col2">3h:20m<\/td>$/;"	I
+T_9307a_row20_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row20_col0" class="data row20 col0">Salamouti<\/td>$/;"	I
+T_9307a_row20_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row20_col1" class="data row20 col1">Amara Touré<\/td>$/;"	I
+T_9307a_row20_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row20_col2" class="data row20 col2">1h:50m<\/td>$/;"	I
+T_9307a_row21_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row21_col0" class="data row21 col0">Ay Çürüdü<\/td>$/;"	I
+T_9307a_row21_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row21_col1" class="data row21 col1">Anadol<\/td>$/;"	I
+T_9307a_row21_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row21_col2" class="data row21 col2">1h:44m<\/td>$/;"	I
+T_9307a_row22_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row22_col0" class="data row22 col0">The Sun<\/td>$/;"	I
+T_9307a_row22_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row22_col1" class="data row22 col1">Kim Jung Mi<\/td>$/;"	I
+T_9307a_row22_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row22_col2" class="data row22 col2">1h:42m<\/td>$/;"	I
+T_9307a_row23_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row23_col0" class="data row23 col0">Görünmez Hava<\/td>$/;"	I
+T_9307a_row23_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row23_col1" class="data row23 col1">Anadol<\/td>$/;"	I
+T_9307a_row23_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row23_col2" class="data row23 col2">1h:42m<\/td>$/;"	I
+T_9307a_row24_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row24_col0" class="data row24 col0">Albaki<\/td>$/;"	I
+T_9307a_row24_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row24_col1" class="data row24 col1">Attarazat Addahabia<\/td>$/;"	I
+T_9307a_row24_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row24_col2" class="data row24 col2">1h:40m<\/td>$/;"	I
+T_9307a_row25_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row25_col0" class="data row25 col0">Afalago<\/td>$/;"	I
+T_9307a_row25_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row25_col1" class="data row25 col1">Amara Touré<\/td>$/;"	I
+T_9307a_row25_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row25_col2" class="data row25 col2">1h:38m<\/td>$/;"	I
+T_9307a_row26_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row26_col0" class="data row26 col0">Ravel: Tzigane, M. 76<\/td>$/;"	I
+T_9307a_row26_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row26_col1" class="data row26 col1">Maurice Ravel<\/td>$/;"	I
+T_9307a_row26_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row26_col2" class="data row26 col2">1h:38m<\/td>$/;"	I
+T_9307a_row27_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row27_col0" class="data row27 col0">Harmonies poétiques et religieuses, S/;"	I
+T_9307a_row27_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row27_col1" class="data row27 col1">Franz Liszt<\/td>$/;"	I
+T_9307a_row27_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row27_col2" class="data row27 col2">1h:37m<\/td>$/;"	I
+T_9307a_row28_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row28_col0" class="data row28 col0">Dying On The Vine<\/td>$/;"	I
+T_9307a_row28_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row28_col1" class="data row28 col1">John Cale<\/td>$/;"	I
+T_9307a_row28_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row28_col2" class="data row28 col2">1h:32m<\/td>$/;"	I
+T_9307a_row29_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row29_col0" class="data row29 col0">Embuwa Bey Lamitu<\/td>$/;"	I
+T_9307a_row29_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row29_col1" class="data row29 col1">Hailu Mergia<\/td>$/;"	I
+T_9307a_row29_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row29_col2" class="data row29 col2">1h:29m<\/td>$/;"	I
+T_9307a_row2_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row2_col0" class="data row2 col0">Noude Ma Gnin Tche De Me<\/td>$/;"	I
+T_9307a_row2_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row2_col1" class="data row2 col1">Orchestre Poly-Rythmo de Cotonou<\/td>$/;"	I
+T_9307a_row2_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row2_col2" class="data row2 col2">2h:48m<\/td>$/;"	I
+T_9307a_row3_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row3_col0" class="data row3 col0">Harmonies poétiques et religieuses, S. /;"	I
+T_9307a_row3_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row3_col1" class="data row3 col1">Franz Liszt<\/td>$/;"	I
+T_9307a_row3_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row3_col2" class="data row3 col2">2h:37m<\/td>$/;"	I
+T_9307a_row4_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row4_col0" class="data row4 col0">Gan Tche Kpo<\/td>$/;"	I
+T_9307a_row4_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row4_col1" class="data row4 col1">Orchestre Poly-Rythmo de Cotonou<\/td>$/;"	I
+T_9307a_row4_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row4_col2" class="data row4 col2">2h:27m<\/td>$/;"	I
+T_9307a_row5_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row5_col0" class="data row5 col0">Harmonies poétiques et religieuses, S. /;"	I
+T_9307a_row5_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row5_col1" class="data row5 col1">Franz Liszt<\/td>$/;"	I
+T_9307a_row5_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row5_col2" class="data row5 col2">2h:21m<\/td>$/;"	I
+T_9307a_row6_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row6_col0" class="data row6 col0">Kansas<\/td>$/;"	I
+T_9307a_row6_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row6_col1" class="data row6 col1">Opinion<\/td>$/;"	I
+T_9307a_row6_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row6_col2" class="data row6 col2">2h:17m<\/td>$/;"	I
+T_9307a_row7_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row7_col0" class="data row7 col0">Lo-Pacific<\/td>$/;"	I
+T_9307a_row7_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row7_col1" class="data row7 col1">Sun City Girls<\/td>$/;"	I
+T_9307a_row7_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row7_col2" class="data row7 col2">2h:13m<\/td>$/;"	I
+T_9307a_row8_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row8_col0" class="data row8 col0">Wagner - Tannhauser: Overture, S442\/R27/;"	I
+T_9307a_row8_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row8_col1" class="data row8 col1">Franz Liszt<\/td>$/;"	I
+T_9307a_row8_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row8_col2" class="data row8 col2">2h:10m<\/td>$/;"	I
+T_9307a_row9_col0	Spotify_2021-2022.html	/^      <td id="T_9307a_row9_col0" class="data row9 col0">Gun<\/td>$/;"	I
+T_9307a_row9_col1	Spotify_2021-2022.html	/^      <td id="T_9307a_row9_col1" class="data row9 col1">John Cale<\/td>$/;"	I
+T_9307a_row9_col2	Spotify_2021-2022.html	/^      <td id="T_9307a_row9_col2" class="data row9 col2">2h:10m<\/td>$/;"	I
+Themes	Reviews/Media/BerlinAlexanderplatz.html	/^<h2 class="anchored" data-anchor-id="themes">Themes<\/h2>$/;"	i
+Tokyo-Yokohama	Reviews/Megacities.html	/^<h1>Tokyo-Yokohama<\/h1>$/;"	h
+Top Artists	Spotify_2021-2022.html	/^<h2 class="anchored" data-anchor-id="top-artists">Top Artists<\/h2>$/;"	i
+Top Tracks	Spotify_2021-2022.html	/^<h2 class="anchored" data-anchor-id="top-tracks">Top Tracks<\/h2>$/;"	i
+Vienna	Reviews/Cities.html	/^<h1>Vienna<\/h1>$/;"	h
+aberdeen	Reviews/Cities.html	/^<section id="aberdeen" class="level1">$/;"	I
+beijing	Reviews/Cities.html	/^<section id="beijing" class="level1">$/;"	I
+bibliography	Reviews/Megacities.html	/^<section id="bibliography" class="level1">$/;"	I
+bike-kitchen-goldschlagstrasse-thursday-8pm	Reviews/Cities.html	/^<section id="bike-kitchen-goldschlagstrasse-thursday-8pm" class="level3">$/;"	I
+book	Reviews/Media/BerlinAlexanderplatz.html	/^<section id="book" class="level1">$/;"	I
+callout-1	Spotify_2021-2022.html	/^<div id="callout-1" class="callout-1-contents callout-collapse collapse">$/;"	I
+cb1	Spotify_2021-2022.html	/^<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code c/;"	I
+cb1-1	Spotify_2021-2022.html	/^<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code c/;"	I
+cb1-10	Spotify_2021-2022.html	/^<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb1-11	Spotify_2021-2022.html	/^<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"><\/a><span class="kw">def<\//;"	I
+cb1-12	Spotify_2021-2022.html	/^<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"><\/a>  <span class="co"># G/;"	I
+cb1-13	Spotify_2021-2022.html	/^<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"><\/a>  df <span class="op">/;"	I
+cb1-14	Spotify_2021-2022.html	/^<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb1-15	Spotify_2021-2022.html	/^<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"><\/a>  <span class="co"># S/;"	I
+cb1-16	Spotify_2021-2022.html	/^<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"><\/a>  df.sort_values(<span/;"	I
+cb1-17	Spotify_2021-2022.html	/^<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb1-18	Spotify_2021-2022.html	/^<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"><\/a>  <span class="co"># F/;"	I
+cb1-19	Spotify_2021-2022.html	/^<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"><\/a>  df[<span class="st">/;"	I
+cb1-2	Spotify_2021-2022.html	/^<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"><\/a><span class="im">import</;"	I
+cb1-20	Spotify_2021-2022.html	/^<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"><\/a>  df[<span class="st">/;"	I
+cb1-21	Spotify_2021-2022.html	/^<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb1-22	Spotify_2021-2022.html	/^<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"><\/a>  df.drop(<span class=/;"	I
+cb1-23	Spotify_2021-2022.html	/^<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"><\/a>  <span class="cf">ret/;"	I
+cb1-24	Spotify_2021-2022.html	/^<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb1-25	Spotify_2021-2022.html	/^<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"><\/a><span class="kw">def<\//;"	I
+cb1-26	Spotify_2021-2022.html	/^<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"><\/a>  <span class="co"># G/;"	I
+cb1-27	Spotify_2021-2022.html	/^<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"><\/a>  df <span class="op">/;"	I
+cb1-28	Spotify_2021-2022.html	/^<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb1-29	Spotify_2021-2022.html	/^<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"><\/a>  <span class="co"># S/;"	I
+cb1-3	Spotify_2021-2022.html	/^<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"><\/a><span class="im">import</;"	I
+cb1-30	Spotify_2021-2022.html	/^<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"><\/a>  df.sort_values(<span/;"	I
+cb1-31	Spotify_2021-2022.html	/^<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb1-32	Spotify_2021-2022.html	/^<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"><\/a>  <span class="co"># F/;"	I
+cb1-33	Spotify_2021-2022.html	/^<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"><\/a>  df[<span class="st">/;"	I
+cb1-34	Spotify_2021-2022.html	/^<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"><\/a>  df[<span class="st">/;"	I
+cb1-35	Spotify_2021-2022.html	/^<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb1-36	Spotify_2021-2022.html	/^<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"><\/a>  df.drop(<span class=/;"	I
+cb1-37	Spotify_2021-2022.html	/^<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"><\/a>  <span class="cf">ret/;"	I
+cb1-4	Spotify_2021-2022.html	/^<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"><\/a><span class="im">import</;"	I
+cb1-5	Spotify_2021-2022.html	/^<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"><\/a><span class="im">import</;"	I
+cb1-6	Spotify_2021-2022.html	/^<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"><\/a><span class="im">import</;"	I
+cb1-7	Spotify_2021-2022.html	/^<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb1-8	Spotify_2021-2022.html	/^<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"><\/a>DATA_DIR <span class="op/;"	I
+cb1-9	Spotify_2021-2022.html	/^<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"><\/a>DATE_FORMAT <span class=/;"	I
+cb2	Spotify_2021-2022.html	/^<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code c/;"	I
+cb2-1	Spotify_2021-2022.html	/^<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code c/;"	I
+cb2-10	Spotify_2021-2022.html	/^<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"><\/a>search_df <span class=/;"	I
+cb2-11	Spotify_2021-2022.html	/^<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb2-12	Spotify_2021-2022.html	/^<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"><\/a><span class="co"># Dis/;"	I
+cb2-13	Spotify_2021-2022.html	/^<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"><\/a><span class="im">from</;"	I
+cb2-14	Spotify_2021-2022.html	/^<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"><\/a>wordcloud <span class=/;"	I
+cb2-15	Spotify_2021-2022.html	/^<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"><\/a>plt.figure(figsize<spa/;"	I
+cb2-16	Spotify_2021-2022.html	/^<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"><\/a>plt.imshow(wordcloud)</;"	I
+cb2-17	Spotify_2021-2022.html	/^<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"><\/a>plt.axis(<span class="/;"	I
+cb2-18	Spotify_2021-2022.html	/^<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"><\/a>plt.show()<\/span><\/c/;"	I
+cb2-2	Spotify_2021-2022.html	/^<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb2-3	Spotify_2021-2022.html	/^<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"><\/a>search_df <span class="o/;"	I
+cb2-4	Spotify_2021-2022.html	/^<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"><\/a>search_df[<span class="s/;"	I
+cb2-5	Spotify_2021-2022.html	/^<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb2-6	Spotify_2021-2022.html	/^<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"><\/a><span class="co"># Drop /;"	I
+cb2-7	Spotify_2021-2022.html	/^<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"><\/a>search_df.drop(<span cla/;"	I
+cb2-8	Spotify_2021-2022.html	/^<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb2-9	Spotify_2021-2022.html	/^<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"><\/a><span class="co"># Selec/;"	I
+cb3	Spotify_2021-2022.html	/^<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code c/;"	I
+cb3-1	Spotify_2021-2022.html	/^<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code c/;"	I
+cb3-10	Spotify_2021-2022.html	/^<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"><\/a>listening_df.rename(co/;"	I
+cb3-11	Spotify_2021-2022.html	/^<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb3-12	Spotify_2021-2022.html	/^<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"><\/a><span class="co"># Dro/;"	I
+cb3-13	Spotify_2021-2022.html	/^<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"><\/a>listening_df <span cla/;"	I
+cb3-14	Spotify_2021-2022.html	/^<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb3-15	Spotify_2021-2022.html	/^<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"><\/a><span class="co"># Sep/;"	I
+cb3-16	Spotify_2021-2022.html	/^<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"><\/a>podcasts <span class="/;"	I
+cb3-17	Spotify_2021-2022.html	/^<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"80/;"	I
+cb3-18	Spotify_2021-2022.html	/^<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"Co/;"	I
+cb3-19	Spotify_2021-2022.html	/^<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"Th/;"	I
+cb3-2	Spotify_2021-2022.html	/^<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"><\/a>listening_json_1 <span c/;"	I
+cb3-20	Spotify_2021-2022.html	/^<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"Da/;"	I
+cb3-21	Spotify_2021-2022.html	/^<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"Th/;"	I
+cb3-22	Spotify_2021-2022.html	/^<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"Le/;"	I
+cb3-23	Spotify_2021-2022.html	/^<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"Se/;"	I
+cb3-24	Spotify_2021-2022.html	/^<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"><\/a>]<\/span>$/;"	I
+cb3-25	Spotify_2021-2022.html	/^<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"><\/a>podcast_df <span class/;"	I
+cb3-26	Spotify_2021-2022.html	/^<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"><\/a>listening_df <span cla/;"	I
+cb3-3	Spotify_2021-2022.html	/^<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"><\/a>listening_json <span cla/;"	I
+cb3-4	Spotify_2021-2022.html	/^<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb3-5	Spotify_2021-2022.html	/^<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"><\/a>listening_df <span class/;"	I
+cb3-6	Spotify_2021-2022.html	/^<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb3-7	Spotify_2021-2022.html	/^<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"><\/a>listening_df[<span class/;"	I
+cb3-8	Spotify_2021-2022.html	/^<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb3-9	Spotify_2021-2022.html	/^<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"><\/a><span class="co"># Renam/;"	I
+cb4	Spotify_2021-2022.html	/^<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code c/;"	I
+cb4-1	Spotify_2021-2022.html	/^<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code c/;"	I
+cb4-2	Spotify_2021-2022.html	/^<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"><\/a>df.head(<span class="dv"/;"	I
+cb5	Spotify_2021-2022.html	/^<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code c/;"	I
+cb5-1	Spotify_2021-2022.html	/^<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code c/;"	I
+cb5-2	Spotify_2021-2022.html	/^<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"><\/a>df.head(<span class="dv"/;"	I
+cb6	Spotify_2021-2022.html	/^<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code c/;"	I
+cb6-1	Spotify_2021-2022.html	/^<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code c/;"	I
+cb6-2	Spotify_2021-2022.html	/^<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb6-3	Spotify_2021-2022.html	/^<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"><\/a><span class="co"># Show /;"	I
+cb6-4	Spotify_2021-2022.html	/^<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"><\/a>df <span class="op">=<\//;"	I
+cb6-5	Spotify_2021-2022.html	/^<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"><\/a>df.head(<span class="dv"/;"	I
+cb7	Spotify_2021-2022.html	/^<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code c/;"	I
+cb7-1	Spotify_2021-2022.html	/^<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code c/;"	I
+cb7-10	Spotify_2021-2022.html	/^<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"Ka/;"	I
+cb7-11	Spotify_2021-2022.html	/^<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"Ma/;"	I
+cb7-12	Spotify_2021-2022.html	/^<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"He/;"	I
+cb7-13	Spotify_2021-2022.html	/^<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"Ni/;"	I
+cb7-14	Spotify_2021-2022.html	/^<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"Jo/;"	I
+cb7-15	Spotify_2021-2022.html	/^<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"Lu/;"	I
+cb7-16	Spotify_2021-2022.html	/^<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"><\/a>]<\/span>$/;"	I
+cb7-17	Spotify_2021-2022.html	/^<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb7-18	Spotify_2021-2022.html	/^<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"><\/a>drop_tracks <span clas/;"	I
+cb7-19	Spotify_2021-2022.html	/^<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"Lo/;"	I
+cb7-2	Spotify_2021-2022.html	/^<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb7-20	Spotify_2021-2022.html	/^<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"Ka/;"	I
+cb7-21	Spotify_2021-2022.html	/^<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"><\/a>]<\/span>$/;"	I
+cb7-22	Spotify_2021-2022.html	/^<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb7-23	Spotify_2021-2022.html	/^<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"><\/a>df <span class="op">=</;"	I
+cb7-24	Spotify_2021-2022.html	/^<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"><\/a>df <span class="op">=</;"	I
+cb7-25	Spotify_2021-2022.html	/^<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"><\/a><\/span>$/;"	I
+cb7-26	Spotify_2021-2022.html	/^<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"><\/a><span class="co"># Sho/;"	I
+cb7-27	Spotify_2021-2022.html	/^<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"><\/a>df <span class="op">=</;"	I
+cb7-28	Spotify_2021-2022.html	/^<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"><\/a>df.head(<span class="d/;"	I
+cb7-3	Spotify_2021-2022.html	/^<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"><\/a><span class="co"># Drop /;"	I
+cb7-4	Spotify_2021-2022.html	/^<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"><\/a>drop_artists <span class/;"	I
+cb7-5	Spotify_2021-2022.html	/^<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"Fran/;"	I
+cb7-6	Spotify_2021-2022.html	/^<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"Frit/;"	I
+cb7-7	Spotify_2021-2022.html	/^<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"Giac/;"	I
+cb7-8	Spotify_2021-2022.html	/^<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"Niko/;"	I
+cb7-9	Spotify_2021-2022.html	/^<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"><\/a>  <span class="st">"Anto/;"	I
+conclusions	Reviews/Megacities.html	/^<section id="conclusions" class="level1">$/;"	I
+conflict-0.6	Reviews/Ideas/Reasons-To-Kill.html	/^<section id="conflict-0.6" class="level1">$/;"	I
+film	Reviews/Media/BerlinAlexanderplatz.html	/^<section id="film" class="level1">$/;"	I
+first-reading	Reviews/Media/BerlinAlexanderplatz.html	/^<section id="first-reading" class="level2">$/;"	I
+fn1	Reviews/Cities.html	/^<li id="fn1"><p>two weeks in <a href="..\/Chronology#2012-07">July 2012<\/a>, then from March 20/;"	I
+fn1	Reviews/Ideas/Reasons-To-Kill.html	/^<li id="fn1"><p>read this<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎<\/a>/;"	I
+fn1	Reviews/Megacities.html	/^<li id="fn1"><p>If that seems unecessary and unfair to Tianjin, I would say that in part the onl/;"	I
+fn2	Reviews/Cities.html	/^<li id="fn2"><p>I moved my <a href="..\/Projects\/Piano">piano<\/a> in first as I was planning t/;"	I
+fn2	Reviews/Ideas/Reasons-To-Kill.html	/^<li id="fn2"><p>On a larger scale this includes most agriculture of course, but here we are talk/;"	I
+fn2	Reviews/Megacities.html	/^<li id="fn2"><p>I was still living off my parents money for the first few months, and off my <a /;"	I
+fn3	Reviews/Megacities.html	/^<li id="fn3"><p>does this mean anything?<a href="#fnref3" class="footnote-back" role="doc-backli/;"	I
+fnref1	Reviews/Cities.html	/^<p>I lived in Leipzig for around 5 years<a href="#fn1" class="footnote-ref" id="fnref1" role="do/;"	I
+fnref1	Reviews/Ideas/Reasons-To-Kill.html	/^<p>In order to get a new perspective on <a href="..\/..\/Essays\/Welfare">welfare<\/a>, and taki/;"	I
+fnref1	Reviews/Megacities.html	/^<p>For now, I am defining a megacity as ’any city with a metro population at or above Paris\/L/;"	I
+fnref2	Reviews/Cities.html	/^<p>Project house that I volunteered at (with my brother). ### Dancers Sublet, Lindenauer Markt #/;"	I
+fnref2	Reviews/Ideas/Reasons-To-Kill.html	/^<p>There are cases where the livelihood of animals is in direct conflict with the livelihood of /;"	I
+fnref2	Reviews/Megacities.html	/^<p>Spent some time here as a child. I remember taxi rides through dusty highways between skyscra/;"	I
+fnref3	Reviews/Megacities.html	/^<p>I have spent well over a year in megacities– a short time when compared to a random sample /;"	I
+footnotes	Reviews/Cities.html	/^<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end/;"	I
+footnotes	Reviews/Ideas/Reasons-To-Kill.html	/^<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end/;"	I
+footnotes	Reviews/Megacities.html	/^<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end/;"	I
+gestalt	Reviews/Cities.html	/^<section id="gestalt" class="level1">$/;"	I
+group-participation	Reviews/Venues.html	/^<section id="group-participation" class="level1">$/;"	I
+href	search.json	/^    "href": "Reviews\/Cities.html",$/;"	s	object:0
+href	search.json	/^    "href": "Reviews\/Cities.html#leipzig-apartments",$/;"	s	object:1
+href	search.json	/^    "href": "Reviews\/Cities.html#still-to-do-in-vienna",$/;"	s	object:2
+href	search.json	/^    "href": "Reviews\/Ideas\/Reasons-To-Kill.html",$/;"	s	object:4
+href	search.json	/^    "href": "Reviews\/Kites.html",$/;"	s	object:10
+href	search.json	/^    "href": "Reviews\/Literature.html",$/;"	s	object:9
+href	search.json	/^    "href": "Reviews\/Media\/BerlinAlexanderplatz.html",$/;"	s	object:5
+href	search.json	/^    "href": "Reviews\/Media\/BerlinAlexanderplatz.html#first-reading",$/;"	s	object:6
+href	search.json	/^    "href": "Reviews\/Media\/BerlinAlexanderplatz.html#themes",$/;"	s	object:7
+href	search.json	/^    "href": "Reviews\/Megacities.html",$/;"	s	object:3
+href	search.json	/^    "href": "Reviews\/Venues.html",$/;"	s	object:8
+href	search.json	/^    "href": "Runs\/2022-26-10.html",$/;"	s	object:11
+href	search.json	/^    "href": "Spotify_2021-2022.html",$/;"	s	object:12
+href	search.json	/^    "href": "Spotify_2021-2022.html#top-artists",$/;"	s	object:13
+href	search.json	/^    "href": "Spotify_2021-2022.html#top-tracks",$/;"	s	object:14
+href	search.json	/^    "href": "about.html",$/;"	s	object:15
+href	search.json	/^    "href": "index.html",$/;"	s	object:16
+imports-and-variables	Spotify_2021-2022.html	/^<section id="imports-and-variables" class="level1 hidden">$/;"	I
+industry	Reviews/Ideas/Reasons-To-Kill.html	/^<section id="industry" class="level1">$/;"	I
+jakarta-memories	Reviews/Megacities.html	/^<section id="jakarta-memories" class="level1">$/;"	I
+karaoke	Reviews/Venues.html	/^<section id="karaoke" class="level1">$/;"	I
+leipzig	Reviews/Cities.html	/^<section id="leipzig" class="level1">$/;"	I
+leipzig-apartments	Reviews/Cities.html	/^<section id="leipzig-apartments" class="level2">$/;"	I
+listening-history	Spotify_2021-2022.html	/^<section id="listening-history" class="level1 page-columns page-full">$/;"	I
+low-participation	Reviews/Venues.html	/^<section id="low-participation" class="level1">$/;"	I
+mysticism	Reviews/Literature.html	/^<section id="mysticism" class="level1">$/;"	I
+nav-menu-reviews	404.html	/^    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-tog/;"	I
+nav-menu-reviews	Reviews/Cities.html	/^    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-tog/;"	I
+nav-menu-reviews	Reviews/Ideas/Reasons-To-Kill.html	/^    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-tog/;"	I
+nav-menu-reviews	Reviews/Kites.html	/^    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-tog/;"	I
+nav-menu-reviews	Reviews/Literature.html	/^    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-tog/;"	I
+nav-menu-reviews	Reviews/Media/BerlinAlexanderplatz.html	/^    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-tog/;"	I
+nav-menu-reviews	Reviews/Megacities.html	/^    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-tog/;"	I
+nav-menu-reviews	Reviews/Venues.html	/^    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-tog/;"	I
+nav-menu-reviews	Runs/2022-26-10.html	/^    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-tog/;"	I
+nav-menu-reviews	Spotify_2021-2022.html	/^    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-tog/;"	I
+nav-menu-reviews	about.html	/^    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-tog/;"	I
+nav-menu-reviews	index.html	/^    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-tog/;"	I
+objectID	search.json	/^    "objectID": "Reviews\/Cities.html",$/;"	s	object:0
+objectID	search.json	/^    "objectID": "Reviews\/Cities.html#leipzig-apartments",$/;"	s	object:1
+objectID	search.json	/^    "objectID": "Reviews\/Cities.html#still-to-do-in-vienna",$/;"	s	object:2
+objectID	search.json	/^    "objectID": "Reviews\/Ideas\/Reasons-To-Kill.html",$/;"	s	object:4
+objectID	search.json	/^    "objectID": "Reviews\/Kites.html",$/;"	s	object:10
+objectID	search.json	/^    "objectID": "Reviews\/Literature.html",$/;"	s	object:9
+objectID	search.json	/^    "objectID": "Reviews\/Media\/BerlinAlexanderplatz.html",$/;"	s	object:5
+objectID	search.json	/^    "objectID": "Reviews\/Media\/BerlinAlexanderplatz.html#first-reading",$/;"	s	object:6
+objectID	search.json	/^    "objectID": "Reviews\/Media\/BerlinAlexanderplatz.html#themes",$/;"	s	object:7
+objectID	search.json	/^    "objectID": "Reviews\/Megacities.html",$/;"	s	object:3
+objectID	search.json	/^    "objectID": "Reviews\/Venues.html",$/;"	s	object:8
+objectID	search.json	/^    "objectID": "Runs\/2022-26-10.html",$/;"	s	object:11
+objectID	search.json	/^    "objectID": "Spotify_2021-2022.html",$/;"	s	object:12
+objectID	search.json	/^    "objectID": "Spotify_2021-2022.html#top-artists",$/;"	s	object:13
+objectID	search.json	/^    "objectID": "Spotify_2021-2022.html#top-tracks",$/;"	s	object:14
+objectID	search.json	/^    "objectID": "about.html",$/;"	s	object:15
+objectID	search.json	/^    "objectID": "index.html",$/;"	s	object:16
+open-participation	Reviews/Venues.html	/^<section id="open-participation" class="level1">$/;"	I
+philipino-bands-singing-in-english	Reviews/Venues.html	/^<section id="philipino-bands-singing-in-english" class="level1">$/;"	I
+pizzalab-george-schwartz-str.	Reviews/Cities.html	/^<section id="pizzalab-george-schwartz-str." class="level3">$/;"	I
+podcasts	Spotify_2021-2022.html	/^<section id="podcasts" class="level3">$/;"	I
+preamble	Spotify_2021-2022.html	/^<section id="preamble" class="level1">$/;"	I
+quarto-appendix	Reviews/Cities.html	/^<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end/;"	I
+quarto-appendix	Reviews/Ideas/Reasons-To-Kill.html	/^<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end/;"	I
+quarto-appendix	Reviews/Megacities.html	/^<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end/;"	I
+quarto-bootstrap	404.html	/^<link href="\/site_libs\/bootstrap\/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" da/;"	I
+quarto-bootstrap	Reviews/Cities.html	/^<link href="..\/site_libs\/bootstrap\/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" /;"	I
+quarto-bootstrap	Reviews/Ideas/Reasons-To-Kill.html	/^<link href="..\/..\/site_libs\/bootstrap\/bootstrap.min.css" rel="stylesheet" id="quarto-bootstr/;"	I
+quarto-bootstrap	Reviews/Kites.html	/^<link href="..\/site_libs\/bootstrap\/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" /;"	I
+quarto-bootstrap	Reviews/Literature.html	/^<link href="..\/site_libs\/bootstrap\/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" /;"	I
+quarto-bootstrap	Reviews/Media/BerlinAlexanderplatz.html	/^<link href="..\/..\/site_libs\/bootstrap\/bootstrap.min.css" rel="stylesheet" id="quarto-bootstr/;"	I
+quarto-bootstrap	Reviews/Megacities.html	/^<link href="..\/site_libs\/bootstrap\/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" /;"	I
+quarto-bootstrap	Reviews/Venues.html	/^<link href="..\/site_libs\/bootstrap\/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" /;"	I
+quarto-bootstrap	Runs/2022-26-10.html	/^<link href="..\/site_libs\/bootstrap\/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" /;"	I
+quarto-bootstrap	Spotify_2021-2022.html	/^<link href="site_libs\/bootstrap\/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data/;"	I
+quarto-bootstrap	about.html	/^<link href="site_libs\/bootstrap\/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data/;"	I
+quarto-bootstrap	index.html	/^<link href="site_libs\/bootstrap\/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data/;"	I
+quarto-code-tools-menu	Spotify_2021-2022.html	/^      <div class="quarto-title-block"><div><h1 class="title">Spotify Data<\/h1><button type="but/;"	I
+quarto-code-tools-source	Reviews/Ideas/Reasons-To-Kill.html	/^<div class="quarto-title-block"><div><h1 class="title">Reasons to Kill<\/h1><button type="button/;"	I
+quarto-code-tools-source	Runs/2022-26-10.html	/^      <div class="quarto-title-block"><div><h1 class="title">Run to Prague 7<\/h1><button type="/;"	I
+quarto-content	404.html	/^<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-art/;"	I
+quarto-content	Reviews/Cities.html	/^<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-art/;"	I
+quarto-content	Reviews/Ideas/Reasons-To-Kill.html	/^<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-art/;"	I
+quarto-content	Reviews/Kites.html	/^<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-art/;"	I
+quarto-content	Reviews/Literature.html	/^<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-art/;"	I
+quarto-content	Reviews/Media/BerlinAlexanderplatz.html	/^<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-art/;"	I
+quarto-content	Reviews/Megacities.html	/^<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-art/;"	I
+quarto-content	Reviews/Venues.html	/^<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-art/;"	I
+quarto-content	Runs/2022-26-10.html	/^  <\/header><div id="quarto-content" class="quarto-container page-columns page-rows-contents pag/;"	I
+quarto-content	Spotify_2021-2022.html	/^  <\/header><div id="quarto-content" class="quarto-container page-columns page-rows-contents pag/;"	I
+quarto-content	about.html	/^<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-art/;"	I
+quarto-content	index.html	/^<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-art/;"	I
+quarto-document-content	404.html	/^<main class="content" id="quarto-document-content">$/;"	I
+quarto-document-content	Reviews/Cities.html	/^<main class="content" id="quarto-document-content">$/;"	I
+quarto-document-content	Reviews/Ideas/Reasons-To-Kill.html	/^<main class="content" id="quarto-document-content">$/;"	I
+quarto-document-content	Reviews/Kites.html	/^<main class="content" id="quarto-document-content">$/;"	I
+quarto-document-content	Reviews/Literature.html	/^<main class="content" id="quarto-document-content">$/;"	I
+quarto-document-content	Reviews/Media/BerlinAlexanderplatz.html	/^<main class="content" id="quarto-document-content">$/;"	I
+quarto-document-content	Reviews/Megacities.html	/^<main class="content" id="quarto-document-content">$/;"	I
+quarto-document-content	Reviews/Venues.html	/^<main class="content" id="quarto-document-content">$/;"	I
+quarto-document-content	Runs/2022-26-10.html	/^<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-conte/;"	I
+quarto-document-content	Spotify_2021-2022.html	/^<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-conte/;"	I
+quarto-document-content	about.html	/^<main class="content" id="quarto-document-content">$/;"	I
+quarto-document-content	index.html	/^<main class="content" id="quarto-document-content">$/;"	I
+quarto-header	404.html	/^  <header id="quarto-header" class="headroom fixed-top">$/;"	I
+quarto-header	Reviews/Cities.html	/^  <header id="quarto-header" class="headroom fixed-top">$/;"	I
+quarto-header	Reviews/Ideas/Reasons-To-Kill.html	/^  <header id="quarto-header" class="headroom fixed-top">$/;"	I
+quarto-header	Reviews/Kites.html	/^  <header id="quarto-header" class="headroom fixed-top">$/;"	I
+quarto-header	Reviews/Literature.html	/^  <header id="quarto-header" class="headroom fixed-top">$/;"	I
+quarto-header	Reviews/Media/BerlinAlexanderplatz.html	/^  <header id="quarto-header" class="headroom fixed-top">$/;"	I
+quarto-header	Reviews/Megacities.html	/^  <header id="quarto-header" class="headroom fixed-top">$/;"	I
+quarto-header	Reviews/Venues.html	/^  <header id="quarto-header" class="headroom fixed-top">$/;"	I
+quarto-header	Runs/2022-26-10.html	/^  <header id="quarto-header" class="headroom fixed-top">$/;"	I
+quarto-header	Spotify_2021-2022.html	/^  <header id="quarto-header" class="headroom fixed-top">$/;"	I
+quarto-header	about.html	/^  <header id="quarto-header" class="headroom fixed-top">$/;"	I
+quarto-header	index.html	/^  <header id="quarto-header" class="headroom fixed-top">$/;"	I
+quarto-hide-all-code	Spotify_2021-2022.html	/^      <div class="quarto-title-block"><div><h1 class="title">Spotify Data<\/h1><button type="but/;"	I
+quarto-html-after-body	404.html	/^<script id="quarto-html-after-body" type="application\/javascript">$/;"	I
+quarto-html-after-body	Reviews/Cities.html	/^<script id="quarto-html-after-body" type="application\/javascript">$/;"	I
+quarto-html-after-body	Reviews/Ideas/Reasons-To-Kill.html	/^<script id="quarto-html-after-body" type="application\/javascript">$/;"	I
+quarto-html-after-body	Reviews/Kites.html	/^<script id="quarto-html-after-body" type="application\/javascript">$/;"	I
+quarto-html-after-body	Reviews/Literature.html	/^<script id="quarto-html-after-body" type="application\/javascript">$/;"	I
+quarto-html-after-body	Reviews/Media/BerlinAlexanderplatz.html	/^<script id="quarto-html-after-body" type="application\/javascript">$/;"	I
+quarto-html-after-body	Reviews/Megacities.html	/^<script id="quarto-html-after-body" type="application\/javascript">$/;"	I
+quarto-html-after-body	Reviews/Venues.html	/^<script id="quarto-html-after-body" type="application\/javascript">$/;"	I
+quarto-html-after-body	Runs/2022-26-10.html	/^<script id="quarto-html-after-body" type="application\/javascript">$/;"	I
+quarto-html-after-body	Spotify_2021-2022.html	/^<script id="quarto-html-after-body" type="application\/javascript">$/;"	I
+quarto-html-after-body	about.html	/^<script id="quarto-html-after-body" type="application\/javascript">$/;"	I
+quarto-html-after-body	index.html	/^<script id="quarto-html-after-body" type="application\/javascript">$/;"	I
+quarto-margin-sidebar	404.html	/^    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">$/;"	I
+quarto-margin-sidebar	Reviews/Cities.html	/^    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">$/;"	I
+quarto-margin-sidebar	Reviews/Ideas/Reasons-To-Kill.html	/^    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">$/;"	I
+quarto-margin-sidebar	Reviews/Kites.html	/^    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">$/;"	I
+quarto-margin-sidebar	Reviews/Literature.html	/^    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">$/;"	I
+quarto-margin-sidebar	Reviews/Media/BerlinAlexanderplatz.html	/^    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">$/;"	I
+quarto-margin-sidebar	Reviews/Megacities.html	/^    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">$/;"	I
+quarto-margin-sidebar	Reviews/Venues.html	/^    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">$/;"	I
+quarto-margin-sidebar	Runs/2022-26-10.html	/^    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">$/;"	I
+quarto-margin-sidebar	Spotify_2021-2022.html	/^    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">$/;"	I
+quarto-margin-sidebar	about.html	/^    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">$/;"	I
+quarto-margin-sidebar	index.html	/^    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">$/;"	I
+quarto-search	404.html	/^            <div id="quarto-search" class="" title="Search"><\/div>$/;"	I
+quarto-search	Reviews/Cities.html	/^            <div id="quarto-search" class="" title="Search"><\/div>$/;"	I
+quarto-search	Reviews/Ideas/Reasons-To-Kill.html	/^            <div id="quarto-search" class="" title="Search"><\/div>$/;"	I
+quarto-search	Reviews/Kites.html	/^            <div id="quarto-search" class="" title="Search"><\/div>$/;"	I
+quarto-search	Reviews/Literature.html	/^            <div id="quarto-search" class="" title="Search"><\/div>$/;"	I
+quarto-search	Reviews/Media/BerlinAlexanderplatz.html	/^            <div id="quarto-search" class="" title="Search"><\/div>$/;"	I
+quarto-search	Reviews/Megacities.html	/^            <div id="quarto-search" class="" title="Search"><\/div>$/;"	I
+quarto-search	Reviews/Venues.html	/^            <div id="quarto-search" class="" title="Search"><\/div>$/;"	I
+quarto-search	Runs/2022-26-10.html	/^            <div id="quarto-search" class="" title="Search"><\/div>$/;"	I
+quarto-search	Spotify_2021-2022.html	/^            <div id="quarto-search" class="" title="Search"><\/div>$/;"	I
+quarto-search	about.html	/^            <div id="quarto-search" class="" title="Search"><\/div>$/;"	I
+quarto-search	index.html	/^            <div id="quarto-search" class="" title="Search"><\/div>$/;"	I
+quarto-search-options	404.html	/^<script id="quarto-search-options" type="application\/json">{$/;"	I
+quarto-search-options	Reviews/Cities.html	/^<script id="quarto-search-options" type="application\/json">{$/;"	I
+quarto-search-options	Reviews/Ideas/Reasons-To-Kill.html	/^<script id="quarto-search-options" type="application\/json">{$/;"	I
+quarto-search-options	Reviews/Kites.html	/^<script id="quarto-search-options" type="application\/json">{$/;"	I
+quarto-search-options	Reviews/Literature.html	/^<script id="quarto-search-options" type="application\/json">{$/;"	I
+quarto-search-options	Reviews/Media/BerlinAlexanderplatz.html	/^<script id="quarto-search-options" type="application\/json">{$/;"	I
+quarto-search-options	Reviews/Megacities.html	/^<script id="quarto-search-options" type="application\/json">{$/;"	I
+quarto-search-options	Reviews/Venues.html	/^<script id="quarto-search-options" type="application\/json">{$/;"	I
+quarto-search-options	Runs/2022-26-10.html	/^<script id="quarto-search-options" type="application\/json">{$/;"	I
+quarto-search-options	Spotify_2021-2022.html	/^<script id="quarto-search-options" type="application\/json">{$/;"	I
+quarto-search-options	about.html	/^<script id="quarto-search-options" type="application\/json">{$/;"	I
+quarto-search-options	index.html	/^<script id="quarto-search-options" type="application\/json">{$/;"	I
+quarto-search-results	404.html	/^<div id="quarto-search-results"><\/div>$/;"	I
+quarto-search-results	Reviews/Cities.html	/^<div id="quarto-search-results"><\/div>$/;"	I
+quarto-search-results	Reviews/Ideas/Reasons-To-Kill.html	/^<div id="quarto-search-results"><\/div>$/;"	I
+quarto-search-results	Reviews/Kites.html	/^<div id="quarto-search-results"><\/div>$/;"	I
+quarto-search-results	Reviews/Literature.html	/^<div id="quarto-search-results"><\/div>$/;"	I
+quarto-search-results	Reviews/Media/BerlinAlexanderplatz.html	/^<div id="quarto-search-results"><\/div>$/;"	I
+quarto-search-results	Reviews/Megacities.html	/^<div id="quarto-search-results"><\/div>$/;"	I
+quarto-search-results	Reviews/Venues.html	/^<div id="quarto-search-results"><\/div>$/;"	I
+quarto-search-results	Runs/2022-26-10.html	/^<div id="quarto-search-results"><\/div>$/;"	I
+quarto-search-results	Spotify_2021-2022.html	/^<div id="quarto-search-results"><\/div>$/;"	I
+quarto-search-results	about.html	/^<div id="quarto-search-results"><\/div>$/;"	I
+quarto-search-results	index.html	/^<div id="quarto-search-results"><\/div>$/;"	I
+quarto-show-all-code	Spotify_2021-2022.html	/^      <div class="quarto-title-block"><div><h1 class="title">Spotify Data<\/h1><button type="but/;"	I
+quarto-text-highlighting-styles	404.html	/^<link href="\/site_libs\/quarto-html\/quarto-syntax-highlighting.css" rel="stylesheet" id="quart/;"	I
+quarto-text-highlighting-styles	Reviews/Cities.html	/^<link href="..\/site_libs\/quarto-html\/quarto-syntax-highlighting.css" rel="stylesheet" id="qua/;"	I
+quarto-text-highlighting-styles	Reviews/Ideas/Reasons-To-Kill.html	/^<link href="..\/..\/site_libs\/quarto-html\/quarto-syntax-highlighting.css" rel="stylesheet" id=/;"	I
+quarto-text-highlighting-styles	Reviews/Kites.html	/^<link href="..\/site_libs\/quarto-html\/quarto-syntax-highlighting.css" rel="stylesheet" id="qua/;"	I
+quarto-text-highlighting-styles	Reviews/Literature.html	/^<link href="..\/site_libs\/quarto-html\/quarto-syntax-highlighting.css" rel="stylesheet" id="qua/;"	I
+quarto-text-highlighting-styles	Reviews/Media/BerlinAlexanderplatz.html	/^<link href="..\/..\/site_libs\/quarto-html\/quarto-syntax-highlighting.css" rel="stylesheet" id=/;"	I
+quarto-text-highlighting-styles	Reviews/Megacities.html	/^<link href="..\/site_libs\/quarto-html\/quarto-syntax-highlighting.css" rel="stylesheet" id="qua/;"	I
+quarto-text-highlighting-styles	Reviews/Venues.html	/^<link href="..\/site_libs\/quarto-html\/quarto-syntax-highlighting.css" rel="stylesheet" id="qua/;"	I
+quarto-text-highlighting-styles	Runs/2022-26-10.html	/^<link href="..\/site_libs\/quarto-html\/quarto-syntax-highlighting.css" rel="stylesheet" id="qua/;"	I
+quarto-text-highlighting-styles	Spotify_2021-2022.html	/^<link href="site_libs\/quarto-html\/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-/;"	I
+quarto-text-highlighting-styles	about.html	/^<link href="site_libs\/quarto-html\/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-/;"	I
+quarto-text-highlighting-styles	index.html	/^<link href="site_libs\/quarto-html\/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-/;"	I
+quarto-view-source	Spotify_2021-2022.html	/^      <div class="quarto-title-block"><div><h1 class="title">Spotify Data<\/h1><button type="but/;"	I
+reading-list	Reviews/Literature.html	/^<section id="reading-list" class="level2">$/;"	I
+research	Reviews/Ideas/Reasons-To-Kill.html	/^<section id="research" class="level1">$/;"	I
+reviews	index.html	/^<section id="reviews" class="level1">$/;"	I
+runs	index.html	/^<section id="runs" class="level1">$/;"	I
+search-history	Spotify_2021-2022.html	/^<section id="search-history" class="level1 page-columns page-full">$/;"	I
+sec-preference	Reviews/Ideas/Reasons-To-Kill.html	/^<section id="sec-preference" class="level1">$/;"	I
+section	search.json	/^    "section": "",$/;"	s	object:0
+section	search.json	/^    "section": "",$/;"	s	object:10
+section	search.json	/^    "section": "",$/;"	s	object:11
+section	search.json	/^    "section": "",$/;"	s	object:12
+section	search.json	/^    "section": "",$/;"	s	object:15
+section	search.json	/^    "section": "",$/;"	s	object:16
+section	search.json	/^    "section": "",$/;"	s	object:3
+section	search.json	/^    "section": "",$/;"	s	object:4
+section	search.json	/^    "section": "",$/;"	s	object:5
+section	search.json	/^    "section": "",$/;"	s	object:8
+section	search.json	/^    "section": "",$/;"	s	object:9
+section	search.json	/^    "section": "First Reading",$/;"	s	object:6
+section	search.json	/^    "section": "Leipzig Apartments",$/;"	s	object:1
+section	search.json	/^    "section": "Still to do in Vienna",$/;"	s	object:2
+section	search.json	/^    "section": "Themes",$/;"	s	object:7
+section	search.json	/^    "section": "Top Artists",$/;"	s	object:13
+section	search.json	/^    "section": "Top Tracks",$/;"	s	object:14
+see-also	Reviews/Venues.html	/^<section id="see-also" class="level1">$/;"	I
+shelter-0.01	Reviews/Ideas/Reasons-To-Kill.html	/^<section id="shelter-0.01" class="level1">$/;"	I
+sport	Reviews/Ideas/Reasons-To-Kill.html	/^<section id="sport" class="level1">$/;"	I
+still-to-do-in-vienna	Reviews/Cities.html	/^<section id="still-to-do-in-vienna" class="level2">$/;"	I
+sustenance-0.1	Reviews/Ideas/Reasons-To-Kill.html	/^<section id="sustenance-0.1" class="level1">$/;"	I
+tabset-1-1	Spotify_2021-2022.html	/^<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">$/;"	I
+tabset-1-1-tab	Spotify_2021-2022.html	/^<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-l/;"	I
+tabset-1-2	Spotify_2021-2022.html	/^<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">$/;"	I
+tabset-1-2-tab	Spotify_2021-2022.html	/^<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-l/;"	I
+text	search.json	/^    "text": "Code\\nimport pandas as pd\\nimport numpy as np\\nimport matplotlib.pyplot as plt\\/;"	s	object:12
+text	search.json	/^    "text": "Eight Worlds - Jane Lead Complete works of Emily Dickinson"$/;"	s	object:9
+text	search.json	/^    "text": "First Reading\\nThe surface level reading of the film leaves you with a bad taste i/;"	s	object:6
+text	search.json	/^    "text": "I grew up in a fishing village in the north of Scotland. I learned to be steady on /;"	s	object:15
+text	search.json	/^    "text": "I have been meaning to write a larger piece about megacities for some time. In an e/;"	s	object:0
+text	search.json	/^    "text": "I have been meaning to write a larger piece about megacities for some time. In an e/;"	s	object:3
+text	search.json	/^    "text": "I went for a nice run today. It took me an hour, and I covered a good stretch of th/;"	s	object:11
+text	search.json	/^    "text": "In order to get a new perspective on welfare, and taking a cue from Butler1, here I/;"	s	object:4
+text	search.json	/^    "text": "Kites in the park in the center of Jakarta. Kites in Tainan, kites in Kaohsiung. Ki/;"	s	object:10
+text	search.json	/^    "text": "Leipzig Apartments\\n\\nPizzalab, George Schwartz Str.\\nProject house that I volun/;"	s	object:1
+text	search.json	/^    "text": "Review of the book and the film."$/;"	s	object:5
+text	search.json	/^    "text": "Reviews\\nSpotify\\n\\n\\nRuns\\n2022-26-10"$/;"	s	object:16
+text	search.json	/^    "text": "Still to do in Vienna\\n\\nBike kitchen, Goldschlagstrasse Thursday 8pm"$/;"	s	object:2
+text	search.json	/^    "text": "Themes"$/;"	s	object:7
+text	search.json	/^    "text": "There are many different types of establishment that could fall under this heading./;"	s	object:8
+text	search.json	/^    "text": "Top Artists\\n\\n\\nCode\\ndf = sort_df_by_artist_time(listening_df)\\ndf.head(100)/;"	s	object:13
+text	search.json	/^    "text": "Top Tracks\\nOkay, now things are starting to fall into place. A lot of the hours t/;"	s	object:14
+themes	Reviews/Media/BerlinAlexanderplatz.html	/^<section id="themes" class="level2">$/;"	I
+title	search.json	/^    "title": "About",$/;"	s	object:15
+title	search.json	/^    "title": "Berlin Alexanderplatz Review",$/;"	s	object:5
+title	search.json	/^    "title": "Berlin Alexanderplatz Review",$/;"	s	object:6
+title	search.json	/^    "title": "Berlin Alexanderplatz Review",$/;"	s	object:7
+title	search.json	/^    "title": "City Reviews",$/;"	s	object:0
+title	search.json	/^    "title": "City Reviews",$/;"	s	object:1
+title	search.json	/^    "title": "City Reviews",$/;"	s	object:2
+title	search.json	/^    "title": "Home!",$/;"	s	object:16
+title	search.json	/^    "title": "Karaoke bars",$/;"	s	object:8
+title	search.json	/^    "title": "Kites",$/;"	s	object:10
+title	search.json	/^    "title": "Literature",$/;"	s	object:9
+title	search.json	/^    "title": "Megacity Reviews",$/;"	s	object:3
+title	search.json	/^    "title": "Reasons to Kill",$/;"	s	object:4
+title	search.json	/^    "title": "Run to Prague 7",$/;"	s	object:11
+title	search.json	/^    "title": "Spotify Data",$/;"	s	object:12
+title	search.json	/^    "title": "Spotify Data",$/;"	s	object:13
+title	search.json	/^    "title": "Spotify Data",$/;"	s	object:14
+title-block-header	404.html	/^<header id="title-block-header" class="quarto-title-block default">$/;"	I
+title-block-header	Reviews/Cities.html	/^<header id="title-block-header" class="quarto-title-block default">$/;"	I
+title-block-header	Reviews/Ideas/Reasons-To-Kill.html	/^<header id="title-block-header" class="quarto-title-block default">$/;"	I
+title-block-header	Reviews/Kites.html	/^<header id="title-block-header" class="quarto-title-block default">$/;"	I
+title-block-header	Reviews/Literature.html	/^<header id="title-block-header" class="quarto-title-block default">$/;"	I
+title-block-header	Reviews/Media/BerlinAlexanderplatz.html	/^<header id="title-block-header" class="quarto-title-block default">$/;"	I
+title-block-header	Reviews/Megacities.html	/^<header id="title-block-header" class="quarto-title-block default">$/;"	I
+title-block-header	Reviews/Venues.html	/^<header id="title-block-header" class="quarto-title-block default">$/;"	I
+title-block-header	Runs/2022-26-10.html	/^<header id="title-block-header" class="quarto-title-block default page-columns page-full">$/;"	I
+title-block-header	Spotify_2021-2022.html	/^<header id="title-block-header" class="quarto-title-block default page-columns page-full">$/;"	I
+title-block-header	about.html	/^<header id="title-block-header" class="quarto-title-block default">$/;"	I
+title-block-header	index.html	/^<header id="title-block-header" class="quarto-title-block default">$/;"	I
+toc-aberdeen	Reviews/Cities.html	/^  <li><a href="#aberdeen" id="toc-aberdeen" class="nav-link" data-scroll-target="#aberdeen">Aber/;"	I
+toc-beijing	Reviews/Cities.html	/^  <li><a href="#beijing" id="toc-beijing" class="nav-link active" data-scroll-target="#beijing">/;"	I
+toc-bibliography	Reviews/Megacities.html	/^  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#biblio/;"	I
+toc-bike-kitchen-goldschlagstrasse-thursday-8pm	Reviews/Cities.html	/^  <li><a href="#bike-kitchen-goldschlagstrasse-thursday-8pm" id="toc-bike-kitchen-goldschlagstra/;"	I
+toc-book	Reviews/Media/BerlinAlexanderplatz.html	/^  <li><a href="#book" id="toc-book" class="nav-link active" data-scroll-target="#book">Book<\/a>/;"	I
+toc-conclusions	Reviews/Megacities.html	/^  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusi/;"	I
+toc-conflict-0.6	Reviews/Ideas/Reasons-To-Kill.html	/^  <li><a href="#conflict-0.6" id="toc-conflict-0.6" class="nav-link" data-scroll-target="#confli/;"	I
+toc-film	Reviews/Media/BerlinAlexanderplatz.html	/^  <li><a href="#film" id="toc-film" class="nav-link" data-scroll-target="#film">Film<\/a>$/;"	I
+toc-first-reading	Reviews/Media/BerlinAlexanderplatz.html	/^  <li><a href="#first-reading" id="toc-first-reading" class="nav-link" data-scroll-target="#firs/;"	I
+toc-gestalt	Reviews/Cities.html	/^  <li><a href="#gestalt" id="toc-gestalt" class="nav-link" data-scroll-target="#gestalt">Gestalt/;"	I
+toc-group-participation	Reviews/Venues.html	/^  <li><a href="#group-participation" id="toc-group-participation" class="nav-link" data-scroll-t/;"	I
+toc-imports-and-variables	Spotify_2021-2022.html	/^  <li><a href="#imports-and-variables" id="toc-imports-and-variables" class="nav-link active" da/;"	I
+toc-industry	Reviews/Ideas/Reasons-To-Kill.html	/^  <li><a href="#industry" id="toc-industry" class="nav-link" data-scroll-target="#industry">Indu/;"	I
+toc-jakarta-memories	Reviews/Megacities.html	/^  <li><a href="#jakarta-memories" id="toc-jakarta-memories" class="nav-link" data-scroll-target=/;"	I
+toc-karaoke	Reviews/Venues.html	/^  <li><a href="#karaoke" id="toc-karaoke" class="nav-link" data-scroll-target="#karaoke">Karaoke/;"	I
+toc-leipzig	Reviews/Cities.html	/^  <li><a href="#leipzig" id="toc-leipzig" class="nav-link" data-scroll-target="#leipzig">Leipzig/;"	I
+toc-leipzig-apartments	Reviews/Cities.html	/^  <li><a href="#leipzig-apartments" id="toc-leipzig-apartments" class="nav-link" data-scroll-tar/;"	I
+toc-listening-history	Spotify_2021-2022.html	/^  <li><a href="#listening-history" id="toc-listening-history" class="nav-link" data-scroll-targe/;"	I
+toc-low-participation	Reviews/Venues.html	/^  <li><a href="#low-participation" id="toc-low-participation" class="nav-link" data-scroll-targe/;"	I
+toc-mysticism	Reviews/Literature.html	/^  <li><a href="#mysticism" id="toc-mysticism" class="nav-link active" data-scroll-target="#mysti/;"	I
+toc-open-participation	Reviews/Venues.html	/^  <li><a href="#open-participation" id="toc-open-participation" class="nav-link active" data-scr/;"	I
+toc-philipino-bands-singing-in-english	Reviews/Venues.html	/^  <li><a href="#philipino-bands-singing-in-english" id="toc-philipino-bands-singing-in-english" /;"	I
+toc-pizzalab-george-schwartz-str.	Reviews/Cities.html	/^  <li><a href="#pizzalab-george-schwartz-str." id="toc-pizzalab-george-schwartz-str." class="nav/;"	I
+toc-podcasts	Spotify_2021-2022.html	/^  <li><a href="#podcasts" id="toc-podcasts" class="nav-link" data-scroll-target="#podcasts">Podc/;"	I
+toc-preamble	Spotify_2021-2022.html	/^  <li><a href="#preamble" id="toc-preamble" class="nav-link" data-scroll-target="#preamble">Prea/;"	I
+toc-reading-list	Reviews/Literature.html	/^  <li><a href="#reading-list" id="toc-reading-list" class="nav-link" data-scroll-target="#readin/;"	I
+toc-research	Reviews/Ideas/Reasons-To-Kill.html	/^  <li><a href="#research" id="toc-research" class="nav-link" data-scroll-target="#research">Rese/;"	I
+toc-reviews	index.html	/^  <li><a href="#reviews" id="toc-reviews" class="nav-link active" data-scroll-target="#reviews">/;"	I
+toc-runs	index.html	/^  <li><a href="#runs" id="toc-runs" class="nav-link" data-scroll-target="#runs">Runs<\/a><\/li>$/;"	I
+toc-search-history	Spotify_2021-2022.html	/^  <li><a href="#search-history" id="toc-search-history" class="nav-link" data-scroll-target="#se/;"	I
+toc-sec-preference	Reviews/Ideas/Reasons-To-Kill.html	/^  <li><a href="#sec-preference" id="toc-sec-preference" class="nav-link" data-scroll-target="#se/;"	I
+toc-see-also	Reviews/Venues.html	/^  <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See /;"	I
+toc-shelter-0.01	Reviews/Ideas/Reasons-To-Kill.html	/^  <li><a href="#shelter-0.01" id="toc-shelter-0.01" class="nav-link" data-scroll-target="#shelte/;"	I
+toc-sport	Reviews/Ideas/Reasons-To-Kill.html	/^  <li><a href="#sport" id="toc-sport" class="nav-link" data-scroll-target="#sport">Sport<\/a><\//;"	I
+toc-still-to-do-in-vienna	Reviews/Cities.html	/^  <li><a href="#still-to-do-in-vienna" id="toc-still-to-do-in-vienna" class="nav-link" data-scro/;"	I
+toc-sustenance-0.1	Reviews/Ideas/Reasons-To-Kill.html	/^  <li><a href="#sustenance-0.1" id="toc-sustenance-0.1" class="nav-link active" data-scroll-targ/;"	I
+toc-themes	Reviews/Media/BerlinAlexanderplatz.html	/^  <li><a href="#themes" id="toc-themes" class="nav-link" data-scroll-target="#themes">Themes<\/a/;"	I
+toc-title	Reviews/Cities.html	/^    <h2 id="toc-title">On this page<\/h2>$/;"	I
+toc-title	Reviews/Ideas/Reasons-To-Kill.html	/^    <h2 id="toc-title">On this page<\/h2>$/;"	I
+toc-title	Reviews/Literature.html	/^    <h2 id="toc-title">On this page<\/h2>$/;"	I
+toc-title	Reviews/Media/BerlinAlexanderplatz.html	/^    <h2 id="toc-title">On this page<\/h2>$/;"	I
+toc-title	Reviews/Megacities.html	/^    <h2 id="toc-title">On this page<\/h2>$/;"	I
+toc-title	Reviews/Venues.html	/^    <h2 id="toc-title">On this page<\/h2>$/;"	I
+toc-title	Spotify_2021-2022.html	/^    <h2 id="toc-title">On this page<\/h2>$/;"	I
+toc-title	index.html	/^    <h2 id="toc-title">On this page<\/h2>$/;"	I
+toc-tokyo-yokohama	Reviews/Megacities.html	/^  <li><a href="#tokyo-yokohama" id="toc-tokyo-yokohama" class="nav-link active" data-scroll-targ/;"	I
+toc-top-artists	Spotify_2021-2022.html	/^  <li><a href="#top-artists" id="toc-top-artists" class="nav-link" data-scroll-target="#top-arti/;"	I
+toc-top-tracks	Spotify_2021-2022.html	/^  <li><a href="#top-tracks" id="toc-top-tracks" class="nav-link" data-scroll-target="#top-tracks/;"	I
+toc-vienna	Reviews/Cities.html	/^  <li><a href="#vienna" id="toc-vienna" class="nav-link" data-scroll-target="#vienna">Vienna<\/a/;"	I
+tokyo-yokohama	Reviews/Megacities.html	/^<section id="tokyo-yokohama" class="level1">$/;"	I
+top-artists	Spotify_2021-2022.html	/^<section id="top-artists" class="level2 page-columns page-full">$/;"	I
+top-tracks	Spotify_2021-2022.html	/^<section id="top-tracks" class="level2">$/;"	I
+vienna	Reviews/Cities.html	/^<section id="vienna" class="level1">$/;"	I
