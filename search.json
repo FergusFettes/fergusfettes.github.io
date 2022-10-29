@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "Reviews/BerlinAlexanderplatz.html",
+    "href": "Reviews/BerlinAlexanderplatz.html",
+    "title": "Berlin Alexanderplatz Review",
+    "section": "",
+    "text": "Review of the book and the film."
+  },
+  {
+    "objectID": "Reviews/BerlinAlexanderplatz.html#first-reading",
+    "href": "Reviews/BerlinAlexanderplatz.html#first-reading",
+    "title": "Berlin Alexanderplatz Review",
+    "section": "First Reading",
+    "text": "First Reading\nThe surface level reading of the film leaves you with a bad taste in your mouth– a man gets out of prison after murdering his wife, is welcomed with open arms by the community of low-grade gangsters and hustlers with whom he associates, eventually gets drawn back into low-grade pimping, robbery etc, then loses his mind.\nThe initial reading summary would be ‘poor people are scum’, a similar message you would get from Bunuels Viridiana on a totally naieve reading."
+  },
+  {
+    "objectID": "Reviews/BerlinAlexanderplatz.html#themes",
+    "href": "Reviews/BerlinAlexanderplatz.html#themes",
+    "title": "Berlin Alexanderplatz Review",
+    "section": "Themes",
+    "text": "Themes"
+  },
+  {
     "objectID": "Reviews/Cities.html",
     "href": "Reviews/Cities.html",
     "title": "City Reviews",
@@ -21,13 +42,6 @@
     "text": "Still to do in Vienna\n\nBike kitchen, Goldschlagstrasse Thursday 8pm"
   },
   {
-    "objectID": "Reviews/Ideas/Reasons-To-Kill.html",
-    "href": "Reviews/Ideas/Reasons-To-Kill.html",
-    "title": "Reasons to Kill",
-    "section": "",
-    "text": "In order to get a new perspective on welfare, and taking a cue from Butler1, here I will review reasons to kill.\nTODO: make a set of metrics to judge these by, make a graph.\n\nSustenance [0.1]\nTo kill for food?\nThis justification dropped off a cliff during the agricultural revolution– at least w.r.t land animals.\nFor sea creatures I would argue that the justification for killing for eating continued at pace until the industrial revolution.\nThe reason sea creatures still merit our violent attentions is that they harvest food from all over the ocean and bring it to the shore, where we can harvest it. It is in this role as transporters of food that they earn their violence.\nThis also provides an interesting lens onto an ancient justification for hunting in general, before the majority of our environment was turned over to human activities– imagining wild animals move in a Brownian fashion, if a hunter-gatherer band sits in one place on the map and captures all wild animals that come their way, they are effectively expanding the plant capture area– especially considering wild animals often process food that is inedible for humans.\nHowever, the same could be said for land animals in certain communities. Eg. in agricultural communities, a diet supplemented with a bit of hunted and foraged food would be much richer than what agriculture alone could sustain.\nSo this probably retained some validity until well into the modern era– especially during eg. wartime periods.\n\n\nShelter [0.01]\nTo kill for clothing?\nThis has doubtless had some validity in certain places and times. It seems clear though that we can substitute very well for animal products in most places, since industrialization.\n\n\nPreference [0.001]\nTo kill for pleasure?\nHard to justify, especially since the advent of writing. Even before that we had art and poetry– there are other ways to entertain yourself.\nNote however the way preference interacts with eg. shelter– wearing real furs, no longer necessary, has social cache because eg. wearing the richest furs would have been a symbol of wealth and power since the early days of humanity, esp. in colder regions. You can see many evolutionary adaptations playing out in fashion in places like Moscow.\n\n\nConflict [0.6]\nThere are cases where the livelihood of animals is in direct conflict with the livelihood of persons2. An obvious example would be mosquitoes– whose livelihood is considered so irrelevant that we are seriously considering eliminating entire species. And we have successfully removed them en mass from eg. Taipei and other tropical cities where they would naturally thrive. Perhaps more interesting is the case of Seagulls and Pigeons, and other uneasy synanthropes– they would doubtless thrive even better if we didn’t build to exclude them, and aside from the corrosive effect of their shit, they don’t seem to do much harm. Maybe opening up cities to birds again would be an easy win for ‘wild animal’ welfare.\nWho else do we compete with directly these days? We prefer our shipping routes to the welfare of whales, and many other such conveniences. But most of the conflicts we have with animals seem to be agricultural. See for example Regenesis for a gloss of the research on wild animal-human encounters in national parks in Europe (w.r.t the question if we can’t live in harmony with wolves or boars).\n\n\nResearch [???]\nWe use animals for research. We use them to learn about the natural world, and to advance medicine in particular.\nThis subject has been treated in some detail by researchers already. TODO: read some relevant papers.\n\n\nIndustry\nAnimal products provide essential components in many industries. I think this topic would require the most careful scrutiny, as the question of relevant trade-offs in different cases might be quite nuanced. For example, if there is an animal product that is vastly more efficient to harvest than it takes to produce a substitute, how do we balance the choice?\n\n\nSport\nSee Section 3\n\n\n\n\n\n\n\nFootnotes\n\n\nread this↩︎\nOn a larger scale this includes most agriculture of course, but here we are talking even more directly.↩︎"
-  },
-  {
     "objectID": "Reviews/Venues.html",
     "href": "Reviews/Venues.html",
     "title": "Karaoke bars",
@@ -35,25 +49,11 @@
     "text": "There are many different types of establishment that could fall under this heading.\n\nOpen Participation\n\n\nGroup Participation\n\n\nLow Participation\n\n\nKaraoke\n\n\nPhilipino Bands Singing in English\nThis is a genre popular throughout SE asia. My father would take us to these bars from time to time when we were children. I suppose these now-faraway dreamlike memories have had some lasting impression on me.\n\n\nSee Also\nJumping the Shark– an album about a washed-up crooner. This album always reminded me in a remarkably clear way of music bars in HongKong and the kind of tragic ex-pats that would end up there. I assume, being from that part of the world, that he has some familiarity with one or more of the many megacities over there."
   },
   {
-    "objectID": "Reviews/Media/BerlinAlexanderplatz.html",
-    "href": "Reviews/Media/BerlinAlexanderplatz.html",
-    "title": "Berlin Alexanderplatz Review",
+    "objectID": "Reviews/ReasonsToKill.html",
+    "href": "Reviews/ReasonsToKill.html",
+    "title": "Reasons to Kill",
     "section": "",
-    "text": "Review of the book and the film."
-  },
-  {
-    "objectID": "Reviews/Media/BerlinAlexanderplatz.html#first-reading",
-    "href": "Reviews/Media/BerlinAlexanderplatz.html#first-reading",
-    "title": "Berlin Alexanderplatz Review",
-    "section": "First Reading",
-    "text": "First Reading\nThe surface level reading of the film leaves you with a bad taste in your mouth– a man gets out of prison after murdering his wife, is welcomed with open arms by the community of low-grade gangsters and hustlers with whom he associates, eventually gets drawn back into low-grade pimping, robbery etc, then loses his mind.\nThe initial reading summary would be ‘poor people are scum’, a similar message you would get from Bunuels Viridiana on a totally naieve reading."
-  },
-  {
-    "objectID": "Reviews/Media/BerlinAlexanderplatz.html#themes",
-    "href": "Reviews/Media/BerlinAlexanderplatz.html#themes",
-    "title": "Berlin Alexanderplatz Review",
-    "section": "Themes",
-    "text": "Themes"
+    "text": "In order to get a new perspective on welfare, and taking a cue from Butler1, here I will review reasons to kill.\nTODO: make a set of metrics to judge these by, make a graph.\n\nSustenance [0.1]\nTo kill for food?\nThis justification dropped off a cliff during the agricultural revolution– at least w.r.t land animals.\nFor sea creatures I would argue that the justification for killing for eating continued at pace until the industrial revolution.\nThe reason sea creatures still merit our violent attentions is that they harvest food from all over the ocean and bring it to the shore, where we can harvest it. It is in this role as transporters of food that they earn their violence.\nThis also provides an interesting lens onto an ancient justification for hunting in general, before the majority of our environment was turned over to human activities– imagining wild animals move in a Brownian fashion, if a hunter-gatherer band sits in one place on the map and captures all wild animals that come their way, they are effectively expanding the plant capture area– especially considering wild animals often process food that is inedible for humans.\nHowever, the same could be said for land animals in certain communities. Eg. in agricultural communities, a diet supplemented with a bit of hunted and foraged food would be much richer than what agriculture alone could sustain.\nSo this probably retained some validity until well into the modern era– especially during eg. wartime periods.\n\n\nShelter [0.01]\nTo kill for clothing?\nThis has doubtless had some validity in certain places and times. It seems clear though that we can substitute very well for animal products in most places, since industrialization.\n\n\nPreference [0.001]\nTo kill for pleasure?\nHard to justify, especially since the advent of writing. Even before that we had art and poetry– there are other ways to entertain yourself.\nNote however the way preference interacts with eg. shelter– wearing real furs, no longer necessary, has social cache because eg. wearing the richest furs would have been a symbol of wealth and power since the early days of humanity, esp. in colder regions. You can see many evolutionary adaptations playing out in fashion in places like Moscow.\n\n\nConflict [0.6]\nThere are cases where the livelihood of animals is in direct conflict with the livelihood of persons2. An obvious example would be mosquitoes– whose livelihood is considered so irrelevant that we are seriously considering eliminating entire species. And we have successfully removed them en mass from eg. Taipei and other tropical cities where they would naturally thrive. Perhaps more interesting is the case of Seagulls and Pigeons, and other uneasy synanthropes– they would doubtless thrive even better if we didn’t build to exclude them, and aside from the corrosive effect of their shit, they don’t seem to do much harm. Maybe opening up cities to birds again would be an easy win for ‘wild animal’ welfare.\nWho else do we compete with directly these days? We prefer our shipping routes to the welfare of whales, and many other such conveniences. But most of the conflicts we have with animals seem to be agricultural. See for example Regenesis for a gloss of the research on wild animal-human encounters in national parks in Europe (w.r.t the question if we can’t live in harmony with wolves or boars).\n\n\nResearch [???]\nWe use animals for research. We use them to learn about the natural world, and to advance medicine in particular.\nThis subject has been treated in some detail by researchers already. TODO: read some relevant papers.\n\n\nIndustry\nAnimal products provide essential components in many industries. I think this topic would require the most careful scrutiny, as the question of relevant trade-offs in different cases might be quite nuanced. For example, if there is an animal product that is vastly more efficient to harvest than it takes to produce a substitute, how do we balance the choice?\n\n\nSport\nSee Section 3\n\n\n\n\n\n\n\nFootnotes\n\n\nread this↩︎\nOn a larger scale this includes most agriculture of course, but here we are talking even more directly.↩︎"
   },
   {
     "objectID": "Reviews/Literature.html",
@@ -67,7 +67,42 @@
     "href": "Reviews/Megacities.html",
     "title": "Megacity Reviews",
     "section": "",
-    "text": "I have been meaning to write a larger piece about megacities for some time. In an effort to start making progresson that and to start gathering some material, I will start doing small autobiographical reviews of some megacities that have made an impression on me.\nFor now, I am defining a megacity as ’any city with a metro population at or above Paris/London as defined by this pdf.1[^UNREAD]\n\nTokyo-Yokohama\n\n\nJakarta [memories]\nSpent some time here as a child. I remember taxi rides through dusty highways between skyscrapers, and the golden candle in the center– there was lots of kite-flying. We went to a karaeoke bar and heard a philippino band singing american rock and roll– probably the first live rock music I heard in my life was in bars in Jakarta.\n\n\nDelhi [memories, map]\n\n\nMumbai [memories, map]\n\n\nManila\n\n\nShanghai [memories]\n\n\nSao Paulo\n\n\nSeoul-Incheon\n\n\nMexico City\n\n\nGuangzhou-Foshan [memories]\n\n\nNew York [memories]\n\n\nBeijing [memories, footage?, opinions?]\nThe first city I lived in as an ‘independent’2.\n\n\nCairo [memories, map, sleep, drink, eat, districts]\n\n\nKolkata\n\n\nMoscow\n\n\nBangkok [memories]\n\n\nBuenos Aires\n\n\nShenzhen [memories]\n\n\nDhaka\n\n\nLos Angeles\n\n\nLagos\n\n\nIstanbul\n\n\nOsaka-Kobe-Kyoto\n\n\nKarachi\n\n\nBangalore [memories, map]\n\n\nTehran\n\n\nKinshasa\n\n\nHo Chi Minh City [memories]\n\n\nRio de Janeiro\n\n\nChennai [memories, map]\n\n\nChengdu [memories]\n\n\nLahore\n\n\nParis [memories]\n\n\nLondon [memories, map, eat, districts]\n\n\nConclusions\nI have spent well over a year in megacities– a short time when compared to a random sample of the world population3.\nI have visited [16/34] of the worlds megacities. There are around 10 more that are high on my list which I should get to in the next decade. I think Moscow and Tehran are the only major difficulties– but I am writing this in the time of the Mahsa Amini protests so lets see.\nI feel like there is a lot to be learned about megacities and I look forward to expanding this page.\n\n\nBibliography\nThe Death and Life of Great American Cities\n\n\n\n\n\nFootnotes\n\n\nIf that seems unecessary and unfair to Tianjin, I would say that in part the only reason I am including Paris and London on the list at all is they provide a relevant reference point for certain people, not because I think they are defining members of the megacity class.↩︎\nI was still living off my parents money for the first few months, and off my other privilidges for much longer.↩︎\ndoes this mean anything?↩︎"
+    "text": "I have been meaning to write a larger piece about megacities for some time. In an effort to start making progresson that and to start gathering some material, I will start doing small autobiographical reviews of some megacities that have made an impression on me."
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-cairo-memories",
+    "href": "Reviews/Megacities.html#sec-cairo-memories",
+    "title": "Megacity Reviews",
+    "section": "Memories",
+    "text": "Memories\nCairo! What a city. My most lasting impression was this: why do so many young Europeans who want to experience the exotic, fly all the way to Mumbai or Delhi, when there is this fabulous exotic beast of a city right on their doorstep? It was shocking how close we were to home– the reason we ended up there was the consistently cheap tickets to Sharm-El-Sheik from anywhere in europe– and yet how far we felt.\nI suppose I have always had a clear association with flying east. The 8 hours you spend crossing continents makes you feel like you are suitably far away. So flying what felt like ‘just across the pond’ and yet being somewhere so radically different– interesting!\nNote on the map, I downloaded my historical data from google maps, but unfortunately it was not as high resolution as I expected. A little disappointing, and I have now started using the OSM tracker, for future travel I will have better traces."
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-cairo-map",
+    "href": "Reviews/Megacities.html#sec-cairo-map",
+    "title": "Megacity Reviews",
+    "section": "Map",
+    "text": "Map\n\n\nCode\nfrom ipyleaflet import Map, Marker, basemaps, basemap_to_tiles, Polyline, Widget, Popup, AwesomeIcon\nfrom ipywidgets import HTML\nimport re\nimport pandas as pd\n\n# Load data from json\nfile = '/si/_data/lat-lng-time.json'\nwith open(file, 'r') as f:\n    data = f.read()\n\n# Json is of the form {[lat, lng, time], ...}\n# Import to pandas\ndf = pd.read_json(data, orient='records')\n\n# Convert coords\ndf['lat'] = df['lat'] / 1e7\ndf['lng'] = df['lng'] / 1e7\n\n# Convert time\ndf['time'] = pd.to_datetime(df['time'])\n\n# Get coords between lat [29, 31] and lng [30, 32]\ndf = df[(df['lat'] > 29) & (df['lat'] < 31) & (df['lng'] > 30) & (df['lng'] < 32)]\ndf.reset_index(inplace=True)\n\n# Sort data into traces\ntraces = []\n# Add first row to first trace\ntraces.append({'start_time': df['time'][0], 'coords': [(df['lat'][0], df['lng'][0])]})\nfor i, row in df.iterrows():\n    if row['time'] - df.iloc[i-1]['time'] < pd.Timedelta('30 minutes'):\n        traces[-1]['coords'].append((row['lat'], row['lng']))\n    else:\n        traces.append({'start_time': row['time'], 'coords': [(row['lat'], row['lng'])]})\n\ntraces = [trace for trace in traces if len(trace['coords']) > 10]\n\n# Select the first entry in febuary\nfeb_point = df[df['time'] > '2022-02-01'].iloc[0]\n# Create a map\n\nm = Map(zoom=12)\n\n\nfirst_trace = 2\n# Make a line from each trace\nfor i, trace in enumerate(traces):\n    color = '#7c5208'\n    if i == first_trace:\n        color = 'blue'\n    line = Polyline(\n        locations=trace['coords'],\n        color=color,\n        fill=False,\n        weight=2,\n    )\n    m.add_layer(line)\n\n    icon = AwesomeIcon(\n        marker_color='darkgreen',\n        spin=False\n    )\n\n    # Add a marker for each trace\n    marker = Marker(\n        location=trace['coords'][0],\n        draggable=False,\n        title=f\"Start time: {trace['start_time']}\",\n        icon=icon,\n    )\n\n    # Create a popup\n    popup = Popup(\n        location=trace['coords'][0],\n        child=HTML(f'{trace[\"start_time\"].strftime(\"%Y-%m-%d %H:%M:%S\")}'),\n        close_button=False,\n        auto_close=False,\n        close_on_escape_key=False,\n    )\n    marker.popup = popup\n\n    m.add_layer(marker)\n\n# Center on the start of trace[1]\nm.center = traces[1]['coords'][0]\nm\n\n\n\n\n\n\nDar El Salam (دار السلام), ‘Abode of Peace’\n\nNot to be confused with the Dar es Salaam in Tanzania (or the Muslimgauze album for that matter), this is a district in Cairo.\n\nThe cluster in the south was where we spent the first week. It is something like the highest-density, fastest-growing, youngest population in town. In a phrase, ‘the poor district’. We were asked many times what we were doing there, and told by many people it was dangerous. But, when we met some Expats in a bar in the center, one of them was from Aberdeen– they were all surprised at where we were staying, but when I asked him ‘but, do you really think it is more dangerous than Aberdeen or Glasgow’ he looked offended at the question and said ‘well of course not’.\nEverything is relative, and it is clear that the crime rates in Egypt are very moderate. To us, the district seemed exactly as it was– bustling with youthful exuberance– the transport in the district consisted almost entirely of teenagers in motorized tuktuks with ghetto blasters and LEDs drinking Pepsi, cruising. They were mostly indifferent to our presence– we would ask them to take us somewhere, they would look at one another, laugh, shrug and start driving.\n\n\nHotel Zamalek, and Downtown\n\n\nPyramids of Giza"
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-cairo-eat",
+    "href": "Reviews/Megacities.html#sec-cairo-eat",
+    "title": "Megacity Reviews",
+    "section": "Eat",
+    "text": "Eat\nThere are three things to eat in Cairo aside from meat: koshary, sandwiches and sweet potatoes.\n\nKoshary\nKoshary is a dish that is a staple of the Egyptian diet. It is a mix of carbs: rice, lentils, macaroni and chickpeas. But it isn’t all carbs! It’s also performance. Lets say you got the takeaway; once you have your mass of carbs (in a little grease-paper bowl, like a regular noodle box), you are also given the following: one large baggie of tomato sauce, one baggie of spicy sauce, one baggie of garlic sauce, and a baggy of fried onions.\nThe fun is in pouring your ingredients one after another onto your base, and then sprinkling the onions on top, and then consuming it in the fastest way possible.\n\n\nSandwiches\nWhile I do miss the koshary, for me the sandwiches were the real deal. In imagining them, start with a falafel sandwich. This is actually one of the options, and in many was similar (though superior) to what you would find in europe. Now however, I want you to shrink down the size of the piece of bread considerably, and I want you to remove all the contents, and replace it instead with one of the following: mashed potatoes, foul (refried kidney beans), fried aubergines, fried courgette, shakshuka– or one of the other options that I don’t know how to identify. So you have your tiny sandwhich with a little bit of friend beans inside it– eat it and have another! Order five if you like, they are cheap as chips and designed for fast, efficient, standing snacking– worthy of Mumbai.\nWalk on, don’t worry– you will see another sandwich place! And another!\n\n\nSweet Potatoes\nSlow cooked sweet potato with spices! Eat it hot, don’t think twice!"
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-cairo-sleep",
+    "href": "Reviews/Megacities.html#sec-cairo-sleep",
+    "title": "Megacity Reviews",
+    "section": "Sleep",
+    "text": "Sleep\nAs I was working full time when we were in Cairo, I couldn’t adventure too hard. So we mostly booked AirBnBs or found hotels through Booking. However, Cairo is a fine city for the foot-goer, and we once managed to stumble into a beautiful old, crumbling dame of a hotel– the Nile Zamalek Hotel. We did what you are meant to do in these places, we ordered a room and stayed there for a week, forming a friendly, nodding acquaintance with the concierge and feeling like we were in a classic movie. There is something truly wonderful about finding a place to stay on foot, it will always beat planning, though planning is an occasional necessity."
+  },
+  {
+    "objectID": "Reviews/Megacities.html#do",
+    "href": "Reviews/Megacities.html#do",
+    "title": "Megacity Reviews",
+    "section": "Do",
+    "text": "Do\nSee the pyramids! When I was first in Cairo I refused, or was too stoned and confused and suffering from akathisia or depressed or whatever you are at 20 years old when you haven’t really woken up yet. Well, not this time!"
   },
   {
     "objectID": "Reviews/Kites.html",
@@ -77,6 +112,510 @@
     "text": "Kites in the park in the center of Jakarta. Kites in Tainan, kites in Kaohsiung. Kids flying kites over the motorway in Cairo."
   },
   {
+    "objectID": "Bib/All.html",
+    "href": "Bib/All.html",
+    "title": "Reading List",
+    "section": "",
+    "text": "I have, for the last years, been rating my reading. I have a database on my phone where I record things I have read.\nI have started adding things I want to read to this database.\nI’m happy enough with this at the moment, though I would like more integration and automation between this and other things."
+  },
+  {
+    "objectID": "Bib/All.html#important",
+    "href": "Bib/All.html#important",
+    "title": "Reading List",
+    "section": "Important",
+    "text": "Important\nConsilience"
+  },
+  {
+    "objectID": "Bib/All.html#blogs",
+    "href": "Bib/All.html#blogs",
+    "title": "Reading List",
+    "section": "Blogs",
+    "text": "Blogs\n\nInvesting\nA bunch of links I found just via this and eg this\n\n\nEA\nEA Blindspots and another ## Trivial Loads of fun links to trawl through in here"
+  },
+  {
+    "objectID": "Bib/All.html#tools",
+    "href": "Bib/All.html#tools",
+    "title": "Reading List",
+    "section": "Tools",
+    "text": "Tools\nSo some searches on hacker news. Scinapse, academic search Semantic Scholar Tribler – seems like a pretty intense torrent harvester technology Fetch.io – streams torrents to you [BROKEN, but worth investigating] Inciteful, academnic graph viz\nWikipedia also has a list of academic search engines.\n\nSci-hub, libgen, zlibrary\nNote, append ‘.sci-hub.ru’ to paper sites!\nMirrors: * sci-hub.se * sci-hub.st * sci-hub.ru\nZlib"
+  },
+  {
+    "objectID": "Bib/All.html#datasets",
+    "href": "Bib/All.html#datasets",
+    "title": "Reading List",
+    "section": "Datasets",
+    "text": "Datasets\nAcademic Torrents"
+  },
+  {
+    "objectID": "Bib/All.html#bio-bio",
+    "href": "Bib/All.html#bio-bio",
+    "title": "Reading List",
+    "section": "Bio Bio",
+    "text": "Bio Bio\nSmybiosis and Evolution, Lynn Margulis Anna Tsing"
+  },
+  {
+    "objectID": "Bib/All.html#statistics",
+    "href": "Bib/All.html#statistics",
+    "title": "Reading List",
+    "section": "Statistics",
+    "text": "Statistics\n\nEasy Overview in here, plus links\nGwern Overview\nTukey’s ‘Future of Data Analysis’"
+  },
+  {
+    "objectID": "Bib/All.html#gerontology",
+    "href": "Bib/All.html#gerontology",
+    "title": "Reading List",
+    "section": "Gerontology",
+    "text": "Gerontology\n\nhttps://nintil.com/aging-solved-in-vitro"
+  },
+  {
+    "objectID": "Bib/All.html#medicine-general",
+    "href": "Bib/All.html#medicine-general",
+    "title": "Reading List",
+    "section": "Medicine General",
+    "text": "Medicine General\n\nhttps://randomcriticalanalysis.com/2020/01/31/i-created-a-primer-on-fundamental-misconceptions-about-health-care/"
+  },
+  {
+    "objectID": "Bib/All.html#citizen-science",
+    "href": "Bib/All.html#citizen-science",
+    "title": "Reading List",
+    "section": "Citizen Science",
+    "text": "Citizen Science\n\nhttps://slimemoldtimemold.com/"
+  },
+  {
+    "objectID": "Bib/All.html#blogs-1",
+    "href": "Bib/All.html#blogs-1",
+    "title": "Reading List",
+    "section": "Blogs",
+    "text": "Blogs\nI should have loved biology – includes links to some good bio books > aka, The Eighth Day of Creation"
+  },
+  {
+    "objectID": "Bib/All.html#tools-1",
+    "href": "Bib/All.html#tools-1",
+    "title": "Reading List",
+    "section": "Tools",
+    "text": "Tools\nArch wiki has a great list of applications– some of them are science focussed. Look through them for useful things."
+  },
+  {
+    "objectID": "Bib/All.html#agi-ruin",
+    "href": "Bib/All.html#agi-ruin",
+    "title": "Reading List",
+    "section": "AGI Ruin",
+    "text": "AGI Ruin\nOriginal Post Containment Strategy ## Articles Manifesto"
+  },
+  {
+    "objectID": "Bib/All.html#blogs-2",
+    "href": "Bib/All.html#blogs-2",
+    "title": "Reading List",
+    "section": "Blogs",
+    "text": "Blogs\nTensions of the Liberal Order Roots of Progress"
+  },
+  {
+    "objectID": "Bib/All.html#acc",
+    "href": "Bib/All.html#acc",
+    "title": "Reading List",
+    "section": "Acc",
+    "text": "Acc\nMillions Must Die\n\nDysgenics\nQuilette, Cognitive Distortions"
+  },
+  {
+    "objectID": "Bib/All.html#democracy",
+    "href": "Bib/All.html#democracy",
+    "title": "Reading List",
+    "section": "Democracy",
+    "text": "Democracy\nComputational Democracy (aka Polis) Computational Sociology (at above link) Network States – also check out Vitaliks post on the topic"
+  },
+  {
+    "objectID": "Bib/All.html#futarchy",
+    "href": "Bib/All.html#futarchy",
+    "title": "Reading List",
+    "section": "Futarchy",
+    "text": "Futarchy\n\nFutarchy is a form of government proposed by economist Robin Hanson, in which elected officials define measures of national wellbeing, and prediction markets are used to determine which policies will have the most positive effect.\n\n\nPersonal context:\nKevin Mulligan introduced me to the GoodJudgementProject many moons ago. I got ‘involved’ (not very involved). Since then I have kept vague tabs on the topic, and one day intend to try getting into it.\nTo really try getting involved, I would have to dive into some of the learning material. For now I am happy to occasianlly dive into the reading.\nOne day I will dive into them again and try and make some bets.\n\n\nRead\n\nArbital guide to Bayes Rule\nGood Judgment Training\nGitcoin Grants\n\n\n\nLearn\n\nMetaculus Blog\n\nDeep learning ourselves into the unknown\n\nAugur\n\nThe Uber for Knowledge\n\n\n\n\nDo\n\nKalshi\nGood Judgement Project\nAugur\nPredictIt"
+  },
+  {
+    "objectID": "Bib/All.html#economic-growth",
+    "href": "Bib/All.html#economic-growth",
+    "title": "Reading List",
+    "section": "Economic Growth",
+    "text": "Economic Growth\nI read conflicting views about this and tried to do a deeper dive by reading Harrawy and a textbook on Degrowth. I found the degrowth stuff quite unconvincing.\n\nEconomic Growth in Five Figures Lant Pritchett 1\nThis has some good graphs that summarize the situation pretty thoroughly.\n\n\nThe Moral Foundations of Progress 0\nGood links to general stuff.\n“Our technological advancements used to entail new antibiotics, reductions in child mortality, and the capacity for self-determination. It is hard to compete with advances of that size, no matter how good our movies and kitchen appliances become.”\nNow they are trying to get me to join the bandwagon? “This all presents a compelling opportunity. Given its nascent state and the lack of serious full-time Progress Studies researchers, we–meaning anyone reading this document, meaning you–each have good odds of being able to substantially shape the course of this field. 25 How should we approach field-building? One approach is straightforward: publish good research, then label it Progress Studies, and simply assert that it is part of a new intellectual tradition. In contrast, my work here thus entails the beginning of an even more straightforward approach: 1. Robustly argue for foundational assumptions 2. Define operationalizations of key concepts 3. Set and enforce epistemic norms”\nQuite tempting actually.\n\n\nOur World in Data\nhas tonnes of stuff and are generally the best combination of gung-ho and data-heavy.\nSee the thread about drama with Justin Hickel for some relevant (and juicy) context.\n\n\nAgainst Wage Stagnation\nI would say that a huge amount of focus is placed on the situation in the US. There is some sense to this since they are leading the charge in GDP, but it should not be over-emphasized.\nReview\n\n\nDevelopment\nI read a lot about development. I want to organize my thoughts and my reading about this a little better.\n\n\nEconomic Growth\nAgain and again I see the idea that economic growth is good, that it drags people out of poverty, that it improves quality of life.\nMore importantly, it often seems like all the things that people want correlate with economic growth. So, even if you are unsatisfied with it as a metric for human wellbeing or happiness or anything else, finding another way of measuring what you ‘really want’ would be a waste of time because GDP already measures what you think you really want to measure. And there is already a tonne of research literature about it, so trying to create a new index and create a new body of literature on your new, improved index would be a huge waste of time.\nOf course if you can invent a wellbeing index that doesn’t correlate strongly with GDP then you will have something significant. But such a thing doesn’t seem to exist.\nHere is a good article that covers a lot of this stuff quite nicely: Economic Growth in 5 Figures.\nThere are also various things from eg. Our World in Data that cover this.\n\n\nThe issue\nThe issue is, many of my dear friends seem to disagree about this. But whenever I try to get to the heart of the disagreement, I get lost.\n\n\nCurrent work\nRead Donna Haraway’s Staying With the Trouble and try to see where the biggest points of difference between my worldview and hers are.\n\n\nOther reading\nI want to read Caliban and the Witch again, I have important disagreements with some of it. I want to read some books by Iam Morris. Though they seem to be largely things I would agree with, I want to check my methods and facts."
+  },
+  {
+    "objectID": "Bib/All.html#history",
+    "href": "Bib/All.html#history",
+    "title": "Reading List",
+    "section": "History",
+    "text": "History\nIam Morris\n\nBlogs\nA collection of unmitigated pedantry, eg, Logistics III"
+  },
+  {
+    "objectID": "Bib/All.html#general",
+    "href": "Bib/All.html#general",
+    "title": "Reading List",
+    "section": "General",
+    "text": "General\nRead Wittgenstein & Popper!"
+  },
+  {
+    "objectID": "Bib/All.html#accelerationism",
+    "href": "Bib/All.html#accelerationism",
+    "title": "Reading List",
+    "section": "Accelerationism",
+    "text": "Accelerationism\n\nhttps://web.archive.org/web/20190530072815/http://xynchroni.city/posts/22"
+  },
+  {
+    "objectID": "Bib/All.html#misc",
+    "href": "Bib/All.html#misc",
+    "title": "Reading List",
+    "section": "Misc",
+    "text": "Misc\nEvil Gwern has some hot takes: * https://fantasticanachronism.com/2022/10/10/against-effective-altruism/"
+  },
+  {
+    "objectID": "Bib/All.html#ontology",
+    "href": "Bib/All.html#ontology",
+    "title": "Reading List",
+    "section": "Ontology",
+    "text": "Ontology\n\nrobot ontology https://eigenrobot.substack.com/p/the-map-is-of-the-territory"
+  },
+  {
+    "objectID": "Bib/All.html#psychedelics",
+    "href": "Bib/All.html#psychedelics",
+    "title": "Reading List",
+    "section": "Psychedelics",
+    "text": "Psychedelics\nEverything from QRI"
+  },
+  {
+    "objectID": "Bib/Farm.html",
+    "href": "Bib/Farm.html",
+    "title": "Farm Life Reading and Resources",
+    "section": "",
+    "text": "Auctions and Markets\ni-bidder"
+  },
+  {
+    "objectID": "Bib/Jobs.html",
+    "href": "Bib/Jobs.html",
+    "title": "Job Boards etc",
+    "section": "",
+    "text": "Meta\nJob Board Search curated list of job boards, eg this one for 4-day work weeks\n\n\nReading/Blogs\nbillable stuff eg Jonathan Stark\nMaybe worth reading some of this if/when you want to set up as freelance.\n\n\nBio Startups\nI’d love to work in some bio startups for a while, see if there is anything good there.\nStarting point?"
+  },
+  {
+    "objectID": "Bib/PictureBooks.html",
+    "href": "Bib/PictureBooks.html",
+    "title": "Picture Books",
+    "section": "",
+    "text": "Tyler Cohen recommends picture books as great value for money. I’ll list some recommendataions here in case I ever have some spare cash.\n\nVanishing Asia: Three Volume Set, Kevin Kelly"
+  },
+  {
+    "objectID": "Essays/Consciousness.html#reviewed",
+    "href": "Essays/Consciousness.html#reviewed",
+    "title": "Consciousness",
+    "section": "Reviewed",
+    "text": "Reviewed"
+  },
+  {
+    "objectID": "Essays/Consciousness.html#read",
+    "href": "Essays/Consciousness.html#read",
+    "title": "Consciousness",
+    "section": "Read",
+    "text": "Read\nEnergy Rate Density USA Consciousness"
+  },
+  {
+    "objectID": "Essays/Consciousness.html#unread",
+    "href": "Essays/Consciousness.html#unread",
+    "title": "Consciousness",
+    "section": "Unread",
+    "text": "Unread\nEnergy Rate Density II"
+  },
+  {
+    "objectID": "Essays/Consciousness.html#transhumanism-general",
+    "href": "Essays/Consciousness.html#transhumanism-general",
+    "title": "Consciousness",
+    "section": "Transhumanism General",
+    "text": "Transhumanism General\nProbably some links here"
+  },
+  {
+    "objectID": "Essays/Determinism.html",
+    "href": "Essays/Determinism.html",
+    "title": "Determinism",
+    "section": "",
+    "text": "The is in many ways an extension of the entropy reading. That material is the context and foundation for this.\nBut determinism has its place in the realm of the everyday. Determinism is what it looks like for entropy relaxation to express itself in everyday life."
+  },
+  {
+    "objectID": "Essays/Determinism.html#geographical-determinism",
+    "href": "Essays/Determinism.html#geographical-determinism",
+    "title": "Determinism",
+    "section": "Geographical Determinism",
+    "text": "Geographical Determinism\nvia Bill Bryson and Ian Morris.\nThe idea is intuitively appealying and easy to understand. How much credence should we give it?"
+  },
+  {
+    "objectID": "Essays/Determinism.html#technological-determinism",
+    "href": "Essays/Determinism.html#technological-determinism",
+    "title": "Determinism",
+    "section": "Technological Determinism",
+    "text": "Technological Determinism\nis economic growth inevitable? Inasmuchas entropy == time– is economic growth one of the flowers growing from this stem, along with increasingly complex life forms and ecologies?"
+  },
+  {
+    "objectID": "Essays/Determinism.html#everyday-determinism-compatibalism",
+    "href": "Essays/Determinism.html#everyday-determinism-compatibalism",
+    "title": "Determinism",
+    "section": "Everyday Determinism– Compatibalism",
+    "text": "Everyday Determinism– Compatibalism"
+  },
+  {
+    "objectID": "Essays/Determinism.html#futurismlongtermism",
+    "href": "Essays/Determinism.html#futurismlongtermism",
+    "title": "Determinism",
+    "section": "Futurism/Longtermism",
+    "text": "Futurism/Longtermism\nWhat will always be inevitable?"
+  },
+  {
+    "objectID": "Essays/Determinism.html#conclusions",
+    "href": "Essays/Determinism.html#conclusions",
+    "title": "Determinism",
+    "section": "Conclusions",
+    "text": "Conclusions\nThis essay sits between the reading on entropy and the reading on acceletationism/transhumanism. These are the outcomes of determinism married to the extremely disorienting experience of living in the post-industrial era of exponential/hyperbolic growth."
+  },
+  {
+    "objectID": "Essays/Education.html",
+    "href": "Essays/Education.html",
+    "title": "Education",
+    "section": "",
+    "text": "Not having ‘graduated highschool’ (not that that means anything, as I later would argue in Leipzig), I was left with limited choices for legitimizing myself in the eyes of society. This was, by this point, something I was increasingly interested in doing. Thankfully there were two universities in Scotland that had a ‘summer school for access’ programm– Aberdeen and Dundee. To Aberdeen I could commute etc., so I was packed off there.\nThe summer school was a wonderful farce, where all the oddballs of the world were sandwiched together into an improbably collective. It wasn’t just people who had left the system, like me, but also foreign students, older students, people wanting to change to radically different programms. A great collection of oddballs and we had a good time of it.\n\n\n\nI decided to study Maths with Chemistry, as I thought that sounded high-minded but yet practical. Unfortunately, having stopped engaging with education approximately a decade earlier, I had absolutely no idea what they were talking about in the introductory maths classes and soon dropped out. The only thing I went to in my first year was the chemistry labs, which were very fun– I had a great benchmate to crack jokes with, and would always fiddle my way through the protocol with a fair amount of flair and alacritty. I always finished an hour before everyone else, and not always because I cooked my books.\n\n\n\nThe few classes I went to in my seconds year (after switching majors) were dissapointing. The psychology class was just a room filled with 200 teenagers that did not give a fuck.\nI’m hardly one to ciriticize, but at this point I had decided I needed to start shaping up, so I was dissapointed. Probably they reflected my own tardiness and incompetence in the worst possible way.\n\n\n\n\nAfter two years in Aberdeen I had had enough, and had to hit the road. If I was better behaved I could of course have done erasmus, studied abroad, etc etc. But I was still a half-conscious idiot and couldn’t behave. I transferred to the Open University, the university for wild oddballs with no money or sense. They let me skip the first year on the meager credits I scraped together from Aberdeen, and the course was only three years total. Hurrah– something I could manage.\n\n\nThe course was physics. I think some part of me still saw the endeavour as something like ‘get the most prestigious degree you can with the least possible effort’, and Physics sounded suitable. I think I believed I could get through it unscathed. I was wrong.\nI cannot stress this enough: a serious study program will change you[^magnified].\n[^magnified] The effect is of course magnified by the fact that you understake your studies at a particularly dramatic point in your development– though personally speaking, I was 25 at this point, so would have been over the development hump.\nThe second year was a deeply religious experience. I will write about it im more length at some point.\n\n\n\n\n\n\nI went to speak to the head of studies at the Chemistry department to ask if I could do a Masters in Chemistry with them. He said found this absurd and hilarious.\n\n\n\nI studied Physics in Leipzig for two years. It was, in many important ways, the most fullfilling time of my life. However, it was also incredibly draining– remember, I was competing with people who had come there directly from a decade of continuous mathematics education, in German universities. I was a degenerate wanderer who was kicked out of school at the age of 15. I had to push myself further than I ever imagined I would. I learned a great deal, about my limits and my capacities, and about physics.\nTwo professors offered me PhD positions. I turned them down, and fled, ashamed, to the road. 5 days after my final defence I was in India."
+  },
+  {
+    "objectID": "Essays/Entropy.html",
+    "href": "Essays/Entropy.html",
+    "title": "Entropy Links",
+    "section": "",
+    "text": "Essay structure\n0: Entropy: Overview Standalone essay with the thesis of the other essays.\n1: Entropy as Time Let’s go.\nTry to make the case that this isn’t just one view of time among many– this is the only testable theory describing time.\n2: Entropy as ‘Energy’ This should be the most accessible and interesting to a regular audience.\nJust a clarification of what it means to say we don’t get energy from the sun.\n3: Entropy as Life The good stuff. Jeremy England, the engines of creation, etc.\nMinkovsky?\n4: Addendum Brief discussion of entropy as information, and the theory of Entropy as everything (gravity etc.)"
+  },
+  {
+    "objectID": "Essays/Megacity-Megaproject.html",
+    "href": "Essays/Megacity-Megaproject.html",
+    "title": "Megacity Megaproject",
+    "section": "",
+    "text": "Megacity Megaproject\nNothing to see here– yet!"
+  },
+  {
+    "objectID": "Essays/Misc.html",
+    "href": "Essays/Misc.html",
+    "title": "Miscellanous Essays",
+    "section": "",
+    "text": "Helicopters In Classical Music\n\nMost of the machines that surround our lives—airliners, refrigerators, cars and typewriters—have streamlined their way into our affections. Now and then, as in the case of the helicopter, with its unstable, insect-like obsessiveness, we can see clearly the deep hostility of the mineral world. We are lucky that the organic realm reached the foot of the evolutionary ladder before the inorganic.\n\nGeorge Crumbs images of the Vietnam War, and the Helicopter quartet are good examples of this."
+  },
+  {
+    "objectID": "Essays/Orguel.html",
+    "href": "Essays/Orguel.html",
+    "title": "Orguel",
+    "section": "",
+    "text": "Reading\nLots of good notes here\nArtificial Life Some scientists suggest that the definition-of-life question is a red herring. Life, they say, should be gauged on a continuum, and not granted according to a binary decision. A rock would certainly be low on any continuum of aliveness, and a dog, a tree, and a human being would rank highly. More ambiguous systems would fall in a middleregion of semialiveness—somewhere below bacteria, which almost ev- eryone agrees are alive, and somewhere above rocks. Viruses, which some biologists consider living and others do not, would reside in the upper reaches of this middle ground. Below that would be complexsystems that no one really considers to be alive but that display some behaviors consistent with living organisms—things such as the economy and automobiles. The PolyWorld organisms would fall somewhere be- tween Chevrolets and the flu. There is a particular advantage in regard- ing life in this manner: using systems that no one would classify as truly alive, biologists could nonetheless isolate the qualities of life."
+  },
+  {
+    "objectID": "Essays/Spotify_2021-2022.html",
+    "href": "Essays/Spotify_2021-2022.html",
+    "title": "Spotify Data",
+    "section": "",
+    "text": "Code\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport datetime\nimport os\n\nDATA_DIR = '/p/my-quarto-site/_data'\nDATE_FORMAT = '%Y-%m-%dT%H:%M:%S.%fZ[UTC]'\n\ndef sort_df_by_artist_time(df):\n  # Group by by_\n  df = df.groupby(['Artist']).sum().reset_index()\n\n  # Sort by listening time\n  df.sort_values('msPlayed', ascending=False, inplace=True)\n\n  # Format the listening time\n  df['Time'] = df['msPlayed'].apply(lambda x: datetime.timedelta(seconds=round(x/1000)))\n  df['Time'] = df['Time'].apply(lambda x: f'{x.days*24 + x.seconds//3600}h:{x.seconds//60%60}m')\n\n  df.drop('msPlayed', axis=1, inplace=True)\n  return df\n\ndef sort_df_by_track(df):\n  # Group by by_\n  df = df.groupby(['Artist', 'Track']).sum().reset_index()\n\n  # Sort by listening time\n  df.sort_values('msPlayed', ascending=False, inplace=True)\n\n  # Format the listening time\n  df['Time'] = df['msPlayed'].apply(lambda x: datetime.timedelta(seconds=round(x/1000)))\n  df['Time'] = df['Time'].apply(lambda x: f'{x.days*24 + x.seconds//3600}h:{x.seconds//60%60}m')\n\n  df.drop('msPlayed', axis=1, inplace=True)\n  return df"
+  },
+  {
+    "objectID": "Essays/Spotify_2021-2022.html#top-artists",
+    "href": "Essays/Spotify_2021-2022.html#top-artists",
+    "title": "Spotify Data",
+    "section": "Top Artists",
+    "text": "Top Artists\n\n\nCode\ndf = sort_df_by_artist_time(listening_df)\ndf.head(100).style.hide_index()\n\n\n\n\n\n\n  \n    \n      Artist\n      Time\n    \n  \n  \n    \n      Franz Liszt\n      33h:48m\n    \n    \n      John Cale\n      21h:24m\n    \n    \n      Franz Schubert\n      21h:6m\n    \n    \n      Domenico Scarlatti\n      18h:39m\n    \n    \n      Sergei Prokofiev\n      17h:13m\n    \n    \n      Orchestre Poly-Rythmo de Cotonou\n      16h:26m\n    \n    \n      Antonio Vivaldi\n      16h:19m\n    \n    \n      Antonín Dvořák\n      15h:43m\n    \n    \n      Johann Sebastian Bach\n      14h:43m\n    \n    \n      Sun City Girls\n      12h:57m\n    \n    \n      Johannes Brahms\n      12h:41m\n    \n    \n      Matmos\n      12h:28m\n    \n    \n      Dmitri Shostakovich\n      11h:14m\n    \n    \n      Amara Touré\n      11h:3m\n    \n    \n      Karol Szymanowski\n      10h:41m\n    \n    \n      Abdel Halim Hafez\n      10h:10m\n    \n    \n      Charlie Megira\n      9h:58m\n    \n    \n      Delroy Edwards\n      9h:58m\n    \n    \n      Slauson Malone\n      9h:32m\n    \n    \n      Scott Walker\n      9h:17m\n    \n    \n      Anadol\n      9h:13m\n    \n    \n      Müzeyyen Senar\n      9h:13m\n    \n    \n      Meridian Brothers\n      9h:6m\n    \n    \n      Brian Eno\n      8h:42m\n    \n    \n      Ludwig van Beethoven\n      8h:31m\n    \n    \n      Shin Joong Hyun\n      8h:28m\n    \n    \n      Jean Sibelius\n      8h:23m\n    \n    \n      Giacinto Scelsi\n      8h:19m\n    \n    \n      Dona Dumitru Siminica\n      8h:18m\n    \n    \n      Leopold Godowsky\n      8h:16m\n    \n    \n      Cem Karaca\n      8h:13m\n    \n    \n      Tom Waits\n      8h:12m\n    \n    \n      Attarazat Addahabia\n      8h:4m\n    \n    \n      Pyotr Ilyich Tchaikovsky\n      8h:2m\n    \n    \n      Hailu Mergia\n      7h:49m\n    \n    \n      Beak>\n      7h:39m\n    \n    \n      Joseph-Nicolas-Pancrace Royer\n      7h:29m\n    \n    \n      Maurice Ravel\n      7h:3m\n    \n    \n      Eartheater\n      6h:55m\n    \n    \n      Niccolò Paganini\n      6h:53m\n    \n    \n      Tsegue-Maryam Guebrou\n      6h:53m\n    \n    \n      Hagihara Yoshiaki\n      6h:48m\n    \n    \n      Lingua Ignota\n      6h:46m\n    \n    \n      The Body\n      6h:35m\n    \n    \n      Ziad Rahbani\n      6h:27m\n    \n    \n      Nikolai Medtner\n      6h:24m\n    \n    \n      Getatchew Mekurya\n      6h:22m\n    \n    \n      Wolfgang Amadeus Mozart\n      6h:21m\n    \n    \n      Michael Robinson\n      6h:5m\n    \n    \n      Gabriel Fauré\n      5h:59m\n    \n    \n      Kikagaku Moyo\n      5h:54m\n    \n    \n      Fritz Kreisler\n      5h:47m\n    \n    \n      Akofa Akoussah\n      5h:17m\n    \n    \n      Olivier Messiaen\n      4h:51m\n    \n    \n      Maria Tănase\n      4h:45m\n    \n    \n      Inade\n      4h:36m\n    \n    \n      The Black Angels\n      4h:35m\n    \n    \n      Cucina Povera\n      4h:33m\n    \n    \n      Julee Cruise\n      4h:32m\n    \n    \n      Sofia Gubaidulina\n      4h:30m\n    \n    \n      Kandia Kouyate\n      4h:25m\n    \n    \n      Hala Strana\n      4h:25m\n    \n    \n      Henry Purcell\n      4h:17m\n    \n    \n      Harry Partch\n      4h:17m\n    \n    \n      Claudio Monteverdi\n      4h:17m\n    \n    \n      Terry Riley\n      4h:16m\n    \n    \n      Philip Glass\n      4h:16m\n    \n    \n      Karlheinz Stockhausen\n      4h:14m\n    \n    \n      Sergei Rachmaninoff\n      4h:13m\n    \n    \n      Dariush\n      4h:13m\n    \n    \n      George Enescu\n      4h:11m\n    \n    \n      Ali Farka Touré\n      4h:9m\n    \n    \n      Miho Hazama\n      4h:6m\n    \n    \n      Opinion\n      4h:0m\n    \n    \n      Enrique Granados\n      3h:55m\n    \n    \n      Tuxedomoon\n      3h:54m\n    \n    \n      Müslüm Gürses\n      3h:48m\n    \n    \n      Alfred Schnittke\n      3h:46m\n    \n    \n      Fennesz\n      3h:39m\n    \n    \n      Vítězslav Novák\n      3h:37m\n    \n    \n      Yves Tumor\n      3h:32m\n    \n    \n      Jean-Philippe Rameau\n      3h:32m\n    \n    \n      Ildebrando Pizzetti\n      3h:29m\n    \n    \n      Phillip Nangle\n      3h:28m\n    \n    \n      Diamanda Galás\n      3h:21m\n    \n    \n      Backxwash\n      3h:21m\n    \n    \n      Thee Oh Sees\n      3h:18m\n    \n    \n      Hans Werner Henze\n      3h:13m\n    \n    \n      Astor Piazzolla\n      3h:5m\n    \n    \n      Psychic TV\n      3h:5m\n    \n    \n      Jon Hopkins\n      3h:0m\n    \n    \n      Harold Budd\n      3h:0m\n    \n    \n      Dean Blunt\n      2h:58m\n    \n    \n      Giovanni Battista Pergolesi\n      2h:57m\n    \n    \n      Mark Turner\n      2h:57m\n    \n    \n      François Couperin\n      2h:51m\n    \n    \n      Armand Hammer\n      2h:48m\n    \n    \n      Jang Hyun\n      2h:46m\n    \n    \n      Pablo de Sarasate\n      2h:45m\n    \n    \n      Kate Bush\n      2h:42m\n    \n  \n\n\nWell there you go (sidebar ==>). It’s actually quite different from what I expected. I mean I know I listen to a lot of solo piano music, but that is a little absurd. And how did John Cale get in there as second!\nThe more I look at that list the more perplexing I find it. I guess I did download a lot of music this year and listen to it on my laptop, so the numbers are quite a bit skewed by that. But that still means that I have listened to 16h or the Polyrythmic Orchestra of Cotonou!\nThe only thing I find totally unrealistic is the 12h of Brahms and the 8h of Beethoven– they must both be from the Menuhin Century album– the ‘Virtuoso and Landmark Recordings’ CDs are full of Brahms and Beethoven, and I listen to it regularly. But in my defense I’m mostly in it for the Menuhin– those two plus the Shostakovich– and maybe even the Rachmaninoff? I think there are a few names on there because of that album.\n\nPodcasts\nHere are the top podcast times:\n\n\n\n\n\n\nPodcasts\n\n\n\n\n\n\n\nCode\ndf = sort_df_by_artist_time(podcast_df)\ndf.head(30).style.hide_index()\n\n\n\n\n\n  \n    \n      Artist\n      Time\n    \n  \n  \n    \n      80,000 Hours Podcast with Rob Wiblin\n      23h:20m\n    \n    \n      Conversations with Tyler\n      17h:21m\n    \n    \n      The Ezra Klein Show\n      10h:30m\n    \n    \n      Dan Carlin's Hardcore History\n      10h:12m\n    \n    \n      The Lunar Society\n      4h:12m\n    \n    \n      Sean Carroll's Mindscape: Science, Society, Philosophy, Culture, Arts, and Ideas\n      1h:57m\n    \n    \n      Lex Fridman Podcast\n      1h:26m"
+  },
+  {
+    "objectID": "Essays/Spotify_2021-2022.html#top-tracks",
+    "href": "Essays/Spotify_2021-2022.html#top-tracks",
+    "title": "Spotify Data",
+    "section": "Top Tracks",
+    "text": "Top Tracks\nOkay, now things are starting to fall into place. A lot of the hours that Liszt has racked up are due to the album ‘Harmonies poétiques et religieuses’, which, I have to admit, has failed to really hit home with me. I spent many hours with the album, as you can see, because I have had good luck with other long Liszt suites (such as the Annees), just by listening to them again and again until they start to sink in. But the Harmonies still haven’t settled in, in fact I hardly remember them, which is why I was so surprised that Liszt was so high on the numbers for the last year.\nLo-Pacific by the Sun City Girls is great, but is an entire album as a single track so is cheating a little bit.\nWhat is Kansas by Opinion? I have never heard of that. Apparently it is on a playlist I created though, so apparently I listened to it and liked it once upon a time– or rather, 4 times upon a time, since it is 30 mins long. I’ll drop it too.\nIf I remove the classical stuff and Lo-Pacific, then the top tracks looks like this:\n\nTop Tracks (All)Top Tracks (Non-Classical)\n\n\n\n\nCode\ndf = sort_df_by_track(listening_df)\n\n# Show columns in the order 'Track', 'Artist', 'Time'\ndf = df[['Track', 'Artist', 'Time']]\ndf.head(30).style.hide_index()\n\n\n\n\n\n  \n    \n      Track\n      Artist\n      Time\n    \n  \n  \n    \n      \"J\" Blues 72\n      Shin Joong Hyun\n      3h:36m\n    \n    \n      Harmonies poétiques et religieuses, S. 173: III. Bénédiction de Dieu dans la solitude\n      Franz Liszt\n      3h:20m\n    \n    \n      Noude Ma Gnin Tche De Me\n      Orchestre Poly-Rythmo de Cotonou\n      2h:48m\n    \n    \n      Harmonies poétiques et religieuses, S. 173: I. Invocation\n      Franz Liszt\n      2h:37m\n    \n    \n      Gan Tche Kpo\n      Orchestre Poly-Rythmo de Cotonou\n      2h:27m\n    \n    \n      Harmonies poétiques et religieuses, S. 173: IV. Pensée des morts\n      Franz Liszt\n      2h:21m\n    \n    \n      Kansas\n      Opinion\n      2h:17m\n    \n    \n      Lo-Pacific\n      Sun City Girls\n      2h:13m\n    \n    \n      Wagner - Tannhauser: Overture, S442/R275\n      Franz Liszt\n      2h:10m\n    \n    \n      Gun\n      John Cale\n      2h:10m\n    \n    \n      Concerto in one movement for violin and orchestra transcribed from the 1st movement of the Concerto No.1 in D Major by Niccolò Paganini\n      Fritz Kreisler\n      2h:6m\n    \n    \n      Ohoi\n      Giacinto Scelsi\n      2h:1m\n    \n    \n      Chromatic Fantasy and Fugue in D Minor, BWV 903\n      Johann Sebastian Bach\n      1h:59m\n    \n    \n      Sonata in E Minor ‘Night Wind’, Op. 25 No. 2: Introduzione: Andante - Allegro\n      Nikolai Medtner\n      1h:59m\n    \n    \n      Beautiful Rivers and Mountains\n      Shin Joong Hyun & The Men\n      1h:58m\n    \n    \n      The Man Who Must Leave\n      Kim Sun\n      1h:56m\n    \n    \n      Harmonies poétiques et religieuses, S. 173: II. Ave Maria\n      Franz Liszt\n      1h:53m\n    \n    \n      The Four Seasons, Violin Concerto No. 2 in G Minor, RV 315 \"L'estate\": I. Allegro - Allegro non molto\n      Antonio Vivaldi\n      1h:53m\n    \n    \n      Szymanowski: Notturno e Tarantella, Op. 28\n      Karol Szymanowski\n      1h:52m\n    \n    \n      Mede Ma Gnin Messe\n      Orchestre Poly-Rythmo de Cotonou\n      1h:52m\n    \n    \n      Salamouti\n      Amara Touré\n      1h:50m\n    \n    \n      Ay Çürüdü\n      Anadol\n      1h:44m\n    \n    \n      The Sun\n      Kim Jung Mi\n      1h:42m\n    \n    \n      Görünmez Hava\n      Anadol\n      1h:42m\n    \n    \n      Albaki\n      Attarazat Addahabia\n      1h:40m\n    \n    \n      Afalago\n      Amara Touré\n      1h:38m\n    \n    \n      Ravel: Tzigane, M. 76\n      Maurice Ravel\n      1h:38m\n    \n    \n      Harmonies poétiques et religieuses, S. 173: VII. Funérailles\n      Franz Liszt\n      1h:37m\n    \n    \n      Dying On The Vine\n      John Cale\n      1h:32m\n    \n    \n      Embuwa Bey Lamitu\n      Hailu Mergia\n      1h:29m\n    \n  \n\n\n\n\n\n\n\nCode\ndf = sort_df_by_track(listening_df)\n\n# Drop classical and Lo-Pacific\ndrop_artists = [\n  \"Franz Liszt\",\n  \"Fritz Kreisler\",\n  \"Giacinto Scelsi\",\n  \"Nikolai Medtner\",\n  \"Antonio Vivaldi\",\n  \"Karol Szymanowski\",\n  \"Maurice Ravel\",\n  \"Henryk Wieniawski\",\n  \"Niccolò Paganini\",\n  \"Johann Sebastian Bach\",\n  \"Ludwig van Beethoven\",\n]\n\ndrop_tracks = [\n  \"Lo-Pacific\",\n  \"Kansas\",\n]\n\ndf = df[~df['Artist'].isin(drop_artists)]\ndf = df[~df['Track'].isin(drop_tracks)]\n\n# Show columns in the order 'Track', 'Artist', 'Time'\ndf = df[['Track', 'Artist', 'Time']]\ndf.head(30).style.hide_index()\n\n\n\n\n\n  \n    \n      Track\n      Artist\n      Time\n    \n  \n  \n    \n      \"J\" Blues 72\n      Shin Joong Hyun\n      3h:36m\n    \n    \n      Noude Ma Gnin Tche De Me\n      Orchestre Poly-Rythmo de Cotonou\n      2h:48m\n    \n    \n      Gan Tche Kpo\n      Orchestre Poly-Rythmo de Cotonou\n      2h:27m\n    \n    \n      Gun\n      John Cale\n      2h:10m\n    \n    \n      Beautiful Rivers and Mountains\n      Shin Joong Hyun & The Men\n      1h:58m\n    \n    \n      The Man Who Must Leave\n      Kim Sun\n      1h:56m\n    \n    \n      Mede Ma Gnin Messe\n      Orchestre Poly-Rythmo de Cotonou\n      1h:52m\n    \n    \n      Salamouti\n      Amara Touré\n      1h:50m\n    \n    \n      Ay Çürüdü\n      Anadol\n      1h:44m\n    \n    \n      The Sun\n      Kim Jung Mi\n      1h:42m\n    \n    \n      Görünmez Hava\n      Anadol\n      1h:42m\n    \n    \n      Albaki\n      Attarazat Addahabia\n      1h:40m\n    \n    \n      Afalago\n      Amara Touré\n      1h:38m\n    \n    \n      Dying On The Vine\n      John Cale\n      1h:32m\n    \n    \n      Embuwa Bey Lamitu\n      Hailu Mergia\n      1h:29m\n    \n    \n      Aflana\n      Attarazat Addahabia\n      1h:27m\n    \n    \n      Baed Aeh\n      Abdel Halim Hafez\n      1h:26m\n    \n    \n      Spring Rain\n      Park In Soo\n      1h:25m\n    \n    \n      Sintayehu\n      Hailu Mergia\n      1h:20m\n    \n    \n      The Girl Who Was Frightened of Ashtrays\n      Charlie Megira\n      1h:18m\n    \n    \n      Ya Evde Korksan\n      Anadol\n      1h:18m\n    \n    \n      N'nijo\n      Amara Touré\n      1h:17m\n    \n    \n      Tela\n      Amara Touré\n      1h:16m\n    \n    \n      Side X\n      Standing On The Corner\n      1h:15m\n    \n    \n      Al Hadaoui\n      Attarazat Addahabia\n      1h:13m\n    \n    \n      Sonata in B Minor, K. 87: Andante\n      Domenico Scarlatti\n      1h:13m\n    \n    \n      You Know Me More Than I Know\n      John Cale\n      1h:13m\n    \n    \n      Spirit Lady\n      Michael Robinson\n      1h:11m\n    \n    \n      The Sleeper\n      John Cale\n      1h:10m\n    \n    \n      Yemanesh Ayinama\n      Hailu Mergia\n      1h:10m\n    \n  \n\n\n\n\n\n\nAnd there you have it! This list makes sense to me now– a great South Korean psychedelic rock song, some voodoo music from Benin, ‘Gun’ by John Cale, some Amara Touré, some Ethiopian and Arab crooners. All good stuff.\nApparently Spotify will be delivering my full listening history in all it’s gory detail sometime soon. Lets see what I make of it when it gets here."
+  },
+  {
+    "objectID": "Essays/ThirdWorldTech.html",
+    "href": "Essays/ThirdWorldTech.html",
+    "title": "Technology in the Third World",
+    "section": "",
+    "text": "When we were kids in Indonesia, our father would show us all kind of strange and wonderful things. One of these was a little silver device that looked almost identical to a CD-walkman, which was called a ‘VCD player’. He told us it would be the future– he plugged it into the hotel television, and from a CD booklet selected a film, and put it on.\nIn the markets in Jakarta we bought Gameboy ripoffs with 200-300 games on them– how strange, this abundance! Back home we had to fight tooth and nail for a single Mario cartridge."
+  },
+  {
+    "objectID": "Essays/ThirdWorldTech.html#india-and-the-internet",
+    "href": "Essays/ThirdWorldTech.html#india-and-the-internet",
+    "title": "Technology in the Third World",
+    "section": "India and the Internet",
+    "text": "India and the Internet"
+  },
+  {
+    "objectID": "Essays/ThirdWorldTech.html#leds-in-cairo",
+    "href": "Essays/ThirdWorldTech.html#leds-in-cairo",
+    "title": "Technology in the Third World",
+    "section": "LEDs in Cairo",
+    "text": "LEDs in Cairo"
+  },
+  {
+    "objectID": "Essays/Work.html#molecular-biophysics-group",
+    "href": "Essays/Work.html#molecular-biophysics-group",
+    "title": "Work",
+    "section": "Molecular Biophysics Group",
+    "text": "Molecular Biophysics Group"
+  },
+  {
+    "objectID": "Essays/Work.html#computer-programmer-python-developer",
+    "href": "Essays/Work.html#computer-programmer-python-developer",
+    "title": "Work",
+    "section": "Computer Programmer (Python Developer)",
+    "text": "Computer Programmer (Python Developer)"
+  },
+  {
+    "objectID": "OldPosts/alacritty-ascii.html",
+    "href": "OldPosts/alacritty-ascii.html",
+    "title": "Alacritty Ascii",
+    "section": "",
+    "text": "Alacritty is one of the many lovely developer tools that are springing up as the first flush in the Rust revolution. Its a fantastic terminal that I’m sure I will have more to say about in due time.\nAs noted, I discovered something lovely while transferring some files the other day. I was moving my small film collection (currently stretching to 7 titles: <INSERT FILMS>) from one computer to another, and I just wanted to sanity check that the transfer had succeeded. So I sshed into the machine ssh work and ran vlc -I dummy ~/films/Mullholland\\ Dr.mkv.\nImagine my surprise to see the criterion logo appear, animated before me. Here is a nice still from another film to illustrate: \nYou can also look at a copy-paste of the terminal here to prove that it really is ASCII output.\n\nZooming out, the resolution becomes better and better (text), but it starts to jitter quite badly at a certain size. \nI thought the ssh connection might be a bottleneck, so I went to the computer to try it on one machine. I had that slightly haunted feeling that the magic might disappear, and when I entered the terminal I suddenly wondered >How will I get it to work here? If I run vlc -I dummy ~/filmes/Crash.mkv I’ll just get a window.\nbut as soon as the thought was there I realised I could just start with ssh localhost. And it worked. I was watching the ‘Universal’ logo barge into my terminal.\nBut things got even better. I noticed that my keystrokes were even getting sent back to vlc, so I could skip forward, pause and even quit the film (sometimes it gets stuck and I have to killall vlc but so it goes).\nAfter a little sleuthing, I notice that\nvlc -I dummy ~/films/film.choice\nis interactive, but\nvlc ~/films/film.choice\nis not. What is this dummy terminal doing after all? Well, the vlc wiki has a little info[^vlc dummy], and they nicely point out that keystrokes are sent back. I find the terminology a little odd, since ‘dummy video output’ is just normal video output, but I think they are looking at it from a gui-makers perspective. And this seems to be the key– with the dummy interface, vlc streams the movie to a window. Alacritty is presumably pretending to be a screen or a window of some sort, in order to pass its work to the GPU, so VLC merrily dumps the video stream in there.\nWhat I would love to know, and I might take some time to investigate, is how is Alacritty mapping the video stream to ASCII? And why?\n\nI will leave this story here for now. I have two things in mind: one, to investigate further over at the Alacritty github and two, to have some people round for a film, run it through Alacritty-ASCII and run the audio through a digital soundcard or some synths, and make a little performance. I’ll update if either of these things transpire.\nIn the meantime, if you want to try it yourself, I have uploaded a slightly rushed video of the effect in action (the size limit on asciinema was not made with 4k ASCII movies in mind, so no hard feelings). Asciinema cast attached1.\nAnd here is a final zoomed in still to admire. In the attached text you can see how much of a difference the color makes, presumably a lot of the 8s have the same foreground and background color.\n\n\n\n\n\nmuscle kid\n\n\n\n\n\n\nFootnotes\n\n\nhttps://asciinema.org/a/378193 [^vlc dummy]: https://wiki.videolan.org/Documentation:Modules/dummy/↩︎"
+  },
+  {
+    "objectID": "OldPosts/distributed-mirrors.html",
+    "href": "OldPosts/distributed-mirrors.html",
+    "title": "Mirroring in the Hyperspace and the IPFS",
+    "section": "",
+    "text": "I’m going to mirror my blog in Hyperspace (aka the backend of the Beaker browser, if you don’t know about it I suggest you check that out first).\nTo do this, I’m going to try setting up my free micro instance1 in the gcloud as a hyperdrive host.\n\nHyperdrive Host\nI’ve had trouble doing big installs on a micro instance before. For reference, here are the specs of a micro instance:\n\n\n\nRAM\nCores\nMem\n\n\n\n\n0.6GB\n0.2 (aka a shared core!)\n32GB\n\n\n\nI run my ansible script against it, and it dies. I try to install and run a docker image, it dies. It is not made for grand works. Or even minor works.\nSo in order to get everything nicely installed and prepared I decided to make a ‘standard simple computer’. This is a decently-proportioned machine I can run in the cloud for generating snapshots that can be used as the base image for smaller, gentler machines. It does all the installations without crashing.\nI also used the opportunity to try out a preemptible instance. This is an instance that google can kill whenever, and is about 3x cheaper than a normal machine. Since I am just running this machine to do little tasks in the cloud, I don’t care if it gets killed sometimes. However, I didn’t realise that my free cloud credits can’t be used for preemptible instances, I only found this out after. This means– shock horror! I will actually get billed for this usage. Lets see how much.\n\n\n\n\n\n\n\n\n\nSKU\nService\nUsage\nCost\n\n\n\n\nPreemptible E2 Instance Core running in Americas\nCompute Engine\n1.63 hour\n€0.01\n\n\nPreemptible E2 Instance Ram running in Americas\nCompute Engine\n6.5 gibibyte hour\n€0.00\n\n\n\nOkay not too terrible.\nSo now I have a snapshot with some basic things installed, I can try running a hyperdrive host. Obviously I don’t need all my command-line tools and everything to really run it, but its nice to have this snapshot available for future machines. And when I get it all running stably, I can create a minimal snapshot with only the server I want so it runs more smoothly.\nTo make my hyperdrive, I’m just going to open up the Beaker browser and see how it is these days, it’s been almost six months since I used it and it’s developing rapidly. Oh! They have a ‘create hyperdrive from git repo’ button now! This gets better and better.\nSo I’m now hosted on the Beaker network. URL.\nOkay so it seems the way Hugo generates sites, based on the CNAME that I supplied, means that all the links from the frontpage on beaker go straight to the clearnet version at www.fergusfettes.com. This is slightly annoying but I’ll not work on it now, since all the rest of the stuff is actually there, it just isn’t linked correctly. This post on the hyperspace, for example.\nAnother thing to note, is I would need to host all the images in hyperspace too to be really complete. However, as it is now, it is a great demonstration of how nicely the hyper protocol interacts with http.\nSo now I’m restarting my micro instance with the hyperdrive installed. Starting hyperspace (hyperspace start), and hyperdrive (hyperdrive start). Playing around with the hyperdrive cli, I can get info about my local hyperdrvie once I have cd’ed into it: cd Hyperdrive; hyperdrive info --root.\nNow I’ll try mounting the hyperdrive that was created on my laptop by the Beaker browser. I copy the URL ID (aka. without the ‘hyper://’) and serve it with\nhyperdrive mount cb8bb0fdb843f78267df2dce7c4dd3cb4fd89a9b16c4454912691a73e5d1c737\nhyperdrive seed /home/ffettes/Hyperdrive/cb8bb0fdb843f78267df2dce7c4dd3cb4fd89a9b16c4454912691a73e5d1c737\n(after the mount there is handy output telling you what to do next :D).\nHaving a look around the beaker user list, I found my first attempt at a beaker blog is still being hosted (I’m @frgnym)! I feel so touched! Someone out there is still on my website! I’ll seed it too:\nhyperdrive mount c2b2403c8aa02cfdff740614ffc437cd09f243d98f84ebe0eb37a86eedf677bb\nhyperdrive seed /home/ffettes/Hyperdrive/c2b2403c8aa02cfdff740614ffc437cd09f243d98f84ebe0eb37a86eedf677bb\nOkay awesome. I’m not only newly mirrored on the hyper network, my old website is still on there. So great. That was incredibly easy. Maybe I’ll start using the beaker browser as my primary browser. (I always say that.)\nSo now my old website is hosted in three places, whoever was hosting it before, my micro instance, and the browser I am currently viewing it from. See the little three in the top right: \nAnd now this blog is hosted there too! Excellent. Now lets see how the IPFS fares!\nUPDATE: It was obviously Kicks Condor who was hosting it before, so I’m hosting their drive now too.\nUPDATE2: So, the micro host wasn’t actually working. I ran a couple tests, turns out I used the complete wrong command. I should have used the following:\nhyperdrive mount some_random_name c2b2403c8aa02cfdff740614ffc437cd09f243d98f84ebe0eb37a86eedf677bb\nhyperdrive seed /home/ffettes/Hyperdrive/some_random_name\nThe random name doesn’t seen to affect the seeded drive. ‘hyperdrive mount X’ creates a new drive called x and creates a new key for it, so I had folders named after all my old drives with new keys and no content.\nAnyway I fixed all the mounts and now I see the IP of my micro host in the top right under the hosts. In other news, this means that there were three people hosting my old blog before, and now there are 4!\n\n\nIPFS Host\nOkay so I’ve started my small computer again and I’m going through the Command-line quickstart. Seems pretty straightforward.\nSo I dumped the contents of my dotfiles into my local IPFS node (ipfs add -r ~/dotfiles), and now I’m going to serve it and mount it. I ran the daemon (ipfs daemon) and set up an ssh tunnel to my small computer ssh -fNL 5001:localhost:5001 small-computer so I can see the IPFS dashboard at localhost:5001. Very snazzy! I can see the files I added too.\nNow I’ll get the browser plugin that lets me view IPFS files in Firefox. Actually since the install was so easy, I’ll run an IPFS node on my local laptop too. When I add my dotfiles locally, I notice that they have the same hashes as when I added them on the server. This is key to the coolest feature of the IPFS– since these files had already been added by me elsewhere, they didn’t get added again, and when I tried to add them locally the network determined this and just ‘pinned’ them as well, aka my local node automatically became a seeder of these same files. Network deduplication. This is a game-changer. Particularly in a world where things like the pypi and npm exist, where vast numbers of developer-hours are spent redoing work, it is easy to see how the notion of deduplication can be expanded to do more and more abstract kinds of energy-saving work. (Imagine writing tests for kinds of work you want code to do, and the code itself being mutable. If multiple people had done work that passed those tests, you could choose between them based on other factors like speed, efficiency etc.)\nSo anyway. Now I go to my blog, and do ipfs add -r public2, and hey presto, my blog is in the IPFS. Running on my local machine, that link redirects to the following:\nhttp://bafybeibgegkyol2e5txemzjuflbpjrsh6da2xxbyzzilahtilsp3jxxaa4.ipfs.localhost:8080/\nso it just gets the file from the local folder nice and easy. However, when I go to the same link in Chrome (where I havent installed the plugin) it loads as well without a redirect (after some time). So I think the ipfs.io acts as a temporary node, grabbing the hash you request from the network and serving it over http. Aka, it came to my local node, got the file, then gave it back to me.\nNow, the blog in the IPFS has the same issue as the one in hyperspace– all the links point to the clearnet. However this is still fine for now, and still shows nicely how the two protocols interact.\nSo now I just need to set up the host in my micro instance, and I’m done for the day. I’m going to take a risk and try to do it directly in my micro host. It’ll probably crash and die but lets see.\nI shut down some unnecessary services on the host. I’ve inited the ipfs node. And added the blog again. And started the daemon. And the node is still accessible. I shut down my local node and tried the URL again through the ipfs gateway and.. its there! I’m a little worried it’s just being cached by the ipfs gateway but I’ll check back tomorrow and see.\nNice! I’m now mirrored on two decentralized internet protocols! I’m safe in the case of nuclear apocalypse! I’m part of the future!\n\n\nConculsions\nVery cool to have finally actually used both of these protocols, I have been following and stanning them for ages now. They both exceed expectations in terms of user-friendliness and just-works-ness. Maybe thats just because I’m a programmer now so things are easier, but their install and setup instructions are really nice and clear and worked without a hitch in this case.\nObviously there are still some things I need to sort out, and some things I want to try: 1. Set up cronjobs to update all three of the hosts once per day with the latest content (I know I should use build pipelines but I have never used github pipelines and I think a little cronjob is fine for now). 2. See if it is possible to have relative paths that work in all three hosts, so internal links work properly and always link within the same protocol. 3. Have a look at hyper-ipfs inter-operability. 4. Set up nodes on a raspberry pi and serve from home.\nIn terms of updating, becaue I just dumped whatever blog I had at the time into the protocol, the version in hyper doesn’t have this post at all, and the version in IPFS has this post without the IPFS content. This needs to be fixed first. The other things will take more time and tweaking so I’ll put them on the back burner for now.\nSo! Great success! I’m off to a New Years bonfire now. Lets burn the bad 2020-vibes away.\n\n\n\n\n\nFootnotes\n\n\nWith the Google Cloud Platform free developer package, you get a teeny little machine in the cloud for free forever.↩︎\nI made a point of checking if hidden files are added, they aren’t by default so the .git folder should be skipped.↩︎"
+  },
+  {
+    "objectID": "OldPosts/hello-world.html",
+    "href": "OldPosts/hello-world.html",
+    "title": "Homepage of Fergus Fettes",
+    "section": "",
+    "text": "“Salamanders have their appointed Dwelling in Fire;\nSylphs in the Air; Nymphs in the flowing Waters;\nand Gnomes in Earthen-burrows, but the creature whose\nsubstance is Bliss is everywhere at home. All sounds,\neven to the roaring of Lions, the screeching of the\nnightly Owls, the laments and groans of those entrapped\nin Hell, are as sweet Musick to her. All odours, even\nto the foulest stench of Corruption, are to her as the\ndelight of roses and Lilies. All savours, even to the\nbanquet-table of the Harpys of heathen lore, are as Sweet\nloaves and spiced Ale.\nWandering at noon through the Waste-Places of the world,\nit seems to her she is refreshed by Canopies of flocking\nAngels.\nThe earnest seeker will look for her in All places,\nhowever dim and sordid, of this world or in the seven\nothers. Thrust a keen Sword-blade through her and it will   seem as a fountain of Divine and Pure pleasure.   These eyes, by Translation, have been given to see her ways;\nand an equal gift as revealed by Wisdom is sometimes granted\nthe Child.”\n\n~ Jane Lead1\n\nReviews\nI have started reviewing things, cities first. This is a largely biographical account of places I have been and what I thought about them.\nI will add more as time goes on (I hope!)\n\n\n\n\n\nFootnotes\n\n\nMy subtitle is plagiarised from the Borges book where I was introduced to her. I have not been able to track down the original source for this, despite some attempts, so it could of course be a Borgesian invention.↩︎"
+  },
+  {
+    "objectID": "OldPosts/music-i-like.html",
+    "href": "OldPosts/music-i-like.html",
+    "title": "Music-I-Like",
+    "section": "",
+    "text": "I like listening to music. I try to listen widely, but also (somewhat) deeply, getting into niche genres and exploring the landscapes I find there. I had a quite tepid entry into music appreciation, growing up listening to Leonard Cohen, Bob Dylan, the Red Hot Chili Peppers, and whatever happened to be popular at the time among my peers (I’m of the Limp Bizkit generation so you can image what that means).\nWhile I was at university, in my early 20s, my musical horizons were broadened, and continued to broaden throughout my twenties. I started listening more and more widely not only to ‘popular’, contemporary music, but also taking a fairly slow, broad pass through the history of classical music. Below I have summarized some of my listening habits of the past ten years."
+  },
+  {
+    "objectID": "OldPosts/music-i-like.html#soulseek",
+    "href": "OldPosts/music-i-like.html#soulseek",
+    "title": "Music-I-Like",
+    "section": "Soulseek",
+    "text": "Soulseek\nI haven’t gotten much into it yet but I hear it is the dream for things that can’t be found elsewhere."
+  },
+  {
+    "objectID": "OldPosts/music-i-like.html#soundcloud",
+    "href": "OldPosts/music-i-like.html#soundcloud",
+    "title": "Music-I-Like",
+    "section": "Soundcloud",
+    "text": "Soundcloud\nI only use Soundcloud to listen to this one song that was produced by a friend of a friend, and my old partners solo stuff. I should really dive in there for the really cutting edge stuff, I know. But I tend to listen to much more older and more established music than the state-of-the-art. That is neither to my credit nor discredit in my opinion."
+  },
+  {
+    "objectID": "OldPosts/music-i-like.html#literature",
+    "href": "OldPosts/music-i-like.html#literature",
+    "title": "Music-I-Like",
+    "section": "Literature",
+    "text": "Literature\nOccasionally I want to here some opinions about the music I like. I generally look up whatever album I’m considering on Pitchfork on these occasions.\nOther than that, there are two sources I should mention: Piero Scaruffi, a physicist I think? I have no idea how I discovered that list, but I have gotten some good stuff from there.\nAnd finally, Ted Gioia. I am working through that list just now. Having gotten halfway through 2019, I’m realising that I need to start skipping the jazz and the folk singers that he recommends, but there is so much weird and fascinating stuff from all over on those lists that I think he will continue to be a great source for many years to come."
+  },
+  {
+    "objectID": "OldPosts/oculus-paint.html",
+    "href": "OldPosts/oculus-paint.html",
+    "title": "Paint in VR",
+    "section": "",
+    "text": "I bought myself a VR headset. My justification was some trailers for ‘Infinite Office’, and my love of portability– if it is true that you can have 5x screens from one laptop strapped to your head, then it’s really a gamechanger in terms of portability.\nAs it happens, I enjoy the office space (though there are still many kinks to be worked out, naturally– for instance it doesn’t support multiple screens yet on Linux), but I am not going to talk about Oculus for work right now.\nThe second thing that I bought it for, was to encourage myself to get back into JavaScript development. I consider JavasScript development to be quite unpleasant, I don’t like the tools or the workflows, but it is what so much of our life is built on, so I want to continue learning more until I am at least at a sort of journeyman-competency.\nSo here is my journey to making a small app in JavaScript-VR."
+  },
+  {
+    "objectID": "OldPosts/oculus-paint.html#getting-started",
+    "href": "OldPosts/oculus-paint.html#getting-started",
+    "title": "Paint in VR",
+    "section": "Getting Started",
+    "text": "Getting Started\nFirst I went over my old JS experinements/work, refactoring a little and refamiliarising myself with the concepts. I ran some of my old 3D geometry monstrosities, and signed up as an oculus developer.\nThe first hurdle I hit was serving my creations to the headset. WebXR only works over https. But there are built-in execptions for localhost, so I had to get the Oculus to think it was at my localhost– sounds like a job for port forwarding.\nI started with the oculus chrome debugging guide. I find myself using something called ‘adb’– I assume this is the android debugger. This is exciting! I’m now an adroid developer apparently.\n$ adb devices\nList of devices attached\n1WMHH83CNH0522  device\nI found the IP of the machine and tried to ssh in:\n$ adb shell ip route\n192.168.1.0/24 dev wlan0 proto kernel scope link src 192.168.1.185\n$ ssh -fNR 1234:localhost:1234 192.168.1.185\nbut to no avail. A moment or two googling later I found the command:\n$ adb reverse tcp:1234 tcp:1234\nand we’re away! I can now open locally hosted sites on my Oculus! And I imagine I have also learned some stuff that will be useful for using my phone as a webcam or other such tricks, very excellent."
+  },
+  {
+    "objectID": "OldPosts/oculus-paint.html#copying-code",
+    "href": "OldPosts/oculus-paint.html#copying-code",
+    "title": "Paint in VR",
+    "section": "Copying Code",
+    "text": "Copying Code\nI first try running some of the ThreeJS examples locally, then I pick the one I want, refactor it (I hate HTTP and JS in one document, and I tend to backup all the ThreeJS files I am using in my own src file to avoid too much dependency hell when building), and commit it to my new javascript playground.\nFortunately, their demo is very limited in scope. This is fortunate because I gives me something to do! It only uses two triggers for everything– you can paint, and resize your tool. I will add some buttons. To learn the correct names for the events, I’m copying this example from the lovely list of WebXR Samples. In fact I’ve cloned the whole repo so I can read through it."
+  },
+  {
+    "objectID": "OldPosts/oculus-paint.html#debugging",
+    "href": "OldPosts/oculus-paint.html#debugging",
+    "title": "Paint in VR",
+    "section": "Debugging",
+    "text": "Debugging\nReading through lots of WebXR and ThreeJS libraries, I’m still not sure how to mesh them together– specifically I can’t figure out what the button-press events are called. So I’m going back to the debug guide to actually catch the events as they are happening.\nSo now I have chrome on my laptop debugging the session in the Oculus. Snazzy.\nI try the Event Listener Breakpoints but no dice. Maybe its too new of a feature? Anyway I stick a breakpoint in the render loop and try to trigger it– my headset only functions when you are wearing it, so I have to have one eye in the headset and one the debugger, but eventually I manager to capture an event. I’ll eventually try to find a way to leave the headset running when I’m not wearing it.\ncontroller1.addEventListener('selectstart', () => {console.log('hello')})\nFrom that captured event I get a nice log dump of all the features–\n...\ngamepad: Gamepad {id: \"\", index: -1, connected: true, timestamp: 734840.0999999994, mapping: \"xr-standard\", …}\ngripSpace: XRSpace {}\nhandedness: \"right\"\nprofiles: (4) [\"oculus-touch-v3\", \"oculus-touch-v2\", \"oculus-touch\", \"generic-trigger-squeeze-thumbstick\"]\ntargetRayMode: \"tracked-pointer\"\n...\nSo that is something to work with!"
+  },
+  {
+    "objectID": "OldPosts/oculus-paint.html#progress",
+    "href": "OldPosts/oculus-paint.html#progress",
+    "title": "Paint in VR",
+    "section": "Progress",
+    "text": "Progress\nBefore tryig to integrate any of the fancy stuff from the WebXR example page (fancy just meaning ‘basic graphics’, but they write all the vertices themselves so it looks a lot more than some simple ThreeJS stuff), I decided to make a quick sanity check so I can really set stuff up to work nicely. So here I am just dumping all the events from the gamepads into the console:\nfunction render() {\n  session = renderer.xr.getSession();\n\n  if (session) {\n    for (let source of session.inputSources) {\n      if (source.gamepad) {\n        ProcessGamepad(source.gamepad, source.handedness);\n      }\n    }\n  }\n\n  handleController( controller1 );\n  handleController( controller2 );\n\n  renderer.render( scene, camera );\n}\n\n\nfunction ProcessGamepad(gamepad, hand, pose) {\n  console.log(hand)\n  update_state(gamepad)\n};\n\nfunction update_state (gamepad) {\n  for (let i = 0; i < gamepad.buttons.length; ++i) {\n    if (gamepad.buttons[i].pressed){\n      console.log('button pressed: ' + i + ', value: ' + gamepad.buttons[i].value + ', touched: ' + gamepad.buttons[i].touched)\n    }\n  }\n  for (let i = 0, j = 0; i < gamepad.axes.length; i+=2, ++j) {\n    console.log(gamepad.axes[i], i + 1 < gamepad.axes.length ? gamepad.axes[i + 1] : 0);\n  }\n}\nI start it up and it works! My Oculus controller has buttons 0, 1, 4 and 5, and 3 is the joystick click. I assume 2 is reseved for the oculus button on the right controller, though maybe I can use it on the left one. It also has sensitive axes on buttons 0 and 1, and the joystick. Plus position information! A veritable wealth of possibilities.\nI’ll continue with this tomorrow."
+  },
+  {
+    "objectID": "OldPosts/oculus-paint.html#archaeology",
+    "href": "OldPosts/oculus-paint.html#archaeology",
+    "title": "Paint in VR",
+    "section": "Archaeology",
+    "text": "Archaeology\nI spent an age trying to add colors to the TubePainter module. I got very confused by it because I couldn’t believe that they hadn’t added the functionality to change the color, but I guess the project is really a stub.\nIn fact the more I look into VR development the puzzles I am spotting. I looks like there was a major boom in VR about five years ago, most of the libraries I’m working with were started back then. But then they seem to have somewhat petered out. Maybe we are currently in a little VR-winter, as the initial hype overshot all reality. Maybe we are heading into a thaw now. Lets see.\nFurthermore, notes after a day or two of regular Oculus useage– it definitely takes a toll on the eyes. Everything has a somewhat hallucinagenic quality when you come out of it, like an acid comedown. I’m not sure if this effect will diminish or grow with continued usage. I can see it being very problematic for people who suffer from HPPD.\nOr maybe all the Oculus Developers are elsewhere, working with the Unreal Engine or Unity or someeuch. Maybe ThreeJS isn’t cool. But I must say I am impressed by how much this thing can run, I spend 20 minutes filling my vision with layer upon layer of multicoloured swirls, without noticing any drop in quality or responsivness.\nThe next part I have to integrate is the VR answer to the dat-gui library. Also made 4 years ago."
+  },
+  {
+    "objectID": "OldPosts/oculus-paint.html#frustration",
+    "href": "OldPosts/oculus-paint.html#frustration",
+    "title": "Paint in VR",
+    "section": "Frustration",
+    "text": "Frustration\nOnce again I am reminded of how much I hate the JS workflow. I need to improve this somehow. With the Oculus it is particularly bad– make a change, serve the change, pick up headset, wait for it to start up, then when it is runnign start up the debugger with a keyboard shortcut, then take it off and do some debugging. Repeat.\nI will eventually work on a better workflow by integrating RiftSketch. That will be a joy I think, if I can code and manipulate objects all in VR. That is the goal."
+  },
+  {
+    "objectID": "OldPosts/oculus-paint.html#features",
+    "href": "OldPosts/oculus-paint.html#features",
+    "title": "Paint in VR",
+    "section": "Features",
+    "text": "Features\nSo after an age of fiddling with GUIs I gave up for the moment and satisfied myself with two new features: * random color generation * (with or without changing the color of your little cloud of cubes) * buffer deletion (specific to each hand, so you can delete work in one hand only)\nObviously both of these things can be much upgraded, a C-z feature and better color choosing. But I think it is enough to have some fun with just now so I will push it to github so I can use it untethered. I’ll make it available at paint.fergusfettes.com."
+  },
+  {
+    "objectID": "OldPosts/oculus-paint.html#further-investigations",
+    "href": "OldPosts/oculus-paint.html#further-investigations",
+    "title": "Paint in VR",
+    "section": "Further Investigations",
+    "text": "Further Investigations\nSo I played with RiftSketch. It is wonderful. It just needs a propery editor. I had a look around the internet (even asked on reddit) then found what I needed. In the process I stumled across some other stuff that might come in useful. At the end of the day what I need is this: * Vim Javascript Implimentation for my editor * RiftSketch for the framework * ThreeJS Editor tools stolen from here. Actually maybe I can just skip RiftSketch and add Vim and a VRButton directly to that. But I would feel bad if I left RiftSketch behind.\nAll of this mixed with my paint program of course! It’s going to be mental.\nIn all seriousness, in the short term, if I can integrate that JS Vim implementation into RiftSketch I will be a happy man.\nThis process is teaching me a great deal about JavaScript. That should go without saying. In the last hour I learned: * how to use prettier and eslint to lint my stuff * how to reverse engineer files from .maps * more about building/packaing etc (still trying to use parcel for everything since it is nice and minimal)"
+  },
+  {
+    "objectID": "OldPosts/oculus-streaming.html",
+    "href": "OldPosts/oculus-streaming.html",
+    "title": "Streaming Oculus",
+    "section": "",
+    "text": "Oculus streaming is still a bit of a shitshow. Or, maybe thats unfair, but its very facebook. Streaming works where they want it to work (eg. your newsfeed).\nI want to stream to radio.schau-wien.at, where I am experimenting with livestreaming/broadcasting.\nSo lets get back into android development!\nI’m on a different laptop now so I have to relearn everything from last time. My devices are gone, my permsission are gone. Lets see.\n$ adb devices\nList of devices attached\n:sad:\nOkay, turns out to become an android developer you literally have to tap the build number of your phone seven times. It even gives you little hints like ‘you are now 4 steps from becoming a developer!’. Nice little easter-egg.\n$ adb devices\nList of devices attached\n21525d14        device\nOkay and heres I one-liner a ran directly from SO:\nadb exec-out screenrecord --output-format=h264 - |\n   ffplay -framerate 60 -probesize 32 -sync video  -\nDaamn that was easy."
+  },
+  {
+    "objectID": "Projects/Barns/00_Overview.html",
+    "href": "Projects/Barns/00_Overview.html",
+    "title": "Fergus Fettes",
+    "section": "",
+    "text": "I am renovating the barns.\nTo do this, I need the following: 1. 3D map in Sketchup 2. Wood\nThe current plans are as follows: 1. Insulate, roof and wall the fermentation lab 2. Do floor above fermentation lab and start shelving that area 3. Use straw for fermentation lab roof insulation 4. Empty Rosies extension into furniture pile 5. Make lean-to out of extension"
+  },
+  {
+    "objectID": "Projects/Car/00_Overview.html",
+    "href": "Projects/Car/00_Overview.html",
+    "title": "Fergus Fettes",
+    "section": "",
+    "text": "I want to buy a car.\nSpecifically an electric autonomous car.\nThe Nissan LEAF seems the best to me.\nBut I need to read more about it: * what range does an old one have? * can I handle shit ranges? If I get 150km from a half-hour charge, isn’t that fine actually? * can I convert it?\n\nConversion\n\nwindow tints all around\npull down screen at the front\nBed taking up half the car\nFlattening seats possible?\nScreens attached to the roof for working on your back? Or just an oculus rift?\n\n\n\nBudget\nIf I imagine I could live out of it for two years total, thats worth * 300 a month rent savings * 200 a month travel savings\nSo 12k as a baseline.\nI saw some online for 7-8k, then I would have ~4k to do it up. Very doable.\nI’m also interested in this because I think these things will become more valuable over time. I think its a decent investment."
+  },
+  {
+    "objectID": "Projects/House/00_Overview.html",
+    "href": "Projects/House/00_Overview.html",
+    "title": "Fergus Fettes",
+    "section": "",
+    "text": "I should build a house.\n\nTODOS:\n\nCall Steve Brown, find the wood suppliers number, contact them.\nBet builder in to map out the foundations.\n\nTODO: 1. Mortgage paperwork 2. Read through all documents and building material. 3. Get builder in to map out foundations 4. Ron to do foundations 5. Cut down trees. 6. Drawing for foundations."
+  },
+  {
+    "objectID": "Projects/House/paperwork/emails.html",
+    "href": "Projects/House/paperwork/emails.html",
+    "title": "Fergus Fettes",
+    "section": "",
+    "text": "Bryan Stuart bryan@sylvanstuart.com\nTue, Mar 22, 2022 at 3:37 PM\nTo: ROSIE wantonwells@btinternet.com\nCc: Brock Fettes brockfettes@gmail.com, Doug Irvine doug@sylvanstuart.com\nHi Rosie, these are the quantities Doug took off last week, which I thought you might find useful.  All machined sections are ex 25 or 50mm sections by 50/75/100/150/175/200mm, and assumed fully seasoned.  Where sawn finish it is generally a fine one.\nIf you want any more advice on this, please get back to me.\nBest\nBryan\nSiberian larch kiln dried sawnfallen IT4 cladding ex 25 x 150mm with two sawn long faces (must be reversible so we can hide any sapwood) – 235/5.0m  Siberian larch kiln dried saw fallen 16 x 89mm v-jointed t&g with two sawn faces - 29m²  Siberian larch kiln dried sawnfallen 75 x75mm with four sawn faces – 4/4.0m  Siberian larch kiln dried sawnfallen 45 x95mm with four sawn faces – 34/4.0m  Siberian larch kiln dried sawnfallen 45 x40mm weathered/angled, as attached, with four sawn faces – 230/5.0m  Siberian larch kiln dried sawnfallen grooved decking 45 x 95mm – 70/5.0m  Siberian larch kiln dried sawnfallen dressed 45 x 145mm – 16/4.8m  Siberian larch kiln dried sawnfallen dressed 45 x 170mm – 10/4.0m  Siberian larch kiln dried sawnfallen dressed 45 x 45mm – 10/4.8m  Siberian larch kiln dried sawnfallen 22 x 195mm with two sawn long faces – 24/5.0m\n\n\nBryan Stuart bryan@sylvanstuart.com\nWed, Dec 29, 2021 at 3:48 PM To: Brock Fettes brockfettes@gmail.com Cc: Rosie Wilson-Leagas wantonwells@btinternet.com\nHi Brock, further to your enquiry, pricelist/specification plus a pdf for our Model E attached, and more detailed drawings of our standard designs than on our website on links below.  The Model E has no rain screening, decking or roof overhangs, and while there are reduced roof overhangs as standard, this is now quoted as an extra on the Model D price list (except for a 1.7m deep gable deck, which is included at the extended roof overhang).\nThe Indicative Total Cost does not include any allowance for a main contractor or project manager, as many of our customers do this themselves as self-builders.  We are well placed to provide support in doing this and in providing or facilitating provision of all the paperwork required in getting to that stage, which makes for a very cost-effective package, but we can provide a full-build service if that is sought.  Local “other trades” contractors are usually accustomed to working together and co-ordinating what they do, which can help greatly with running a house-build.  A turn-key supply adds substantially to cost as it requires a main contractor and project manager.  We can usually provide a project manager if required or supply through a main contractor (subject to agreed payment terms).\nCost will vary depending on site location, access and site conditions, but the Indicative Total Cost gives good guidance of the direct build costs.  We frequently carry out the erection of the finished shell, i.e. the house having roof finish, guttering and wall cladding completed, and the standing scaffolding removed.   Alternatively, we can erect the shell only to airtightness level.  The airtightness membrane is installed as part of this process, and the only specialist issue thereafter is ensuring it is not pierced, or where this is necessary, that this is supervised and adequately sealed. \nThe kit price includes all drawings, schedules, calculations and certification etc relating to our supply, and we are happy to provide a kit only, although if we are not providing any erection labour we would have to charge VAT on it, which is normally reclaimable for a dwelling-house.  Similarly on that basis, we normally don’t have to charge VAT if we provide some assistance with the kit erection.\nRegarding mortgageablity, the construction is compliant with the criteria of most lenders, the only exception in our experience to date is the few who won’t lend on timber clad homes.   We are category A1 NHBC housebuilders, and can carry out construction under their ten-year warranty scheme, which includes staged inspections during the build.\nWe’ll be pleased to provide any additional information you may require, and to discuss the project further with you.\nRegards\nBryan\n\n\nI’ll be back in the office later, and will email you our information pack which includes guide prices, but it has been very difficult to keep track of material prices this year.  I’ll also send you a specimen quotation which sets out our normal contract terms.  In the past we have been able to confirm the kit cost on order confirmation (which is the next stage for you following receipt of the BW), but recently all we could do was have up to date quotes for most of the required materials, then order these promptly, and identify those where this was not possible.\n\n\nWe regularly help folk fill in their mortgage application forms in regard to costs and how these are set out.  Where there is a mortgage we usually provide NHBC cover, which gives a 10 year warranty, and independent, staged inspections, otherwise you are likely to need to have the build stages inspected and certified by a chartered professional.  The cost of NHBC cover is usually around £2,000.  The self-build lenders we have mainly come across are Halifax and  the Ecological Building Society.\nThe BW requires structural design certification of the whole house, including the full design of the substructure, which allows accurate estimates to be obtained for that.  We can provide cost allowances for other trades, but the harder the information, i.e. actual estimates, the better.  Again, the BW specifies these fairly tightly.  You also need a mechanical ventilation and heat recovery (MVHR) installation due to the airtightness, and a local firm has done almost all of these in our most recent houses.  Additionally, you may need to firm up on the renewables input and heating.  This will all have been done in draft form to produce SAP calculations for the BW, but you may want to give it further thought.\nOur current lead time from order confirmation to kit deliver to site is about 14 weeks.  While we have had pre Christmas notifications of further complement price increases, I think timber prices may well soften in the New Year (they have doubled over the past 18 months!).   Concrete, and especially steel prices have shot up, along with there being supply issues, but we have costs on a current local groundworks and substructure build at Chapel of Garioch, which should be a good guide for starters.  From commencement of site works to completion usually takes about six months.  Trades overlaps add time, and that between practical completion and actual occupation alway seems to take longer than what folk plan!\n\n\nEven the simplest planning application will take six weeks to process, probably longer.  I think the main reason they are asking for this is to ensure the neighbour has been notified.\nIn terms of kit delivery, the critical supply time is normally for the windows and external doors.  This is currently about 12 weeks plus with all the usual suppliers, and another three weeks can be added to that for their July shutdown.  We don’t like to order these until the BW is issued, or at least it has been confirmed there are definitely no issues regarding the building regulations.  It would also be good to know there was no issue with the planning application to reorientate the house. >\nAlso a good move to get the extant consent confirmed as implemented, as set out by Doug.\nAn August delivery for the kit looks more likely.  The paperwork is a marathon these days, so actually erecting the houses seems a bit of a breeze by comparison!"
+  },
+  {
+    "objectID": "Projects/Overview.html",
+    "href": "Projects/Overview.html",
+    "title": "Fergus Fettes",
+    "section": "",
+    "text": "Trying to organize material related to current and ongoing projects.\nThis is part of a movement to try to clear my head a little, as I am becoming dizzy and unfocussed. One part of that is to stop reading the news and twitter and instagram. Another part is to try to cut out focus on pointless things.\n\nLife:\n\nOverview\nHabits\n\n\n\nOngoing:\n\nHouse\nBarns\n\n\n\nFor future:\n\nCar"
+  },
+  {
     "objectID": "Runs/2022-26-10.html",
     "href": "Runs/2022-26-10.html",
     "title": "Run to Prague 7",
@@ -84,25 +623,95 @@
     "text": "I went for a nice run today. It took me an hour, and I covered a good stretch of the city.\nThis is just a little test to see about doing maps in quarto, downloading the data, extracting it etc. This took me about 25 minutes all told– Quarto is a fucking Godsend. I cannot stress that enough.\nSoon I will add such maps to my city reviews. It is going to be great."
   },
   {
-    "objectID": "Spotify_2021-2022.html",
-    "href": "Spotify_2021-2022.html",
-    "title": "Spotify Data",
+    "objectID": "Study/GIS/Overpass API.html",
+    "href": "Study/GIS/Overpass API.html",
+    "title": "Fergus Fettes",
     "section": "",
-    "text": "Code\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport datetime\nimport os\n\nDATA_DIR = '/p/my-quarto-site/_data'\nDATE_FORMAT = '%Y-%m-%dT%H:%M:%S.%fZ[UTC]'\n\ndef sort_df_by_artist_time(df):\n  # Group by by_\n  df = df.groupby(['Artist']).sum().reset_index()\n\n  # Sort by listening time\n  df.sort_values('msPlayed', ascending=False, inplace=True)\n\n  # Format the listening time\n  df['Time'] = df['msPlayed'].apply(lambda x: datetime.timedelta(seconds=round(x/1000)))\n  df['Time'] = df['Time'].apply(lambda x: f'{x.days*24 + x.seconds//3600}h:{x.seconds//60%60}m')\n\n  df.drop('msPlayed', axis=1, inplace=True)\n  return df\n\ndef sort_df_by_track(df):\n  # Group by by_\n  df = df.groupby(['Artist', 'Track']).sum().reset_index()\n\n  # Sort by listening time\n  df.sort_values('msPlayed', ascending=False, inplace=True)\n\n  # Format the listening time\n  df['Time'] = df['msPlayed'].apply(lambda x: datetime.timedelta(seconds=round(x/1000)))\n  df['Time'] = df['Time'].apply(lambda x: f'{x.days*24 + x.seconds//3600}h:{x.seconds//60%60}m')\n\n  df.drop('msPlayed', axis=1, inplace=True)\n  return df"
+    "text": "Overpass\nOverpass piqued me interest as a potential everyday tool of some use. I’m going to try and learn it.\nLets start easy, everything in the box:\nnwr({{bbox}});\nout meta;\n(nwr means ‘node or way or relation’)\nNow lets just find a coord:\n[out:json];\nway[highway](around:50.0,{point.lat},{point.lon});\nout;\nPubs in Insch: note, the original search for Insch is overwritten by the search for pubs relative to it.\nnwr[name=\"Insch\"]({{bbox}});\nnwr[amenity=pub](around:1000);\nout center;\nPubs relative to a starting coordinate:\nnode(around:50,57.3433947,-2.6120391);\nnwr[amenity=pub](around:2000);\n(._;>;);\nout meta;\nAll amenities or shops near Insch:\nnode(around:50,57.3433947,-2.6120391);\n(\n  nwr[amenity](around:2000);\n  nwr[shop](around:2000);\n);\n(._;>;);\nout meta;\nAnd a printout of the amenity and restaurant types:\n[out:csv(Insch Shops and Amenities)];\nnode(around:50,57.3433947,-2.6120391)->.insch;\nnwr[amenity](around.insch:2000);\nfor (t[\"amenity\"])\n{\n  make Beispiel name=_.val;\n  out;\n}\nnwr[shop](around.insch:2000);\nfor (t[\"shop\"])\n{\n  make Beispiel name=_.val;\n  out;\n}"
   },
   {
-    "objectID": "Spotify_2021-2022.html#top-artists",
-    "href": "Spotify_2021-2022.html#top-artists",
-    "title": "Spotify Data",
-    "section": "Top Artists",
-    "text": "Top Artists\n\n\nCode\ndf = sort_df_by_artist_time(listening_df)\ndf.head(100).style.hide_index()\n\n\n\n\n\n\n  \n    \n      Artist\n      Time\n    \n  \n  \n    \n      Franz Liszt\n      33h:48m\n    \n    \n      John Cale\n      21h:24m\n    \n    \n      Franz Schubert\n      21h:6m\n    \n    \n      Domenico Scarlatti\n      18h:39m\n    \n    \n      Sergei Prokofiev\n      17h:13m\n    \n    \n      Orchestre Poly-Rythmo de Cotonou\n      16h:26m\n    \n    \n      Antonio Vivaldi\n      16h:19m\n    \n    \n      Antonín Dvořák\n      15h:43m\n    \n    \n      Johann Sebastian Bach\n      14h:43m\n    \n    \n      Sun City Girls\n      12h:57m\n    \n    \n      Johannes Brahms\n      12h:41m\n    \n    \n      Matmos\n      12h:28m\n    \n    \n      Dmitri Shostakovich\n      11h:14m\n    \n    \n      Amara Touré\n      11h:3m\n    \n    \n      Karol Szymanowski\n      10h:41m\n    \n    \n      Abdel Halim Hafez\n      10h:10m\n    \n    \n      Charlie Megira\n      9h:58m\n    \n    \n      Delroy Edwards\n      9h:58m\n    \n    \n      Slauson Malone\n      9h:32m\n    \n    \n      Scott Walker\n      9h:17m\n    \n    \n      Anadol\n      9h:13m\n    \n    \n      Müzeyyen Senar\n      9h:13m\n    \n    \n      Meridian Brothers\n      9h:6m\n    \n    \n      Brian Eno\n      8h:42m\n    \n    \n      Ludwig van Beethoven\n      8h:31m\n    \n    \n      Shin Joong Hyun\n      8h:28m\n    \n    \n      Jean Sibelius\n      8h:23m\n    \n    \n      Giacinto Scelsi\n      8h:19m\n    \n    \n      Dona Dumitru Siminica\n      8h:18m\n    \n    \n      Leopold Godowsky\n      8h:16m\n    \n    \n      Cem Karaca\n      8h:13m\n    \n    \n      Tom Waits\n      8h:12m\n    \n    \n      Attarazat Addahabia\n      8h:4m\n    \n    \n      Pyotr Ilyich Tchaikovsky\n      8h:2m\n    \n    \n      Hailu Mergia\n      7h:49m\n    \n    \n      Beak>\n      7h:39m\n    \n    \n      Joseph-Nicolas-Pancrace Royer\n      7h:29m\n    \n    \n      Maurice Ravel\n      7h:3m\n    \n    \n      Eartheater\n      6h:55m\n    \n    \n      Niccolò Paganini\n      6h:53m\n    \n    \n      Tsegue-Maryam Guebrou\n      6h:53m\n    \n    \n      Hagihara Yoshiaki\n      6h:48m\n    \n    \n      Lingua Ignota\n      6h:46m\n    \n    \n      The Body\n      6h:35m\n    \n    \n      Ziad Rahbani\n      6h:27m\n    \n    \n      Nikolai Medtner\n      6h:24m\n    \n    \n      Getatchew Mekurya\n      6h:22m\n    \n    \n      Wolfgang Amadeus Mozart\n      6h:21m\n    \n    \n      Michael Robinson\n      6h:5m\n    \n    \n      Gabriel Fauré\n      5h:59m\n    \n    \n      Kikagaku Moyo\n      5h:54m\n    \n    \n      Fritz Kreisler\n      5h:47m\n    \n    \n      Akofa Akoussah\n      5h:17m\n    \n    \n      Olivier Messiaen\n      4h:51m\n    \n    \n      Maria Tănase\n      4h:45m\n    \n    \n      Inade\n      4h:36m\n    \n    \n      The Black Angels\n      4h:35m\n    \n    \n      Cucina Povera\n      4h:33m\n    \n    \n      Julee Cruise\n      4h:32m\n    \n    \n      Sofia Gubaidulina\n      4h:30m\n    \n    \n      Kandia Kouyate\n      4h:25m\n    \n    \n      Hala Strana\n      4h:25m\n    \n    \n      Henry Purcell\n      4h:17m\n    \n    \n      Harry Partch\n      4h:17m\n    \n    \n      Claudio Monteverdi\n      4h:17m\n    \n    \n      Terry Riley\n      4h:16m\n    \n    \n      Philip Glass\n      4h:16m\n    \n    \n      Karlheinz Stockhausen\n      4h:14m\n    \n    \n      Sergei Rachmaninoff\n      4h:13m\n    \n    \n      Dariush\n      4h:13m\n    \n    \n      George Enescu\n      4h:11m\n    \n    \n      Ali Farka Touré\n      4h:9m\n    \n    \n      Miho Hazama\n      4h:6m\n    \n    \n      Opinion\n      4h:0m\n    \n    \n      Enrique Granados\n      3h:55m\n    \n    \n      Tuxedomoon\n      3h:54m\n    \n    \n      Müslüm Gürses\n      3h:48m\n    \n    \n      Alfred Schnittke\n      3h:46m\n    \n    \n      Fennesz\n      3h:39m\n    \n    \n      Vítězslav Novák\n      3h:37m\n    \n    \n      Yves Tumor\n      3h:32m\n    \n    \n      Jean-Philippe Rameau\n      3h:32m\n    \n    \n      Ildebrando Pizzetti\n      3h:29m\n    \n    \n      Phillip Nangle\n      3h:28m\n    \n    \n      Diamanda Galás\n      3h:21m\n    \n    \n      Backxwash\n      3h:21m\n    \n    \n      Thee Oh Sees\n      3h:18m\n    \n    \n      Hans Werner Henze\n      3h:13m\n    \n    \n      Astor Piazzolla\n      3h:5m\n    \n    \n      Psychic TV\n      3h:5m\n    \n    \n      Jon Hopkins\n      3h:0m\n    \n    \n      Harold Budd\n      3h:0m\n    \n    \n      Dean Blunt\n      2h:58m\n    \n    \n      Giovanni Battista Pergolesi\n      2h:57m\n    \n    \n      Mark Turner\n      2h:57m\n    \n    \n      François Couperin\n      2h:51m\n    \n    \n      Armand Hammer\n      2h:48m\n    \n    \n      Jang Hyun\n      2h:46m\n    \n    \n      Pablo de Sarasate\n      2h:45m\n    \n    \n      Kate Bush\n      2h:42m\n    \n  \n\n\nWell there you go (sidebar ==>). It’s actually quite different from what I expected. I mean I know I listen to a lot of solo piano music, but that is a little absurd. And how did John Cale get in there as second!\nThe more I look at that list the more perplexing I find it. I guess I did download a lot of music this year and listen to it on my laptop, so the numbers are quite a bit skewed by that. But that still means that I have listened to 16h or the Polyrythmic Orchestra of Cotonou!\nThe only thing I find totally unrealistic is the 12h of Brahms and the 8h of Beethoven– they must both be from the Menuhin Century album– the ‘Virtuoso and Landmark Recordings’ CDs are full of Brahms and Beethoven, and I listen to it regularly. But in my defense I’m mostly in it for the Menuhin– those two plus the Shostakovich– and maybe even the Rachmaninoff? I think there are a few names on there because of that album.\n\nPodcasts\nHere are the top podcast times:\n\n\n\n\n\n\nPodcasts\n\n\n\n\n\n\n\nCode\ndf = sort_df_by_artist_time(podcast_df)\ndf.head(30).style.hide_index()\n\n\n\n\n\n  \n    \n      Artist\n      Time\n    \n  \n  \n    \n      80,000 Hours Podcast with Rob Wiblin\n      23h:20m\n    \n    \n      Conversations with Tyler\n      17h:21m\n    \n    \n      The Ezra Klein Show\n      10h:30m\n    \n    \n      Dan Carlin's Hardcore History\n      10h:12m\n    \n    \n      The Lunar Society\n      4h:12m\n    \n    \n      Sean Carroll's Mindscape: Science, Society, Philosophy, Culture, Arts, and Ideas\n      1h:57m\n    \n    \n      Lex Fridman Podcast\n      1h:26m"
+    "objectID": "Study/Sql.html",
+    "href": "Study/Sql.html",
+    "title": "Fergus Fettes",
+    "section": "",
+    "text": "Postgres Docs"
   },
   {
-    "objectID": "Spotify_2021-2022.html#top-tracks",
-    "href": "Spotify_2021-2022.html#top-tracks",
-    "title": "Spotify Data",
-    "section": "Top Tracks",
-    "text": "Top Tracks\nOkay, now things are starting to fall into place. A lot of the hours that Liszt has racked up are due to the album ‘Harmonies poétiques et religieuses’, which, I have to admit, has failed to really hit home with me. I spent many hours with the album, as you can see, because I have had good luck with other long Liszt suites (such as the Annees), just by listening to them again and again until they start to sink in. But the Harmonies still haven’t settled in, in fact I hardly remember them, which is why I was so surprised that Liszt was so high on the numbers for the last year.\nLo-Pacific by the Sun City Girls is great, but is an entire album as a single track so is cheating a little bit.\nWhat is Kansas by Opinion? I have never heard of that. Apparently it is on a playlist I created though, so apparently I listened to it and liked it once upon a time– or rather, 4 times upon a time, since it is 30 mins long. I’ll drop it too.\nIf I remove the classical stuff and Lo-Pacific, then the top tracks looks like this:\n\nTop Tracks (All)Top Tracks (Non-Classical)\n\n\n\n\nCode\ndf = sort_df_by_track(listening_df)\n\n# Show columns in the order 'Track', 'Artist', 'Time'\ndf = df[['Track', 'Artist', 'Time']]\ndf.head(30).style.hide_index()\n\n\n\n\n\n  \n    \n      Track\n      Artist\n      Time\n    \n  \n  \n    \n      \"J\" Blues 72\n      Shin Joong Hyun\n      3h:36m\n    \n    \n      Harmonies poétiques et religieuses, S. 173: III. Bénédiction de Dieu dans la solitude\n      Franz Liszt\n      3h:20m\n    \n    \n      Noude Ma Gnin Tche De Me\n      Orchestre Poly-Rythmo de Cotonou\n      2h:48m\n    \n    \n      Harmonies poétiques et religieuses, S. 173: I. Invocation\n      Franz Liszt\n      2h:37m\n    \n    \n      Gan Tche Kpo\n      Orchestre Poly-Rythmo de Cotonou\n      2h:27m\n    \n    \n      Harmonies poétiques et religieuses, S. 173: IV. Pensée des morts\n      Franz Liszt\n      2h:21m\n    \n    \n      Kansas\n      Opinion\n      2h:17m\n    \n    \n      Lo-Pacific\n      Sun City Girls\n      2h:13m\n    \n    \n      Wagner - Tannhauser: Overture, S442/R275\n      Franz Liszt\n      2h:10m\n    \n    \n      Gun\n      John Cale\n      2h:10m\n    \n    \n      Concerto in one movement for violin and orchestra transcribed from the 1st movement of the Concerto No.1 in D Major by Niccolò Paganini\n      Fritz Kreisler\n      2h:6m\n    \n    \n      Ohoi\n      Giacinto Scelsi\n      2h:1m\n    \n    \n      Chromatic Fantasy and Fugue in D Minor, BWV 903\n      Johann Sebastian Bach\n      1h:59m\n    \n    \n      Sonata in E Minor ‘Night Wind’, Op. 25 No. 2: Introduzione: Andante - Allegro\n      Nikolai Medtner\n      1h:59m\n    \n    \n      Beautiful Rivers and Mountains\n      Shin Joong Hyun & The Men\n      1h:58m\n    \n    \n      The Man Who Must Leave\n      Kim Sun\n      1h:56m\n    \n    \n      Harmonies poétiques et religieuses, S. 173: II. Ave Maria\n      Franz Liszt\n      1h:53m\n    \n    \n      The Four Seasons, Violin Concerto No. 2 in G Minor, RV 315 \"L'estate\": I. Allegro - Allegro non molto\n      Antonio Vivaldi\n      1h:53m\n    \n    \n      Szymanowski: Notturno e Tarantella, Op. 28\n      Karol Szymanowski\n      1h:52m\n    \n    \n      Mede Ma Gnin Messe\n      Orchestre Poly-Rythmo de Cotonou\n      1h:52m\n    \n    \n      Salamouti\n      Amara Touré\n      1h:50m\n    \n    \n      Ay Çürüdü\n      Anadol\n      1h:44m\n    \n    \n      The Sun\n      Kim Jung Mi\n      1h:42m\n    \n    \n      Görünmez Hava\n      Anadol\n      1h:42m\n    \n    \n      Albaki\n      Attarazat Addahabia\n      1h:40m\n    \n    \n      Afalago\n      Amara Touré\n      1h:38m\n    \n    \n      Ravel: Tzigane, M. 76\n      Maurice Ravel\n      1h:38m\n    \n    \n      Harmonies poétiques et religieuses, S. 173: VII. Funérailles\n      Franz Liszt\n      1h:37m\n    \n    \n      Dying On The Vine\n      John Cale\n      1h:32m\n    \n    \n      Embuwa Bey Lamitu\n      Hailu Mergia\n      1h:29m\n    \n  \n\n\n\n\n\n\n\nCode\ndf = sort_df_by_track(listening_df)\n\n# Drop classical and Lo-Pacific\ndrop_artists = [\n  \"Franz Liszt\",\n  \"Fritz Kreisler\",\n  \"Giacinto Scelsi\",\n  \"Nikolai Medtner\",\n  \"Antonio Vivaldi\",\n  \"Karol Szymanowski\",\n  \"Maurice Ravel\",\n  \"Henryk Wieniawski\",\n  \"Niccolò Paganini\",\n  \"Johann Sebastian Bach\",\n  \"Ludwig van Beethoven\",\n]\n\ndrop_tracks = [\n  \"Lo-Pacific\",\n  \"Kansas\",\n]\n\ndf = df[~df['Artist'].isin(drop_artists)]\ndf = df[~df['Track'].isin(drop_tracks)]\n\n# Show columns in the order 'Track', 'Artist', 'Time'\ndf = df[['Track', 'Artist', 'Time']]\ndf.head(30).style.hide_index()\n\n\n\n\n\n  \n    \n      Track\n      Artist\n      Time\n    \n  \n  \n    \n      \"J\" Blues 72\n      Shin Joong Hyun\n      3h:36m\n    \n    \n      Noude Ma Gnin Tche De Me\n      Orchestre Poly-Rythmo de Cotonou\n      2h:48m\n    \n    \n      Gan Tche Kpo\n      Orchestre Poly-Rythmo de Cotonou\n      2h:27m\n    \n    \n      Gun\n      John Cale\n      2h:10m\n    \n    \n      Beautiful Rivers and Mountains\n      Shin Joong Hyun & The Men\n      1h:58m\n    \n    \n      The Man Who Must Leave\n      Kim Sun\n      1h:56m\n    \n    \n      Mede Ma Gnin Messe\n      Orchestre Poly-Rythmo de Cotonou\n      1h:52m\n    \n    \n      Salamouti\n      Amara Touré\n      1h:50m\n    \n    \n      Ay Çürüdü\n      Anadol\n      1h:44m\n    \n    \n      The Sun\n      Kim Jung Mi\n      1h:42m\n    \n    \n      Görünmez Hava\n      Anadol\n      1h:42m\n    \n    \n      Albaki\n      Attarazat Addahabia\n      1h:40m\n    \n    \n      Afalago\n      Amara Touré\n      1h:38m\n    \n    \n      Dying On The Vine\n      John Cale\n      1h:32m\n    \n    \n      Embuwa Bey Lamitu\n      Hailu Mergia\n      1h:29m\n    \n    \n      Aflana\n      Attarazat Addahabia\n      1h:27m\n    \n    \n      Baed Aeh\n      Abdel Halim Hafez\n      1h:26m\n    \n    \n      Spring Rain\n      Park In Soo\n      1h:25m\n    \n    \n      Sintayehu\n      Hailu Mergia\n      1h:20m\n    \n    \n      The Girl Who Was Frightened of Ashtrays\n      Charlie Megira\n      1h:18m\n    \n    \n      Ya Evde Korksan\n      Anadol\n      1h:18m\n    \n    \n      N'nijo\n      Amara Touré\n      1h:17m\n    \n    \n      Tela\n      Amara Touré\n      1h:16m\n    \n    \n      Side X\n      Standing On The Corner\n      1h:15m\n    \n    \n      Al Hadaoui\n      Attarazat Addahabia\n      1h:13m\n    \n    \n      Sonata in B Minor, K. 87: Andante\n      Domenico Scarlatti\n      1h:13m\n    \n    \n      You Know Me More Than I Know\n      John Cale\n      1h:13m\n    \n    \n      Spirit Lady\n      Michael Robinson\n      1h:11m\n    \n    \n      The Sleeper\n      John Cale\n      1h:10m\n    \n    \n      Yemanesh Ayinama\n      Hailu Mergia\n      1h:10m\n    \n  \n\n\n\n\n\n\nAnd there you have it! This list makes sense to me now– a great South Korean psychedelic rock song, some voodoo music from Benin, ‘Gun’ by John Cale, some Amara Touré, some Ethiopian and Arab crooners. All good stuff.\nApparently Spotify will be delivering my full listening history in all it’s gory detail sometime soon. Lets see what I make of it when it gets here."
+    "objectID": "Study/Sql.html#courses",
+    "href": "Study/Sql.html#courses",
+    "title": "Fergus Fettes",
+    "section": "Courses:",
+    "text": "Courses:\n\nMastery with SQL"
+  },
+  {
+    "objectID": "Travel/Journeys.html",
+    "href": "Travel/Journeys.html",
+    "title": "Journeys",
+    "section": "",
+    "text": "This was one of the stranges adventures of my life. I went to work on an oil rig in the Iraqi Kurdistan (in an area that would fall to ISIS only a few years later) for four months. In between shifts I spent a month in Egypt."
+  },
+  {
+    "objectID": "Travel/Journeys.html#berlin",
+    "href": "Travel/Journeys.html#berlin",
+    "title": "Journeys",
+    "section": "Berlin",
+    "text": "Berlin"
+  },
+  {
+    "objectID": "Travel/Journeys.html#dresden",
+    "href": "Travel/Journeys.html#dresden",
+    "title": "Journeys",
+    "section": "Dresden",
+    "text": "Dresden"
+  },
+  {
+    "objectID": "Travel/Journeys.html#prague",
+    "href": "Travel/Journeys.html#prague",
+    "title": "Journeys",
+    "section": "Prague",
+    "text": "Prague"
+  },
+  {
+    "objectID": "Travel/Journeys.html#bratislava",
+    "href": "Travel/Journeys.html#bratislava",
+    "title": "Journeys",
+    "section": "Bratislava",
+    "text": "Bratislava"
+  },
+  {
+    "objectID": "Travel/Journeys.html#budapest",
+    "href": "Travel/Journeys.html#budapest",
+    "title": "Journeys",
+    "section": "Budapest",
+    "text": "Budapest"
+  },
+  {
+    "objectID": "Travel/Journeys.html#berlin-1",
+    "href": "Travel/Journeys.html#berlin-1",
+    "title": "Journeys",
+    "section": "Berlin",
+    "text": "Berlin"
+  },
+  {
+    "objectID": "Travel/Journeys.html#leipzig",
+    "href": "Travel/Journeys.html#leipzig",
+    "title": "Journeys",
+    "section": "Leipzig",
+    "text": "Leipzig\nMy first visit to Leipzig, where I would eventually live for many years. See Leipzig"
+  },
+  {
+    "objectID": "Travel/Journeys.html#leipzig-london",
+    "href": "Travel/Journeys.html#leipzig-london",
+    "title": "Journeys",
+    "section": "Leipzig-London",
+    "text": "Leipzig-London\nMy longest continuous hitchiking journey, all the way from Leipzig to London with only one stopoff."
+  },
+  {
+    "objectID": "Travel/Wiki.html",
+    "href": "Travel/Wiki.html",
+    "title": "Travel Wiki",
+    "section": "",
+    "text": "New Travel Wiki\n\nusing wikivoyage and wikitravel (and all their archives)\nusing wikipedia and many other places\nusing couchers.org, adding a button somewhere there for people to describe experiences\ngetting the openstreetmap community involved? maybe some back and forth there?\n\nAll of this rewritten by ai at different scales– this could even be an opportunity to use different hypertext protocols– maybe AI can finally start using that one where you can zoom in on words/paragraphs and they fit seamlessly into the page?"
   },
   {
     "objectID": "about.html",
@@ -116,6 +725,6 @@
     "href": "index.html",
     "title": "Home!",
     "section": "",
-    "text": "Reviews\nSpotify\n\n\nRuns\n2022-26-10"
+    "text": "Finished Essays\n\n\n\n\n\n\nnone :(\n\n\n\n\n\n\n\n\n\n\nEssays In Progress\n\n\n\n\n\n\nnone :(\n\n\n\n\n\n\n\n\n\n\n\nFinished Reviews\n\n\n\n\n\n\nnone :(\n\n\n\n\n\n\n\n\n\n\nReviews In Progress\n\n\n\n\n\n\nSpotify\nBerlin Alexanderplatz\nCities\nMegacities\nReasons to Kill\n\n\n\n\n\n\n\nRuns\n\n2022-26-10"
   }
 ]
