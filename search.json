@@ -189,13 +189,6 @@
     "text": "To do this, I’m going to try setting up my free micro instance1 in the gcloud as a hyperdrive host.\n\nHyperdrive Host\nI’ve had trouble doing big installs on a micro instance before. For reference, here are the specs of a micro instance:\n\n\n\nRAM\nCores\nMem\n\n\n\n\n0.6GB\n0.2 (aka a shared core!)\n32GB\n\n\n\nI run my ansible script against it, and it dies. I try to install and run a docker image, it dies. It is not made for grand works. Or even minor works.\nSo in order to get everything nicely installed and prepared I decided to make a ‘standard simple computer’. This is a decently-proportioned machine I can run in the cloud for generating snapshots that can be used as the base image for smaller, gentler machines. It does all the installations without crashing.\nI also used the opportunity to try out a preemptible instance. This is an instance that google can kill whenever, and is about 3x cheaper than a normal machine. Since I am just running this machine to do little tasks in the cloud, I don’t care if it gets killed sometimes. However, I didn’t realise that my free cloud credits can’t be used for preemptible instances, I only found this out after. This means– shock horror! I will actually get billed for this usage. Lets see how much.\n\n\n\n\n\n\n\n\n\nSKU\nService\nUsage\nCost\n\n\n\n\nPreemptible E2 Instance Core running in Americas\nCompute Engine\n1.63 hour\n€0.01\n\n\nPreemptible E2 Instance Ram running in Americas\nCompute Engine\n6.5 gibibyte hour\n€0.00\n\n\n\nOkay not too terrible.\nSo now I have a snapshot with some basic things installed, I can try running a hyperdrive host. Obviously I don’t need all my command-line tools and everything to really run it, but its nice to have this snapshot available for future machines. And when I get it all running stably, I can create a minimal snapshot with only the server I want so it runs more smoothly.\nTo make my hyperdrive, I’m just going to open up the Beaker browser and see how it is these days, it’s been almost six months since I used it and it’s developing rapidly. Oh! They have a ‘create hyperdrive from git repo’ button now! This gets better and better.\nSo I’m now hosted on the Beaker network. URL.\nOkay so it seems the way Hugo generates sites, based on the CNAME that I supplied, means that all the links from the frontpage on beaker go straight to the clearnet version at www.fergusfettes.com. This is slightly annoying but I’ll not work on it now, since all the rest of the stuff is actually there, it just isn’t linked correctly. This post on the hyperspace, for example.\nAnother thing to note, is I would need to host all the images in hyperspace too to be really complete. However, as it is now, it is a great demonstration of how nicely the hyper protocol interacts with http.\nSo now I’m restarting my micro instance with the hyperdrive installed. Starting hyperspace (hyperspace start), and hyperdrive (hyperdrive start). Playing around with the hyperdrive cli, I can get info about my local hyperdrvie once I have cd’ed into it: cd Hyperdrive; hyperdrive info --root.\nNow I’ll try mounting the hyperdrive that was created on my laptop by the Beaker browser. I copy the URL ID (aka. without the ‘hyper://’) and serve it with\nhyperdrive mount cb8bb0fdb843f78267df2dce7c4dd3cb4fd89a9b16c4454912691a73e5d1c737\nhyperdrive seed /home/ffettes/Hyperdrive/cb8bb0fdb843f78267df2dce7c4dd3cb4fd89a9b16c4454912691a73e5d1c737\n(after the mount there is handy output telling you what to do next :D).\nHaving a look around the beaker user list, I found my first attempt at a beaker blog is still being hosted (I’m @frgnym)! I feel so touched! Someone out there is still on my website! I’ll seed it too:\nhyperdrive mount c2b2403c8aa02cfdff740614ffc437cd09f243d98f84ebe0eb37a86eedf677bb\nhyperdrive seed /home/ffettes/Hyperdrive/c2b2403c8aa02cfdff740614ffc437cd09f243d98f84ebe0eb37a86eedf677bb\nOkay awesome. I’m not only newly mirrored on the hyper network, my old website is still on there. So great. That was incredibly easy. Maybe I’ll start using the beaker browser as my primary browser. (I always say that.)\nSo now my old website is hosted in three places, whoever was hosting it before, my micro instance, and the browser I am currently viewing it from. See the little three in the top right: \nAnd now this blog is hosted there too! Excellent. Now lets see how the IPFS fares!\nUPDATE: It was obviously Kicks Condor who was hosting it before, so I’m hosting their drive now too.\nUPDATE2: So, the micro host wasn’t actually working. I ran a couple tests, turns out I used the complete wrong command. I should have used the following:\nhyperdrive mount some_random_name c2b2403c8aa02cfdff740614ffc437cd09f243d98f84ebe0eb37a86eedf677bb\nhyperdrive seed /home/ffettes/Hyperdrive/some_random_name\nThe random name doesn’t seen to affect the seeded drive. ‘hyperdrive mount X’ creates a new drive called x and creates a new key for it, so I had folders named after all my old drives with new keys and no content.\nAnyway I fixed all the mounts and now I see the IP of my micro host in the top right under the hosts. In other news, this means that there were three people hosting my old blog before, and now there are 4!\n\n\nIPFS Host\nOkay so I’ve started my small computer again and I’m going through the Command-line quickstart. Seems pretty straightforward.\nSo I dumped the contents of my dotfiles into my local IPFS node (ipfs add -r ~/dotfiles), and now I’m going to serve it and mount it. I ran the daemon (ipfs daemon) and set up an ssh tunnel to my small computer ssh -fNL 5001:localhost:5001 small-computer so I can see the IPFS dashboard at localhost:5001. Very snazzy! I can see the files I added too.\nNow I’ll get the browser plugin that lets me view IPFS files in Firefox. Actually since the install was so easy, I’ll run an IPFS node on my local laptop too. When I add my dotfiles locally, I notice that they have the same hashes as when I added them on the server. This is key to the coolest feature of the IPFS– since these files had already been added by me elsewhere, they didn’t get added again, and when I tried to add them locally the network determined this and just ‘pinned’ them as well, aka my local node automatically became a seeder of these same files. Network deduplication. This is a game-changer. Particularly in a world where things like the pypi and npm exist, where vast numbers of developer-hours are spent redoing work, it is easy to see how the notion of deduplication can be expanded to do more and more abstract kinds of energy-saving work. (Imagine writing tests for kinds of work you want code to do, and the code itself being mutable. If multiple people had done work that passed those tests, you could choose between them based on other factors like speed, efficiency etc.)\nSo anyway. Now I go to my blog, and do ipfs add -r public2, and hey presto, my blog is in the IPFS. Running on my local machine, that link redirects to the following:\nhttp://bafybeibgegkyol2e5txemzjuflbpjrsh6da2xxbyzzilahtilsp3jxxaa4.ipfs.localhost:8080/\nso it just gets the file from the local folder nice and easy. However, when I go to the same link in Chrome (where I havent installed the plugin) it loads as well without a redirect (after some time). So I think the ipfs.io acts as a temporary node, grabbing the hash you request from the network and serving it over http. Aka, it came to my local node, got the file, then gave it back to me.\nNow, the blog in the IPFS has the same issue as the one in hyperspace– all the links point to the clearnet. However this is still fine for now, and still shows nicely how the two protocols interact.\nSo now I just need to set up the host in my micro instance, and I’m done for the day. I’m going to take a risk and try to do it directly in my micro host. It’ll probably crash and die but lets see.\nI shut down some unnecessary services on the host. I’ve inited the ipfs node. And added the blog again. And started the daemon. And the node is still accessible. I shut down my local node and tried the URL again through the ipfs gateway and.. its there! I’m a little worried it’s just being cached by the ipfs gateway but I’ll check back tomorrow and see.\nNice! I’m now mirrored on two decentralized internet protocols! I’m safe in the case of nuclear apocalypse! I’m part of the future!\n\n\nConculsions\nVery cool to have finally actually used both of these protocols, I have been following and stanning them for ages now. They both exceed expectations in terms of user-friendliness and just-works-ness. Maybe thats just because I’m a programmer now so things are easier, but their install and setup instructions are really nice and clear and worked without a hitch in this case.\nObviously there are still some things I need to sort out, and some things I want to try: 1. Set up cronjobs to update all three of the hosts once per day with the latest content (I know I should use build pipelines but I have never used github pipelines and I think a little cronjob is fine for now). 2. See if it is possible to have relative paths that work in all three hosts, so internal links work properly and always link within the same protocol. 3. Have a look at hyper-ipfs inter-operability. 4. Set up nodes on a raspberry pi and serve from home.\nIn terms of updating, becaue I just dumped whatever blog I had at the time into the protocol, the version in hyper doesn’t have this post at all, and the version in IPFS has this post without the IPFS content. This needs to be fixed first. The other things will take more time and tweaking so I’ll put them on the back burner for now.\nSo! Great success! I’m off to a New Years bonfire now. Lets burn the bad 2020-vibes away.\n\n\n\n\n\nFootnotes\n\n\nWith the Google Cloud Platform free developer package, you get a teeny little machine in the cloud for free forever.↩︎\nI made a point of checking if hidden files are added, they aren’t by default so the .git folder should be skipped.↩︎"
   },
   {
-    "objectID": "OldPosts/hello-world.html",
-    "href": "OldPosts/hello-world.html",
-    "title": "Homepage of Fergus Fettes",
-    "section": "",
-    "text": "~ Jane Lead1\n\nReviews\nI have started reviewing things, cities first. This is a largely biographical account of places I have been and what I thought about them.\nI will add more as time goes on (I hope!)\n\n\n\n\n\nFootnotes\n\n\nMy subtitle is plagiarised from the Borges book where I was introduced to her. I have not been able to track down the original source for this, despite some attempts, so it could of course be a Borgesian invention.↩︎"
-  },
-  {
     "objectID": "OldPosts/music-i-like.html",
     "href": "OldPosts/music-i-like.html",
     "title": "Music-I-Like",
@@ -294,18 +287,11 @@
     "text": "Oculus streaming is still a bit of a shitshow. Or, maybe thats unfair, but its very facebook. Streaming works where they want it to work (eg. your newsfeed).\nI want to stream to radio.schau-wien.at, where I am experimenting with livestreaming/broadcasting.\nSo lets get back into android development!\nI’m on a different laptop now so I have to relearn everything from last time. My devices are gone, my permsission are gone. Lets see.\n$ adb devices\nList of devices attached\n:sad:\nOkay, turns out to become an android developer you literally have to tap the build number of your phone seven times. It even gives you little hints like ‘you are now 4 steps from becoming a developer!’. Nice little easter-egg.\n$ adb devices\nList of devices attached\n21525d14        device\nOkay and heres I one-liner a ran directly from SO:\nadb exec-out screenrecord --output-format=h264 - |\n   ffplay -framerate 60 -probesize 32 -sync video  -\nDaamn that was easy."
   },
   {
-    "objectID": "Projects/Barns/00_Overview.html",
-    "href": "Projects/Barns/00_Overview.html",
-    "title": "Fergus Fettes",
+    "objectID": "Projects/Barns/index.html",
+    "href": "Projects/Barns/index.html",
+    "title": "Barns Project",
     "section": "",
-    "text": "To do this, I need the following: 1. 3D map in Sketchup 2. Wood\nThe current plans are as follows: 1. Insulate, roof and wall the fermentation lab 2. Do floor above fermentation lab and start shelving that area 3. Use straw for fermentation lab roof insulation 4. Empty Rosies extension into furniture pile 5. Make lean-to out of extension"
-  },
-  {
-    "objectID": "Projects/Car/00_Overview.html",
-    "href": "Projects/Car/00_Overview.html",
-    "title": "Fergus Fettes",
-    "section": "",
-    "text": "Specifically an electric autonomous car.\nThe Nissan LEAF seems the best to me.\nBut I need to read more about it: * what range does an old one have? * can I handle shit ranges? If I get 150km from a half-hour charge, isn’t that fine actually? * can I convert it?\n\nConversion\n\nwindow tints all around\npull down screen at the front\nBed taking up half the car\nFlattening seats possible?\nScreens attached to the roof for working on your back? Or just an oculus rift?\n\n\n\nBudget\nIf I imagine I could live out of it for two years total, thats worth * 300 a month rent savings * 200 a month travel savings\nSo 12k as a baseline.\nI saw some online for 7-8k, then I would have ~4k to do it up. Very doable.\nI’m also interested in this because I think these things will become more valuable over time. I think its a decent investment."
+    "text": "The current plans are as follows: 1. Insulate, roof and wall the fermentation lab 2. Do floor above fermentation lab and start shelving that area 3. Use straw for fermentation lab roof insulation 4. Empty Rosies extension into furniture pile 5. Make lean-to out of extension"
   },
   {
     "objectID": "Projects/GIS.html",
@@ -313,20 +299,6 @@
     "title": "GIS Map Experiments",
     "section": "",
     "text": "Cartography is an ancient and noble art. It has continued apace into the modern era. It seems clear that it will be a useful tool in my kit, both regarding my career as well as my hobbies, and there are many fun everyday applications of it, so I am finally diving in to studying it in a little more detail.\nSee attempts so far:\n\nAttempt 1\nAttempt 2\nAttempt 3"
-  },
-  {
-    "objectID": "Projects/House/00_Overview.html",
-    "href": "Projects/House/00_Overview.html",
-    "title": "Fergus Fettes",
-    "section": "",
-    "text": "TODOS:\n\nCall Steve Brown, find the wood suppliers number, contact them.\nBet builder in to map out the foundations.\n\nTODO: 1. Mortgage paperwork 2. Read through all documents and building material. 3. Get builder in to map out foundations 4. Ron to do foundations 5. Cut down trees. 6. Drawing for foundations."
-  },
-  {
-    "objectID": "Projects/House/paperwork/emails.html",
-    "href": "Projects/House/paperwork/emails.html",
-    "title": "Fergus Fettes",
-    "section": "",
-    "text": "Bryan Stuart bryan@sylvanstuart.com\nWed, Dec 29, 2021 at 3:48 PM To: Brock Fettes brockfettes@gmail.com Cc: Rosie Wilson-Leagas wantonwells@btinternet.com\nHi Brock, further to your enquiry, pricelist/specification plus a pdf for our Model E attached, and more detailed drawings of our standard designs than on our website on links below.  The Model E has no rain screening, decking or roof overhangs, and while there are reduced roof overhangs as standard, this is now quoted as an extra on the Model D price list (except for a 1.7m deep gable deck, which is included at the extended roof overhang).\nThe Indicative Total Cost does not include any allowance for a main contractor or project manager, as many of our customers do this themselves as self-builders.  We are well placed to provide support in doing this and in providing or facilitating provision of all the paperwork required in getting to that stage, which makes for a very cost-effective package, but we can provide a full-build service if that is sought.  Local “other trades” contractors are usually accustomed to working together and co-ordinating what they do, which can help greatly with running a house-build.  A turn-key supply adds substantially to cost as it requires a main contractor and project manager.  We can usually provide a project manager if required or supply through a main contractor (subject to agreed payment terms).\nCost will vary depending on site location, access and site conditions, but the Indicative Total Cost gives good guidance of the direct build costs.  We frequently carry out the erection of the finished shell, i.e. the house having roof finish, guttering and wall cladding completed, and the standing scaffolding removed.   Alternatively, we can erect the shell only to airtightness level.  The airtightness membrane is installed as part of this process, and the only specialist issue thereafter is ensuring it is not pierced, or where this is necessary, that this is supervised and adequately sealed. \nThe kit price includes all drawings, schedules, calculations and certification etc relating to our supply, and we are happy to provide a kit only, although if we are not providing any erection labour we would have to charge VAT on it, which is normally reclaimable for a dwelling-house.  Similarly on that basis, we normally don’t have to charge VAT if we provide some assistance with the kit erection.\nRegarding mortgageablity, the construction is compliant with the criteria of most lenders, the only exception in our experience to date is the few who won’t lend on timber clad homes.   We are category A1 NHBC housebuilders, and can carry out construction under their ten-year warranty scheme, which includes staged inspections during the build.\nWe’ll be pleased to provide any additional information you may require, and to discuss the project further with you.\nRegards\nBryan\n\n\nI’ll be back in the office later, and will email you our information pack which includes guide prices, but it has been very difficult to keep track of material prices this year.  I’ll also send you a specimen quotation which sets out our normal contract terms.  In the past we have been able to confirm the kit cost on order confirmation (which is the next stage for you following receipt of the BW), but recently all we could do was have up to date quotes for most of the required materials, then order these promptly, and identify those where this was not possible.\n\n\nWe regularly help folk fill in their mortgage application forms in regard to costs and how these are set out.  Where there is a mortgage we usually provide NHBC cover, which gives a 10 year warranty, and independent, staged inspections, otherwise you are likely to need to have the build stages inspected and certified by a chartered professional.  The cost of NHBC cover is usually around £2,000.  The self-build lenders we have mainly come across are Halifax and  the Ecological Building Society.\nThe BW requires structural design certification of the whole house, including the full design of the substructure, which allows accurate estimates to be obtained for that.  We can provide cost allowances for other trades, but the harder the information, i.e. actual estimates, the better.  Again, the BW specifies these fairly tightly.  You also need a mechanical ventilation and heat recovery (MVHR) installation due to the airtightness, and a local firm has done almost all of these in our most recent houses.  Additionally, you may need to firm up on the renewables input and heating.  This will all have been done in draft form to produce SAP calculations for the BW, but you may want to give it further thought.\nOur current lead time from order confirmation to kit deliver to site is about 14 weeks.  While we have had pre Christmas notifications of further complement price increases, I think timber prices may well soften in the New Year (they have doubled over the past 18 months!).   Concrete, and especially steel prices have shot up, along with there being supply issues, but we have costs on a current local groundworks and substructure build at Chapel of Garioch, which should be a good guide for starters.  From commencement of site works to completion usually takes about six months.  Trades overlaps add time, and that between practical completion and actual occupation alway seems to take longer than what folk plan!\n\n\nEven the simplest planning application will take six weeks to process, probably longer.  I think the main reason they are asking for this is to ensure the neighbour has been notified.\nIn terms of kit delivery, the critical supply time is normally for the windows and external doors.  This is currently about 12 weeks plus with all the usual suppliers, and another three weeks can be added to that for their July shutdown.  We don’t like to order these until the BW is issued, or at least it has been confirmed there are definitely no issues regarding the building regulations.  It would also be good to know there was no issue with the planning application to reorientate the house. >\nAlso a good move to get the extant consent confirmed as implemented, as set out by Doug.\nAn August delivery for the kit looks more likely.  The paperwork is a marathon these days, so actually erecting the houses seems a bit of a breeze by comparison!"
   },
   {
     "objectID": "Projects/Overview.html",
@@ -490,6 +462,69 @@
     "text": "I have been meaning to write a larger piece about megacities for some time. In an effort to start making progresson that and to start gathering some material, I will start doing small autobiographical reviews of some megacities that have made an impression on me."
   },
   {
+    "objectID": "Reviews/Megacities.html#sec-jakarta-memories",
+    "href": "Reviews/Megacities.html#sec-jakarta-memories",
+    "title": "Megacity Reviews",
+    "section": "Memories",
+    "text": "Memories\nSpent some time here as a child. I remember taxi rides through dusty highways between skyscrapers, and the golden candle in the center– there was lots of kite-flying. We went to a karaeoke bar and heard a philippino band singing american rock and roll– probably the first live rock music I heard in my life was in bars in Jakarta."
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-delhi-memories",
+    "href": "Reviews/Megacities.html#sec-delhi-memories",
+    "title": "Megacity Reviews",
+    "section": "Memories",
+    "text": "Memories\nI flew out of Delhi at the end of my post-masters trip. I spent just two weeks there, mostly walking around the markets between the Red Fort and Paharganj where my hostel was. Delhi was pleasant and I thoroughly enjoyed the spice markets and the Jawaharlal Nehru University. They let me see the library, and I unded up browsing their physics section and found some great passages by Bell on the controversies he was involved with in Quantum Mechanics. I’ll upload the text of those passages sometime3 they were fantastic.3 TODO: upload the text of those passages.\nI need to give Delhi its time. I was just there to do some pre-return shopping and soak up the last drops of India."
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-delhi-map",
+    "href": "Reviews/Megacities.html#sec-delhi-map",
+    "title": "Megacity Reviews",
+    "section": "Map",
+    "text": "Map\nI believe I should have some google maps data from Delhi."
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-mumbai-memories",
+    "href": "Reviews/Megacities.html#sec-mumbai-memories",
+    "title": "Megacity Reviews",
+    "section": "Memories",
+    "text": "Memories\nI arrived in Mumbai a week after I finished my final defense of my Masters. The moment I finished my masters I had started reading literature nonstop, and so I could hardly bring myself to remember to prepare in any way. I remember being in London before I left, reading Lady Chatterly’s Lover on a bus, dimly aware that something was about to happen. When I arrived in Mumbai airport I realised that I had neglected even to look at the city on google maps, so didn’t even have a vague outline cached on my phone. I couldn’t see evidence of a bus anywere, so I reluctantly queued for a taxi. In the taxi line I asked the people in front of and behind me what was a good district to get started in, and I promptly headed there.\nThe city was a chaos4. The taxi driver kept asking me where I wanted to go, and I kept responding with gestures trying to indicate bustle and saying ‘main street’ over and over again. I suppose he got the message, and eventually he gestured for me to get out. The city is a building site, a lot of it is either a slum or that sort of mixed-concrete-blocks, zoneless and haphazard. One of the first things I remember seeing from the highway as we descended into the city proper was a line of people walking along a long, steel passenger bridge, seeming to come from nowhere– might have been a swamp or so– and heading into a railway station, crammed with people. The first street I got out on was crammed wall to wall, and I rushed for the nearest coffee shop. The first one I found was some neoliberal dump, AC too high, possible south Korean inspired hypercapitalist decor. But they had wifi, so I could get my bearings.4 I vacillated on this repeatedly, almost maddeningly. Before I went, the horrorstories people had told me were so over the top that I basically expected piles of rotting corpses outside the airport. I responded to this with seeming to percieve the whole place as totally underwheling (not a realistic description of Mumbai). Then my first step out of the taxi was a moment of frank disbelief that this could be the main street of the ‘recommended’ district. (I later looked it up and it was indeed one of the nicer parts of town.) Then after my neoliberal latte and wifi, I strolled around feeling almost belligerently at peace (in fact after a week or so there, in order not to lost my mind, I started acting out my belligerent peace quite literally– finding no peace, I made it where I could– sat down in a square foot by a tree and read some poetry in the middle of the crowd– this is how you get by in India. Be belligerently okay with it all until you are.) Much later, after six weeks or so of intense self-imposed exile, when I went back into society to meet a friend, I suddenly had a moment of genuine calm– and I realised ‘wow, okay, it really did take me two full months to become in any way okay with this place’. I would not recommend anyone, even the most experienced traveller, to go to India for less than two months. The very idea that people do this is insane.\nI messaged some Couchsurfing hosts, had a look at the map, found some interesting looking places and set of to walk around.\nI was quite exhausted and still relatively5 poor, so my plan was to survive for the first month off $100, to set the tone for the rest of my journey. In order to achieve this, I cheated a little: I signed up for Vipassana.5 I have no illusions about being an unfortunate, but by the standards of europeans I was ‘pennyless’.\nI had heard about Vipassana from a few friends who had done it in Germany. I believe I went there with the perfect attitude: not expecting anything but a place to stay, but with my natural inclination to doing what is expected of me– I dilligently did whatever they asked, and had a fantastic experience. The Mumbai centers are presumably of a higher standard than those found elsewhere, and the calm oasis in the middle of such a throbbing megacity lent it a quite serious air. You felt like you were doing important business.\nAfter Vipassana, I foolishly moved to a hostel. This was in part to get some help in figuring out how to get a sim card, which was an enormous pain in the ass at the time. It was a quite horrible experience, especially after Vipassana, and I soon moved to an indian dorm6 where I could work on my reading in peace. It was $3-4 a day for the indian dorm and the bed came with a fan and a lock box. Quite fine, but I wasn’t in the mood for Mumbai– I had far too much reading with me for one thing.6 this was also essentially a hostel, or a capsule hotel, but I will tend to use the term ‘hostel’ for the kind of backpacker hostel you are familiar with"
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-mumbai-map",
+    "href": "Reviews/Megacities.html#sec-mumbai-map",
+    "title": "Megacity Reviews",
+    "section": "Map",
+    "text": "Map\nI must have some traces {.TODO}"
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-shanghai-memories",
+    "href": "Reviews/Megacities.html#sec-shanghai-memories",
+    "title": "Megacity Reviews",
+    "section": "Memories",
+    "text": "Memories"
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-guangzhou-foshan-memories",
+    "href": "Reviews/Megacities.html#sec-guangzhou-foshan-memories",
+    "title": "Megacity Reviews",
+    "section": "Memories",
+    "text": "Memories"
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-new-york-memories",
+    "href": "Reviews/Megacities.html#sec-new-york-memories",
+    "title": "Megacity Reviews",
+    "section": "Memories",
+    "text": "Memories"
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-beijing-memories",
+    "href": "Reviews/Megacities.html#sec-beijing-memories",
+    "title": "Megacity Reviews",
+    "section": "Memories",
+    "text": "Memories"
+  },
+  {
     "objectID": "Reviews/Megacities.html#sec-cairo-memories",
     "href": "Reviews/Megacities.html#sec-cairo-memories",
     "title": "Megacity Reviews",
@@ -522,7 +557,84 @@
     "href": "Reviews/Megacities.html#do",
     "title": "Megacity Reviews",
     "section": "Do",
-    "text": "Do\nSee the pyramids! When I was first in Cairo I refused, or was too stoned and confused and suffering from akathisia or depressed or whatever you are at 20 years old when you haven’t really woken up yet. Well, not this time!\nVictoria wanted to go there and I said, ‘okay, but lets do it properly’. I knew it would be something of a horrorshow, with the skallys and hawkers and hustlers– shafting tourists is practically a national sport in Egypt3– so I thought we should spend at least a day hovering around the district to get the smell of the air. In the end, it was even better– we got a small hotel overlooking the compound and had a whole week basking in the ineffable glory of those monuments. What a place! Things are even stranger than you expect– you understand of course that there are still communities– travellers, performers, poorer districts in Ireland where the horse is still present, but the reality of this in a place like Giza is far odder than you would think.3 That is not to say that it is dangerous! Here are the brass tacks: in Egypt they are unlikely to assault or rob you as a tourist, but that does not meant that they will treat you with dignity and respect at every turn! In particular, the art of finding the ‘right price’ for things– and consistently getting it, requires constant work– a quick eye, a sharp wit, a good ear– and a mean streak! Because even if you do figure out the right price and some tricks for getting them, you then have to battle with your conscience– do you really want that tea and shisha for less than a dollar, when your monthly income is likely the same as they make in a year? (Short answer, its complicated– yes, often you do want the local price just on principle, but sometimes I find myself wishing I had lost the battle of the wits and gotten shafted a little harder. A delicious samosa in Mumbai from a kind hearted young man that set me back 10p was one of these occasions.)\nLet me set it up for you: in the Pyramids Complex– a patch of desert surrounded on all sides by a 10m high concrete wall topped with a 4m wire fence containing several pyramids and archeological sites and a deeply unpleasant, presumably 5-star restaurant– there are tourists with thier guides, and there are locals with their horses and camels. The tourists on tours are being sheparded by their guides and kept safe, but there are also roaving bands of lone tourists, all of whom are taxonomically designated as customers for the locals with their horses and camels. The selling of horse and camel rides through the Pyramids Complex seems to be the chief way that the locals benefit economically from their location. This setup, already familiar to me, seemed to my imagination as a classic High Octane Bad Vibe of the tourist-trap variety, and I was not eager to play the role that the locals would obviously want me to play. But enough about me– what I wanted to talk about was, what this setup does for local society. There is a second way in which locals benefit from the pyramids– they run guest houses. We stayed in one and it was very pleasant. But I get the impression that the number of people who hang around in Giza is slim. So what is left is a relatively impoverished district, literally in the shadow of one of the most stunning objects on the earth (and I have seen some things in my time), which has an economic incentive to handle large quantities of camels and horses.\nWhat I’m getting at here is that the entire district is an extended, sprawling stables. As a farm boy, this was very endearing to me, and I thoroughly enjoyed waking up to the sound of horses galloping in groups past my window. I enjoyed walking through the stable district 100m along the road from our guesthouse. I enjoyed the gangs of pre-teens you would occasionally see who had commandeered a carriage for the evening, barging around the streets with wild abandon. But most of all, I enjoyed the surly, 20-something Arab men who would cruise around town on horseback. This was something I never expected to enjoy so much, and never knew that I had missed! Until I saw it in Giza.\nTo give just a bit more context, if you walked for 8 or 9 minutes away from the Complex you would enter Giza proper. The area immediately around the Pyramids is exactly that sort of bizzaro-world that exists in third world countries around UNESCO sites, where the enormity of global inequality is most present, most palpable– and through which veil, one presumes (or one presumes the poor people in the area presume), a person could at these sites most easily pass. The shops have crazy prices and are run by increasingly villainous individuals the closer you get to the gate4. The sheer evil that flickered in the eye of the man who sold me a liter of water for two dollars 50m from the gate– was worth it of course, for the lesson in the shapes and forms of darkness. But if you turn away and walk into Giza, very quickly you will come across a highway, and once you have crossed that highway you are in a very regular part of Cairo. Poor but pround, happy to see you, strange sites on every corner.4 Exemplified most exquisitely by the KFC that sites directly across from the entrance to the complex– a glowing obelisk of the capitalocene facing off against eternity.\nVery regular except– for the young men on horseback.\nIt was beautiful to me not just because seeing people on horses doing regular people stuff, hanging out, going about the place, seemed like something that all humans should see– its something that was in our culture for millenia, and its a tragedy that we have lost it. But it was also an amusing and deeply characterful lesson in the force of– what to call it, inequality, situations, contingency. That this young man here, on this motorway divider, should be riding a horse about the place as if it was the most regular thing in the world– was due to the fact that tourists found it appropriate to see the pyramids from horseback, and had the cash to actualise their fantasies– and that this was so present, and so consistent that an entire community had grown around the pyramids, a large community of people who, against all odds, in a megacity populated in parts by teenagers in tuktuks high on pepsi, so lost was it in the stream of technofuturism– that here would be the first time I saw regular folks doing people stuff on horseback. Funny.\nThe story of the pyramids itself– a great place really– I will leave for another time."
+    "text": "Do\nSee the pyramids! When I was first in Cairo I refused, or was too stoned and confused and suffering from akathisia or depressed or whatever you are at 20 years old when you haven’t really woken up yet. Well, not this time!\nVictoria wanted to go there and I said, ‘okay, but lets do it properly’. I knew it would be something of a horrorshow, with the skallys and hawkers and hustlers– shafting tourists is practically a national sport in Egypt8– so I thought we should spend at least a day hovering around the district to get the smell of the air. In the end, it was even better– we got a small hotel overlooking the compound and had a whole week basking in the ineffable glory of those monuments. What a place! Things are even stranger than you expect– you understand of course that there are still communities– travellers, performers, poorer districts in Ireland where the horse is still present, but the reality of this in a place like Giza is far odder than you would think.8 That is not to say that it is dangerous! Here are the brass tacks: in Egypt they are unlikely to assault or rob you as a tourist, but that does not meant that they will treat you with dignity and respect at every turn! In particular, the art of finding the ‘right price’ for things– and consistently getting it, requires constant work– a quick eye, a sharp wit, a good ear– and a mean streak! Because even if you do figure out the right price and some tricks for getting them, you then have to battle with your conscience– do you really want that tea and shisha for less than a dollar, when your monthly income is likely the same as they make in a year? (Short answer, its complicated– yes, often you do want the local price just on principle, but sometimes I find myself wishing I had lost the battle of the wits and gotten shafted a little harder. A delicious samosa in Mumbai from a kind hearted young man that set me back 10p was one of these occasions.)\nLet me set it up for you: in the Pyramids Complex– a patch of desert surrounded on all sides by a 10m high concrete wall topped with a 4m wire fence containing several pyramids and archeological sites and a deeply unpleasant, presumably 5-star restaurant– there are tourists with thier guides, and there are locals with their horses and camels. The tourists on tours are being sheparded by their guides and kept safe, but there are also roaving bands of lone tourists, all of whom are taxonomically designated as customers for the locals with their horses and camels. The selling of horse and camel rides through the Pyramids Complex seems to be the chief way that the locals benefit economically from their location. This setup, already familiar to me, seemed to my imagination as a classic High Octane Bad Vibe of the tourist-trap variety, and I was not eager to play the role that the locals would obviously want me to play. But enough about me– what I wanted to talk about was, what this setup does for local society. There is a second way in which locals benefit from the pyramids– they run guest houses. We stayed in one and it was very pleasant. But I get the impression that the number of people who hang around in Giza is slim. So what is left is a relatively impoverished district, literally in the shadow of one of the most stunning objects on the earth (and I have seen some things in my time), which has an economic incentive to handle large quantities of camels and horses.\nWhat I’m getting at here is that the entire district is an extended, sprawling stables. As a farm boy, this was very endearing to me, and I thoroughly enjoyed waking up to the sound of horses galloping in groups past my window. I enjoyed walking through the stable district 100m along the road from our guesthouse. I enjoyed the gangs of pre-teens you would occasionally see who had commandeered a carriage for the evening, barging around the streets with wild abandon. But most of all, I enjoyed the surly, 20-something Arab men who would cruise around town on horseback. This was something I never expected to enjoy so much, and never knew that I had missed! Until I saw it in Giza.\nTo give just a bit more context, if you walked for 8 or 9 minutes away from the Complex you would enter Giza proper. The area immediately around the Pyramids is exactly that sort of bizzaro-world that exists in third world countries around UNESCO sites, where the enormity of global inequality is most present, most palpable– and through which veil, one presumes (or one presumes the poor people in the area presume), a person could at these sites most easily pass. The shops have crazy prices and are run by increasingly villainous individuals the closer you get to the gate9. The sheer evil that flickered in the eye of the man who sold me a liter of water for two dollars 50m from the gate– was worth it of course, for the lesson in the shapes and forms of darkness. But if you turn away and walk into Giza, very quickly you will come across a highway, and once you have crossed that highway you are in a very regular part of Cairo. Poor but pround, happy to see you, strange sites on every corner.9 Exemplified most exquisitely by the KFC that sites directly across from the entrance to the complex– a glowing obelisk of the capitalocene facing off against eternity.\nVery regular except– for the young men on horseback.\nIt was beautiful to me not just because seeing people on horses doing regular people stuff, hanging out, going about the place, seemed like something that all humans should see– its something that was in our culture for millenia, and its a tragedy that we have lost it. But it was also an amusing and deeply characterful lesson in the force of– what to call it, inequality, situations, contingency. That this young man here, on this motorway divider, should be riding a horse about the place as if it was the most regular thing in the world– was due to the fact that tourists found it appropriate to see the pyramids from horseback, and had the cash to actualise their fantasies– and that this was so present, and so consistent that an entire community had grown around the pyramids, a large community of people who, against all odds, in a megacity populated in parts by teenagers in tuktuks high on pepsi, so lost was it in the stream of technofuturism– that here would be the first time I saw regular folks doing people stuff on horseback. Funny.\nThe story of the pyramids itself– a great place really– I will leave for another time."
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-bangkok-memories",
+    "href": "Reviews/Megacities.html#sec-bangkok-memories",
+    "title": "Megacity Reviews",
+    "section": "Memories",
+    "text": "Memories"
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-shenzhen-memories",
+    "href": "Reviews/Megacities.html#sec-shenzhen-memories",
+    "title": "Megacity Reviews",
+    "section": "Memories",
+    "text": "Memories"
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-bangalore-memories",
+    "href": "Reviews/Megacities.html#sec-bangalore-memories",
+    "title": "Megacity Reviews",
+    "section": "Memories",
+    "text": "Memories"
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-bangalore-map",
+    "href": "Reviews/Megacities.html#sec-bangalore-map",
+    "title": "Megacity Reviews",
+    "section": "Map",
+    "text": "Map"
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-ho-chi-minh-city-memories",
+    "href": "Reviews/Megacities.html#sec-ho-chi-minh-city-memories",
+    "title": "Megacity Reviews",
+    "section": "Memories",
+    "text": "Memories"
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-chennai-memories",
+    "href": "Reviews/Megacities.html#sec-chennai-memories",
+    "title": "Megacity Reviews",
+    "section": "Memories",
+    "text": "Memories"
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-chennai-map",
+    "href": "Reviews/Megacities.html#sec-chennai-map",
+    "title": "Megacity Reviews",
+    "section": "Map",
+    "text": "Map"
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-chengdu-memories",
+    "href": "Reviews/Megacities.html#sec-chengdu-memories",
+    "title": "Megacity Reviews",
+    "section": "Memories",
+    "text": "Memories"
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-paris-memories",
+    "href": "Reviews/Megacities.html#sec-paris-memories",
+    "title": "Megacity Reviews",
+    "section": "Memories",
+    "text": "Memories"
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-london-memories",
+    "href": "Reviews/Megacities.html#sec-london-memories",
+    "title": "Megacity Reviews",
+    "section": "Memories",
+    "text": "Memories"
+  },
+  {
+    "objectID": "Reviews/Megacities.html#sec-london-eat",
+    "href": "Reviews/Megacities.html#sec-london-eat",
+    "title": "Megacity Reviews",
+    "section": "Eat",
+    "text": "Eat"
   },
   {
     "objectID": "Reviews/ReasonsToKill.html",
@@ -623,6 +735,55 @@
     "text": "Leipzig-London\nMy longest continuous hitchiking journey, all the way from Leipzig to London with only one stopoff."
   },
   {
+    "objectID": "Travel/Journeys.html#mumbai",
+    "href": "Travel/Journeys.html#mumbai",
+    "title": "Journeys",
+    "section": "Mumbai",
+    "text": "Mumbai"
+  },
+  {
+    "objectID": "Travel/Journeys.html#karnataka",
+    "href": "Travel/Journeys.html#karnataka",
+    "title": "Journeys",
+    "section": "Karnataka",
+    "text": "Karnataka"
+  },
+  {
+    "objectID": "Travel/Journeys.html#kerala-and-tamil-nadu",
+    "href": "Travel/Journeys.html#kerala-and-tamil-nadu",
+    "title": "Journeys",
+    "section": "Kerala and Tamil Nadu",
+    "text": "Kerala and Tamil Nadu"
+  },
+  {
+    "objectID": "Travel/Journeys.html#bankok-vietnam",
+    "href": "Travel/Journeys.html#bankok-vietnam",
+    "title": "Journeys",
+    "section": "Bankok-Vietnam",
+    "text": "Bankok-Vietnam"
+  },
+  {
+    "objectID": "Travel/Journeys.html#china-honk-kong",
+    "href": "Travel/Journeys.html#china-honk-kong",
+    "title": "Journeys",
+    "section": "China-Honk Kong",
+    "text": "China-Honk Kong"
+  },
+  {
+    "objectID": "Travel/Journeys.html#chennai-jaipur",
+    "href": "Travel/Journeys.html#chennai-jaipur",
+    "title": "Journeys",
+    "section": "Chennai-Jaipur",
+    "text": "Chennai-Jaipur"
+  },
+  {
+    "objectID": "Travel/Journeys.html#delhi",
+    "href": "Travel/Journeys.html#delhi",
+    "title": "Journeys",
+    "section": "Delhi",
+    "text": "Delhi"
+  },
+  {
     "objectID": "Travel/Wiki.html",
     "href": "Travel/Wiki.html",
     "title": "Travel Wiki",
@@ -641,7 +802,7 @@
     "href": "index.html",
     "title": "Home!",
     "section": "",
-    "text": "Finished Projects\n\n\n\n\n\n\nnone :(\n\n\n\n\n\n\n\n\n\n\nProjects In Progress\n\n\n\n\n\n\nGIS\n\n\n\n\n\n\n\n\n\n\n\nFinished Notes\n\n\n\n\n\n\nnone :(\n\n\n\n\n\n\n\n\n\n\nNotes In Progress\n\n\n\n\n\n\nnone :(\n\n\n\n\n\n\n\nPsychoGeography\n\n2022-10-26\n2022-10-29\n2022-11-02\n2022-11-03\n2022-11-06"
+    "text": "Finished Essays\n\n\n\n\n\n\nnone :(\n\n\n\n\n\n\n\n\n\n\nEssays In Progress\n\n\n\n\n\n\nnone :(\n\n\n\n\n\n\n\n\n\n\n\nFinished Reviews\n\n\n\n\n\n\nnone :(\n\n\n\n\n\n\n\n\n\n\nReviews In Progress\n\n\n\n\n\n\nSpotify\nBerlin Alexanderplatz\nCities\nMegacities\nReasons to Kill\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinished Projects\n\n\n\n\n\n\nnone :(\n\n\n\n\n\n\n\n\n\n\nProjects In Progress\n\n\n\n\n\n\nGIS\n\n\n\n\n\n\n\n\n\n\n\nFinished Notes\n\n\n\n\n\n\nnone :(\n\n\n\n\n\n\n\n\n\n\nNotes In Progress\n\n\n\n\n\n\nnone :(\n\n\n\n\n\n\n\nPsychoGeography\n\n2022-10-26\n2022-10-29\n2022-11-02\n2022-11-03\n2022-11-06\n\n\n\n\n\n\nFootnotes\n\n\nMy subtitle is plagiarised from the Borges book where I was introduced to her. I have not been able to track down the original source for this, despite some attempts, so it could of course be a Borgesian invention.↩︎"
   },
   {
     "objectID": "Bib/All.html",

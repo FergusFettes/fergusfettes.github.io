@@ -1,1 +1,71 @@
+@charset "UTF-8";
+
+/* Language: css */
 /* css styles */
+
+.markdownBody section > :first-child > a {
+    background: none;
+}
+.markdownBody section:not(.collapse) > h1:first-child a,
+.markdownBody section:not(.collapse) > h2:first-child a {
+    display: block;
+}
+section > :first-child a::after {
+    content: "\00B6"; /* Pilcrow sign: ¶ */
+    font-size: 0.75em;
+    position: relative;
+    top: -0.2em;
+    left: 0.35em;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0s ease 0.1s;
+}
+section > :first-child a:hover::after,
+section > :first-child a:active::after,
+section > :first-child a:focus::after,
+section.highlighted > :first-child a::after,
+section:target > :first-child a::after {
+    visibility: visible;
+}
+section > :first-child a:hover::after,
+section > :first-child a:active::after,
+section > :first-child a:focus::after,
+section.highlighted > :first-child a::after {
+    opacity: 0.8;
+}
+section:target > :first-child a::after {
+    opacity: 0.5;
+}
+
+
+/* Set hyperlinks in the #quarto-content section to be black with wide dots under them */
+/* move them closer to the text */
+#quarto-content a {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px dotted #000000;
+    padding-bottom: -3px;
+    margin-bottom: -1px;
+}
+
+/* Change font to grey on hover */
+a:hover {
+    color: #999999;
+}
+
+/* In section headers, make the links in brackets smaller and grey */
+#quarto-content h1 a,
+#quarto-content h2 a,
+#quarto-content h3 a,
+#quarto-content h4 a,
+#quarto-content h5 a,
+#quarto-content h6 a {
+    font-size: 0.8em;
+    color: #999999;
+}
+
+/* In headers with '.strikethrough' class, strike through the text and grey it out */
+.strikethrough {
+    text-decoration: line-through;
+    color: #999999;
+}
