@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -77,13 +77,17 @@ ul.task-list li input[type="checkbox"] {
   </div>
           <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html">Home</a>
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html">About</a>
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-toggle="dropdown" aria-expanded="false">Reviews</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Reviews</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-reviews">    
         <li class="dropdown-header">Cities</li>
         <li>
@@ -113,7 +117,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#megacity-megaproject" id="toc-megacity-megaproject" class="nav-link active" data-scroll-target="#megacity-megaproject">Megacity Megaproject</a></li>
+  <li><a href="#megacity-megaproject" id="toc-megacity-megaproject" class="nav-link active" data-scroll-target="#megacity-megaproject">Megacity Megaproject</a>
+  <ul class="collapse">
+  <li><a href="#density" id="toc-density" class="nav-link" data-scroll-target="#density">Density</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -136,6 +143,7 @@ ul.task-list li input[type="checkbox"] {
       <p class="date">October 28, 2022</p>
     </div>
   </div>
+  
     
   </div>
   
@@ -144,9 +152,18 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="megacity-megaproject" class="level1">
 <h1>Megacity Megaproject</h1>
-<p>Nothing to see here– yet!</p>
+<section id="density" class="level2">
+<h2 class="anchored" data-anchor-id="density">Density</h2>
+<p>There must be some literature about the effective density of a city. The density after taking transportation into account.</p>
+<p>Lets say the density per 100m^2 in area X is x.</p>
+<p>Lets say the density in the areas Y_1, Y_2.. around x are y_1 etc..</p>
+<p>There should be some function f(x,y) that gives the effective density of x considering the rate at which neighbors will wander in. The initial value will be w.r.t walking speed and average walking distance.</p>
+<p>Then there is public transportation. The transportation speed of the city will contribute some amount f(z) to the initial area X.</p>
+<p>With these values we can calculate the effective density of the city.</p>
+<p>I asked ChatGPT about this and it replied: “This sounds similar to the concept of”accessibility” in urban planning and transportation research. Accessibility is a measure of how easily and quickly people can reach different destinations within a city, and it is often used to evaluate the effectiveness of transportation systems and land use patterns. There are various ways to measure accessibility, but one common approach is to use a gravity model, which estimates the number of trips between different locations based on their distance, population size, and transportation infrastructure. Some researchers also include additional factors such as land use mix, walkability, and transit service quality in their accessibility measures. The effective density you described can be seen as a composite measure of accessibility considering both walking and public transportation.”</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -191,7 +208,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -227,24 +261,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

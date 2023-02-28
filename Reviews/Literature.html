@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -77,13 +77,17 @@ ul.task-list li input[type="checkbox"] {
   </div>
           <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html">Home</a>
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html">About</a>
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-toggle="dropdown" aria-expanded="false">Reviews</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Reviews</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-reviews">    
         <li class="dropdown-header">Cities</li>
         <li>
@@ -116,6 +120,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#mysticism" id="toc-mysticism" class="nav-link active" data-scroll-target="#mysticism">Mysticism</a>
   <ul class="collapse">
   <li><a href="#reading-list" id="toc-reading-list" class="nav-link" data-scroll-target="#reading-list">Reading List</a></li>
+  <li><a href="#ernst-junger" id="toc-ernst-junger" class="nav-link" data-scroll-target="#ernst-junger">Ernst Junger</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -138,6 +143,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -149,12 +155,26 @@ ul.task-list li input[type="checkbox"] {
 <section id="reading-list" class="level2">
 <h2 class="anchored" data-anchor-id="reading-list">Reading List</h2>
 <p><a href="https://archive.org/details/JaneLead-EightWorlds">Eight Worlds - Jane Lead</a> Complete works of Emily Dickinson</p>
+</section>
+<section id="ernst-junger" class="level2">
+<h2 class="anchored" data-anchor-id="ernst-junger">Ernst Junger</h2>
+<p>There is something I want to say about Junger. Junger was the one who finally broke my sturdy belief in materialism<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p>It is simply the improbability of Junger that so offends and baffles me. And I come at this knowing about [the fact that miracles happen once a month] etc. So maybe I can make my feeling more concrete.</p>
+<p>There are some number of poeple that I like in the world. You can cut people up into groups and you will find some intersection with the poeple I like. There are some correlations– probably they lie more in the upper half of various distributions around cognitive power etc. Probably they lie in the lower of half of distributions around social agreeableness. I hope and believe that there is little correlation between those people I like and race or gender, or age, or year of birth (not to mention season of birth).</p>
+<p>In the first world war, there were a lot of poeple of all classes, and representatives of many races. And there were a lot, really a lot. Maybe the soltion to my discomfort lies in the magnitude. But, nevertheless, how many were on that frenetic brink of nonexistence? One third of them died. Perhaps a third had a milder time than average.</p>
+<p>Who was in the deepness of the fire, who was under the rain of steel? Who ran among the poplar trees of mud, birthed by bombs dropped, fields plowed by the fruits of heaven? Were there enough, that of all the people I would like who were in that war– some of those who ran through the fire survived?</p>
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Not that I don’t believe in materialism, but there are cracks, and those cracks were widened by Junger. It was a flawless, marbel edific before Junger.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -196,7 +216,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -232,24 +269,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

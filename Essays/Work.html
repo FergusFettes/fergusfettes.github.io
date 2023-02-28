@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -76,13 +76,17 @@ ul.task-list li input[type="checkbox"] {
   </div>
           <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html">Home</a>
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html">About</a>
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-toggle="dropdown" aria-expanded="false">Reviews</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Reviews</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-reviews">    
         <li class="dropdown-header">Cities</li>
         <li>
@@ -150,6 +154,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -193,6 +198,8 @@ ul.task-list li input[type="checkbox"] {
 <p>In any case, I do indeed program computers. And while I nominally do so using python, I am also increasingly comfortable with bash, with markdown, with SQL[^Postgres– see my <a href="Misc/Tips">tips</a> folder.], and with those weird pseudo-DSLs that are basically glorified config files– I’m basically talking about YAML of course– that constitute much of the ‘DevOps’ lifecycle. I also, though I am not proud of this, occasionally click my way through a maze of AWS screens, though I prefer to do that sort of thing in terraform when I can (or bash).</p>
 <section id="ondewo" class="level3">
 <h3 class="anchored" data-anchor-id="ondewo">ONDEWO</h3>
+<p>Once I got home from India, I was working on my parents farm, utterly destitute again, not a penny to my name. I applied for many jobs, and I got an interview for one. The programming task seemed quite challenging. With hindsight, it was totally unreasonable– my boss later told me that he had since tried useding it on other people and noone else ever managed to submit anything. I was given a week to finish it, and I worked on it 20-some hours a day (by the end ceasing to sleep entirely) until I had cracked it sufficiently well to submit it.</p>
+<p>I got the job and moved to Austria. My first month was quite intense, it was clear I was underqualified so I worked myself to the bone, while also needing to spend much of my evenings entertaining couch surfing hosts and shmoozing at art fairs in order to find a home– I didn’t have enough money to pay rent until I got my first paycheck. One of my coworkers took me in for a week, and I found a flat through a friend, where I didn’t have to pay till the next month.</p>
 <section id="history" class="level4">
 <h4 class="anchored" data-anchor-id="history">History</h4>
 <p>Wow, what a place! This was my first job as an actual software engineer, and I am eternally grateful for the opportunity, the experience, and for setting a low bar for all my future bosses to rise above!</p>
@@ -270,7 +277,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -306,24 +330,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
