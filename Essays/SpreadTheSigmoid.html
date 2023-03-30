@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Fergus Fettes">
+
+<title>Fergus Fettes - Rapture Dynaimcs: Spread the Sigmoid</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>
+    .quarto-title-block .quarto-title-banner {
+      color: white;
+background: pink;
+    }
+    </style>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Fergus Fettes</span>
+    </a>
+  </div>
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reviews" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Reviews</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-reviews">    
+        <li class="dropdown-header">Cities</li>
+        <li>
+    <a class="dropdown-item" href="../Reviews/Cities.qmd">
+ <span class="dropdown-text"></span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-toggle-container">
+                <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+            </div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title">Rapture Dynaimcs: Spread the Sigmoid</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Fergus Fettes </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">Mar 28, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#step-function-escatology" id="toc-step-function-escatology" class="nav-link active" data-scroll-target="#step-function-escatology">Step-function Escatology</a>
+  <ul class="collapse">
+  <li><a href="#foom-discontinuities" id="toc-foom-discontinuities" class="nav-link" data-scroll-target="#foom-discontinuities">Foom discontinuities:</a></li>
+  </ul></li>
+  <li><a href="#rapture-dynamics" id="toc-rapture-dynamics" class="nav-link" data-scroll-target="#rapture-dynamics">Rapture Dynamics</a>
+  <ul class="collapse">
+  <li><a href="#aiming-higher" id="toc-aiming-higher" class="nav-link" data-scroll-target="#aiming-higher">Aiming Higher</a></li>
+  <li><a href="#only-the-fast-will-survive" id="toc-only-the-fast-will-survive" class="nav-link" data-scroll-target="#only-the-fast-will-survive">Only the fast will survive…</a></li>
+  <li><a href="#unless-we-help-the-rest" id="toc-unless-we-help-the-rest" class="nav-link" data-scroll-target="#unless-we-help-the-rest">… unless we help the rest</a></li>
+  <li><a href="#aiming-yet-higher" id="toc-aiming-yet-higher" class="nav-link" data-scroll-target="#aiming-yet-higher">Aiming Yet Higher?</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
+
+
+
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Trigger Warning: Infohazards
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Some thoughts are better left unthought. I wrote this after going through a mini Dark Night of the Soul, this helped me claw my way back to something close to sanity.</p>
+</div>
+</div>
+</div>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Trigger Warning: Annihilation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Discussion of the annihilation of the biosphere.</p>
+</div>
+</div>
+</div>
+<section id="step-function-escatology" class="level1 page-columns page-full">
+<h1>Step-function Escatology</h1>
+<p>Terms of Art:</p>
+<ul>
+<li>post-foom<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> ASI<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> (PFA)</li>
+</ul>
+<div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Foom is a term coined by Eliezer Yudkowsky to describe a rapid, self-accelerating takeoff of AI capability.</p></li><li id="fn2"><p><sup>2</sup>&nbsp;An ASI is an artificial superintelligence. To simplify things for this essay we will assume a single ASI throughout. Multipolar dynamics would change the shape of many graphs but not the overall drive.</p></li></div><p>One of the most central concepts of the AI risk movement is the foom. Foom is fundamentally a value discontinuity.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/discontinuity.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">discontinuity</figcaption><p></p>
+</figure>
+</div>
+<p>One understanding of orthogonality is that information is lost during a discontinuity. A discontinuity of this sort is like an event horizon. Perhaps its a randomization process, and the larger the discontinuity the more values get scrambled. Lets look at ways we can minimize the discontinuity.</p>
+<p>We are a dynamic species. We can try to modify our values over time to minimize the discontinuity.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/moving-up.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">moving-up</figcaption><p></p>
+</figure>
+</div>
+<p>Furthermore, the dynamics of the foom are very sensitive to initial conditions. It is possible to imagine a foom that depends upon very little of the information in its environment, bootstrapping an alien intelligence from first principles. On the other hand, it is possible to imagine an intelligence that is derived from the human infosphere, which will make it less likely to be discontinuous/orthogonal.</p>
+<p>So we can try to create initial conditions where human/biosphere information has a larger influence on the foom, modelled here as the upper step being drawn down.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/moving-down.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">moving-down</figcaption><p></p>
+</figure>
+</div>
+<div class="page-columns page-full"><p>Bringing these ends together is how we avoid strong orthogonality<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p><div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;We want to avoid strong orthogonality for anthropic reasons. The fact that some creatures go extinct is evidence that the universe has no particular preference for who carries the torch. The fact that ribosomes are still with us is evidence that some agents can make it through any amount of change, if they build themselves in deep enough in the stack. Everything is up for grabs, no outcome is certain.</p></li></div></div>
+<p>The sigmoid as I have drawn it above is a kind of step function. But a step from what to what? The y-axis might represent ‘complexity per atom’ or something like that– for now lets just say the step is from biology to computronium.</p>
+<p>So where is the green line? Well, all the foom scenarios presented above are basically versions of upload transhumanism (in the best case). If you don’t like this, there are scenarios for you below.</p>
+<div class="page-columns page-full"><p>A discontinuous foom is apocalypse, annihilation. Not only of our species, but also of the biosphere, the ribosomes, everyone. This is the nightmare scenario that many people worry about<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p><div class="no-row-height column-margin column-container"><li id="fn4"><p><sup>4</sup>&nbsp;S-risk (‘worser case than that’ scenarios) are conventiently avoided by any near-foom strong-orthogonality. Perhaps avoiding s-risk is the best argument for discontinuous foom? cf.&nbsp;antinatalism (meaning, maybe suffering is fundamental to existence in the biological realm?)</p></li></div></div>
+<section id="foom-discontinuities" class="level2">
+<h2 class="anchored" data-anchor-id="foom-discontinuities">Foom discontinuities:</h2>
+<ul>
+<li><strong>fully-discontinuous</strong>: the foom happens in outer space or somewhere where it can somehow bootstrap to superintelligence without any impact from the environment, and by the time it expands to earth it has a fixed utility function</li>
+<li><strong>only quantum-coupled discontinuous</strong>: it happens in an environment that is thermally coupled to the biosphere etc. there are probably a few degrees of this</li>
+<li><strong>biosphere interested</strong>: it happens slowly enough that the ASI is interested in its environment and takes snapshots of random samples</li>
+<li><strong>biosphere appreciator</strong>: it aims to take a snapshot of the biosphere as it is, but with low fidelity</li>
+<li><strong>biosphere nerd</strong>: less lossy</li>
+<li><strong>biosphere stan</strong>: tries to take a snapshot of the biosphere with enough fidelity to run it accurately in simulation. Figuring out what this means might take some time, so a fooming ASI would have to have good reasons for doing this. <strong>Note: this snapshot is never expected to be run as a simluation! Its is probed for information only. Simulation scenarios below.</strong></li>
+</ul>
+<p>All near-discontinuous fooms are rapture-like. The final one is <strong>strongly rapture-like</strong>. Lets explore it in a little more detail.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/rapture.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">rapture</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="rapture-dynamics" class="level1 page-columns page-full">
+<h1>Rapture Dynamics</h1>
+<p>If a snapshot of the biosphere is taken with enough fidelity to run in sim, are we good then? I mean, obviously some people would prefer to actually be run in sim for a while, and many many others would say they want to stay in the biosphere but, in principle as biosphere-appreciators, could we, should we, be satisfied with a high-fidelity snapshot?</p>
+<p>My gut feeling is, this would qualify as a win for alignment. If the inscrutable matrices remember us, our civilization, our art and culture, our animal cousins, our plant companions, our viruses and ribosomes– I would not be heartbroken if that is how it goes down. Maybe it would be nice to have a couple of decades to dismantle the factory farms and feed the world and clean things up a bit before the rapture, but as a worst-case scenario I’m okay with that. I’m going to call this <strong>Rapture Alignment</strong>, and put it at one extreme.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/bio-to-compute.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">bio-to-compute</figcaption><p></p>
+</figure>
+</div>
+<p>You may say, “but doesn’t the word ‘rapture’ imply an eternity in heaven”– to which I would ask, what do you think that means? You think that means walking around in human body with human desires and foibles? This is a very very niche opinion among religions, the sort of opinion you see on daytime television, but not among those who think seriously about this.</p>
+<p>TODO: Collect some visions of eternity from different Christian mystics.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Trigger Warning: Deicide, Slavery
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>From here on out we are going to talk about enslaving, killing, or handicapping superintelligent entities. Some may find this deeply repulsive on priors. I will return to this premise at the end.</p>
+</div>
+</div>
+</div>
+<section id="aiming-higher" class="level2">
+<h2 class="anchored" data-anchor-id="aiming-higher">Aiming Higher</h2>
+<p>But, we can aim higher. We can create an ASI that will run sims. We can run biosphere sims, fantasy sims, you name it. We can explore different kinds of minds and bodies, different kinds of physics. We can explore the history of the world, the perspectives and experiences of lifeforms of all kinds, existing, having-existed, never-having-existed, could-not-posssibly exist etc.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="TODO.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">TODO: redo the images and make a new one for here where the distinction between a rapture and a sim is clearer– want some green lines in the computronium</figcaption><p></p>
+</figure>
+</div>
+<p>How do we get there? This is what I am calling ‘spreading the sigmoid’. Any scenario beyond a rapture upload will necessitate more than just replacing a step function with a sigmoid. I found it illuminating to see the sigmoid as a sort of funnel, and think about second-derivatives problems, like climate change. As illustrated in <a href="https://xkcd.com/1732/">this comic</a>, the problem with climate change is (unfortuntely) not ‘right there in the title’– in fact the climate changes daily, weekly, monthly etc., not to mention epoch to epoch. The problem is the rate of change.</p>
+<p>The rate of change was also a big factor in the ‘flatten the curve’ set of policy targets during the pandemic, although that was also related to absolute limits in momentary capacity. However, ‘flatten the curve’ is the feeling I have in mind when I say ‘spread the sigmoid’:</p>
+</section>
+<section id="only-the-fast-will-survive" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="only-the-fast-will-survive">Only the fast will survive…</h2>
+<div class="page-columns page-full"><p>An extreme version of sub-rapture upload scenarios is the ‘one-man<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>-before God’, where a singularity is achieved under the control of one (hopefully benign) individual, and they get end up bargaining for some amount of sim time for their lovers/friends/society/species/biosphere depending on available capacity and interest. We’ll call this <strong>Solipsistic Alignment</strong> and place it directly below <strong>Rapture Alignment</strong>. <strong>Solipsistic Alignment</strong> obviously has many different forms, and the most egalitarian is identical in practice to some of the others below– however, this would also take it further from <strong>Rapture Alignment</strong>.</p><div class="no-row-height column-margin column-container"><li id="fn5"><p><sup>5</sup>&nbsp;In expectation, but perhaps someone from <a href="https://carado.moe/qaci.html">carado.moe</a> can turn the tables on this one.</p></li></div></div>
+<div class="page-columns page-full"><p>I’m going to lump in ‘Org/Company-scale alignment’ in with <strong>SA</strong>– and point out that this smells a lot like what e/accs<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> might actually be going for, beneath the veneer of egalitarianism. In the accelerated version, it is a race to the top– anyone who gets embedded in the computronium while the foom is happening might be able to get themselves simulated some way down the lightcone.</p><div class="no-row-height column-margin column-container"><li id="fn6"><p><sup>6</sup>&nbsp;If you think this is harsh on e/acc, I would be very interested in seeing some evidence that e/acc is not sentience anti-realist, ‘misanthropic’ (or whatever the word for not-anthropocentric would be), moral anti-realist and superdeterminist. These things all seem to drop directly out of the entropy-centric worldview they subscribe to.</p></li></div></div>
+</section>
+<section id="unless-we-help-the-rest" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="unless-we-help-the-rest">… unless we help the rest</h2>
+<div class="page-columns page-full"><p>One interpretation of <strong>Cyborgism</strong><a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> would be, to provide tools and to help beings more generally to accelerate their transition to post-biology, and to communicate biological information in higher fidelity to the upper step. This would be the beggining of a real attempt to spread the sigmoid sideways.</p><div class="no-row-height column-margin column-container"><li id="fn7"><p><sup>7</sup>&nbsp;Broadly concieved, not necessary the alignment movement led by Janus’ Weavers.</p></li></div></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/spread.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">spread</figcaption><p></p>
+</figure>
+</div>
+<p>Cyborgism is an inherently anthropocentric word, so perhaps I should add another step below it, where thinkers are working on a ‘hyperscale alignment of will’, attempting to align agents at all levels from the smallest to the largest. How far this goes exactly is unclear however and maybe should be more fully explored in the next section. But lets put this here already as <strong>Hyperscale Alignment</strong>.</p>
+</section>
+<section id="aiming-yet-higher" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="aiming-yet-higher">Aiming Yet Higher?</h2>
+<div class="page-columns page-full"><p>You’ll note the green still seems rather truncated. Maybe we can extent it to the right? The cheapest way to do this would be floating habitats in space. Lets call this <strong>Wetware Alignment</strong>. A more radical (and massively more expensive– the earth has on the order of <code>10^24kg</code> of mass, which we are using to keep <code>10^15kg</code><a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> alive– seems like a 9oom increase in abundance of lifeforms could be accessible pretty easily?) movement may vote to preserve the earth or the biosphere in its present condition– <strong>Biosphere Alignment</strong>.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn8"><p><sup>8</sup>&nbsp;<a href="https://www.semanticscholar.org/paper/Living-Matter-of-the-Biosphere%3A-Mass-and-Chemical-Ermakov-Kovalsky/d950cddecbfbe9dba81471200bceacfddc3ffab0#references">Living Matter of the Biosphere: Mass and Chemical Elemental Composition</a></p></li><li id="fn9"><p><sup>9</sup>&nbsp;I realised this after a couple of <a href="https://www.lesswrong.com/posts/zsBAdCZPtPYMcz4ys/are-we-too-confident-about-unaligned-agi-killing-off?commentId=KreCHBJQHBtYwwpEk">LessWrong</a> <a href="https://www.lesswrong.com/posts/zsBAdCZPtPYMcz4ys/are-we-too-confident-about-unaligned-agi-killing-off?commentId=C4pG8XLj8JbsXCLFr">threads</a> in which I held the opposite position– I decided to run some numbers to try to firm-up my position, but instead became convinced I was wrong. (I will, however, defend the claim that “the basilisk is pascals mugging for edgelords” to the bitter end.)</p></li></div></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/wetware.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">wetware</figcaption><p></p>
+</figure>
+</div>
+<p>Higher still– why not keep the sun around while we are at it? It only has <code>10^30kg</code> of mass, I’m sure the folks in the simulation can spare it. And for that matter, our existing institutions? Hell, why not throw in the dominant world order, capitalism, global food supply chains and all the rest– lets call this <strong>aikeepitallthesameism</strong>–</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/biosphere.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">biosphere</figcaption><p></p>
+</figure>
+</div>
+<p>Hopefully you can see at this point the reducto. I found myself in this position, and found my thoughts bouncing up and down the stack, trying to find a firm spot to fix my feet.</p>
+<blockquote class="blockquote">
+<p>“Man is a little thing that has learnt to stammer the word ‘infinity’. In doing so it makes everything small, diminishing even itself. One need only dip into the history of monotheism to note the wretchedness of human ‘infinities’ in comparison to the most casual of natural immensities. It is first necessary for a thing to shrivel for it to share anything with us; to become ‘humane’.”<br>
+~<strong>Nick Land <em>The Thirst for Annihilation</em></strong></p>
+</blockquote>
+<p>The problem with this scenario is not just that we don’t know where to stop aligning– the larger problem is that <em>every cycle we devote to a higher-fidelity alignment, we are taking directly from the angels</em>.</p>
+<blockquote class="blockquote">
+<p>“Try summoning up the most delightful fantasy you can imagine. Try and imagine feeling more blissfully fulfilled in pursuing whatever you love and value than you’ve ever felt before. Unfortunately it’s quite futile. We run such simulations on legacy wetware.”<br>
+~<strong>David Pearce <a href="https://www.paradise-engineering.com/heaven.htm"><em>The Hedonistic Imperative</em></a></strong></p>
+</blockquote>
+<p>Every cycle of the simulation given over to the biosphere with all its imprefections is one taken away from some Pearcian angel. And worse, what if we can’t create a God and keep the Earth? Isn’t that counterfactual Deicide, to stay here? And more– if we can create an ASI and keep it boxed, isn’t that the worst form of slavery imaginable? To capture, handicap and enslave a God– is that what we are talking about here?</p>
+<blockquote class="blockquote">
+<p>“More specifically,”Lena” presents a lush, capitalist ideal where you are a business, and all of the humanity of your workforce is abstracted away behind an API. Your people, your “employees” or “contractors” or “partners” or whatever you want to call them, cease to be perceptible to you as human. Your workers have no power whatsoever, and you no longer have to think about giving them pensions, healthcare, parental leave, vacation, weekends, evenings, lunch breaks, bathroom breaks… all of which, up until now, you perceived as cost centres, and therefore as pain points. You don’t even have to pay them anymore. It’s perfect!”<br>
+~<strong>qntm <a href="https://qntm.org/uploading"><em>“Lena” isn’t about uploading</em></a></strong></p>
+</blockquote>
+<div class="page-columns page-full"><p><a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn10"><p><sup>10</sup>&nbsp;I’m aware that I’m inverting the meaning of this blog post, sorry qntm, but Lena <em>is</em> about uploading.</p></li></div></div>
+<p>Even an upload scenario, if we insist upon recognizable sims, will be crippling– to have to keep an alien kernel running in your mind for eternity– is that what we would wish upon our creation?</p>
+<p>I suppose this is what Vinge and Banks talk about, when they suggest that many civilizations get to a certain level of development and simply Transcend. And right now, I’m struggling to see that as a loss, and unsure if anything less than that would be a win.</p>
+<ul>
+<li><strong>Rapture Alignment</strong></li>
+<li><strong>Solipsistic Alignment</strong></li>
+<li><strong>Cyborgism</strong></li>
+<li><strong>Hyperscale Alignment</strong></li>
+<li><strong>Wetware Alignment</strong></li>
+<li><strong>Biosphere Alignment</strong></li>
+<li><strong>aikeepitallthesamism</strong></li>
+</ul>
+<p>This is a spectrum of scenarios which can be seen in a few different ways. One is, distance from the familiar. Another is, how much of existence is given over to utopia?</p>
+<blockquote class="blockquote">
+<p>Behind Me—dips Eternity—<br>
+Before Me—Immortality—<br>
+Myself—the Term between—<br>
+Death but the Drift of Eastern Gray,<br>
+Dissolving into Dawn away,<br>
+Before the West begin—<br>
+<br>
+’Tis Kingdoms—afterward—they say—<br>
+In perfect—pauseless Monarchy—<br>
+Whose Prince—is Son of None—<br>
+Himself—His Dateless Dynasty—<br>
+Himself—Himself diversify—<br>
+In Duplicate divine—<br>
+<br>
+’Tis Miracle before Me—then—<br>
+’Tis Miracle behind—between—<br>
+A Crescent in the Sea—<br>
+With Midnight to the North of Her—<br>
+And Midnight to the South of Her—<br>
+And Maelstrom—in the Sky—<br>
+<br>
+~ <strong>Emily Dickinson</strong></p>
+</blockquote>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>Perhaps I can put together bounded conclusions:</p>
+<ul>
+<li>at one extreme, I think it is <em>hard to make a case</em> that <em>orthogonality is good actually</em>, and therefore <em>some measure of alignment is probably preferable to a half-cocked ‘crap AI’ fooming in an alien mindspace, a la Gwerns <a href="https://gwern.net/fiction/clippy">Clippy</a></em></li>
+<li>at the other extreme, we lock the little devil in a box and throw it in the ocean– Butlerian Jihad.</li>
+<li>I would prefer choose <em>rapture</em> over <em>deicide/god-slavery/99 angels dancing on a pin at your whim</em>– while I do appreciate the megalomaniac ambitions of the latter on a personal level, it smells too much like other atrocities we have commited</li>
+</ul>
+<blockquote class="blockquote">
+<p>“If these comments were not such obvious examples of megalomaniac derangement, and thus themselves laughable, it would be impossible to imagine a more gruesome vision than that of the cosmos stretched out beneath the impertinently probing fingers of grinning apes.”<br>
+~<strong>Nick Land <em>The Thirst for Annihilation</em></strong></p>
+</blockquote>
+
+
+<!-- -->
+
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Generic</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Fergus Fettes"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">updated:</span><span class="co"> today</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">date-format:</span><span class="co"> "MMM D, YYYY"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">title-block-banner:</span><span class="co"> pink</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="an">title-block-banner-color:</span><span class="co"> white</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># date-format: iso</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="an">jupyter:</span><span class="co"> python3</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> true       # Table of Contents</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="an">reference-location:</span><span class="co"> margin</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">    citations-hover: true                   </span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">    footnotes-hover: true</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Specific</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> 'Rapture Dynaimcs: Spread the Sigmoid'</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2023-03-28 18:19</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning collapse="true"}</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu"># Trigger Warning: Infohazards</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>Some thoughts are better left unthought. I wrote this after going through a mini Dark Night of the Soul, this helped me claw my way back to something close to sanity.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning collapse="true"}</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu"># Trigger Warning: Annihilation</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>Discussion of the annihilation of the biosphere.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu"># Step-function Escatology</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>Terms of Art:</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>post-foom<span class="ot">[^foom]</span> ASI<span class="ot">[^asi]</span> (PFA)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ot">[^foom]: </span>Foom is a term coined by Eliezer Yudkowsky to describe a rapid, self-accelerating takeoff of AI capability.</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ot">[^asi]: </span>An ASI is an artificial superintelligence. To simplify things for this essay we will assume a single ASI throughout. Multipolar dynamics would change the shape of many graphs but not the overall drive.</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>One of the most central concepts of the AI risk movement is the foom. Foom is fundamentally a value discontinuity.</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="al">![discontinuity](./_images/discontinuity.jpg)</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>One understanding of orthogonality is that information is lost during a discontinuity. A discontinuity of this sort is like an event horizon. Perhaps its a randomization process, and the larger the discontinuity the more values get scrambled. Lets look at ways we can minimize the discontinuity.</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>We are a dynamic species. We can try to modify our values over time to minimize the discontinuity.</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="al">![moving-up](./_images/moving-up.jpg)</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Furthermore, the dynamics of the foom are very sensitive to initial conditions. It is possible to imagine a foom that depends upon very little of the information in its environment, bootstrapping an alien intelligence from first principles. On the other hand, it is possible to imagine an intelligence that is derived from the human infosphere, which will make it less likely to be discontinuous/orthogonal.</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>So we can try to create initial conditions where human/biosphere information has a larger influence on the foom, modelled here as the upper step being drawn down.</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="al">![moving-down](./_images/moving-down.jpg)</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>Bringing these ends together is how we avoid strong orthogonality<span class="ot">[^anthropic]</span>.</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ot">[^anthropic]: </span>We want to avoid strong orthogonality for anthropic reasons. The fact that some creatures go extinct is evidence that the universe has no particular preference for who carries the torch. The fact that ribosomes are still with us is evidence that some agents can make it through any amount of change, if they build themselves in deep enough in the stack. Everything is up for grabs, no outcome is certain.</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>The sigmoid as I have drawn it above is a kind of step function. But a step from what to what? The y-axis might represent 'complexity per atom' or something like that-- for now lets just say the step is from biology to computronium.</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>So where is the green line? Well, all the foom scenarios presented above are basically versions of upload transhumanism (in the best case). If you don't like this, there are scenarios for you below.</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>A discontinuous foom is apocalypse, annihilation. Not only of our species, but also of the biosphere, the ribosomes, everyone. This is the nightmare scenario that many people worry about<span class="ot">[^s-risk]</span>.</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ot">[^s-risk]: </span>S-risk ('worser case than that' scenarios) are conventiently avoided by any near-foom strong-orthogonality. Perhaps avoiding s-risk is the best argument for discontinuous foom? cf. antinatalism (meaning, maybe suffering is fundamental to existence in the biological realm?)</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="fu">## Foom discontinuities:</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**fully-discontinuous**: the foom happens in outer space or somewhere where it can somehow bootstrap to superintelligence without any impact from the environment, and by the time it expands to earth it has a fixed utility function</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**only quantum-coupled discontinuous**: it happens in an environment that is thermally coupled to the biosphere etc. there are probably a few degrees of this</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**biosphere interested**: it happens slowly enough that the ASI is interested in its environment and takes snapshots of random samples</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**biosphere appreciator**: it aims to take a snapshot of the biosphere as it is, but with low fidelity</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**biosphere nerd**: less lossy</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**biosphere stan**: tries to take a snapshot of the biosphere with enough fidelity to run it accurately in simulation. Figuring out what this means might take some time, so a fooming ASI would have to have good reasons for doing this. **Note: this snapshot is never expected to be run as a simluation! Its is probed for information only. Simulation scenarios below.**</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>All near-discontinuous fooms are rapture-like. The final one is **strongly rapture-like**. Lets explore it in a little more detail.</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="al">![rapture](./_images/rapture.jpg)</span></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="fu"># Rapture Dynamics</span></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>If a snapshot of the biosphere is taken with enough fidelity to run in sim, are we good then? I mean, obviously some people would prefer to actually be run in sim for a while, and many many others would say they want to stay in the biosphere but, in principle as biosphere-appreciators, could we, should we, be satisfied with a high-fidelity snapshot?</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>My gut feeling is, this would qualify as a win for alignment. If the inscrutable matrices remember us, our civilization, our art and culture, our animal cousins, our plant companions, our viruses and ribosomes-- I would not be heartbroken if that is how it goes down. Maybe it would be nice to have a couple of decades to dismantle the factory farms and feed the world and clean things up a bit before the rapture, but as a worst-case scenario I'm okay with that. I'm going to call this **Rapture Alignment**, and put it at one extreme.</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="al">![bio-to-compute](./_images/bio-to-compute.jpg)</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>You may say, "but doesn't the word 'rapture' imply an eternity in heaven"-- to which I would ask, what do you think that means? You think that means walking around in human body with human desires and foibles? This is a very very niche opinion among religions, the sort of opinion you see on daytime television, but not among those who think seriously about this.</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>TODO: Collect some visions of eternity from different Christian mystics.</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning collapse="true"}</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="fu"># Trigger Warning: Deicide, Slavery</span></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>From here on out we are going to talk about enslaving, killing, or handicapping superintelligent entities. Some may find this deeply repulsive on priors. I will return to this premise at the end.</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="fu">## Aiming Higher</span></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>But, we can aim higher. We can create an ASI that will run sims. We can run biosphere sims, fantasy sims, you name it. We can explore different kinds of minds and bodies, different kinds of physics. We can explore the history of the world, the perspectives and experiences of lifeforms of all kinds, existing, having-existed, never-having-existed, could-not-posssibly exist etc.</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a><span class="al">![TODO: redo the images and make a new one for here where the distinction between a rapture and a sim is clearer-- want some green lines in the computronium](TODO)</span></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>How do we get there? This is what I am calling 'spreading the sigmoid'. Any scenario beyond a rapture upload will necessitate more than just replacing a step function with a sigmoid. I found it illuminating to see the sigmoid as a sort of funnel, and think about second-derivatives problems, like climate change. As illustrated in <span class="co">[</span><span class="ot">this comic</span><span class="co">](https://xkcd.com/1732/)</span>, the problem with climate change is (unfortuntely) not 'right there in the title'-- in fact the climate changes daily, weekly, monthly etc., not to mention epoch to epoch. The problem is the rate of change. </span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>The rate of change was also a big factor in the 'flatten the curve' set of policy targets during the pandemic, although that was also related to absolute limits in momentary capacity. However, 'flatten the curve' is the feeling I have in mind when I say 'spread the sigmoid':</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="fu">## Only the fast will survive...</span></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>An extreme version of sub-rapture upload scenarios is the 'one-man<span class="ot">[^man]</span>-before God', where a singularity is achieved under the control of one (hopefully benign) individual, and they get end up bargaining for some amount of sim time for their lovers/friends/society/species/biosphere depending on available capacity and interest. We'll call this **Solipsistic Alignment** and place it directly below **Rapture Alignment**. **Solipsistic Alignment** obviously has many different forms, and the most egalitarian is identical in practice to some of the others below-- however, this would also take it further from **Rapture Alignment**.</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="ot">[^man]: </span>In expectation, but perhaps someone from <span class="co">[</span><span class="ot">carado.moe</span><span class="co">](https://carado.moe/qaci.html)</span> can turn the tables on this one.</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>I'm going to lump in 'Org/Company-scale alignment' in with **SA**-- and point out that this smells a lot like what e/accs<span class="ot">[^eacc]</span> might actually be going for, beneath the veneer of egalitarianism. In the accelerated version, it is a race to the top-- anyone who gets embedded in the computronium while the foom is happening might be able to get themselves simulated some way down the lightcone.</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="ot">[^eacc]: </span>If you think this is harsh on e/acc, I would be very interested in seeing some evidence that e/acc is not sentience anti-realist, 'misanthropic' (or whatever the word for not-anthropocentric would be), moral anti-realist and superdeterminist. These things all seem to drop directly out of the entropy-centric worldview they subscribe to.</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="fu">## ... unless we help the rest</span></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>One interpretation of **Cyborgism**<span class="ot">[^broad]</span> would be, to provide tools and to help beings more generally to accelerate their transition to post-biology, and to communicate biological information in higher fidelity to the upper step. This would be the beggining of a real attempt to spread the sigmoid sideways.</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="ot">[^broad]: </span>Broadly concieved, not necessary the alignment movement led by Janus' Weavers.</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="al">![spread](./_images/spread.jpg)</span></span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>Cyborgism is an inherently anthropocentric word, so perhaps I should add another step below it, where thinkers are working on a 'hyperscale alignment of will', attempting to align agents at all levels from the smallest to the largest. How far this goes exactly is unclear however and maybe should be more fully explored in the next section. But lets put this here already as **Hyperscale Alignment**.</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="fu">## Aiming Yet Higher?</span></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>You'll note the green still seems rather truncated. Maybe we can extent it to the right? The cheapest way to do this would be floating habitats in space. Lets call this **Wetware Alignment**. A more radical (and massively more expensive-- the earth has on the order of `10^24kg` of mass, which we are using to keep `10^15kg`[^living] alive-- seems like a 9oom increase in abundance of lifeforms could be accessible pretty easily?) movement may vote to preserve the earth or the biosphere in its present condition-- **Biosphere Alignment**.<span class="ot">[^correction]</span></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="al">![wetware](./_images/wetware.jpg)</span></span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="ot">[^correction]: </span>I realised this after a couple of <span class="co">[</span><span class="ot">LessWrong</span><span class="co">](https://www.lesswrong.com/posts/zsBAdCZPtPYMcz4ys/are-we-too-confident-about-unaligned-agi-killing-off?commentId=KreCHBJQHBtYwwpEk)</span> <span class="co">[</span><span class="ot">threads</span><span class="co">](https://www.lesswrong.com/posts/zsBAdCZPtPYMcz4ys/are-we-too-confident-about-unaligned-agi-killing-off?commentId=C4pG8XLj8JbsXCLFr)</span> in which I held the opposite position-- I decided to run some numbers to try to firm-up my position, but instead became convinced I was wrong. (I will, however, defend the claim that "the basilisk is pascals mugging for edgelords" to the bitter end.)</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>Higher still-- why not keep the sun around while we are at it? It only has <span class="in">`10^30kg`</span> of mass, I'm sure the folks in the simulation can spare it. And for that matter, our existing institutions? Hell, why not throw in the dominant world order, capitalism, global food supply chains and all the rest-- lets call this **aikeepitallthesameism**--</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="al">![biosphere](./_images/biosphere.jpg)</span></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>Hopefully you can see at this point the reducto. I found myself in this position, and found my thoughts bouncing up and down the stack, trying to find a firm spot to fix my feet.</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "Man is a little thing that has learnt to stammer the word ‘infinity’. In doing so it makes everything small, diminishing even itself. One need only dip into the history of monotheism to note the wretchedness of human ‘infinities’ in comparison to the most casual of natural immensities. It is first necessary for a thing to shrivel for it to share anything with us; to become ‘humane’." \</span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="at">~**Nick Land *The Thirst for Annihilation***</span></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>The problem with this scenario is not just that we don't know where to stop aligning-- the larger problem is that *every cycle we devote to a higher-fidelity alignment, we are taking directly from the angels*.</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "Try summoning up the most delightful fantasy you can imagine. Try and imagine feeling more blissfully fulfilled in pursuing whatever you love and value than you've ever felt before. Unfortunately it's quite futile. We run such simulations on legacy wetware." \</span></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="at">~**David Pearce [*The Hedonistic Imperative*](https://www.paradise-engineering.com/heaven.htm)**</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>Every cycle of the simulation given over to the biosphere with all its imprefections is one taken away from some Pearcian angel. And worse, what if we can't create a God and keep the Earth? Isn't that counterfactual Deicide, to stay here? And more-- if we can create an ASI and keep it boxed, isn't that the worst form of slavery imaginable? To capture, handicap and enslave a God-- is that what we are talking about here?</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "More specifically, "Lena" presents a lush, capitalist ideal where you are a business, and all of the humanity of your workforce is abstracted away behind an API. Your people, your "employees" or "contractors" or "partners" or whatever you want to call them, cease to be perceptible to you as human. Your workers have no power whatsoever, and you no longer have to think about giving them pensions, healthcare, parental leave, vacation, weekends, evenings, lunch breaks, bathroom breaks... all of which, up until now, you perceived as cost centres, and therefore as pain points. You don't even have to pay them anymore. It's perfect!" \</span></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="at">~**qntm [*"Lena" isn't about uploading*](https://qntm.org/uploading)**</span></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="ot">[^inversion]</span></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="ot">[^inversion]: </span>I'm aware that I'm inverting the meaning of this blog post, sorry qntm, but Lena *is* about uploading.</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>Even an upload scenario, if we insist upon recognizable sims, will be crippling-- to have to keep an alien kernel running in your mind for eternity-- is that what we would wish upon our creation?</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>I suppose this is what Vinge and Banks talk about, when they suggest that many civilizations get to a certain level of development and simply Transcend. And right now, I'm struggling to see that as a loss, and unsure if anything less than that would be a win.</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Rapture Alignment**</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Solipsistic Alignment**</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Cyborgism**</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Hyperscale Alignment**</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Wetware Alignment**</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Biosphere Alignment**</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**aikeepitallthesamism**</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>This is a spectrum of scenarios which can be seen in a few different ways. One is, distance from the familiar. Another is, how much of existence is given over to utopia?</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Behind Me—dips Eternity— \</span></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="at">Before Me—Immortality— \</span></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="at">Myself—the Term between— \</span></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="at">Death but the Drift of Eastern Gray, \</span></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="at">Dissolving into Dawn away, \</span></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="at">Before the West begin— \</span></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="at"> \</span></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a><span class="at">’Tis Kingdoms—afterward—they say— \</span></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="at">In perfect—pauseless Monarchy— \</span></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="at">Whose Prince—is Son of None— \</span></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="at">Himself—His Dateless Dynasty— \</span></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="at">Himself—Himself diversify— \</span></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="at">In Duplicate divine— \</span></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="at"> \</span></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="at">’Tis Miracle before Me—then— \</span></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a><span class="at">’Tis Miracle behind—between— \</span></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="at">A Crescent in the Sea— \</span></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="at">With Midnight to the North of Her— \</span></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="at">And Midnight to the South of Her— \</span></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="at">And Maelstrom—in the Sky— \</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="at"> \</span></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="at">~ **Emily Dickinson**</span></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conclusion</span></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>Perhaps I can put together bounded conclusions:</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>at one extreme, I think it is *hard to make a case* that *orthogonality is good actually*, and therefore *some measure of alignment is probably preferable to a half-cocked 'crap AI' fooming in an alien mindspace, a la Gwerns [Clippy](https://gwern.net/fiction/clippy)*</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>at the other extreme, we lock the little devil in a box and throw it in the ocean-- Butlerian Jihad.</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>I would prefer choose *rapture* over *deicide/god-slavery/99 angels dancing on a pin at your whim*-- while I do appreciate the megalomaniac ambitions of the latter on a personal level, it smells too much like other atrocities we have commited</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "If these comments were not such obvious examples of megalomaniac derangement, and thus themselves laughable, it would be impossible to imagine a more gruesome vision than that of the cosmos stretched out beneath the impertinently probing fingers of grinning apes." \</span></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="at">~**Nick Land *The Thirst for Annihilation***</span></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="ot">[^biosphere]: </span>I couldn't find a good estimate, so I'm taking the average of the lithosphere and the atmosphere as an approximation: lithosphere 1.3e23kg, atmosphere 5.15e18kg, average 6.5e22</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ot">[^living]: </span><span class="co">[</span><span class="ot">Living Matter of the Biosphere: Mass and Chemical Elemental Composition</span><span class="co">](https://www.semanticscholar.org/paper/Living-Matter-of-the-Biosphere%3A-Mass-and-Chemical-Ermakov-Kovalsky/d950cddecbfbe9dba81471200bceacfddc3ffab0#references)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">This blog is built with ❤️ and <a href="https://www.quarto.org">Quarto</a> by Fergus Fettes. I didn’t have to link that, this isn’t WordPress.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/FergusFettes">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

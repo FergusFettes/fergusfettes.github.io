@@ -1,0 +1,43 @@
+---
+# Generic
+author: "Fergus Fettes"
+updated: today
+date-format: "MMM D, YYYY"
+title-block-banner: pink
+title-block-banner-color: white
+# date-format: iso
+jupyter: python3
+toc: true       # Table of Contents
+reference-location: margin
+format:
+  html:
+    code-tools: true
+    code-fold: true
+    citations-hover: true
+    footnotes-hover: true
+
+freeze: auto
+# Specific
+title: GIS Map Experiments
+date: 2022-10-30T11:37:33+01:00
+---
+
+# Introduction
+
+Cartography is an ancient and noble art. It has continued apace into the modern era. It seems clear that it will be a useful tool in my kit, both regarding my career as well as my hobbies, and there are many fun everyday applications of it, so I am finally diving in to studying it in a little more detail.
+
+See attempts so far:
+
+* [Attempt 1](Tests/GIS_0.qmd)
+
+* [Attempt 2](Tests/GIS_1.qmd)
+
+* [Attempt 3](/PsyGeo/2022-11-02.qmd)
+
+# PsychoGeography Misc
+
+* [2022-10-26](/PsyGeo/2022-10-26.qmd)
+* [2022-10-29](/PsyGeo/2022-10-29.qmd)
+* [2022-11-02](/PsyGeo/2022-11-02.qmd)
+* [2022-11-03](/PsyGeo/2022-11-03.qmd)
+* [2022-11-06](/PsyGeo/2022-11-06.qmd)
