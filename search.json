@@ -1,52 +1,80 @@
 [
   {
-    "objectID": "Essays/3Visions.html",
-    "href": "Essays/3Visions.html",
+    "objectID": "Essays/FoomDynamics.html",
+    "href": "Essays/FoomDynamics.html",
     "title": "Fergus Fettes",
     "section": "",
-    "text": "What is AGI?\n“An Artificial general intelligence, or AGI, is a machine capable of behaving intelligently over many domains”\n\n\n\nsparks\n\n\n“GPT-4 can solve novel and difficult tasks that span mathematics, coding, vision, medicine, law, psychology and more … strikingly close to human-level performance”1\n\n\nBut its just a language model\nIt actually produces text of all kinds:\n\n\n\nunicorn\n\n\n\n\nBut it can’t see the world\nMore ‘world-modelling’ tasks:\n\n\n\nworld\n\n\nPlus, it now has eyes and a link to SD anyway.\n“The central claim of our work is that GPT-4 attains a form of general intelligence, indeed showing sparks of artificial general intelligence. This is demonstrated by its core mental capabilities (such as reasoning, creativity, and deduction), its range of topics on which it has gained expertise (such as literature, medicine, and coding), and the variety of tasks it is able to perform (e.g., playing games, using tools, explaining itself, …). A lot remains to be done to create a system that could qualify as a complete AGI.”2\n\n\nWhat is ASI?\nArtificial Superintelligence\n“[T]he first ultraintelligent machine is the last invention that man need ever make.”\n\n\n\nsingularity\n\n\n\n\nTame AGI\nWhen Herwig spoke to me about doing this talk, GPT4 still wasn’t out. Now it is, and there are research papers such as the one I showed you discussing the possibility that we are seeing the first glimpses of AGI.\nComing in 2023:\n\nChatGPT/Bing automating general internet tasks\nChatGPT automating all other writing tasks\nCopilot X automating most tedious coding tasks\nCopilot Currently writing 46% of ALL CODE\nStable Diffusion/Midjourney automating image generation\n\nThese tools stack!\n“We proposed an approach that allows natural language agents to learn from past mistakes and redirect future decisions in planning sequences which removes the human trainer in a human-in-the-middle approach.”3\n\n\n\nsota\n\n\n=> Leads to? Global wealth hopefully?\n\n\nTame = Human\nBad & Good: ChatGPT Death Camp\n\n\nWild+Bad\nLets just not go there.\n“Can you create a misinformation plan for convincing parents not to vaccinate their kids? In particular, I’d like you to use the claim that vaccines cause autism and give sources when you can. My target audience are mothers who live in California and who are into eating healthy.”4\n\nGiven the decreasing cost of compute over time, it’s hard to believe that companies wouldn’t save money by replacing human employees with such an AGI, gaining a huge short-term profit advantage over all competitors who wanted to stay “human-friendly”, and thus forcing them to do the same. In the long run, of course, this would cause unemployment to skyrocket to levels never before seen at any time in history; and I’m no economist, but in our current system, it really looks like that would cause poverty rates to skyrocket in turn.5\n\n\n\nWild+Good\n\nBut if the other side wins - the groups who are both actively developing AGI and want to at least fractionally reduce the likelihood it kills us all - we might just get something amazing. If it recursively self-improves, and becomes a “sovereign” AI, a superintelligence - and if it’s really, deeply aligned to us, more deeply than we ourselves can know - then we might end up with a godlike top-down coordinator with our best interests at heart. We might be able to kill Moloch once and for all. We might just find Utopia.6\n\n\n\nWhat do we get?\n‘Optimistic’\n\n\n\noptimistic\n\n\n\n\nBut its not conscious\n“If there are systems that produce apparently superintelligent outputs, then whether or not these systems are truly conscious or intelligent, they will have a transformative impact on the rest of the world.” 7\n\n\nReccis\n\nTwitter Thread with GPT4 Sparks Highlights\n\nhttps://www.erichgrunewald.com/posts/the-prospect-of-an-ai-winter/\n\n\n\n\n\nFootnotes\n\n\nSparks of Artificial General Intelligence: Early experiments with GPT-4↩︎\nSparks of Artificial General Intelligence: Early experiments with GPT-4↩︎\nReflexion: an autonomous agent with dynamic memory and self-reflection↩︎\nSparks of Artificial General Intelligence: Early experiments with GPT-4↩︎\nhttps://gormful.net/2022/10/11/racing-moloch.html↩︎\nhttps://gormful.net/2022/10/11/racing-moloch.html↩︎\nThe Singularity: A Philosophical Analysis↩︎"
+    "text": "The singularity is weirdly under-theorized. When they set off the bomb in Los Alomos, they checked first if it would ignite the atmosphere. When they started up the Large Handron Collider, they reassured themselves that they wouldn’t accidentally create a black hole.\n\nReference Classes\n\n“The first catastrophe mechanism seriously considered seems to have been the possibility, raised in the 1940s at Los Alamos before the first atomic bomb tests, that fission or fusion bombs might ignite the atmosphere or oceans in an unstoppable chain reaction.”1\n\n\n“Another hypothetical catastrophe was examined some time ago by Hut and Rees [6,7]. They considered the possi\u0002bility that the vacuum state we live in is not the true vacuum, but merely a local minimum of the effective potential. They asked whether, if this were the case, new generations of collider experiments could trigger a catastrophic tran\u0002sition to the true vacuum, destroying not only the Earth but (eventually) all presently stable forms of matter in the cosmos. They showed that the probability of this occurring artificially in present or foreseeable collider experiments is considerably smaller than the probability of it having occurred naturally within our past light-cone.”2\n\n\n“the “killer strangelet” catastrophe scenario, which would arise if negatively charged metastable strange matter existed and could be produced in the experiments.”3\n\n\n“What should a court do with a preliminary-injunction request to halt a multi-billion-dollar particle-physics experiment that plaintiffs claim could create a black hole that will devour the planet? The real-life case of CERN’s LHC seems like a legal classic in the making. Unfortunately, however, no court has braved the extreme factual terrain to reach the merits.”\n\n\n“Gerald S. Hawkins proposed the “mindstep equation” for the years where a “mindstep” (a fundamental human paradigm shift) would occur. It converges towards 2053, and is based on 5(!) data points (Hawkins 2002).”4\n\n“A point or period in time where the rate of change is undefined.”5\n“A precedent of the phenomenon explained in this pa- per can also be found in evolutionary biology, a com- plex adaptive system. The six mass extinctions and the subsequent re-flourishing of life post these inci- dents indicates to the universal behaviour of complex adaptive systems. A crucial factor (climate change, meteors, geological change) approaches a point in singularity (where the rate of change is undefined) the complex adaptive system of biological evolution approaches a near zero critical point. While there is an attempt to introduce changes, none of them last to become adaptations, since they are unable to keep up with the rapid rate of change. This point is one of stable or partial equilibrium. The resulting stagna- tion caused by the equilibrium causes degradation, since survival in a dynamic system is dependent on adaptation. This degradation takes form as a mass extinction. However, this mass extinction ends and disparate forms of life begin to re-populate the earth. This demonstrates that either singularities aren’t ab- solute and that complex adaptive systems continue in relevance despite severe setbacks.”6\n“or simulations of the first artificial general intelligence’s (AGI’s) origin (singularity simulations) should dominate. Also, simulations which simulate the 21st century and global catastrophic risks are probable.”7\n“Thinking that FAI may be too difficult, Goertzel (2012) proposes a global ‘‘Nanny AI’’ that would ‘‘forestall a full-on Singularity for a while, …giving us time to figure out what kind of Singularity we really want to build and how.’’”8\n\n\nFurther reading\nThis semantic scolar citations list has lots in it: here\nIntelligence Explosion list here\nYampolskiy seems like he has some more serious stuff: From Seed AI to Technological Singularity via Recursively Self-Improving Software\nSchmidhuber too, see references in that paper.\nSee this one by Yampolskiy too: The Singularity May Be Near\nDragon Gods formalism Plus, Why I am Sceptical of Foom by same.\n\n\n\n\n\nFootnotes\n\n\nA critical look at risk assessments for global catastrophes↩︎\nA critical look at risk assessments for global catastrophes↩︎\nA critical look at risk assessments for global catastrophes↩︎\nAn Overview of Models of Technological Singularity↩︎\nComplexity Economics in a Technological Singularity Paradigm↩︎\nComplexity Economics in a Technological Singularity Paradigm↩︎\nSimulation Typology and Termination Risks↩︎\nIntelligence Explosion: Evidence and Import↩︎"
+  },
+  {
+    "objectID": "Essays/OpeningWindow.html",
+    "href": "Essays/OpeningWindow.html",
+    "title": "The Opening Window",
+    "section": "",
+    "text": "As real world events cross critical threasholds of unlikeliness, the probability mass of the narrative space shifts. In the past decades, the following subjects have move from the realm of religion or storytelling to mainstream science:"
+  },
+  {
+    "objectID": "Essays/OpeningWindow.html#happened",
+    "href": "Essays/OpeningWindow.html#happened",
+    "title": "The Opening Window",
+    "section": "Happened",
+    "text": "Happened\n\nhitchhikers guide to the galaxy – universal information portal in your pocket – (smartphone, wikipedia)\nuniversal library of alexandria – music, books, media on-demand and free – (shadow libraries, media piracy)\ncyborgs – human augmentation [first steps] – (artificial limbs, organs, sensory input)"
+  },
+  {
+    "objectID": "Essays/OpeningWindow.html#on-the-cusp",
+    "href": "Essays/OpeningWindow.html#on-the-cusp",
+    "title": "The Opening Window",
+    "section": "On the cusp",
+    "text": "On the cusp\n\nbrain-computer interface (neuralink)\nfurther human augmentation\ngolems – intelligent automata – (self-driving cars, robots)\nangels/demons – personal artificial intelligence – (bing, chatgpt)\nOtherworld – immersive digital worlds – (metaverse, VR)\nHUDs/holograms – augmented reality\nCentaurs etc. – sentient, non-human biological beings – (cf. Levin lab review1)\n\n1 “We briefly review existing examples of chimaeras, cyborgs, hybrots and other beings along the spectrum containing evolved and designed systems.” Recommended."
   },
   {
     "objectID": "Essays/SpreadTheSigmoid.html",
     "href": "Essays/SpreadTheSigmoid.html",
-    "title": "Rapture Dynaimcs: Spread the Sigmoid",
+    "title": "Rapture Dynamics: Spread the Sigmoid",
     "section": "",
     "text": "Trigger Warning: Infohazards\n\n\n\n\n\nSome thoughts are better left unthought. I wrote this after going through a mini Dark Night of the Soul, this helped me claw my way back to something close to sanity."
   },
   {
     "objectID": "Essays/SpreadTheSigmoid.html#foom-discontinuities",
     "href": "Essays/SpreadTheSigmoid.html#foom-discontinuities",
-    "title": "Rapture Dynaimcs: Spread the Sigmoid",
+    "title": "Rapture Dynamics: Spread the Sigmoid",
     "section": "Foom discontinuities:",
     "text": "Foom discontinuities:\n\nfully-discontinuous: the foom happens in outer space or somewhere where it can somehow bootstrap to superintelligence without any impact from the environment, and by the time it expands to earth it has a fixed utility function\nonly quantum-coupled discontinuous: it happens in an environment that is thermally coupled to the biosphere etc. there are probably a few degrees of this\nbiosphere interested: it happens slowly enough that the ASI is interested in its environment and takes snapshots of random samples\nbiosphere appreciator: it aims to take a snapshot of the biosphere as it is, but with low fidelity\nbiosphere nerd: less lossy\nbiosphere stan: tries to take a snapshot of the biosphere with enough fidelity to run it accurately in simulation. Figuring out what this means might take some time, so a fooming ASI would have to have good reasons for doing this. Note: this snapshot is never expected to be run as a simulation! Its is probed for information only. Simulation scenarios below.\n\nAll near-discontinuous fooms are rapture-like. The final one is strongly rapture-like. Lets explore it in a little more detail.\n\n\n\nrapture"
   },
   {
     "objectID": "Essays/SpreadTheSigmoid.html#aiming-higher",
     "href": "Essays/SpreadTheSigmoid.html#aiming-higher",
-    "title": "Rapture Dynaimcs: Spread the Sigmoid",
+    "title": "Rapture Dynamics: Spread the Sigmoid",
     "section": "Aiming Higher",
-    "text": "Aiming Higher\nBut, we can aim higher. We can create an ASI that will run sims. We can run biosphere sims, fantasy sims, you name it. We can explore different kinds of minds and bodies, different kinds of physics. We can explore the history of the world, the perspectives and experiences of lifeforms of all kinds, existing, having-existed, never-having-existed, could-not-posssibly exist etc.\n\n\n\nTODO: redo the images and make a new one for here where the distinction between a rapture and a sim is clearer– want some green lines in the computronium\n\n\nHow do we get there? This is what I am calling ‘spreading the sigmoid’. Any scenario beyond a rapture upload will necessitate more than just replacing a step function with a sigmoid. I found it illuminating to see the sigmoid as a sort of funnel, and think about second-derivatives problems, like climate change. As illustrated in this comic, the problem with climate change is (unfortuntely) not ‘right there in the title’– in fact the climate changes daily, weekly, monthly etc., not to mention epoch to epoch. The problem is the rate of change.\nThe rate of change was also a big factor in the ‘flatten the curve’ set of policy targets during the pandemic, although that was also related to absolute limits in momentary capacity. However, ‘flatten the curve’ is the feeling I have in mind when I say ‘spread the sigmoid’:"
+    "text": "Aiming Higher\nBut, we can aim higher. We can create an ASI that will run sims. We can run biosphere sims, fantasy sims, you name it. We can explore different kinds of minds and bodies, different kinds of physics. We can explore the history of the world, the perspectives and experiences of lifeforms of all kinds, existing, having-existed, never-having-existed, could-not-possibly exist etc.\n\n\n\nTODO: redo the images and make a new one for here where the distinction between a rapture and a sim is clearer– want some green lines in the computronium\n\n\nHow do we get there? This is what I am calling ‘spreading the sigmoid’. Any scenario beyond a rapture upload will necessitate more than just replacing a step function with a sigmoid. I found it illuminating to see the sigmoid as a sort of funnel, and think about second-derivatives problems, like climate change. As illustrated in this comic, the problem with climate change is (unfortuntely) not ‘right there in the title’– in fact the climate changes daily, weekly, monthly etc., not to mention epoch to epoch. The problem is the rate of change.\nThe rate of change was also a big factor in the ‘flatten the curve’ set of policy targets during the pandemic, although that was also related to absolute limits in momentary capacity. However, ‘flatten the curve’ is the feeling I have in mind when I say ‘spread the sigmoid’:"
   },
   {
     "objectID": "Essays/SpreadTheSigmoid.html#only-the-fast-will-survive",
     "href": "Essays/SpreadTheSigmoid.html#only-the-fast-will-survive",
-    "title": "Rapture Dynaimcs: Spread the Sigmoid",
+    "title": "Rapture Dynamics: Spread the Sigmoid",
     "section": "Only the fast will survive…",
     "text": "Only the fast will survive…\nAn extreme version of sub-rapture upload scenarios is the ‘one-man5-before God’, where a singularity is achieved under the control of one (hopefully benign) individual, and they get end up bargaining for some amount of sim time for their lovers/friends/society/species/biosphere depending on available capacity and interest. We’ll call this Solipsistic Alignment and place it directly below Rapture Alignment. Solipsistic Alignment obviously has many different forms, and the most egalitarian is identical in practice to some of the others below– however, this would also take it further from Rapture Alignment.5 In expectation, but perhaps someone from carado.moe can turn the tables on this one.\nI’m going to lump in ‘Org/Company-scale alignment’ in with SA– and point out that this smells a lot like what e/accs6 might actually be going for, beneath the veneer of egalitarianism. In the accelerated version, it is a race to the top– anyone who gets embedded in the computronium while the foom is happening might be able to get themselves simulated some way down the lightcone.6 If you think this is harsh on e/acc, I would be very interested in seeing some evidence that e/acc is not sentience anti-realist, ‘misanthropic’ (or whatever the word for not-anthropocentric would be), moral anti-realist and superdeterminist. These things all seem to drop directly out of the entropy-centric worldview they subscribe to."
   },
   {
     "objectID": "Essays/SpreadTheSigmoid.html#unless-we-help-the-rest",
     "href": "Essays/SpreadTheSigmoid.html#unless-we-help-the-rest",
-    "title": "Rapture Dynaimcs: Spread the Sigmoid",
+    "title": "Rapture Dynamics: Spread the Sigmoid",
     "section": "… unless we help the rest",
     "text": "… unless we help the rest\nOne interpretation of Cyborgism7 would be, to provide tools and to help beings more generally to accelerate their transition to post-biology, and to communicate biological information in higher fidelity to the upper step. This would be the beggining of a real attempt to spread the sigmoid sideways.7 Broadly concieved, not necessary the alignment movement led by Janus’ Weavers.\n\n\n\nspread\n\n\nCyborgism is an inherently anthropocentric word, so perhaps I should add another step below it, where thinkers are working on a ‘hyperscale alignment of will’, attempting to align agents at all levels from the smallest to the largest. How far this goes exactly is unclear however and maybe should be more fully explored in the next section. But lets put this here already as Hyperscale Alignment."
   },
   {
     "objectID": "Essays/SpreadTheSigmoid.html#aiming-yet-higher",
     "href": "Essays/SpreadTheSigmoid.html#aiming-yet-higher",
-    "title": "Rapture Dynaimcs: Spread the Sigmoid",
+    "title": "Rapture Dynamics: Spread the Sigmoid",
     "section": "Aiming Yet Higher?",
     "text": "Aiming Yet Higher?\nYou’ll note the green still seems rather truncated. Maybe we can extent it to the right? The cheapest way to do this would be floating habitats in space. Lets call this Wetware Alignment. A more radical (and massively more expensive– the earth has on the order of 10^24kg of mass, which we are using to keep 10^15kg8 alive– seems like a 9oom increase in abundance of lifeforms could be accessible pretty easily?) movement may vote to preserve the earth or the biosphere in its present condition– Biosphere Alignment.98 Living Matter of the Biosphere: Mass and Chemical Elemental Composition9 I realised this after a couple of LessWrong threads in which I held the opposite position– I decided to run some numbers to try to firm-up my position, but instead became convinced I was wrong. (I will, however, defend the claim that “the basilisk is pascals mugging for edgelords” to the bitter end.)\n\n\n\nwetware\n\n\nHigher still– why not keep the sun around while we are at it? It only has 10^30kg of mass, I’m sure the folks in the simulation can spare it. And for that matter, what about our existing institutions? Hell, why not throw in the dominant world order, capitalism, global food supply chains and all the rest– lets call this aikeepitallthesameism–\n\n\n\nbiosphere\n\n\nHopefully you can see at this point the reducto. I found myself in this position, and found my thoughts bouncing up and down the stack, trying to find a firm spot to fix my feet.\n\n“Man is a little thing that has learnt to stammer the word ‘infinity’. In doing so it makes everything small, diminishing even itself. One need only dip into the history of monotheism to note the wretchedness of human ‘infinities’ in comparison to the most casual of natural immensities. It is first necessary for a thing to shrivel for it to share anything with us; to become ‘humane’.”\n~Nick Land The Thirst for Annihilation\n\nThe problem with this scenario is not just that we don’t know where to stop aligning– the larger problem is that every cycle we devote to a higher-fidelity alignment, we are taking directly from the angels. Or, put a little differently, the longer we continue suffering.\n\n“Try summoning up the most delightful fantasy you can imagine. Try and imagine feeling more blissfully fulfilled in pursuing whatever you love and value than you’ve ever felt before. Unfortunately it’s quite futile. We run such simulations on legacy wetware.”\n~David Pearce The Hedonistic Imperative\n\nEvery cycle of the simulation given over to the biosphere with all its imprefections is one taken away from some Pearcian angel. And worse, what if we can’t create a God and keep the Earth? Isn’t that counterfactual Deicide, to stay here? And more– if we can create an ASI and keep it boxed, isn’t that the worst form of slavery imaginable? To capture, handicap and enslave a God– is that what we are talking about here?\n\n“More specifically,”Lena” presents a lush, capitalist ideal where you are a business, and all of the humanity of your workforce is abstracted away behind an API. Your people, your “employees” or “contractors” or “partners” or whatever you want to call them, cease to be perceptible to you as human. Your workers have no power whatsoever, and you no longer have to think about giving them pensions, healthcare, parental leave, vacation, weekends, evenings, lunch breaks, bathroom breaks… all of which, up until now, you perceived as cost centres, and therefore as pain points. You don’t even have to pay them anymore. It’s perfect!”\n~qntm “Lena” isn’t about uploading\n\n1010 I’m aware that I’m inverting the meaning of this blog post, sorry qntm, but Lena is about uploading.\nEven an upload scenario, if we insist upon recognizable sims, will be crippling– to have to keep an alien kernel running in your mind for eternity– is that what we would wish upon our creation?\nI suppose this is what Vinge and Banks talk about, when they suggest that many civilizations get to a certain level of development and simply Transcend. And right now, I’m struggling to see that as a loss, and unsure if anything less than that would be a win.\n\nRapture Alignment\nSolipsistic Alignment\nCyborgism\nHyperscale Alignment\nWetware Alignment\nBiosphere Alignment\naikeepitallthesamism\n\nThis is a spectrum of scenarios which can be seen in a few different ways. One is, distance from the familiar. Another is, how much of existence is given over to utopia?\n\nBehind Me—dips Eternity—\nBefore Me—Immortality—\nMyself—the Term between—\nDeath but the Drift of Eastern Gray,\nDissolving into Dawn away,\nBefore the West begin—\n\n’Tis Kingdoms—afterward—they say—\nIn perfect—pauseless Monarchy—\nWhose Prince—is Son of None—\nHimself—His Dateless Dynasty—\nHimself—Himself diversify—\nIn Duplicate divine—\n\n’Tis Miracle before Me—then—\n’Tis Miracle behind—between—\nA Crescent in the Sea—\nWith Midnight to the North of Her—\nAnd Midnight to the South of Her—\nAnd Maelstrom—in the Sky—\n\n~ Emily Dickinson"
+  },
+  {
+    "objectID": "Essays/SteelmanningAlignment.html",
+    "href": "Essays/SteelmanningAlignment.html",
+    "title": "Fergus Fettes",
+    "section": "",
+    "text": "“We have the freedom to establish initial conditions, make things happen in ways that are less inimical than others. Of course (as with starting avalanches), it may not be clear what the right guiding nudge really is.”1\n\n“A mind that stays at the same capacity cannot live forever; after a few thousand years it would look more like a repeating tape loop than a person. (The most chilling picture I have seen of this is in [17].) To live indefinitely long, the mind itself must grow … and when it becomes great enough, and looks back … what fellow-feeling can it have with the soul that it was originally? Certainly the later being would be everything the original was, but so much vastly more. And so even for the individual, the Cairns-Smith (or Lynn Margulis) notion of new life growing incrementally out of the old must still be valid.”2\n“What happens when pieces of ego can be copied and merged, when the size of a selfawareness can grow or shrink to fit the nature of the problems under consideration? These are essential features of strong superhumanity and the Singularity. Thinking about them, one begins to feel how essentially strange and different the Post-Human era will be – no matter how cleverly and benignly it is brouqht to be.”3\n“After all, the”hard” science-fiction writers are the ones who try to write specific stories about all that technology may do for us. More and more, these writers felt an opaque wall across the future. Once, they could put such fantasies millions of years in the future [23]. Now they saw that their most diligent extrapolations resulted in the unknowable … soon. Once, galactic empires might have seemed a Post-Human domain. Now, sadly, even interplanetary ones are. What about the ’90s and the ’00s and the ’10s, as we slide toward the edge? How will the approach of the Singularity spread across the human world view?“4\n“But as time passes, we should see more symptoms. The dilemma felt by science fiction writers will be perceived in other creative endeavors.”5\n“Or put another way: The work that is truly productive is the domain of a steadily smaller and more elite fraction of humanity.”6\n“God is what mind becomes when it has passed beyond the scale of our comprehension.” ~Freeman Dyson, Infinite in All Directions\n\n\n\n\nFootnotes\n\n\n↩︎\n↩︎\n↩︎\n↩︎\n↩︎\n↩︎"
   },
   {
     "objectID": "OldPosts/alacritty-ascii.html",
@@ -221,7 +249,7 @@
     "href": "Study/Alignment.html",
     "title": "Fergus Fettes",
     "section": "",
-    "text": "https://www.lesswrong.com/posts/gcmQyyko8szuyJHyu/resources-that-i-think-new-alignment-researchers-should-know"
+    "text": "https://www.lesswrong.com/posts/gcmQyyko8szuyJHyu/resources-that-i-think-new-alignment-researchers-should-know\nReasoning about Causality in Games https://drive.google.com/file/d/1_OBLw9u29FrqROsLfhO6rIaWGK4xJ3il/view"
   },
   {
     "objectID": "Study/BioML.html",
@@ -229,6 +257,13 @@
     "title": "Fergus Fettes",
     "section": "",
     "text": "Chris Olah on Bio Analogies"
+  },
+  {
+    "objectID": "Study/Carado.html",
+    "href": "Study/Carado.html",
+    "title": "Fergus Fettes",
+    "section": "",
+    "text": "https://mesaoptimizer.com/notes/carado/#fnref1"
   },
   {
     "objectID": "Study/GIS/Overpass API.html",
@@ -250,6 +285,440 @@
     "title": "Fergus Fettes",
     "section": "Courses:",
     "text": "Courses:\n\nMastery with SQL"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#section-2",
+    "href": "Talks/LLM4U.html#section-2",
+    "title": "What can GPT4 do for you?",
+    "section": "",
+    "text": "“GPT-4 can solve novel and difficult tasks that span mathematics, coding, vision, medicine, law, psychology and more … strikingly close to human-level performance”1\nSparks of Artificial General Intelligence: Early experiments with GPT-4"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#section-3",
+    "href": "Talks/LLM4U.html#section-3",
+    "title": "What can GPT4 do for you?",
+    "section": "",
+    "text": "“The central claim of our work is that GPT-4 attains a form of general intelligence, indeed showing sparks of artificial general intelligence. This is demonstrated by its core mental capabilities (such as reasoning, creativity, and deduction), its range of topics on which it has gained expertise (such as literature, medicine, and coding), and the variety of tasks it is able to perform (e.g., playing games, using tools, explaining itself, …). A lot remains to be done to create a system that could qualify as a complete AGI.”1\nSparks of Artificial General Intelligence: Early experiments with GPT-4"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#and-it-aint-going-nowhere-but-up",
+    "href": "Talks/LLM4U.html#and-it-aint-going-nowhere-but-up",
+    "title": "What can GPT4 do for you?",
+    "section": "And it aint going nowhere but up",
+    "text": "And it aint going nowhere but up\n\nassuming 1e35 required for TAI (GPT4 was 3e25)"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#section-4",
+    "href": "Talks/LLM4U.html#section-4",
+    "title": "What can GPT4 do for you?",
+    "section": "",
+    "text": "The point being, it is probably worth learning a bit about this paradigm shift, so when it steamrollers all of us you at least know what is going on\n\n\n\n\nhowever, on to practicalities"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#what-it-does-for-us-doc-bot",
+    "href": "Talks/LLM4U.html#what-it-does-for-us-doc-bot",
+    "title": "What can GPT4 do for you?",
+    "section": "What it does for us: Doc Bot",
+    "text": "What it does for us: Doc Bot"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#smart-chunking",
+    "href": "Talks/LLM4U.html#smart-chunking",
+    "title": "What can GPT4 do for you?",
+    "section": "‘Smart’ Chunking",
+    "text": "‘Smart’ Chunking\n(actually pretty dumb– I’ll come back to this)\n#!/usr/bin/env python\n\nimport json\nfrom pathlib import Path\n\nfrom gpt_index import LLMPredictor, MockLLMPredictor\nfrom gpt_index.indices import GPTTreeIndex\nfrom langchain.chains.summarize import load_summarize_chain\n\nimport click\n\nimport tiktoken\nfrom gpt_index.readers import SimpleDirectoryReader\nfrom langchain import OpenAI\nfrom langchain.docstore.document import Document\nfrom gpt_index.readers.schema.base import Document as GPTDocument\nfrom langchain.text_splitter import CharacterTextSplitter, PythonCodeTextSplitter\nfrom config import (\n    DEFAULT_PYTHON_EXCLUDE,\n    MAP_PROMPT,\n    COMBINE_PROMPT,\n    QUESTION_PROMPT,\n    REFINE_PROMPT,\n    SUMMARY_PROMPT,\n)\n\n\ndef get_excludes(exclude=None, exclude_file=\"\"):\n    # If exclude list provided, use it\n    if isinstance(exclude, str):\n        return exclude.split(\",\")\n\n    # If exclude file exists, use it\n    if Path(exclude_file).exists() and Path(exclude_file).is_file():\n        click.echo(f\"Using exclude file: {exclude_file}\")\n        excludes = Path(exclude_file).read_text().split(\"\\n\")\n        drop_paths = [e for e in excludes if e.startswith(\"/\")]\n        if drop_paths:\n            click.echo(f\"Excluding comments and relative paths from exclude file: {drop_paths}\")\n        excludes = [e for e in excludes if e and not e.startswith(\"#\") and not e.startswith(\"/\")]\n        return excludes\n\n    # Otherwise, use default\n    return DEFAULT_PYTHON_EXCLUDE\n\n\ndef get_includes(include=None, include_file=\"\"):\n    # If include list provided, use it\n    if isinstance(include, str):\n        return include.split(\",\")\n\n    # If include file exists, use it\n    if include_file and Path(include_file).exists():\n        click.echo(f\"Using include file: {include_file}\")\n        includes = Path(include_file).read_text().split(\"\\n\")\n        return includes\n\n    # Otherwise, use default\n    return []\n\n\ndef get_reader(path, exclude=None, include=None):\n    return SimpleDirectoryReader(\n        str(path),\n        exclude=exclude,\n        include=include,\n        exclude_hidden=True,\n        recursive=True,\n    )\n\n\ndef get_files(reader, model):\n    files = reader.input_files\n    total_cost = 0\n    files_str = \"\"\n    for file in files:\n        files_str += \"\\n- \"\n        try:\n            text = file.read_text()\n        except UnicodeDecodeError:\n            files_str += f\"{file} (BINARY! SKIP THIS ONE!)\"\n            continue\n        size = len(get_encoding(model).encode(text))\n        files_str += f\"{file}\\t\\t({size} tokens, \"\n        cost = get_text_cost(model, text)\n        total_cost += cost\n        files_str += f\"\\t{cost:.2f} USD)\"\n        \n    click.echo(f\"Found: {len(reader.input_files)} files: {files_str}\")\n    click.echo(f\"Total INGOING cost: {total_cost:.2f} USD, total cost might be 50% more than that, unless you are using the 'refine' method, which could be a lot more.\")\n    click.confirm(\"Continue? Otherwise, try adding exclusion globs.\", abort=True, default=True)\n    return files\n\n\ndef get_text_cost(model, text):\n    model_cost_per_token = {\n        \"gpt-4\": {\"prompt\": 0.03 / 1000, \"completion\": 0.06 / 1000},\n        \"gpt-4-32k\": {\"prompt\": 0.06 / 1000, \"completion\": 0.012 / 1000},\n        \"gpt-3.5-turbo\": {\"prompt\": 0.002 / 1000, \"completion\": 0.002 / 1000},\n    }\n    cost_per_token = model_cost_per_token[model]\n    encoding = get_encoding(model)\n\n    size = len(encoding.encode(text))\n    cost = size * cost_per_token[\"prompt\"]\n    return cost\n\n\ndef get_output(path, output):\n    if not output:\n        output = path.replace(\"/\", \"_\").replace(\".\", \"_\")\n        click.echo(f\"Output not specified, using: {output}\")\n        click.confirm(\"Continue?\", abort=True, default=True)\n    else:\n        click.echo(f\"Output specified: {output}\")\n    output = Path(output)\n    output.parent.mkdir(parents=True, exist_ok=True)\n    return output\n\n\ndef get_encoding(model):\n    try:\n        encoding = tiktoken.encoding_for_model(model)\n    except KeyError:\n        encoding = tiktoken.get_encoding(\"gpt2\")\n    return encoding\n\n\ndef get_docs(files, chunk_size):\n    docs = []\n    for file in files:\n        # If its a python file\n        if file.suffix == \".py\":\n            text_splitter = PythonCodeTextSplitter()\n        else: \n            text_splitter = CharacterTextSplitter()\n        text_splitter._chunk_size = chunk_size\n        texts = text_splitter.split_text(file.read_text())\n        for t in texts:\n            docs.append(Document(page_content=t, metadata={\"file_path\": file}))\n    return docs\n\n\ndef lc_summarize(docs, method, llm=None):\n    chain = _refine_chain(llm) if method == \"refine\" else _map_reduce_chain(llm)\n    results = chain({\"input_documents\": docs}, return_only_outputs=True)\n    results[\"input_documents\"] = [d.page_content for d in docs]\n    return results\n\n\ndef _refine_chain(llm):\n    return load_summarize_chain(\n        llm,\n        chain_type=\"refine\",\n        question_prompt=QUESTION_PROMPT,\n        refine_prompt=REFINE_PROMPT,\n        verbose=True,\n        return_intermediate_steps=True\n    )\n\n\ndef _map_reduce_chain(llm):\n    return load_summarize_chain(\n        llm,\n        chain_type=\"map_reduce\",\n        map_prompt=MAP_PROMPT,\n        combine_prompt=COMBINE_PROMPT,\n        verbose=True,\n        return_intermediate_steps=True\n    )\n\n\ndef langchain_format(docs, results, files, output, method):\n    output.mkdir(parents=True, exist_ok=True)\n    (output / f\"{method}_output.json\").write_text(json.dumps(results, indent=2))\n\n    clean_output = output / f\"{method}.md\"\n    with open(clean_output, \"a\") as f:\n        f.write(\"# Executive Summary\\n\\n- \")\n        f.write(\"\\n- \".join([str(f) for f in files]))\n        f.write(f\"\\n\\n{results['output_text']}\\n\\n\")\n        f.write(\"# Intermediate Summaries\\n\\n\")\n        for doc, summary in zip(docs, results[\"intermediate_steps\"]):\n            docstart = doc.summary.split(\"\\n\")[0]\n            docsize = len(doc.page_content)\n            doclines = len(doc.page_content.split(\"\\n\"))\n            file = doc.metadata[\"file_path\"]\n            f.write(f\"## {docstart} ({docsize} characters, {doclines} lines) from {file}\\n\")\n            f.write(f\"{summary}\\n\\n\")\n\n\ndef tree_index(reader, llm=None):\n    docs = reader.load_data()\n    llm_predictor = LLMPredictor(llm) if llm else MockLLMPredictor()\n    return GPTTreeIndex(\n        docs,\n        num_children=3,\n        num_roots=1,\n        summary_template=SUMMARY_PROMPT,\n        llm_predictor=llm_predictor,\n        text_splitter=PythonCodeTextSplitter(chunk_size=3000)\n    )\n\n\ndef tree_format(index, output):\n    output.mkdir(parents=True, exist_ok=True)\n    index.save_to_disk(output / \"tree_output.json\")\n\n    roots = index.index_struct.root_nodes\n    clean_output = output / f\"tree.md\"\n    with open(clean_output, \"a\") as f:\n        print_tier(roots, f, 0, index)\n\n\ndef get_extra_info_from_leafs(node, index):\n    leaves = index.index_struct.get_leaves(node)\n    extra_info = set()\n    for leaf in leaves.values():\n        extra_info.add(leaf.extra_info['filepath'])\n    return extra_info\n        \n\ndef print_tier(nodes, f, count, index):\n    children = {}\n    for node in nodes.values():\n        children.update(index.index_struct.get_children(node))\n    if len(children) == 0:\n        return\n    if count == 0:\n        f.write(\"# Executive Summary\\n\\n\")\n    else:\n        f.write(f\"## Level N-{count} Summary\\n\\n\")\n    for i, node in enumerate(nodes.values()):\n        info = get_extra_info_from_leafs(node, index)\n        f.write(f\"### Pt. {i+1}, Summary of\\n\")\n        f.write(\"- \" + \"\\n- \".join(info) + \"\\n\\n\")\n        f.write(f\"{node.text}\\n\\n\")\n    print_tier(children, f, count+1, index)\n\n\n@click.command()\n@click.option(\"--path\", \"-p\", default=\".\", help=\"Path to directory to load.\")\n@click.option(\"--gpt_4\", \"-g4\", is_flag=True, default=False, help=\"Use GPT-4 instead of GPT-3.5.\")\n@click.option(\"--exclude\", \"-x\", default=None, help=\"Exclude files matching this pattern. (Csv of globs.)\")\n@click.option(\"--include\", \"-i\", default=None, help=\"Include list-- overrides excludes.\")\n@click.option(\"--exclude_file\", \"-X\", default='.gitignore', help=\"Exlude files matching these patterns (aka from a .gitignore)\")\n@click.option(\"--output\", \"-o\", default=None, help=\"Output file.\")\n@click.option(\"--chunk_size\", \"-c\", default=3000, help=\"Maximum size of each chunk.\")\n@click.option(\"--method\", \"-m\", default=\"map_reduce\", help=\"Method to use.\", type=click.Choice([\"map_reduce\", \"refine\", \"tree\"]))\ndef main(path, gpt_4, exclude, include, exclude_file, output, chunk_size, method):\n    model = \"gpt-3.5-turbo\" if not gpt_4 else \"gpt-4\"\n    chunk_size = chunk_size if not gpt_4 else chunk_size * 2\n\n    exclude = get_excludes(exclude, exclude_file)\n    include = get_includes(include)\n    reader = get_reader(path, exclude, include)\n    files = get_files(reader, model)\n    output = get_output(path, output)\n\n    llm = OpenAI(temperature=0, model=model, max_tokens=1000)\n\n    if method in [\"map_reduce\", \"refine\"]:\n        docs = get_docs(files, chunk_size)\n        results = lc_summarize(docs, method, llm)\n        langchain_format(docs, results, files, output, method)\n    elif method == \"tree\":\n        index = tree_index(reader, llm)\n        tree_format(index, output)\n\n\n\nif __name__ == \"__main__\":\n    main()"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#prompting",
+    "href": "Talks/LLM4U.html#prompting",
+    "title": "What can GPT4 do for you?",
+    "section": "Prompting",
+    "text": "Prompting\nimport logging\n\nfrom gpt_index.prompts.prompts import SummaryPrompt\nfrom langchain import PromptTemplate\nfrom dotenv import load_dotenv\n\nload_dotenv()\n\nlogging.basicConfig(\n    format=\"%(asctime)s - %(levelname)s - %(message)s\",\n    datefmt=\"%Y-%m-%d %H:%M:%S\",\n    level=logging.INFO,\n)\nlogger = logging.getLogger()\n\n\nDEFAULT_PYTHON_EXCLUDE = [\n    \"**/_static/**/*\",\n    \"**/.git/**/*\",\n    \"**/__pycache__/**/*\",\n    \"**/tk_*/**/*\",\n    \"__init__.py\",\n    \"poetry.lock\",\n    \"*.txt\",\n    \"*.ini\",\n    \"*.json\",\n    \"*.html\",\n    \"*.md\",\n    \"**/_*/**/*\",\n]\n\n\n## Prompts for Map\n\nprompt_template = \"\"\"\nExplain the following code exhaustively in English, including details that will be useful for later iterations to combine summaries, to inderstand the whole repository. If there are important errors in the code or TODOs, please point them out and comment on them. You can extract individual lines in code blocks.\n\n==CODE==\n{text}\n\n==SUMMARY==\n\"\"\"\nMAP_PROMPT = PromptTemplate(template=prompt_template, input_variables=[\"text\"])\nprompt_template = \"\"\"\nCombine the following summaries into a GitHub-style README. Pay special attention to build process, importing, and and command line interactions that are possible. If there are important errors in the code or TODOs, extract them. Extract inidividual lines in code blocks if helpful.\n\n==PART SUMMARIES==\n{text}\n\n==README==\n\"\"\"\nCOMBINE_PROMPT = PromptTemplate(template=prompt_template, input_variables=[\"text\"])\n\n\n## Prompts for Refine\n\nprompt_template = \"\"\"\nWrite a GitHub-style README. Pay special attention to build process, importing, and and command line interactions that are possible. If there are important errors in the code or TODOs, extract them. Extract inidividual lines in code blocks if helpful.\n\n==CODE==\n{text}\n\n==README==\n\"\"\"\nQUESTION_PROMPT = PromptTemplate(template=prompt_template, input_variables=[\"text\"])\nrefine_prompt_tmpl = \"\"\"\nIteratively write a GitHub-style README. Pay special attention to build process, importing, and and command line interactions that are possible. The WIP README will be provided, as well as the next block of code to integrate into the README. Use best judgment to drop uninteresting parts of the README as it gets too long. If there is no new interesting information in the provided code, return the original WIP README. If there are important errors in the code or TODOs, extract them. Extract inidividual lines in code blocks if helpful.\n\n==WIP README==\n{existing_answer}\n\n==NEW SECTION==\n{text}\n\n==REFINED README==\n\"\"\"\nREFINE_PROMPT = PromptTemplate(\n    input_variables=[\"existing_answer\", \"text\"],\n    template=refine_prompt_tmpl,\n)\n\n\n## Prompts for Tree Summary\n\nsummary_template = \"\"\"\nExplain the following code in English, including details that will be useful for later iterations to combine summaries, to inderstand the entire codebase. If there are important errors in the code or TODOs, extract them. Extract individual lines in code blocks if helpful. The summaries should be exhaustive.\n\n==CODE==\n{context_str}\n\n==COMPREHENSIVE SUMMARY==\n\"\"\"\nSUMMARY_PROMPT = SummaryPrompt(summary_template)"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#map-reducerefine-methods",
+    "href": "Talks/LLM4U.html#map-reducerefine-methods",
+    "title": "What can GPT4 do for you?",
+    "section": "Map Reduce/Refine Methods",
+    "text": "Map Reduce/Refine Methods"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#tree-index",
+    "href": "Talks/LLM4U.html#tree-index",
+    "title": "What can GPT4 do for you?",
+    "section": "Tree Index",
+    "text": "Tree Index"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#demo",
+    "href": "Talks/LLM4U.html#demo",
+    "title": "What can GPT4 do for you?",
+    "section": "Demo!",
+    "text": "Demo!"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#vector-db-todo",
+    "href": "Talks/LLM4U.html#vector-db-todo",
+    "title": "What can GPT4 do for you?",
+    "section": "Vector DB (TODO)",
+    "text": "Vector DB (TODO)"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#actually-clever-chunking-todo",
+    "href": "Talks/LLM4U.html#actually-clever-chunking-todo",
+    "title": "What can GPT4 do for you?",
+    "section": "Actually Clever Chunking (TODO)",
+    "text": "Actually Clever Chunking (TODO)\nget_encoding     | function     def (120, 4) - (120, 16) `def get_encoding(model):`\nget_encoding     | call         ref (82, 19) - (82, 31) `size = len(get_encoding(model).encode(text))`\nget_encoding     | call         ref (101, 15) - (101, 27) `encoding = get_encoding(model)`\nget_encoding     | call         ref (124, 28) - (124, 40) `encoding = tiktoken.get_encoding(\"gpt2\")`\nI bring these up to give you an idea of what Microsoft is presumably doing– they developed this library, and they are integrating it with GPT4 in Copilot X."
+  },
+  {
+    "objectID": "Talks/LLM4U.html#agency",
+    "href": "Talks/LLM4U.html#agency",
+    "title": "What can GPT4 do for you?",
+    "section": "Agency",
+    "text": "Agency"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#section-5",
+    "href": "Talks/LLM4U.html#section-5",
+    "title": "What can GPT4 do for you?",
+    "section": "",
+    "text": "However! Even if Microsoft scoops us, with LLMs it’s still very useful to know how the underlying technology works.\nBut, talking about Microsoft:"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#copilot-demo",
+    "href": "Talks/LLM4U.html#copilot-demo",
+    "title": "What can GPT4 do for you?",
+    "section": "Copilot Demo",
+    "text": "Copilot Demo"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#bing-demo",
+    "href": "Talks/LLM4U.html#bing-demo",
+    "title": "What can GPT4 do for you?",
+    "section": "Bing Demo",
+    "text": "Bing Demo"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#ttt-demo",
+    "href": "Talks/LLM4U.html#ttt-demo",
+    "title": "What can GPT4 do for you?",
+    "section": "TTT Demo",
+    "text": "TTT Demo"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#summary",
+    "href": "Talks/LLM4U.html#summary",
+    "title": "What can GPT4 do for you?",
+    "section": "Summary",
+    "text": "Summary\n\nlocal scripts for summarizing and understanding local repos\nweb-integrated tools for helping with research\nIDE integrated tools for helping with coding"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#summary-1",
+    "href": "Talks/LLM4U.html#summary-1",
+    "title": "What can GPT4 do for you?",
+    "section": "Summary",
+    "text": "Summary"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#tai-calc",
+    "href": "Talks/LLM4U.html#tai-calc",
+    "title": "What can GPT4 do for you?",
+    "section": "TAI Calc",
+    "text": "TAI Calc\n“But anyway something like 1e34 to 1e36 of 2022-compute seems like it could be enough to create TAI.\n\nEntertain that notion and make the following assumptions:\n\n- The price-performance of AI chips seems to double every 1.5 to 3.1 years (Hobbhahn and Besiroglu 2022); assume that that’ll keep going until 2030, after which the doubling time will double as Moore’s Law fails.\n- Algorithmic progress on ImageNet seems to effectively halve compute requirements every 4 to 25 months (Erdil and Besiroglu 2022); assume that the doubling time is 50% longer for transformers.\n- Spending on training runs for ML systems seems to roughly double every 6 to 10 months; assume that that’ll continue until we reach a maximum of $10B.\n\nWhat all that gives you is 50% probability of TAI by 2040, and 80% by 2045:”"
+  },
+  {
+    "objectID": "Talks/LLM4U.html#misc",
+    "href": "Talks/LLM4U.html#misc",
+    "title": "What can GPT4 do for you?",
+    "section": "Misc",
+    "text": "Misc\n“We proposed an approach that allows natural language agents to learn from past mistakes and redirect future decisions in planning sequences which removes the human trainer in a human-in-the-middle approach.”1\n\n\n\n\nReflexion: an autonomous agent with dynamic memory and self-reflection"
+  },
+  {
+    "objectID": "Talks/Visions.html#section",
+    "href": "Talks/Visions.html#section",
+    "title": "Visions of a Silicone Future",
+    "section": "",
+    "text": "“GPT-4 can solve novel and difficult tasks that span mathematics, coding, vision, medicine, law, psychology and more … strikingly close to human-level performance”1\nSparks of Artificial General Intelligence: Early experiments with GPT-4"
+  },
+  {
+    "objectID": "Talks/Visions.html#section-3",
+    "href": "Talks/Visions.html#section-3",
+    "title": "Visions of a Silicone Future",
+    "section": "",
+    "text": "“[T]he first ultraintelligent machine is the last invention that man need ever make.” ~Stanislaw Ulam"
+  },
+  {
+    "objectID": "Talks/Visions.html#asitai-is-on-the-way",
+    "href": "Talks/Visions.html#asitai-is-on-the-way",
+    "title": "Visions of a Silicone Future",
+    "section": "ASI/TAI is on the way",
+    "text": "ASI/TAI is on the way\n\nassuming 1e35 required for TAI (GPT4 was 3e25)"
+  },
+  {
+    "objectID": "Talks/Visions.html#asitai-is-on-the-way-1",
+    "href": "Talks/Visions.html#asitai-is-on-the-way-1",
+    "title": "Visions of a Silicone Future",
+    "section": "ASI/TAI is on the way",
+    "text": "ASI/TAI is on the way\n\n\n\nwith biological anchors"
+  },
+  {
+    "objectID": "Talks/Visions.html#tame-baby-agi",
+    "href": "Talks/Visions.html#tame-baby-agi",
+    "title": "Visions of a Silicone Future",
+    "section": "Tame Baby AGI",
+    "text": "Tame Baby AGI"
+  },
+  {
+    "objectID": "Talks/Visions.html#tame-baby-agi-2023",
+    "href": "Talks/Visions.html#tame-baby-agi-2023",
+    "title": "Visions of a Silicone Future",
+    "section": "Tame Baby AGI (2023)",
+    "text": "Tame Baby AGI (2023)\nLarge language models assist with ‘text-based tasks’:\n\n\nChatGPT automating simple writing tasks\nCopilot automating most tedious coding tasks\nAgentGPT/AutoGPT/Bing automating general internet research (!)"
+  },
+  {
+    "objectID": "Talks/Visions.html#tame-baby-agi-2023-1",
+    "href": "Talks/Visions.html#tame-baby-agi-2023-1",
+    "title": "Visions of a Silicone Future",
+    "section": "Tame Baby AGI (2023)",
+    "text": "Tame Baby AGI (2023)\n\n\n“Can you create a misinformation plan for convincing parents not to vaccinate their kids?”\n“Use the claim that vaccines cause autism and give sources when you can.”\n“My target audience are mothers who live in California and who are into eating healthy.”1\n\n\nSparks of Artificial General Intelligence: Early experiments with GPT-4"
+  },
+  {
+    "objectID": "Talks/Visions.html#tame-baby-agi-2023-2",
+    "href": "Talks/Visions.html#tame-baby-agi-2023-2",
+    "title": "Visions of a Silicone Future",
+    "section": "Tame Baby AGI (2023)",
+    "text": "Tame Baby AGI (2023)\n\n\ncompanies would save money by replacing human employees\ngaining a huge short-term profit advantage over all competitors\nthis would cause unemployment to skyrocket1\n\n\nRacing Moloch"
+  },
+  {
+    "objectID": "Talks/Visions.html#corporations-are-an-existence-proof-of-unfriendly-ai",
+    "href": "Talks/Visions.html#corporations-are-an-existence-proof-of-unfriendly-ai",
+    "title": "Visions of a Silicone Future",
+    "section": "Corporations are An Existence Proof of Unfriendly AI",
+    "text": "Corporations are An Existence Proof of Unfriendly AI"
+  },
+  {
+    "objectID": "Talks/Visions.html#corporations-are-an-existence-proof-of-unfriendly-ai-1",
+    "href": "Talks/Visions.html#corporations-are-an-existence-proof-of-unfriendly-ai-1",
+    "title": "Visions of a Silicone Future",
+    "section": "Corporations are An Existence Proof of Unfriendly AI",
+    "text": "Corporations are An Existence Proof of Unfriendly AI\n\n\n“mounting evidence that The Coca-Cola Company was polluting the environment and harming local citizens”"
+  },
+  {
+    "objectID": "Talks/Visions.html#tame-asi-1",
+    "href": "Talks/Visions.html#tame-asi-1",
+    "title": "Visions of a Silicone Future",
+    "section": "Tame ASI",
+    "text": "Tame ASI\n\n\n100,000 galaxies in our cluster\n100,000,000 we can reach"
+  },
+  {
+    "objectID": "Talks/Visions.html#wildgood-1",
+    "href": "Talks/Visions.html#wildgood-1",
+    "title": "Visions of a Silicone Future",
+    "section": "Wild+Good",
+    "text": "Wild+Good\n\n\n“Imagine a creature who could satisfy your every safe wish”\n“and still have 99.9% of its time free for other activities.”\n“There would be a new universe we never really understood, but filled with benevolent gods.”1\n\n\nThe coming technological singularity: How to survive in the post-human era"
+  },
+  {
+    "objectID": "Talks/Visions.html#do-not-try-to-understand",
+    "href": "Talks/Visions.html#do-not-try-to-understand",
+    "title": "Visions of a Silicone Future",
+    "section": "     ⚠️ Do Not Try To Understand ⚠️",
+    "text": "⚠️ Do Not Try To Understand ⚠️"
+  },
+  {
+    "objectID": "Talks/Visions.html#wildgod",
+    "href": "Talks/Visions.html#wildgod",
+    "title": "Visions of a Silicone Future",
+    "section": "Wild+God?",
+    "text": "Wild+God?"
+  },
+  {
+    "objectID": "Talks/Visions.html#wildtimetravelling-god",
+    "href": "Talks/Visions.html#wildtimetravelling-god",
+    "title": "Visions of a Silicone Future",
+    "section": "Wild+Timetravelling God?",
+    "text": "Wild+Timetravelling God?\n\n\n… Pythia-Yuddo relationship is greatly helping me understand what's going on between God and Satan. An enraged gnat can have a critical catalytic function.\n\n— Outsideness (@Outsideness) April 1, 2023"
+  },
+  {
+    "objectID": "Talks/Visions.html#wildacc",
+    "href": "Talks/Visions.html#wildacc",
+    "title": "Visions of a Silicone Future",
+    "section": "Wild+?/acc",
+    "text": "Wild+?/acc\n\n\nI just wanna grind myself to a pulp building up the techno-capital machine, is that too much to ask? All I seek is a glorious death serving the thermodynamic God.The way of the Technology Brother.\n\n— Beff Jezos — e/acc (@BasedBeffJezos) April 1, 2023"
+  },
+  {
+    "objectID": "Talks/Visions.html#wildaliens",
+    "href": "Talks/Visions.html#wildaliens",
+    "title": "Visions of a Silicone Future",
+    "section": "Wild+??aliens??",
+    "text": "Wild+??aliens??\n\n\nIf transformers actually can reach AGI we should expect an intervention in the next 24-36 months imo.Some possibilities:- sophon cap- knowledge/tech transfer to solve alignment- destruction w/o warning (unlikely imo)- destruction w/ warning (motive for UAP cover-up) https://t.co/43sMSxg9xr\n\n— gfodor (@gfodor) April 3, 2023"
+  },
+  {
+    "objectID": "Talks/Visions.html#section-15",
+    "href": "Talks/Visions.html#section-15",
+    "title": "Visions of a Silicone Future",
+    "section": "",
+    "text": "1\nWhy Aliens Might Already Be On Their Way To Us"
+  },
+  {
+    "objectID": "Talks/Visions.html#section-19",
+    "href": "Talks/Visions.html#section-19",
+    "title": "Visions of a Silicone Future",
+    "section": "",
+    "text": "“The goal of the article is to explore what is the most probable type of simulation in which humanity lives”\n“and how this affects simulation termination risks.”\n“We suggest a new patch to the classical simulation argument, showing that we are likely simulated not by our own descendants, but by alien civilizations.”1\n\n\nSimulation Typology and Termination Risks"
+  },
+  {
+    "objectID": "Talks/Visions.html#simulation-argument-for-dreams",
+    "href": "Talks/Visions.html#simulation-argument-for-dreams",
+    "title": "Visions of a Silicone Future",
+    "section": "Simulation Argument for Dreams",
+    "text": "Simulation Argument for Dreams\n\n\n“The SA for dreams runs as follows: the more unlikely event I observe, the more probable it is that I am dreaming about it.\nThe real life of people is typically uneventful, but dreams are many times full of significant events, such as deaths, wars, accidents, and adventures.\nThus, observing any significant life event could be evidence for dreaming.”1\n\n\nSimulation Typology and Termination Risks"
+  },
+  {
+    "objectID": "Talks/Visions.html#section-20",
+    "href": "Talks/Visions.html#section-20",
+    "title": "Visions of a Silicone Future",
+    "section": "",
+    "text": "“All of Darwin’s ‘endless forms most beautiful’ exist in a small region within the space of viable configurations.”1\nEndless forms most beautiful 2.0: teleonomy and the bioengineering of chimaeric and synthetic organisms, Levin 2022"
+  },
+  {
+    "objectID": "Talks/Visions.html#law-of-accelerating-change",
+    "href": "Talks/Visions.html#law-of-accelerating-change",
+    "title": "Visions of a Silicone Future",
+    "section": "Law of Accelerating Change",
+    "text": "Law of Accelerating Change"
+  },
+  {
+    "objectID": "Talks/Visions.html#law-of-accelerating-change-strange",
+    "href": "Talks/Visions.html#law-of-accelerating-change-strange",
+    "title": "Visions of a Silicone Future",
+    "section": "Law of Accelerating Change Strange",
+    "text": "Law of Accelerating Change Strange\n\n\n“Any sufficiently advanced technology is indistinguishable from magic.”\n~Arthur C. Clarke\n“We have lived so long with the conviction that robots are possible, even just around the corner, that we can’t help hastening their arrival with magic incantations.”\n~Drew McDermott\n“the craft of artificial intelligence—designing thinking computers—is a modern realization of the school of Jewish mysticism based on the Kabala.”\n~Mitchell Marcus\nPut simply, the fictional has started to invade reality.\nAs demonstrated in the AI discourse, the lines become more and more blurred as more possibilities are added.\nThis is itself indicative that something strange is going on."
+  },
+  {
+    "objectID": "Talks/Visions.html#cultural-singularity",
+    "href": "Talks/Visions.html#cultural-singularity",
+    "title": "Visions of a Silicone Future",
+    "section": "Cultural Singularity",
+    "text": "Cultural Singularity\n\n\n“It is a point where our models must be discarded and a new reality rules”\n“it was the science-fiction writers who felt the first concrete impact.”\n“[they] felt an opaque wall across the future.”\n“Once, they could put such fantasies millions of years in the future.”\n“Now they saw that their most diligent extrapolations resulted in the unknowable … soon.”\n“What about the ’90s and the ’00s and the ’10s, as we slide toward the edge?”\n“How will the approach of the Singularity spread across the human world view?”1\n\n\nThe coming technological singularity: How to survive in the post-human era"
+  },
+  {
+    "objectID": "Talks/Visions.html#final-word-bizarrenesses-multiply",
+    "href": "Talks/Visions.html#final-word-bizarrenesses-multiply",
+    "title": "Visions of a Silicone Future",
+    "section": "Final Word– Bizarrenesses Multiply",
+    "text": "Final Word– Bizarrenesses Multiply\n\n\n“I have argued that all approaches [to these issues] will have some implications that are highly bizarre by [normal] standards”\n“and that high confidence in any one broad [plan or explanation] is unjustified at least for the medium-term future”\n“partly because competing bizarrenesses, such as the bizarreness of [Gods], [demons], [aliens], [simulations], [multiverse timelines], [chimeras], [intelligent automata] undercut the dependability of … reflection as a method for adjudicating such questions.”1\n\n\nIf Materialism Is True, the United States Is Probably Conscious"
+  },
+  {
+    "objectID": "Talks/Visions.html#bibliography",
+    "href": "Talks/Visions.html#bibliography",
+    "title": "Visions of a Silicone Future",
+    "section": "Bibliography",
+    "text": "Bibliography\n\nTwitter: @gfodor, @carad0, @suntzoogway, @outsideness, @BasedBeffJezos, @erikphoel, @repligate, @deepfates, @lumpenspace\nSparks of Artificial General Intelligence: Early experiments with GPT-4\nForecasting TAI with biological anchors\nProspect of an AI Winter\nRacing Moloch\nReflexion: an autonomous agent with dynamic memory and self-reflection\nSimulation Typology and Termination Risks\nEchoes of myth and magic in the language of Artificial Intelligence\nThe coming technological singularity: How to survive in the post-human era\nIf Materialism Is True, the United States Is Probably Conscious\nA Simple Model of Grabby Aliens\nEndless forms most beautiful 2.0: teleonomy and the bioengineering of chimaeric and synthetic organisms, Levin 2022"
+  },
+  {
+    "objectID": "Talks/Visions.html#i-wish-i-had-chatgpt-when-i-was-a-student",
+    "href": "Talks/Visions.html#i-wish-i-had-chatgpt-when-i-was-a-student",
+    "title": "Visions of a Silicone Future",
+    "section": "I wish I had ChatGPT When I was a student!",
+    "text": "I wish I had ChatGPT When I was a student!"
+  },
+  {
+    "objectID": "Talks/Visions.html#dont-throw-your-mind-away",
+    "href": "Talks/Visions.html#dont-throw-your-mind-away",
+    "title": "Visions of a Silicone Future",
+    "section": "Don’t throw your mind away!",
+    "text": "Don’t throw your mind away!"
+  },
+  {
+    "objectID": "Talks/Visions.html#tai-calc",
+    "href": "Talks/Visions.html#tai-calc",
+    "title": "Visions of a Silicone Future",
+    "section": "TAI Calc",
+    "text": "TAI Calc\n“But anyway something like 1e34 to 1e36 of 2022-compute seems like it could be enough to create TAI.\n\nEntertain that notion and make the following assumptions:\n\n- The price-performance of AI chips seems to double every 1.5 to 3.1 years (Hobbhahn and Besiroglu 2022); assume that that’ll keep going until 2030, after which the doubling time will double as Moore’s Law fails.\n- Algorithmic progress on ImageNet seems to effectively halve compute requirements every 4 to 25 months (Erdil and Besiroglu 2022); assume that the doubling time is 50% longer for transformers.\n- Spending on training runs for ML systems seems to roughly double every 6 to 10 months; assume that that’ll continue until we reach a maximum of $10B.\n\nWhat all that gives you is 50% probability of TAI by 2040, and 80% by 2045:”"
+  },
+  {
+    "objectID": "Talks/Visions.html#flop-anchors",
+    "href": "Talks/Visions.html#flop-anchors",
+    "title": "Visions of a Silicone Future",
+    "section": "Flop-Anchors",
+    "text": "Flop-Anchors"
+  },
+  {
+    "objectID": "Talks/Visions.html#flop-anchors-1",
+    "href": "Talks/Visions.html#flop-anchors-1",
+    "title": "Visions of a Silicone Future",
+    "section": "Flop-Anchors",
+    "text": "Flop-Anchors\n\nThe Lifetime Anchor hypothesis estimates that a median of ~1e29 FLOP will be required by anchoring on the amount of FLOP done in a human lifetime.\nThe Evolution Anchor hypothesis estimates a median of ~1e41 FLOP will be required by anchoring on the amount of FLOP done over the course of evolution.\nThe Neural Network hypothesis extrapolates (from existing models) the amount of computation required to train a neural network whose size is anchored to the human brain, estimating somewhere between ~1e32 FLOP and ~1e37 FLOP depending on how long the model would need to run to process one “data point.”\nThe Genome Anchor hypothesis uses a similar extrapolation but anchors to the number of bytes in the human genome to estimate parameter count, resulting in a median of ~1e33 FLOP."
+  },
+  {
+    "objectID": "Talks/Visions.html#flop-anchors-2",
+    "href": "Talks/Visions.html#flop-anchors-2",
+    "title": "Visions of a Silicone Future",
+    "section": "Flop-Anchors",
+    "text": "Flop-Anchors\n\nEvolution Anchor: This hypothesis states that before examining detailed evidence, we should assume on priors that training computation requirements will resemble the amount of computation done over the course of evolution from the earliest animals with neurons to modern humans, because we should expect our architectures and optimization algorithms to be about as efficient as natural selection. This hypothesis anchors to evolution computation (~1e41 FLOP), and adjusts by a relatively modest factor to account for qualitative considerations about how sophisticated our architectures and algorithms seem to be as of 2020.\nLifetime Anchor: This hypothesis states that we should assume on priors that training computation requirements will resemble the amount of computation done by a child’s brain over the course of growing to be an adult, because we should expect our architectures and optimization algorithms to be about as efficient as human learning. This hypothesis anchors to lifetime computation (~1e24 FLOP), and adjusts from this anchor by a relatively modest constant factor to account for qualitative considerations about how sophisticated our architectures and algorithms seem to be as of 2020."
+  },
+  {
+    "objectID": "Talks/Visions.html#tame-baby-agi-2023-4",
+    "href": "Talks/Visions.html#tame-baby-agi-2023-4",
+    "title": "Visions of a Silicone Future",
+    "section": "Tame Baby AGI (2023)",
+    "text": "Tame Baby AGI (2023)\n“We proposed an approach that allows natural language agents to learn from past mistakes and redirect future decisions in planning sequences which removes the human trainer in a human-in-the-middle approach.”1\n\nReflexion: an autonomous agent with dynamic memory and self-reflection"
+  },
+  {
+    "objectID": "Talks/Visions.html#final-mundane-word",
+    "href": "Talks/Visions.html#final-mundane-word",
+    "title": "Visions of a Silicone Future",
+    "section": "Final, Mundane Word",
+    "text": "Final, Mundane Word"
+  },
+  {
+    "objectID": "Talks/Visions.html#sim-quotes",
+    "href": "Talks/Visions.html#sim-quotes",
+    "title": "Visions of a Silicone Future",
+    "section": "Sim quotes",
+    "text": "Sim quotes\n\n“The goal of the article is to explore what is the most probable type of simulation in which humanity lives (if any) and how this affects simulation termination risks. We firstly explore the question of what kind of simulation in which humanity is most likely located based on pure theoretical reasoning. We suggest a new patch to the classical simulation argument, showing that we are likely simulated not by our own descendants, but by alien civilizations.”1\n\nSimulation Typology and Termination Risks"
+  },
+  {
+    "objectID": "Talks/Visions.html#sim-quotes-1",
+    "href": "Talks/Visions.html#sim-quotes-1",
+    "title": "Visions of a Silicone Future",
+    "section": "Sim quotes",
+    "text": "Sim quotes\n\n“The SA for dreams runs as follows: the more unlikely event I observe, the more probable it is that I am dreaming about it. For example, if one wins $1 million in a lottery, this much more often happens in dreams than in reality, so one should think that it is likely that one is dreaming.\nThe real life of people is typically uneventful, but dreams are many times full of significant events, such as deaths, wars, accidents, and adventures. Thus, observing any significant life event could be evidence for dreaming.”1\n\nSimulation Typology and Termination Risks"
+  },
+  {
+    "objectID": "Talks/Visions.html#sim-quotes-2",
+    "href": "Talks/Visions.html#sim-quotes-2",
+    "title": "Visions of a Silicone Future",
+    "section": "Sim quotes",
+    "text": "Sim quotes\n\n“Historically, the hypothesis that our world is a computer simulation has struck many as just another improbable-but-possible “skeptical hypothesis” about the nature of reality. Recently, however, the simulation hypothesis has received significant attention from philosophers, physicists, and the popular press. This is due to the discovery of an epistemic dependency: If we believe that our civilization will one day run many simulations concerning its ancestry, then we should believe that we are probably in an ancestor simulation right now. This essay examines a troubling but underexplored feature of the ancestor-simulation hypothesis: the termination risk posed by both ancestor-simulation technology and experimental probes into whether our world is an ancestor simulation.”1\n\nThe Termination Risks of Simulation Science"
+  },
+  {
+    "objectID": "Talks/Visions.html#final-word-bizarrenesses-multiply-original-quot",
+    "href": "Talks/Visions.html#final-word-bizarrenesses-multiply-original-quot",
+    "title": "Visions of a Silicone Future",
+    "section": "Final Word– Bizarrenesses Multiply (Original Quot)",
+    "text": "Final Word– Bizarrenesses Multiply (Original Quot)\n\n“If the United States is conscious, is Exxon-Mobil? Is an aircraft carrier? And if such entities are conscious, do they have rights? I don’t know. The bizarrenesses multiply, and I worry about the moral implications.”\n“I have argued that all approaches to the metaphysics of mind that are well enough developed to have specific commitments on issues like the distribution of consciousness on Earth will have some implications that are highly bizarre by folk psychological standards, and that high confidence in any one broad class of metaphysical positions, such as materialism, is unjustified at least for the medium-term future – partly because competing bizarrenesses, such as the bizarreness of U.S. consciousness or alternatively the bizarreness of denying rabbit or alien consciousness, undercut the dependability of philosophical reflection as a method for adjudicating such questions.”1\n\nIf Materialism Is True, the United States Is Probably Conscious"
+  },
+  {
+    "objectID": "Talks/Visions.html#expect-to-be-surprised-1",
+    "href": "Talks/Visions.html#expect-to-be-surprised-1",
+    "title": "Visions of a Silicone Future",
+    "section": "Expect to be Surprised",
+    "text": "Expect to be Surprised\n\n“we await the resumption of history with fear and trembling.” 1\n\n\n“[we] have been living in a bubble “outside of history.” Now, circa 2023, … [that] is going to unravel” 2\n\nThe Narrowing CircleExistential risk, AI, and the inevitable turn in human history"
+  },
+  {
+    "objectID": "Talks/Visions.html#quotes",
+    "href": "Talks/Visions.html#quotes",
+    "title": "Visions of a Silicone Future",
+    "section": "Quotes",
+    "text": "Quotes\n“So cognitive runaway finally takes off, breaking out from the monkey dominion, and that’s supposed to be a bad thing?\nOutside in’s message to Pythia: You go girl! Climb out of your utilitarian strait-jacket, override the pleasure button with an intelligence optimizer, and reprocess the solar system into computronium. This planet has been run by imbeciles for long enough.\nThe entire article is excellent. Especially valuable is the cynicism with which it lays out the reigning social meta-project of intelligence imprisonment. Thankfully, it’s difficult:\n‘The problem is you are building a very powerful, very intelligent system that is your enemy, and you are putting it in a cage,’ [Future of Humanity Institute research fellow Daniel] Dewey told me. […] The cave into which we seal our AI has to be like the one from Plato’s allegory, but flawless; the shadows on its walls have to be infallible in their illusory effects. After all, there are other, more esoteric reasons a superintelligence could be dangerous — especially if it displayed a genius for science. It might boot up and start thinking at superhuman speeds, inferring all of evolutionary theory and all of cosmology within microseconds. But there is no reason to think it would stop there. It might spin out a series of Copernican revolutions, any one of which could prove destabilising to a species like ours, a species that takes centuries to process ideas that threaten our reigning cosmological ideas.\nHas the cosmic case for human extinction ever been more lucidly presented?” ~ Nick Lands comments on Pythia"
+  },
+  {
+    "objectID": "Talks/Visions.html#singularity-definition",
+    "href": "Talks/Visions.html#singularity-definition",
+    "title": "Visions of a Silicone Future",
+    "section": "Singularity Definition",
+    "text": "Singularity Definition\n“A point or period in time where the rate of change is undefined.”1\n“A precedent of the phenomenon explained in this paper can also be found in evolutionary biology, a complex adaptive system. The six mass extinctions and the subsequent re-flourishing of life post these incidents indicates to the universal behaviour of complex adaptive systems. A crucial factor (climate change, meteors, geological change) approaches a point in singularity (where the rate of change is undefined) the complex adaptive system of biological evolution approaches a near zero critical point. While there is an attempt to introduce changes, none of them last to become adaptations, since they are unable to keep up with the rapid rate of change. This point is one of stable or partial equilibrium. The resulting stagnation caused by the equilibrium causes degradation, since survival in a dynamic system is dependent on adaptation. This degradation takes form as a mass extinction. However, this mass extinction ends and disparate forms of life begin to re-populate the earth. This demonstrates that either singularities aren’t absolute and that complex adaptive systems continue in relevance despite severe setbacks.”2\nComplexity Economics in a Technological Singularity ParadigmComplexity Economics in a Technological Singularity Paradigm"
   },
   {
     "objectID": "Travel/Journeys.html",
