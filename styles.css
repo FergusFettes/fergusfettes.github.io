@@ -80,7 +80,7 @@ blockquote::before {
   display: block;
   font-family: Garamond;
   font-style: normal;
-  font-size: 48px;
+  font-size: 36px;
   color: #444;
   font-weight: 700;
   line-height: 30px;
@@ -89,9 +89,10 @@ blockquote::before {
 }
 
 /* Make the blockquote the same color as the text */
+/* Remove the left border */
 /* And move the text inwards */
 .blockquote {
   color: #444;
-  border-left: 4px solid #000;
+  border-left: none;
   padding-left: 40px;
 }
