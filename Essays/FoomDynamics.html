@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Fergus Fettes">
 
-<title>Fergus Fettes – foomdynamics</title>
+<title>Fergus Fettes - Foom Dynamis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +21,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -58,6 +122,12 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<style>
+    .quarto-title-block .quarto-title-banner {
+      color: white;
+background: pink;
+    }
+    </style>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -108,7 +178,35 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title">Foom Dynamis</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Fergus Fettes </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">Apr 15, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -122,33 +220,34 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
 
 
 
 <p><img src="https://twitter.com/robinhanson/status/1642565502403788800.png" class="img-fluid" alt="Hanson Tweet"> <img src="https://twitter.com/gfodor/status/1642751707829649408.png" class="img-fluid" alt="Gfodor Tweet"> <img src="https://twitter.com/Outsideness/status/1642580787626123265.png" class="img-fluid" alt="Land Basilisk Satanism"></p>
 <p>The singularity is weirdly under-theorized. When they set off the bomb in Los Alomos, they checked first if it would ignite the atmosphere. When they started up the Large Handron Collider, they reassured themselves that they wouldn’t accidentally create a black hole.</p>
-<section id="reference-classes" class="level1">
+<section id="reference-classes" class="level1 page-columns page-full">
 <h1>Reference Classes</h1>
-<blockquote class="blockquote">
-<p>“The first catastrophe mechanism seriously considered seems to have been the possibility, raised in the 1940s at Los Alamos before the first atomic bomb tests, that fission or fusion bombs might ignite the atmosphere or oceans in an unstoppable chain reaction.”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<blockquote class="blockquote page-columns page-full">
+<div class="page-columns page-full"><p>“The first catastrophe mechanism seriously considered seems to have been the possibility, raised in the 1940s at Los Alamos before the first atomic bomb tests, that fission or fusion bombs might ignite the atmosphere or oceans in an unstoppable chain reaction.”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;<a href="https://arxiv.org/pdf/hep-ph/0009204v6.pdf">A critical look at risk assessments for global catastrophes</a></p></li></div></div>
 </blockquote>
-<blockquote class="blockquote">
-<p>“Another hypothetical catastrophe was examined some time ago by Hut and Rees [6,7]. They considered the possibility that the vacuum state we live in is not the true vacuum, but merely a local minimum of the effective potential. They asked whether, if this were the case, new generations of collider experiments could trigger a catastrophic transition to the true vacuum, destroying not only the Earth but (eventually) all presently stable forms of matter in the cosmos. They showed that the probability of this occurring artificially in present or foreseeable collider experiments is considerably smaller than the probability of it having occurred naturally within our past light-cone.”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<blockquote class="blockquote page-columns page-full">
+<div class="page-columns page-full"><p>“Another hypothetical catastrophe was examined some time ago by Hut and Rees [6,7]. They considered the possibility that the vacuum state we live in is not the true vacuum, but merely a local minimum of the effective potential. They asked whether, if this were the case, new generations of collider experiments could trigger a catastrophic transition to the true vacuum, destroying not only the Earth but (eventually) all presently stable forms of matter in the cosmos. They showed that the probability of this occurring artificially in present or foreseeable collider experiments is considerably smaller than the probability of it having occurred naturally within our past light-cone.”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;<a href="https://arxiv.org/pdf/hep-ph/0009204v6.pdf">A critical look at risk assessments for global catastrophes</a></p></li></div></div>
 </blockquote>
-<blockquote class="blockquote">
-<p>“the “killer strangelet” catastrophe scenario, which would arise if negatively charged metastable strange matter existed and could be produced in the experiments.”<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<blockquote class="blockquote page-columns page-full">
+<div class="page-columns page-full"><p>“the “killer strangelet” catastrophe scenario, which would arise if negatively charged metastable strange matter existed and could be produced in the experiments.”<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;<a href="https://arxiv.org/pdf/hep-ph/0009204v6.pdf">A critical look at risk assessments for global catastrophes</a></p></li></div></div>
 </blockquote>
 <blockquote class="blockquote">
 <p>“What should a court do with a preliminary-injunction request to halt a multi-billion-dollar particle-physics experiment that plaintiffs claim could create a black hole that will devour the planet? The real-life case of CERN’s LHC seems like a legal classic in the making. Unfortunately, however, no court has braved the extreme factual terrain to reach the merits.”</p>
 </blockquote>
-<blockquote class="blockquote">
-<p>“Gerald S. Hawkins proposed the “mindstep equation” for the years where a “mindstep” (a fundamental human paradigm shift) would occur. It converges towards 2053, and is based on 5(!) data points (Hawkins 2002).”<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<blockquote class="blockquote page-columns page-full">
+<div class="page-columns page-full"><p>“Gerald S. Hawkins proposed the “mindstep equation” for the years where a “mindstep” (a fundamental human paradigm shift) would occur. It converges towards 2053, and is based on 5(!) data points (Hawkins 2002).”<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn4"><p><sup>4</sup>&nbsp;<a href="https://www.semanticscholar.org/paper/An-Overview-of-Models-of-Technological-Singularity-Sandberg/867ec09d9dd31f03cc699e252bb5cf5f74e4f700?sort=relevance&amp;page=2">An Overview of Models of Technological Singularity</a></p></li></div></div>
 </blockquote>
-<p>“A point or period in time where the rate of change is undefined.”<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
-<p>“A precedent of the phenomenon explained in this pa- per can also be found in evolutionary biology, a com- plex adaptive system. The six mass extinctions and the subsequent re-flourishing of life post these inci- dents indicates to the universal behaviour of complex adaptive systems. A crucial factor (climate change, meteors, geological change) approaches a point in singularity (where the rate of change is undefined) the complex adaptive system of biological evolution approaches a near zero critical point. While there is an attempt to introduce changes, none of them last to become adaptations, since they are unable to keep up with the rapid rate of change. This point is one of stable or partial equilibrium. The resulting stagna- tion caused by the equilibrium causes degradation, since survival in a dynamic system is dependent on adaptation. This degradation takes form as a mass extinction. However, this mass extinction ends and disparate forms of life begin to re-populate the earth. This demonstrates that either singularities aren’t ab- solute and that complex adaptive systems continue in relevance despite severe setbacks.”<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
-<p>“or simulations of the first artificial general intelligence’s (AGI’s) origin (singularity simulations) should dominate. Also, simulations which simulate the 21st century and global catastrophic risks are probable.”<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
-<p>“Thinking that FAI may be too difficult, Goertzel (2012) proposes a global ‘‘Nanny AI’’ that would ‘‘forestall a full-on Singularity for a while, …giving us time to figure out what kind of Singularity we really want to build and how.’’”<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
+<div class="page-columns page-full"><p>“A point or period in time where the rate of change is undefined.”<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn5"><p><sup>5</sup>&nbsp;<a href="https://cfrce.com/images/Paper_1_finalish_edited.pdf">Complexity Economics in a Technological Singularity Paradigm</a></p></li></div></div>
+<div class="page-columns page-full"><p>“A precedent of the phenomenon explained in this pa- per can also be found in evolutionary biology, a com- plex adaptive system. The six mass extinctions and the subsequent re-flourishing of life post these inci- dents indicates to the universal behaviour of complex adaptive systems. A crucial factor (climate change, meteors, geological change) approaches a point in singularity (where the rate of change is undefined) the complex adaptive system of biological evolution approaches a near zero critical point. While there is an attempt to introduce changes, none of them last to become adaptations, since they are unable to keep up with the rapid rate of change. This point is one of stable or partial equilibrium. The resulting stagna- tion caused by the equilibrium causes degradation, since survival in a dynamic system is dependent on adaptation. This degradation takes form as a mass extinction. However, this mass extinction ends and disparate forms of life begin to re-populate the earth. This demonstrates that either singularities aren’t ab- solute and that complex adaptive systems continue in relevance despite severe setbacks.”<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn6"><p><sup>6</sup>&nbsp;<a href="https://cfrce.com/images/Paper_1_finalish_edited.pdf">Complexity Economics in a Technological Singularity Paradigm</a></p></li></div></div>
+<div class="page-columns page-full"><p>“or simulations of the first artificial general intelligence’s (AGI’s) origin (singularity simulations) should dominate. Also, simulations which simulate the 21st century and global catastrophic risks are probable.”<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn7"><p><sup>7</sup>&nbsp;<a href="https://arxiv.org/pdf/1905.05792.pdf">Simulation Typology and Termination Risks</a></p></li></div></div>
+<div class="page-columns page-full"><p>“Thinking that FAI may be too difficult, Goertzel (2012) proposes a global ‘‘Nanny AI’’ that would ‘‘forestall a full-on Singularity for a while, …giving us time to figure out what kind of Singularity we really want to build and how.’’”<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn8"><p><sup>8</sup>&nbsp;<a href="https://sci-hub.ru/https://link.springer.com/chapter/10.1007/978-3-642-32560-1_2">Intelligence Explosion: Evidence and Import</a></p></li></div></div>
 </section>
 <section id="further-reading" class="level1">
 <h1>Further reading</h1>
@@ -160,22 +259,12 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="https://www.lesswrong.com/posts/cLyo7dKmimeXR3hAC/towards-a-formalisation-of-returns-on-cognitive-reinvestment">Dragon Gods formalism</a> Plus, <a href="https://www.lesswrong.com/posts/jdLmC46ZuXS54LKzL/why-i-m-sceptical-of-foom">Why I am Sceptical of Foom</a> by same.</p>
 
 
+<!-- -->
+
 </section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p><a href="https://arxiv.org/pdf/hep-ph/0009204v6.pdf">A critical look at risk assessments for global catastrophes</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p><a href="https://arxiv.org/pdf/hep-ph/0009204v6.pdf">A critical look at risk assessments for global catastrophes</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p><a href="https://arxiv.org/pdf/hep-ph/0009204v6.pdf">A critical look at risk assessments for global catastrophes</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p><a href="https://www.semanticscholar.org/paper/An-Overview-of-Models-of-Technological-Singularity-Sandberg/867ec09d9dd31f03cc699e252bb5cf5f74e4f700?sort=relevance&amp;page=2">An Overview of Models of Technological Singularity</a><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p><a href="https://cfrce.com/images/Paper_1_finalish_edited.pdf">Complexity Economics in a Technological Singularity Paradigm</a><a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p><a href="https://cfrce.com/images/Paper_1_finalish_edited.pdf">Complexity Economics in a Technological Singularity Paradigm</a><a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p><a href="https://arxiv.org/pdf/1905.05792.pdf">Simulation Typology and Termination Risks</a><a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p><a href="https://sci-hub.ru/https://link.springer.com/chapter/10.1007/978-3-642-32560-1_2">Intelligence Explosion: Evidence and Import</a><a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -241,6 +330,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
   function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
@@ -308,7 +448,81 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Generic</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Fergus Fettes"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">updated:</span><span class="co"> today</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">date-format:</span><span class="co"> "MMM D, YYYY"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">title-block-banner:</span><span class="co"> pink</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="an">title-block-banner-color:</span><span class="co"> white</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># date-format: iso</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="an">jupyter:</span><span class="co"> python3</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> true       # Table of Contents</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="an">reference-location:</span><span class="co"> margin</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">    citations-hover: true                   </span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">    footnotes-hover: true</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Specific</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Foom Dynamis</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> today</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="al">![Hanson Tweet](https://twitter.com/robinhanson/status/1642565502403788800)</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="al">![Gfodor Tweet](https://twitter.com/gfodor/status/1642751707829649408)</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="al">![Land Basilisk Satanism](https://twitter.com/Outsideness/status/1642580787626123265)</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>The singularity is weirdly under-theorized. When they set off the bomb in Los Alomos, they checked first if it would ignite the atmosphere. When they started up the Large Handron Collider, they reassured themselves that they wouldn't accidentally create a black hole.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu"># Reference Classes</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "The first catastrophe mechanism seriously considered seems to have been the possibility, raised in the 1940s at Los Alamos before the first atomic bomb tests, that fission or fusion bombs might ignite the atmosphere or oceans in an unstoppable chain reaction."</span><span class="ot">[^catastrophes]</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "Another hypothetical catastrophe was examined some time ago by Hut and Rees </span><span class="co">[</span><span class="ot">6,7</span><span class="co">]</span><span class="at">. They considered the possibility that the vacuum state we live in is not the true vacuum, but merely a local minimum of the effective potential. They asked whether, if this were the case, new generations of collider experiments could trigger a catastrophic transition to the true vacuum, destroying not only the Earth but (eventually) all presently stable forms of matter in the cosmos. They showed that the probability of this occurring artificially in present or foreseeable collider experiments is considerably smaller than the probability of it having occurred naturally within our past light-cone."</span><span class="ot">[^catastrophes]</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "the “killer strangelet” catastrophe scenario, which would arise if negatively charged metastable strange matter existed and could be produced in the experiments."</span><span class="ot">[^catastrophes]</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "What should a court do with a preliminary-injunction request to halt a multi-billion-dollar particle-physics experiment that plaintiffs claim could create a black hole that will devour the planet? The real-life case of CERN's LHC seems like a legal classic in the making. Unfortunately, however, no court has braved the extreme factual terrain to reach the merits."</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "Gerald S. Hawkins proposed the “mindstep equation” for the years where a “mindstep” (a fundamental human paradigm shift) would occur. It converges towards 2053, and is based on 5(!) data points (Hawkins 2002)."</span><span class="ot">[^overview-of-models]</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>"A point or period in time where the rate of change is undefined."<span class="ot">[^cas-singularity]</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>"A precedent of the phenomenon explained in this pa- per can also be found in evolutionary biology, a com- plex adaptive system. The six mass extinctions and the subsequent re-flourishing of life post these inci- dents indicates to the universal behaviour of complex adaptive systems. A crucial factor (climate change, meteors, geological change) approaches a point in singularity (where the rate of change is undefined) the complex adaptive system of biological evolution approaches a near zero critical point. While there is an attempt to introduce changes, none of them last to become adaptations, since they are unable to keep up with the rapid rate of change. This point is one of stable or partial equilibrium. The resulting stagna- tion caused by the equilibrium causes degradation, since survival in a dynamic system is dependent on adaptation. This degradation takes form as a mass extinction. However, this mass extinction ends and disparate forms of life begin to re-populate the earth. This demonstrates that either singularities aren’t ab- solute and that complex adaptive systems continue in relevance despite severe setbacks."<span class="ot">[^cas-singularity]</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>"or simulations of the first artificial general intelligence’s (AGI’s) origin (singularity simulations) should dominate. Also, simulations which simulate the 21st century and global catastrophic risks are probable."<span class="ot">[^simulation]</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>"Thinking that FAI may be too difficult, Goertzel (2012) proposes a global ‘‘Nanny AI’’ that would ‘‘forestall a full-on Singularity for a while, ...giving us time to figure out what kind of Singularity we really want to build and how.’’"<span class="ot">[^explosion]</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ot">[^cas-singularity]: </span><span class="co">[</span><span class="ot">Complexity Economics in a Technological Singularity Paradigm</span><span class="co">](https://cfrce.com/images/Paper_1_finalish_edited.pdf)</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ot">[^catastrophes]: </span><span class="co">[</span><span class="ot">A critical look at risk assessments for global catastrophes</span><span class="co">](https://arxiv.org/pdf/hep-ph/0009204v6.pdf)</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ot">[^injunction]: </span><span class="co">[</span><span class="ot">The Black Hole Case: The Injunction Against the End of the World</span><span class="co">](https://www.semanticscholar.org/paper/The-Black-Hole-Case%3A-The-Injunction-Against-the-End-Johnson/c53f7064f472f8d5b0b385e68b7f25ac2e46f32b)</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ot">[^simulation]: </span><span class="co">[</span><span class="ot">Simulation Typology and Termination Risks</span><span class="co">](https://arxiv.org/pdf/1905.05792.pdf)</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ot">[^overview-of-models]: </span><span class="co">[</span><span class="ot">An Overview of Models of Technological Singularity</span><span class="co">](https://www.semanticscholar.org/paper/An-Overview-of-Models-of-Technological-Singularity-Sandberg/867ec09d9dd31f03cc699e252bb5cf5f74e4f700?sort=relevance&amp;page=2)</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ot">[^explosion]: </span><span class="co">[</span><span class="ot">Intelligence Explosion: Evidence and Import</span><span class="co">](https://sci-hub.ru/https://link.springer.com/chapter/10.1007/978-3-642-32560-1_2)</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ot">[^micro]: </span><span class="co">[</span><span class="ot">Intelligence Explosion Microeconomics</span><span class="co">](https://intelligence.org/files/IEM.pdf)</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="fu"># Further reading</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>This semantic scolar citations list has lots in it: <span class="co">[</span><span class="ot">here</span><span class="co">](https://www.semanticscholar.org/paper/A-Critical-Look-at-Risk-Assessments-for-Global-Kent/3bb94b38582b1733129dfa1cfe0f119da7f20742?sort=relevance&amp;page=2)</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>Intelligence Explosion list <span class="co">[</span><span class="ot">here</span><span class="co">](https://www.semanticscholar.org/paper/Intelligence-Explosion%3A-Evidence-and-Import-Muehlhauser-Salamon/40e3086dd279fd23042b37962d8e67f5fd9801ae)</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>Yampolskiy seems like he has some more serious stuff: <span class="co">[</span><span class="ot">From Seed AI to Technological Singularity via Recursively Self-Improving Software</span><span class="co">](https://arxiv.org/pdf/1502.06512.pdf)</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>Schmidhuber too, see references in that paper.</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>See this one by Yampolskiy too: <span class="co">[</span><span class="ot">The Singularity May Be Near</span><span class="co">](https://www.semanticscholar.org/paper/The-Singularity-May-Be-Near-Yampolskiy/cc466d95caccc551d2fb23909cf39cab8642d76b)</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Dragon Gods formalism</span><span class="co">](https://www.lesswrong.com/posts/cLyo7dKmimeXR3hAC/towards-a-formalisation-of-returns-on-cognitive-reinvestment)</span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>Plus, <span class="co">[</span><span class="ot">Why I am Sceptical of Foom</span><span class="co">](https://www.lesswrong.com/posts/jdLmC46ZuXS54LKzL/why-i-m-sceptical-of-foom)</span> by same.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
