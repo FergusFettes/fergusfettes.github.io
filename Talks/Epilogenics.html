@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.2.269">
+
+  <meta name="author" content="Fergus Fettes">
+  <title>Fergus Fettes - Primer for the Age of Polygenic Screening, Present and Future</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-captioned.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-captioned) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-captioned.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-captioned .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-captioned .callout-caption  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-captioned.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-captioned.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-caption {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-caption {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-caption {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-captioned .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-captioned .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-captioned) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-caption {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-caption {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-caption {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-caption {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-caption {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Primer for the Age of Polygenic Screening, Present and Future</h1>
+  <p class="subtitle">or, the Digitalization and Commercialization of Identity</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Fergus Fettes 
+</div>
+</div>
+</div>
+
+  <p class="date">Feb 8, 2023</p>
+</section>
+<section>
+<section id="introduction" class="title-slide slide level1 center">
+<h1>Introduction</h1>
+
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p><img data-src="../_images/ivf.png"> <a href="https://procarehospital.com/treatment/">source</a></p>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<p><img data-src="../_images/ivf2.png"> <a href="https://procarehospital.com/treatment/">source</a></p>
+<!-- - a few eggs are extracted from a patient and fertilized -->
+<!-- - each embryo is biopsied for a few cells which are sequenced -->
+<!-- - each embryo is ranked according to a weighted sum of multiple traits -->
+<!-- - the chosen embryo is implanted into the patient -->
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+
+<img data-src="../_images/biopsy.png" class="r-stretch"></section></section>
+<section id="bits-and-cash-polygenic-screening-as-a-digital-good" class="title-slide slide level1 center">
+<h1>Bits and Cash– Polygenic Screening as a Digital Good</h1>
+
+</section>
+
+<section>
+<section id="section-3" class="title-slide slide level1 center">
+<h1></h1>
+
+<!-- - Many companies offering genomic services -->
+<!-- - (I recommend getting the full genome done btw) -->
+<!-- - Polygenic screening is very similar to this. -->
+<img data-src="../_images/digital_genetics.png" class="r-stretch"></section>
+<section id="all-about-the-dataset" class="slide level2">
+<h2>All About the Dataset</h2>
+
+<img data-src="../_images/sequencing_cost.png" class="r-stretch"></section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+
+<img data-src="../_images/biobank.png" class="r-stretch"></section>
+<section id="section-5" class="slide level2">
+<h2></h2>
+<p><img data-src="../_images/ivf2.png"> <a href="https://procarehospital.com/treatment/">source</a></p>
+<!-- - Notes: normally at this point you screen for monogenic disorders -->
+</section></section>
+<section>
+<section id="polygenic-screening-shallow-dive" class="title-slide slide level1 center">
+<h1>Polygenic Screening Shallow Dive</h1>
+<!-- - Notes: briefly introduce the ideas of polygenic screening etc. before the shallow dive. Basically the same ideas from the paper, but just a little before. So the same thing I am doing here, but do it before the paper and not after (and forget mentioning what educational attainment means). -->
+</section>
+<section id="how-does-it-work" class="slide level2">
+<h2>How Does it Work?</h2>
+</section>
+<section id="the-data" class="slide level2">
+<h2>The data</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="../_images/dna-frequencies.png" height="600"></p>
+</div><div class="column" style="width:40%;">
+<ul>
+<li class="fragment">large populations</li>
+<li class="fragment">‘brute force’ approache</li>
+<li class="fragment">look at all their traits and their DNA</li>
+<li class="fragment">find correlations</li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="so-what-are-they-actually-offering" class="title-slide slide level1 center">
+<h1>So, what are they actually offering?</h1>
+
+</section>
+<section id="monogenic-traits-done-by-default" class="slide level2">
+<h2>Monogenic Traits (done by default)</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Huntington’s Disease</li>
+<li>Cystic Fibrosis</li>
+<li>Sickle Cell Anemia</li>
+<li>Thalassemia</li>
+<li>Duchenne Muscular Dystrophy</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<ul>
+<li class="fragment"><span style="display: flex; align-items: center;">🧬<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span></li>
+<li class="fragment"><span style="display: flex; align-items: center;">🫁<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span></li>
+<li class="fragment"><span style="display: flex; align-items: center;">🌡️<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span></li>
+<li class="fragment"><span style="display: flex; align-items: center;">🌙<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span></li>
+<li class="fragment"><span style="display: flex; align-items: center;">💪<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="polygenic-traits" class="slide level2 smaller" data-auto-animate="True">
+<h2 data-id="quarto-animate-title">Polygenic Traits</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li>atrial fibrillation</li>
+<li>coronary artery disease</li>
+<li>heart attack</li>
+<li>hypertension</li>
+<li>hypercholesterolemia</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<ul>
+<li>breast cancer</li>
+<li>basal cell carcinoma</li>
+<li>malignant melanoma</li>
+<li>prostate cancer</li>
+<li>testicular cancer</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<ul>
+<li>Alzheimer’s Disease</li>
+<li>gout</li>
+<li>asthma</li>
+<li>inflammatory bowel disease</li>
+<li>ischemic stroke</li>
+<li>diabetes (I &amp; II)</li>
+<li>obesity</li>
+<li>major depressive disorder</li>
+<li>schizophrenia</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="polygenic-traits-1" class="slide level2 smaller" data-auto-animate="True">
+<h2 data-id="quarto-animate-title">Polygenic Traits</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li>atrial fibrillation 💔</li>
+<li>coronary artery disease 💔</li>
+<li>heart attack 💔</li>
+<li>hypertension 💔</li>
+<li>hypercholesterolemia 🧈</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<ul>
+<li>breast cancer 🦀</li>
+<li>basal cell carcinoma 🦀</li>
+<li>malignant melanoma 🦀</li>
+<li>prostate cancer 🦀</li>
+<li>testicular cancer 🦀</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<ul>
+<li>Alzheimer’s Disease 🧠</li>
+<li>gout 🦶</li>
+<li>asthma 😷</li>
+<li>inflammatory bowel disease 🥗</li>
+<li>ischemic stroke 🩸</li>
+<li>diabetes (I &amp; II) 💉</li>
+<li>obesity 🍔</li>
+<li>major depressive disorder 😢</li>
+<li>schizophrenia 🎭</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="polygenic-trait-ranking" class="slide level2 smaller" data-auto-animate="True">
+<h2 data-id="quarto-animate-title">Polygenic Trait Ranking</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+
+</div><div class="column" style="width:30%;">
+<p><span style="font-size: 2em; display: flex; align-items: center;">💔<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🦀<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🧠<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🦶<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span></p>
+</div><div class="column" style="width:30%;">
+<p><span style="font-size: 2em; display: flex; align-items: center;">🩸<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🍔<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">😢<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🎭<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span></p>
+</div>
+</div>
+</section>
+<section id="polygenic-trait-ranking-1" class="slide level2 smaller" data-auto-animate="True">
+<h2 data-id="quarto-animate-title">Polygenic Trait Ranking</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><span style="font-size: 2em; display: flex; align-items: center;">🧬<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span> <span style="font-size: 2em; display: flex; align-items: center;">🫁<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span> <span style="font-size: 2em; display: flex; align-items: center;">🌡️<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span> <span style="font-size: 2em; display: flex; align-items: center;">🌙<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span> <span style="font-size: 2em; display: flex; align-items: center;">💪<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span></p>
+</div><div class="column" style="width:30%;">
+<p><span style="font-size: 2em; display: flex; align-items: center;">💔<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🦀<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🧠<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🦶<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span></p>
+</div><div class="column" style="width:30%;">
+<p><span style="font-size: 2em; display: flex; align-items: center;">🩸<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🍔<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">😢<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🎭<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span></p>
+</div>
+</div>
+</section>
+<section id="polygenic-trait-ranking-2" class="slide level2 smaller" data-auto-animate="True">
+<h2 data-id="quarto-animate-title">Polygenic Trait Ranking</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><span style="font-size: 2em; display: flex; align-items: center;">🧬<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span> <span style="font-size: 2em; display: flex; align-items: center;">🫁<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span> <span style="font-size: 2em; display: flex; align-items: center;">🌡️<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span> <span style="font-size: 2em; display: flex; align-items: center;">🌙<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span> <span style="font-size: 2em; display: flex; align-items: center;">💪<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span></p>
+</div><div class="column" style="width:30%;">
+<p><span style="font-size: 2em; display: flex; align-items: center;">💔<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🦀<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🧠<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🦶<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span></p>
+</div><div class="column" style="width:30%;">
+<p><span style="font-size: 2em; display: flex; align-items: center;">🩸<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🍔<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">😢<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🎭<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span></p>
+</div>
+</div>
+</section>
+<section id="legislation-and-price" class="slide level2 smaller">
+<h2>Legislation and Price</h2>
+<ul>
+<li>“Working with 173 Clinics in 37 countries and 6 continents … and growing.”<sup>1</sup></li>
+<li>legal in 30 out of 43 countries in Europe<sup>2</sup></li>
+<li>“Over a million babies are born each year via IVF”</li>
+<li>example: 10% of children in Denmark are born by IVF</li>
+<li>Denmark and Israel pay for IVF</li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://www.lifeview.com/tests_pgtp.html">LifeView, from Genomic Prediction</a></p></li><li id="fn2"><p><a href="https://academic.oup.com/hropen/article/2020/1/hoz044/5715201">Survey on ART and IUI: legislation, regulation, funding and registries in European countries: The European IVF-monitoring Consortium (EIM) for the European Society of Human Reproduction and Embryology (ESHRE), Calhaz-Jorge 2020</a></p></li></ol></aside></section></section>
+<section>
+<section id="section-6" class="title-slide slide level1 smaller center">
+<h1></h1>
+
+<img data-src="../_images/prices.png" class="r-stretch"></section>
+<section id="section-7" class="slide level2 smaller" data-auto-animate="True">
+<h2 data-id="quarto-animate-title"></h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><span style="font-size: 2em; display: flex; align-items: center;">🧬<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span> <span style="font-size: 2em; display: flex; align-items: center;">🫁<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span> <span style="font-size: 2em; display: flex; align-items: center;">🌡️<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span> <span style="font-size: 2em; display: flex; align-items: center;">🌙<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span> <span style="font-size: 2em; display: flex; align-items: center;">💪<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span></p>
+</div><div class="column" style="width:30%;">
+<p><span style="font-size: 2em; display: flex; align-items: center;">💔<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🦀<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🧠<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🦶<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">📏<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🏋️<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span></p>
+</div><div class="column" style="width:30%;">
+<p><span style="font-size: 2em; display: flex; align-items: center;">🩸<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🍔<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">😢<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🎭<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">😁<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🎤<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span></p>
+</div>
+</div>
+<p><br>
+<br>
+<br>
+<span style="font-size: 0.5em"> 📨 To: <em>superofficialpolygenicscreening@compa.ny</em><br>
+📨 CC: <em>blackmarketmusicianmakers@proton.mail, blackmarketcharactergen@tor.mail</em><br>
+</span> <span style="font-size: 0.4em"> <em>bits and cash 💸</em> </span></p>
+</section></section>
+<section>
+<section id="opinion" class="title-slide slide level1 smaller center">
+<h1>🚧 OPINION 🚧</h1>
+
+</section>
+<section id="section-8" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="../_images/approved.png" height="600"></p>
+</div><div class="column" style="width:50%;">
+
+</div>
+</div>
+</section>
+<section id="section-9" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="../_images/approved.png" height="600"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="../_images/diversirty.png" height="600"></p>
+</div>
+</div>
+</section>
+<section id="does-it-actually-work" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Does it actually work?</h2>
+<div>
+<ul>
+<li class="fragment">‘moderate’ improvements</li>
+<li class="fragment">4 DALYs (Disability Adjusted Life Years)</li>
+<li class="fragment">limited by the data</li>
+<li class="fragment">limited by the genetics of the parents</li>
+</ul>
+</div>
+</section>
+<section id="does-it-actually-work-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Does it actually work?</h2>
+<ul>
+<li>‘moderate’ improvements</li>
+<li>4 DALYs (Disability Adjusted Life Years)</li>
+<li>limited by the data</li>
+<li>limited by the genetics of the parents</li>
+</ul>
+<p>That doesn’t seem like a big deal?</p>
+<div>
+<ul>
+<li class="fragment">first, the differences will accumulate over time</li>
+<li class="fragment">this is pretty much confined to elites</li>
+<li class="fragment">so the status quo is, elites get marginal but consistent improvement every generation</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="the-future" class="title-slide slide level1 center">
+<h1>The Future</h1>
+<div>
+<ul>
+<li class="fragment">“Extrapolating the DALY gain vs Health Index score curve (top figure) to the entire human population (e.g., 10 billion people) results in +30 or +40 DALYs more than average, or something like 120 total years of life.”</li>
+<li class="fragment">What to do if we want to overcome the limitations of the techniques?</li>
+</ul>
+</div>
+</section>
+<section id="actively-used-in-livestock-and-pets" class="slide level2 smaller">
+<h2>Actively used in Livestock and Pets:</h2>
+<div>
+<ul>
+<li class="fragment">IVEP (In Vitro Embryo Production)</li>
+<li class="fragment"><ul>
+<li class="fragment"><em>close to 1 million cows per year</em></li>
+</ul></li>
+<li class="fragment"><ul>
+<li class="fragment"><em>most common method of embryo production</em> <!-- // this is ths 'industrialization' of embryo production, producing now close to 1 million cows per year. More cows are produced by this method than natural methods. this involves harvesting eggs from abbatoirs, and in humans this would be achievable with ovary donation --></li>
+</ul></li>
+<li class="fragment">Germline Editing</li>
+<li class="fragment"><ul>
+<li class="fragment"><em>CRISPR cows, pigs, sheep, goats, rabbits, chickens, and fish</em></li>
+</ul></li>
+<li class="fragment"><ul>
+<li class="fragment"><em>widely used to create the breed stocks for IVEP</em> <!-- // need to do a more thorough review of this, but seems pretty common --></li>
+</ul></li>
+<li class="fragment">Cloning</li>
+<li class="fragment"><ul>
+<li class="fragment"><em>widely used in livestock, horses, dogs and cats</em></li>
+</ul></li>
+<li class="fragment"><ul>
+<li class="fragment"><em>commercialized in several industries</em> <!-- // post Dolly (1996), cloning has continued apace-- however, there have been no real fundamental breakthroughs, and the process remains imperfect. it is widely used in livestock, horses, dogs and cats, but there are fundamental breakthroughs necessary before it will be ready for human trials --></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="however" class="slide level2">
+<h2>However</h2>
+<div>
+<ul>
+<li class="fragment">the ‘industrial’ techniques can help make the process cheaper</li>
+<li class="fragment">however, absent significant breakthroughs in the science, cloning and germline editing will likely not play a significant role in the near future in humans</li>
+<li class="fragment">so, what can make it cheaper and more democratic?</li>
+<li class="fragment">(apart from more data, which is happening apace)</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="research-phase" class="title-slide slide level1 smaller center">
+<h1>Research Phase</h1>
+
+</section>
+<section id="egg-parthenogenesis" class="slide level2">
+<h2>Egg Parthenogenesis</h2>
+
+<img data-src="../_images/parthenogenesis.png" class="r-stretch"></section>
+<section id="group-chromosome-selection" class="slide level2">
+<h2>Group Chromosome Selection</h2>
+<p>TODO: need an image for this</p>
+
+<img data-src="../_images/group-selection.png" class="r-stretch"></section>
+<section id="iterated-embryo-selection" class="slide level2">
+<h2>Iterated Embryo Selection</h2>
+<p>TODO: need an image for this</p>
+<ul>
+<li>IES (Iterated Embryo Selection)</li>
+<li><ul>
+<li><em>Waiting on breakthroughs in cloning– epigenetic difficulties</em></li>
+</ul></li>
+<li><ul>
+<li><em>most likely ‘next generation’ in humans</em></li>
+</ul></li>
+<li><ul>
+<li><em>huge potential gains across all traits– predicted up to 120 years of life</em><sup>1</sup></li>
+</ul></li>
+</ul>
+<!-- - 'pygmaliomics'  -->
+<!-- - - _assembly of DNA from selected fragments_ -->
+<!-- - - _active research (mammoth deextinction)_ -->
+<!-- - de-novo DNA synthesis -->
+<!-- - - _not really significant, will always be expensive, but acts as an upper bound_ -->
+<aside><ol class="aside-footnotes"><li id="fn3"><p><a href="https://infoproc.blogspot.com/2022/06/polygenic-health-index-general-health.html">Infoproc: Polygenic Health Index, General Health, and Disease Risk</a></p></li></ol></aside></section></section>
+<section>
+<section id="wrapup" class="title-slide slide level1 center">
+<h1>Wrapup</h1>
+<ul>
+<li>Polygenic Screening has begun</li>
+<li>Currently, 5 DALYs for $5k (or $15k if you weren’t already doing IVF)</li>
+<li>The data is improving rapidly (exponentially)</li>
+<li>Remaining limits are cost, egg production and genetic basis</li>
+<li>Cost is being driven down with industrial techniques</li>
+<li>Techniques for egg production are improving</li>
+<li>Techniques for boosting the genetic basis for selection are improving</li>
+<li>and finally, in my view, empowering people with more reproductive choice is the way to go</li>
+</ul>
+</section>
+<section id="section-10" class="slide level2 smaller" data-auto-animate="True">
+<h2 data-id="quarto-animate-title"></h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><span style="font-size: 2em; display: flex; align-items: center;">🧬<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span> <span style="font-size: 2em; display: flex; align-items: center;">🫁<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span> <span style="font-size: 2em; display: flex; align-items: center;">🌡️<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span> <span style="font-size: 2em; display: flex; align-items: center;">🌙<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span> <span style="font-size: 2em; display: flex; align-items: center;">💪<input style="transform: scale(1.5); margin-left: 30px;" type="checkbox" id="myCheck"> </span></p>
+</div><div class="column" style="width:30%;">
+<p><span style="font-size: 2em; display: flex; align-items: center;">💔<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🦀<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🧠<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🦶<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">📏<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🏋️<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span></p>
+</div><div class="column" style="width:30%;">
+<p><span style="font-size: 2em; display: flex; align-items: center;">🩸<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🍔<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">😢<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🎭<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">😁<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span> <span style="font-size: 2em; display: flex; align-items: center;">🎤<input type="range" min="0" max="100" value="50" class="slider" id="myRange"></span></p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="appendix" class="title-slide slide level1 center">
+<h1>Appendix</h1>
+
+</section>
+<section id="bibliography" class="slide level2 smaller scrollable">
+<h2>Bibliography</h2>
+<ul>
+<li><a href="https://www.nature.com/articles/s41588-022-01016-z">Polygenic prediction of educational attainment within and between families from genome-wide association analyses in 3 million individuals</a></li>
+<li><a href="https://doi.org/10.1038/s41436-020-01019-3">Screening embryos for polygenic conditions and traits: ethical considerations for an emerging technology, (Lázaro-Muñoz et al., 2021)</a></li>
+<li><a href="https://www.theguardian.com/science/2021/oct/17/polygenic-screening-of-embryos-is-here-but-is-it-ethical">Polygenic screening of embryos is here, but is it ethical?</a></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/35451785/">From Genotype to Phenotype: Polygenic Prediction of Complex Human Traits</a></li>
+<li><a href="https://www.fertstert.org/article/S0015-0282(22)00207-2/fulltext">Should preimplantation genetic testing for polygenic disease be offered to all – or none?</a></li>
+<li><a href="https://journalofethics.ama-assn.org/article/keeping-backdoor-eugenics-ajar-disability-and-future-prenatal-screening/2016-04">Keeping the Backdoor to Eugenics Ajar?: Disability and the Future of Prenatal Screening (Thomas et al, 2016)</a></li>
+<li><a href="https://sci-hub.ru/https://www.nature.com/articles/s41576-019-0127-1">Benefits and limitations of genome-wide association studies. Nature Reviews Genetics, Tam (2019)</a></li>
+<li><a href="https://www.lifeview.com/tests_pgtp.html">LifeView, from Genomic Prediction</a></li>
+<li><a href="https://link.springer.com/chapter/10.1007/978-981-19-3072-0_11">Ovum Pick-Up and In Vitro Embryo Production in Bovine</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S0022030221008845">Invited review: Use of assisted reproduction techniques to accelerate genetic gain and increase value of beef production in dairy herds, 2021</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S1642431X20303016">In vitro embryo production (IVEP) in camelids: Present status and future perspectives</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S0093691X22002576#bib4">The many problems of somatic cell nuclear transfer in reproductive cloning of mammals, Malin et al.&nbsp;2022</a></li>
+<li><a href="https://www.fertstert.org/article/S0015-0282(99)00587-7/fulltext">Ethical issues in ovarian transplantation and donation</a></li>
+<li><a href="https://www.genome.gov/Health/Genomics-and-Medicine/Polygenic-risk-scores">Polygenic Risk Scores Primer, NHGRI</a></li>
+<li><a href="https://www.medrxiv.org/content/10.1101/2022.06.15.22276102v1.full.pdf">Polygenic Health Index, General Health, and Disease Risk, Hsu et al 2022</a></li>
+<li><a href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-020-00742-5">Polygenic risk scores: from research tools to clinical instruments, Lewis 2020</a></li>
+<li><a href="https://infoproc.blogspot.com/2022/06/polygenic-health-index-general-health.html">Polygenic Health Index, General Health, and Disease Risk, Hsu et al 2022</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S0015028218303285#bib1">Use of preimplantation genetic testing for monogenic defects (PGT-M) for adult-onset conditions: an Ethics Committee opinion, Ethics Committee of ASRM, 2018</a></li>
+<li><a href="https://www.mdpi.com/2073-4425/11/8/871">Preimplantation Genetic Testing for Monogenic Disorders, De Ryke 2020</a></li>
+<li><a href="https://academic.oup.com/hropen/article/2020/1/hoz044/5715201">Survey on ART and IUI: legislation, regulation, funding and registries in European countries: The European IVF-monitoring Consortium (EIM) for the European Society of Human Reproduction and Embryology (ESHRE), Calhaz-Jorge 2020</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0197455601001083">Art and mental illness: where is the link?</a></li>
+</ul>
+</section>
+<section id="quotes" class="slide level2 smaller scrollable">
+<h2>Quotes</h2>
+<ul>
+<li><p>“Polygenic embryo screening (PES)—the use of polygenic risk scores for complex phenotypes as a component of preimplantation genetic testing (PGT)—has emerged as a commercially available service, despite almost no public deliberation about its ethical, clinical, and societal implications.” <sup>1</sup></p></li>
+<li><p>“However, PES also raises ethical concerns that are in many ways novel in the preimplantation genetics context.” <sup>2</sup></p></li>
+<li><p>“The birth of the first IVF baby, Louise Brown, in 1978 provoked a media frenzy. In comparison, a little girl named Aurea born by IVF in May 2020 went almost unnoticed.” <sup>3</sup></p></li>
+<li><p>“We hope that in the future, society as a whole, perhaps on a nation-by-nation basis, will reach a consensus on which non-disease traits are acceptable for embryo screening.” Stephen Hsu, Eugenecist</p></li>
+<li><p>“For many diseases, including important common conditions such as coronary artery disease, breast cancer, type I and II diabetes, individuals with outlier polygenic scores (e.g., top few percent) have been shown to have 5 or even 10 times higher risk than average. Several psychiatric conditions such as schizophrenia and autism also fall into this category.” <sup>4</sup></p></li>
+<li><p>“Further, we argue that the continuing development of prenatal screening technologies plays a key role in the problematic framing of people with disabilities.”<sup>5</sup></p></li>
+<li><p>“We argue that prenatal screening (and specifically NIPT) for Down syndrome can be considered a form of contemporary eugenics, in that it effaces, devalues, and possibly prevents the births of people with the condition.”<sup>6</sup></p></li>
+<li><p>“We are in this position due to historical and contemporary developments including—among other things—the historic institutionalization of people with disabilities, the growth of genetics, the introduction of prenatal testing for terminating conditions other than Down syndrome, the passing of certain abortion laws, the acceptability of screening as an appropriate medical practice, the medicalization of pregnancy, and the public exclusion of and discrimination against people with disabilities.”<sup>7</sup></p></li>
+<li><p>“Another huge problem: MrBeast’s video seems to regard disability as something that needs to be solved.”<sup>8</sup></p></li>
+<li><p>“Then, ultimately, what the introduction of technologies such as preimplantation PRSs demands from us is an assessment not simply of their particular risks and benefits narrowly understood, but a reflection of the kinds of societies we want to promote, what we think parents owe their children, and what we owe one another.”<sup>9</sup></p></li>
+<li><p>” GWAS performed to date represent the tip of the iceberg. The discoveries that can be made using genomewide association studies (GWAS) are represented by an iceberg. The portion of the iceberg above water represents the discoveries that have been made by GWAS to date, using easy-to-measure phenotypes, predominantly European populations, and an additive genetic model. Most of the iceberg is submerged under water. The submerged portion represents the vast number of discoveries that can potentially be made by expanding the current paradigm of GWAS to include a wider range of phenotypes, substantially larger sample sizes, more diverse populations and ethnic groups, and different study designs and analyses. GxG, gene–gene; GxE, gene–environment.”<sup>10</sup></p></li>
+<li><p>“One thing people talk a lot about is schizophrenia. So they say that schizophrenia could be correlated with creativity. So if your brother’s schizophrenic, maybe you’re more likely to be creative. He’s super creative, but we don’t know what he’s talking about. Hahahah. So people say that if you start screening against schizophrenia, maybe we won’t get creative geniuses. So there are all kinds of pleiotropic things that are possibly true. But the thing I keep wanting to go back to is that if it’s 10,000-20,000 different genetic variants, locations in your genome, that are more or less determining your genetic, cognitive potential, I can go around the high dimensional space. If I find out you can make someone smart using this stuff in this cluster, but it makes them dull or makes them autistic, or it makes them they don’t have big muscles, I’ll just go round. I don’t need to use those, I have plenty more, look over here! Those 500, I don’t need to use, I will use <em>these</em> 500. This is why it’s important to look at historical geniuses who were pretty normal. Maybe they’re even good athletes. And, maybe they even were good with the ladies. These people existed. So you have these existence proofs that I can if I need to, if I’m a really good genetic engineer, and I can operate in this 10,000-dimensional space, whatever obstacle you put for me, I will just drive around it. I need lots of data and lots of ML. I’ll do it. That’s the answer, which, again, most people don’t really get. But it’s true.”<sup>11</sup></p></li>
+<li><p>“So, if Taleb and La Griffe have opposite approaches, which one is right? Well, reality is complicated, so they can both be highly useful.”<sup>12</sup></p></li>
+<li><p>“This biotechnique promises to multiply superior bovine germplasm with efficient use of sexed semen technology and inferring genomic selection indices at the embryonic stage to produce high genetic potential calves.”<sup>13</sup></p></li>
+<li><p>“including in vitro embryo production (IVEP), utilizing the germplasm/ DNA from elite animals for transfer to synchronized recipients and manipulations.”<sup>14</sup></p></li>
+<li><p>“Development of assisted reproductive biotechnology techniques such as artificial insemination (AI), multiple ovulation and embryo transfer (MOET), in vitro embryo production by in vitro fertilization (IVF), intracytoplasmic sperm injection (ICSI) or somatic cell nuclear transfer (SCNT) has been slow in camelids when compared with some other domestic animal species.”<sup>15</sup></p></li>
+<li><p>“Old world camels are a fundamental livestock resource providing milk, meat, and draught power in dry regions of Asia and Africa and thus have a significant role in the agricultural economy of these countries. Similarly, llamas and alpacas are used as beasts of burden in South America because of their surefootedness, ability to adapt to high altitudes, and general hardiness, which has made them a crucial indigenous resource. In the Middle East, in addition to meat and milk, camel racing is a highly sought after and well-organized multimillion-dollar sport. Also, camel festivals, including camel beauty contests, are held every year in Middle Eastern countries with prize money going onwards of USD 22 million. In recent years highly mechanized camel dairy farms have been established to produce dromedary milk and milk products in different countries due to a massive demand for these products. This has led to an interest in camel breeding and research, including in vitro embryo production (IVEP), utilizing the germplasm/ DNA from elite animals for transfer to synchronized recipients and manipulations.”<sup>16</sup></p></li>
+<li><p>“Despite inaccesibility to canine oocytes, relatively rare ovulation and very low in vitro maturation efficacy of canine oocytes, a resounding success was achieved and canine alongside feline cloning is commercially available as of 2022 at a cost of ca. $50 000 and $35 000, respectively.”<sup>17</sup></p></li>
+<li><p>“Unfortunately, somatic cell nuclear transfer success rate in mammals has not changed much since its very beginning. It is not uncommon that hundreds of oocytes need to be reconstructed to obtain a single live birth. In this review we provide a brief summary of the progress and problems of the field; beginning with selection of the donor cells and their susceptibility to different methods of epigenetic reprogramming; methods of the later gene activation, placental abnormalities, and their possible causes; to health issues that such offspring is prone to.”<sup>18</sup></p></li>
+<li><p>“According to the annual embryo production statistics presented by the IETS in recent years, more than 400 000 bovine IVP embryos were transferred worldwide (Figure 1a).”<a href="https://www.sciencedirect.com/science/article/pii/S1751731119002775">Recent advances in bovine in vitro embryo production</a></p></li>
+<li><p>“Provide the tools to combine information from reference genome sequences, genetic mapping, comparative genomics, genome annotation, functional studies and dense sequence data from the latest hyper-parallel re-sequencing technologies to identify rapidly the causative deoxyribonucleic acid (DNA) variation underlying important traits in livestock species.”<sup>19</sup></p></li>
+<li><p>“Beyond making the case that it is technically feasible for dead men to donate their sperm for use in reproduction, we argue that this is ethically permissible.”<a href="https://jme.bmj.com/content/46/7/489.abstract">The ethical case for non-directed postmortem sperm donation</a></p></li>
+<li><p>“At that point, use of cadaveric ovary donors as a source of donor eggs would have several advantages over egg donation from live donors. It would avoid subjecting a live donor to the risks and burdens of hyperstimulation and egg retrieval. In addition, the costs to the recipient would be considerably less because there would be no need to pay for a donor stimulation and retrieval cycle, plus the donor’s fees for undergoing that cycle. Finally, in vitro maturation of donated ovarian tissue would greatly increase the supply of eggs for donation, because many more oocytes could be retrieved and matured in this way than could be obtained from living donors stimulated for the purpose of donation.” <sup>20</sup></p></li>
+<li><p>“A controversial variation on cadaveric ovarian donation would arise with the use of ovarian tissue retrieved from elective legal abortions. Because state anatomical gift acts authorize a woman to donate tissue from aborted fetuses, there is no legal barrier to such donations. Nor would such donations encourage abortions if the request to donate comes after the decisions to abort have been made, and the other conditions that circumscribe fetal tissue donations for transplant under federal law are followed. The main objection to use of fetal ovarian tissue retrieved from legal abortions for reproductive purposes is the concern for the child, who might learn that he or she were conceived with eggs retrieved from a genetic mother who never lived past the early fetal stage of life because the child’s genetic grandmother chose to have an abortion. Also of concern is whether the donor—the woman undergoing the abortion—fully understands that as a result of the donation of fetal tissue she could become a genetic grandmother, even though she chose abortion to avoid motherhood.”<sup>21</sup></p></li>
+<li><p>“However, the biggest difference between PGT-P screening and earlier forms of genetic testing is that the prior tests checked for genetically simple conditions such as Down syndrome, cystic fibrosis, or Tay Sachs disease. These diseases, which are serious or fatal, have extremely high “penetrance,” which means that if the gene mutation is seen in the embryo’s DNA, it is nearly certain that the child will have that condition. The appearance of the disease-linked gene is the basis of a clear diagnosis.” <a href="https://infoproc.blogspot.com/">Stephens Hsus blog about Israel</a></p></li>
+<li><p>“Polygenic risk scores are not yet routinely used by health professionals because there are no guidelines for practice and researchers are still improving how these scores are generated. However, private healthcare and direct-to-consumer companies have already begun generating polygenic risk scores for their consumers and they may someday serve as an important new tool to guide healthcare decisions.<br>
+Polygenic risk scores will always be probabilities, not certainties. Understanding how polygenic risk scores can impact peoples’ lives and health is an active area of research being supported by the National Human Genome Research Institute.”<sup>22</sup></p></li>
+<li><p>“For schizophrenia, the predictive ability is higher, with the current score accounting for 7% of trait variance and an AUC of 0.61, but these values are still far below that needed for an individual’s score to have sufficient signal for interpretation or for clinical utility [57]. There is greater potential for using risk prediction from genetics in schizophrenia, since the heritability of 65–80% [58, 59] is much higher than 37% for major depression [60], but the substantially different disease lifetime risks (&lt; 1% for schizophrenia vs.&nbsp;15% for major depressive disorder) is also relevant.”<sup>23</sup></p></li>
+<li><p>“Much of the research to motivate moving polygenic risk scores from research studies to clinical implementation comes from cardiovascular disease, type 2 diabetes, breast and prostate cancers, and Alzheimer’s disease [47]. Khera et al.&nbsp;[2] recently demonstrated in the UK Biobank that PRS can identify which percentage of the sample have at least 3-fold increased risk for coronary artery disease, atrial fibrillation, type 2 diabetes, inflammatory bowel disease, and breast cancer, with the proportion of individuals identified varying between 1.5 and 8% depending on the disorder.”<sup>24</sup></p></li>
+<li><p>“In summary, we have made astounding biological advances in uncovering the genetic component to common complex disorders since the advent of genome-wide association studies in 2007. This is slowly moving from research discovery to clinical implementation, but much work remains in acquiring the necessary research base for polygenic risk scores and in establishing how the information can be best be used and communicated.”<sup>25</sup></p></li>
+<li><p>“We construct a polygenic health index as a weighted sum of polygenic risk scores for 208 major disease conditions, including, e.g., coronary artery disease, type 1 and 2 diabetes, schizophrenia, etc. Individual weights are determined by population-level estimates of impact on life expectancy.”<sup>26</sup></p></li>
+<li><p>“When estimated Disability Adjusted Life Years (DALYs) are used as the performance metric, the gain from selection among 10 individuals (highest index score vs average) is found to be roughly 4 DALYs. We find no statistical evidence for antagonistic trade-offs in risk reduction across these diseases.”<sup>27</sup></p></li>
+<li><p>“It is commonly believed that some individuals, in part due to genetic causes, enjoy robust good health, while others are sickly and prone to disease. Longevity is said to run in families. With modern genomic methods we can test the scientific veracity of these ideas. By combining Polygenic Risk Scores (PRS) across the most impactful disease conditions, we can build a composite predictor of overall health. The specific implementation studied in this paper used lifespan impact of each disease condition as the weighting factor in the index.”<sup>28</sup></p></li>
+<li><p>“The conventional logic is that, because a single gene can affect many different complex traits, it must be the case that different complex traits, such as disease risks, are themselves correlated, perhaps antagonistically (e.g., due to balancing selection, or for some deeper biochemical reason). This would entail specific tradeoffs, hy- pothetically: an individual with low diabetes risk might necessarily have higher cancer risk, etc. However, results from the modern era of GWAS and machine learning on large data sets show that the number of genetic loci which control a specific complex trait is typically in the thousands, and that these SNP sets are largely disjoint for different traits or disease risks. The fact that most of the variance can be disjoint across different complex traits is a manifestation of high dimensionality.”<sup>29</sup></p></li>
+<li><p>“Extrapolating the DALY gain vs Health Index score curve (top figure) to the entire human population (e.g., 10 billion people) results in +30 or +40 DALYs more than average, or something like 120 total years of life. The individual with the highest Health Index score in the world is predicted to live about 120 years.”<sup>30</sup></p></li>
+<li><p>“More recently, PGT-M has been used for serious single-gene diseases that do not develop until adulthood, such as Huntington disease and early-onset Alzheimer disease; for cancer predisposition genes, such as BRCA mutations; and for non-fatal but potentially serious conditions that are apparent at birth, such as focal dermal hypoplasia”<sup>31</sup></p></li>
+<li><p>“excluding the selection or enhancement of non-pathological characteristics in humans”<sup>32</sup></p></li>
+<li><p>“PGT-A fails to meet the standard of a ‘high risk and serious disorder’ and is therefore not permitted in 11 out of 43 European countries”<sup>33</sup>]</p></li>
+<li><p>“The more frequent indications for which PGT-M are currently applied are cystic fibrosis and hereditary hemoglobinopathies for the autosomal recessive disorders, and myotonic dystrophy type 1, neurofibromatosis, Huntington’s disease, and hereditary cancer syndromes for the autosomal dominant disorders. For the X-linked disorders, PGT is mainly carried out for Duchenne’s muscular dystrophy, hemophilia, and fragile X syndrome (unpublished data from the ESHRE PGT consortium).”<sup>34</sup></p></li>
+<li><p>“Information was received from 43 out of the 44 European countries where ART and IUI are performed. Thirty-nine countries reported specific legislation on ART, and artificial insemination was considered an ART technique in 35 of them. Accessibility is limited to infertile couples in 11 of the 43 countries. A total of 30 countries offer treatments to single women and 18 to female couples. In five countries ART and IUI are permitted for treatment of all patient groups, being infertile couples, single women and same sex couples, male and female. Use of donated sperm is allowed in 41 countries, egg donation in 38, the simultaneous donation of sperm and egg in 32 and embryo donation in 29. Preimplantation genetic testing (PGT) for monogenic disorders or structural rearrangements is not allowed in two countries, and PGT for aneuploidy is not allowed in 11; surrogacy is accepted in 16 countries. With the exception of marital/sexual situation, female age is the most frequently reported limiting criteria for legal access to ART—minimal age is usually set at 18 years and maximum ranging from 45 to 51 years with some countries not using numeric definition. Male maximum age is set in very few countries. Where permitted, age is frequently a limiting criterion for third-party donors (male maximum age 35 to 55 years; female maximum age 34 to 38 years). Other legal constraints in third-party donation are the number of children born from the same donor (in some countries, number of families with children from the same donor) and, in 10 countries, a maximum number of egg donations. How countries deal with the anonymity is diverse—strict anonymity, anonymity just for the recipients (not for children when reaching legal adulthood age), mixed system (anonymous and non-anonymous donations) and strict non-anonymity.”<sup>35</sup></p></li>
+<li><p>“As engineers we would like to know, what is possible to build? What are the edges of biological possibility?”<sup>36</sup></p></li>
+<li><p>“[In our lab] we try to control anatomical decision making.”<sup>37</sup></p></li>
+<li><p>“We can reach regions of the morphospace not explored by evolution, by changing electric circuits’ dynamics in vivo. <span class="citation" data-cites="23:00">@23:00</span>”<sup>38</sup></p></li>
+<li><p>“The rich variety of biological forms and behaviours results from one evolutionary history on Earth, via frozen accidents and selection in specific environments. This ubiquitous baggage in natural, familiar model species obscures the plasticity and swarm intelligence of cellular collectives. Significant gaps exist in our understanding of the origin of anatomical novelty, of the relationship between genome and form, and of strategies for control of large-scale structure and function in regenerative medicine and bioengineering. Analysis of living forms that have never existed before is necessary to reveal deep design principles of life as it can be. We briefly review existing examples of chimaeras, cyborgs, hybrots and other beings along the spectrum containing evolved and designed systems. To drive experimental progress in multicellular synthetic morphology, we propose teleonomic (goal-seeking, problem-solving) behaviour in diverse problem spaces as a powerful invariant across possible beings regardless of composition or origin. Cybernetic perspectives on chimaeric morphogenesis erase artificial distinctions established by past limitations of technology and imagination. We suggest that a multi-scale competency architecture facilitates evolution of robust problem-solving, living machines. Creation and analysis of novel living forms will be an essential testbed for the emerging field of diverse intelligence, with numerous implications across regenerative medicine, robotics and ethics.”<sup>39</sup></p></li>
+<li><p>“Progress in molecular biology and genetics has led to great strides in understanding the micro-scale hardware of cells (the protein machinery encoded by the genome). However, as shown clearly by the trajectory of the information sciences, this is only the beginning; the next frontier is the software of life: developing a mature science of prediction and control over system-level phenotypes.”<sup>40</sup></p></li>
+<li><p>“Questions about selves, autonomy, plasticity and the origin of biological novelty led us to ask what would happen if skin cells were removed from a frog embryo, dissociated and given a chance to reboot their multicellularity in vitro (Blackiston et al., 2021). Many outcomes are possible a priori: they could have spread out or died or formed a monolayer, etc. Instead (Fig. 7), what they did was to reassemble and form a novel proto-organism known as a Xenobot (Kriegman et al., 2020). These spherical constructs move through water by the coherent action of cilia, exhibiting a variety of self-actuated types of motility. They have a developmental sequence of novel forms that are unlike the typical Xenopus stages; they repair after damage, interact with their environment and show spontaneous changes in behaviour. These novel morphologies and behaviours do not require transgenes or genomic editing; Xenobots repurpose their native hardware (e.g.&nbsp;cilia, which are normally used to redistribute mucus) to new functionality. Amazingly, deprived of their normal way of reproducing, the emergent processes of Xenobots discover kinematic self-replication (a novel mode of reproduction not used by any other organism on Earth, to our knowledge), which they implement by herding loose collections of cells in their environment together to form the next generation of Xenobots (Kriegman et al., 2021). Nothing has been added to their completely wild-type frog genome; instead, developmental constraints have been removed. Without the normal instructions from the rest of the body telling these skin cells to form a passive, two-dimensional boundary layer to keep out the bacteria (a system of low agency), the true capacities of this cellular collective are revealed; it forms a three-dimensional individual with a more exciting life of self-initiated motile behaviour. The collective intelligence of these cells is revealed as, despite a novel environment and novel internal configuration that never existed in the frog evolutionary lineage, they discover novel ways to be a coherent organism. Their option space is normally distorted by the larger collective, but their default geodesic through option space (and their baseline preferences in morphospace) are revealed when these influences are removed. All this self-assembly and emergent organization takes place in 48 h and does not require aeons of evolutionary forces to become a good Xenobot.”<sup>41</sup></p></li>
+<li><p>“Consciousness is emerging as a basic and inherent property of biological organisms which is relevant for their survival and evolution. Importantly in this respect, plants and several unicellular organisms generate endogenous anaesthetics any time they are wounded or stressed. The hypothetical basic unit of consciousness in multicellular organisms, such as humans, non-human animals and plants might be represented by cellular and subcellular levels of consciousness. There are at least three possible sources of sentience and consciousness (understood as a gradual self-mapping tool) at the cellular and subcellular levels.”</p></li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn4"><p><a href="https://doi.org/10.1038/s41436-020-01019-3">Screening embryos for polygenic conditions and traits: ethical considerations for an emerging technology, (Lázaro-Muñoz et al., 2021)</a></p></li><li id="fn5"><p><a href="https://doi.org/10.1038/s41436-020-01019-3">Screening embryos for polygenic conditions and traits: ethical considerations for an emerging technology, (Lázaro-Muñoz et al., 2021)</a></p></li><li id="fn6"><p><a href="https://www.theguardian.com/science/2021/oct/17/polygenic-screening-of-embryos-is-here-but-is-it-ethical">Polygenic screening of embryos is here, but is it ethical?</a></p></li><li id="fn7"><p><a href="https://pubmed.ncbi.nlm.nih.gov/35451785/">From Genotype to Phenotype: Polygenic Prediction of Complex Human Traits</a></p></li><li id="fn8"><p><a href="https://journalofethics.ama-assn.org/article/keeping-backdoor-eugenics-ajar-disability-and-future-prenatal-screening/2016-04">Keeping the Backdoor to Eugenics Ajar?: Disability and the Future of Prenatal Screening (Thomas et al, 2016)</a></p></li><li id="fn9"><p><a href="https://journalofethics.ama-assn.org/article/keeping-backdoor-eugenics-ajar-disability-and-future-prenatal-screening/2016-04">Keeping the Backdoor to Eugenics Ajar?: Disability and the Future of Prenatal Screening (Thomas et al, 2016)</a></p></li><li id="fn10"><p><a href="https://journalofethics.ama-assn.org/article/keeping-backdoor-eugenics-ajar-disability-and-future-prenatal-screening/2016-04">Keeping the Backdoor to Eugenics Ajar?: Disability and the Future of Prenatal Screening (Thomas et al, 2016)</a></p></li><li id="fn11"><p><a href="https://www.buzzfeednews.com/article/kelseyweekman/mrbeast-helping-blind-people-youtube-stunt-philanthropy">MrBeast Built A YouTube Empire On Being Mr.&nbsp;Nice Guy, But His Stunt Helping 1,000 Blind People Divided Viewers, Who Called It “Demonic”, Kelsey Weekman</a></p></li><li id="fn12"><p><a href="https://www.fertstert.org/article/S0015-0282(22)00207-2/fulltext">Should preimplantation genetic testing for polygenic disease be offered to all – or none?</a></p></li><li id="fn13"><p><a href="https://sci-hub.ru/https://www.nature.com/articles/s41576-019-0127-1">Tam, V., Patel, N., Turcotte, M., Bossé, Y., Paré, G., &amp; Meyre, D. (2019). Benefits and limitations of genome-wide association studies. Nature Reviews Genetics. doi:10.1038/s41576-019-0127-1</a></p></li><li id="fn14"><p><a href="https://www.dwarkeshpatel.com/p/steve-hsu#details">Lunar Society Podcast</a></p></li><li id="fn15"><p><a href="https://www.takimag.com/article/the-fundamental-constant-of-sociology/">The Fundamental Constant of Sociology</a></p></li><li id="fn16"><p><a href="https://link.springer.com/chapter/10.1007/978-981-19-3072-0_11">Ovum Pick-Up and In Vitro Embryo Production in Bovine</a></p></li><li id="fn17"><p><a href="https://www.sciencedirect.com/science/article/abs/pii/S1642431X20303016">In vitro embryo production (IVEP) in camelids: Present status and future perspectives</a></p></li><li id="fn18"><p><a href="https://www.sciencedirect.com/science/article/abs/pii/S1642431X20303016">In vitro embryo production (IVEP) in camelids: Present status and future perspectives</a></p></li><li id="fn19"><p><a href="https://www.sciencedirect.com/science/article/abs/pii/S1642431X20303016">In vitro embryo production (IVEP) in camelids: Present status and future perspectives</a></p></li><li id="fn20"><p><a href="https://www.sciencedirect.com/science/article/pii/S0093691X22002576#bib4">The many problems of somatic cell nuclear transfer in reproductive cloning of mammals, Malin et al.&nbsp;2022</a></p></li><li id="fn21"><p><a href="https://www.sciencedirect.com/science/article/pii/S0093691X22002576#bib4">The many problems of somatic cell nuclear transfer in reproductive cloning of mammals, Malin et al.&nbsp;2022</a></p></li><li id="fn22"><p><a href="https://cordis.europa.eu/project/id/222664/reporting">Final Report Summary - QUANTOMICS (From Sequence to Consequence - Tools for the Exploitation of Livestock Genomes)</a></p></li><li id="fn23"><p><a href="https://www.fertstert.org/article/S0015-0282(99)00587-7/fulltext">Ethical issues in ovarian transplantation and donation</a></p></li><li id="fn24"><p><a href="https://www.fertstert.org/article/S0015-0282(99)00587-7/fulltext">Ethical issues in ovarian transplantation and donation</a></p></li><li id="fn25"><p><a href="https://www.genome.gov/Health/Genomics-and-Medicine/Polygenic-risk-scores">Polygenic Risk Scores Primer, NHGRI</a></p></li><li id="fn26"><p><a href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-020-00742-5">Polygenic risk scores: from research tools to clinical instruments, Lewis 2020</a></p></li><li id="fn27"><p><a href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-020-00742-5">Polygenic risk scores: from research tools to clinical instruments, Lewis 2020</a></p></li><li id="fn28"><p><a href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-020-00742-5">Polygenic risk scores: from research tools to clinical instruments, Lewis 2020</a></p></li><li id="fn29"><p><a href="https://www.medrxiv.org/content/10.1101/2022.06.15.22276102v1.full.pdf">Polygenic Health Index, General Health, and Disease Risk, Hsu et al 2022</a></p></li><li id="fn30"><p><a href="https://www.medrxiv.org/content/10.1101/2022.06.15.22276102v1.full.pdf">Polygenic Health Index, General Health, and Disease Risk, Hsu et al 2022</a></p></li><li id="fn31"><p><a href="https://www.medrxiv.org/content/10.1101/2022.06.15.22276102v1.full.pdf">Polygenic Health Index, General Health, and Disease Risk, Hsu et al 2022</a></p></li><li id="fn32"><p><a href="https://www.medrxiv.org/content/10.1101/2022.06.15.22276102v1.full.pdf">Polygenic Health Index, General Health, and Disease Risk, Hsu et al 2022</a></p></li><li id="fn33"><p><a href="https://infoproc.blogspot.com/2022/06/polygenic-health-index-general-health.html">Infoproc: Polygenic Health Index, General Health, and Disease Risk</a></p></li><li id="fn34"><p><a href="https://www.sciencedirect.com/science/article/pii/S0015028218303285#bib1">Use of preimplantation genetic testing for monogenic defects (PGT-M) for adult-onset conditions: an Ethics Committee opinion, Ethics Committee of ASRM, 2018</a></p></li><li id="fn35"><p><a href="https://www.mdpi.com/2073-4425/11/8/871">Preimplantation Genetic Testing for Monogenic Disorders, De Ryke 2020</a></p></li><li id="fn36"><p><a href="https://www.mdpi.com/2073-4425/11/8/871">Preimplantation Genetic Testing for Monogenic Disorders, De Ryke 2020</a></p></li><li id="fn37"><p><a href="https://www.mdpi.com/2073-4425/11/8/871">Preimplantation Genetic Testing for Monogenic Disorders, De Ryke 2020</a></p></li><li id="fn38"><p><a href="https://academic.oup.com/hropen/article/2020/1/hoz044/5715201">Survey on ART and IUI: legislation, regulation, funding and registries in European countries: The European IVF-monitoring Consortium (EIM) for the European Society of Human Reproduction and Embryology (ESHRE), Calhaz-Jorge 2020</a></p></li><li id="fn39"><p><a href="https://youtu.be/RjD1aLm4Thg">What Bodies Think About: Bioelectric Computation Outside the Nervous System - NeurIPS 2018</a></p></li><li id="fn40"><p><a href="https://youtu.be/RjD1aLm4Thg">What Bodies Think About: Bioelectric Computation Outside the Nervous System - NeurIPS 2018</a></p></li><li id="fn41"><p><a href="https://youtu.be/RjD1aLm4Thg">What Bodies Think About: Bioelectric Computation Outside the Nervous System - NeurIPS 2018</a></p></li><li id="fn42"><p><a href="https://academic.oup.com/biolinnean/advance-article/doi/10.1093/biolinnean/blac073/6643577">Endless forms most beautiful 2.0: teleonomy and the bioengineering of chimaeric and synthetic organisms, Levin 2022</a></p></li><li id="fn43"><p><a href="https://academic.oup.com/biolinnean/advance-article/doi/10.1093/biolinnean/blac073/6643577">Endless forms most beautiful 2.0: teleonomy and the bioengineering of chimaeric and synthetic organisms, Levin 2022</a></p></li><li id="fn44"><p><a href="https://academic.oup.com/biolinnean/advance-article/doi/10.1093/biolinnean/blac073/6643577">Endless forms most beautiful 2.0: teleonomy and the bioengineering of chimaeric and synthetic organisms, Levin 2022</a></p></li></ol></aside></section></section>
+<section>
+<section id="acronyms" class="title-slide slide level1 center">
+<h1>Acronyms</h1>
+<ul>
+<li>PGD: Preimplantation Genetic Diagnosis</li>
+<li>PGS: Polygenic Score</li>
+<li>IVF: In Vitro Fertilization</li>
+<li>PRS: Polygenic Risk Score</li>
+<li>GWAS: Genome Wide Association Study</li>
+<li>MOET: Multiple Ovulation Embryo Transfer</li>
+<li>IV(E)P: In Vitro (Embryo) Production</li>
+</ul>
+</section>
+<section id="post-future-science-fabulation" class="slide level2 smaller">
+<h2>[Post] Future (Science Fabulation)</h2>
+<ul>
+<li><em>Harrawayan ‘Compostist’ becoming-with non-human organisms<sup>1</sup></em></li>
+<li><em>“the biological nirvana awaiting our descendants”</em><sup>2</sup></li>
+<li>Synthetic Biology/ Synthetic Morphology</li>
+<li><ul>
+<li><em>“We can reach regions of the morphospace not explored by evolution, by changing electric circuits’ dynamics in vivo.”</em><sup>3</sup></li>
+</ul></li>
+<li><ul>
+<li><em>“As engineers we would like to know, what is possible to build? What are the edges of biological possibility?”</em><sup>4</sup></li>
+</ul></li>
+<li><ul>
+<li><em>“the next frontier is the software of life: developing a mature science of prediction and control over system-level phenotypes”</em><sup>5</sup></li>
+</ul></li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn45"><p><a href="https://www.emerald.com/insight/content/doi/10.1108/IJSSP-08-2019-0158/full/html">Becoming-with in a compost society — Haraway beyond posthumanism, Timeto 2020</a></p></li><li id="fn46"><p><a href="https://www.paradise-engineering.com/">THE HEDONISTIC IMPERATIVE: Heaven on Earth?</a></p></li><li id="fn47"><p><a href="https://youtu.be/RjD1aLm4Thg">What Bodies Think About: Bioelectric Computation Outside the Nervous System - NeurIPS 2018</a></p></li><li id="fn48"><p><a href="https://youtu.be/RjD1aLm4Thg">What Bodies Think About: Bioelectric Computation Outside the Nervous System - NeurIPS 2018</a></p></li><li id="fn49"><p><a href="https://academic.oup.com/biolinnean/advance-article/doi/10.1093/biolinnean/blac073/6643577">Endless forms most beautiful 2.0: teleonomy and the bioengineering of chimaeric and synthetic organisms, Levin 2022</a></p></li></ol></aside></section></section>
+<section id="causation" class="title-slide slide level1 smaller center">
+<h1>Causation</h1>
+<p>Correlation or causation?</p>
+<p>“OK”, you might say. “That’s well and good, but how do we know that these genetic differences are actually CAUSING someone to be taller or smarter rather than just spuriously correlated with height?”</p>
+<p>The main reason this is possible is because nature has already conducted a randomized control trial on our behalf. Every time your body produces a sperm or egg cell, your DNA is more or less randomly mixed up and half of it is given to the reproductive cell. This means that, conditional on parental genomes, sibling genomes are randomized!</p>
+<p>In turn, this means that if a gene can predict differences between siblings, you can be quite confident that it is in fact CAUSING the difference. This is actually quite a remarkable fact, and one that underpins the entire reason for believing embryo selection should work.</p>
+
+<img data-src="../images/causation.png" class="r-stretch"></section>
+
+<section id="epilogenics" class="title-slide slide level1 center" data-background-color="black">
+<h1>Epilogenics</h1>
+
+<img data-src="../_images/epilogenics.png" class="r-stretch"></section>
+
+
+
+<section>
+
+</section>
+
+
+
+
+
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        target: function(trigger) {
+          return trigger.previousElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto-reveal',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
