@@ -767,7 +767,7 @@
     "href": "Talks/SummerHarvest.html#free-online-computers",
     "title": "AI Summer Harvest:",
     "section": "Free Online Computers",
-    "text": "Free Online Computers\nThe following websites and companies offer considerable quantities of free GPU processing time online: - kaggle.com (30h/week) - Google Cloud (\\(300 startup bonus) - modal.com (10\\)/month) - HuggingFace.co (unspecified, but high limits and free hosting) - Google Collab (unspecified, plenty of free GPU time) - paperspace.com (unspecified, ‘free instances’, varies) - Amazon Sagemaker (2-6 months of free stuff) - Microsoft Azure ($100 startup bonus) - vast.ai (some free credit)"
+    "text": "Free Online Computers\nThe following websites and companies offer considerable quantities of free GPU processing time online:\n\nkaggle.com (30h/week)\nGoogle Cloud ($300 startup bonus)\nmodal.com ($10/month)\nHuggingFace.co (unspecified, but high limits and free hosting)\nGoogle Collab (unspecified, plenty of free GPU time)\npaperspace.com (unspecified, ‘free instances’, varies)\nAmazon Sagemaker (2-6 months of free stuff)\nMicrosoft Azure ($100 startup bonus)\nvast.ai (some free credit)"
   },
   {
     "objectID": "Talks/SummerHarvest.html#free-online-computers-1",
