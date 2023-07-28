@@ -728,6 +728,13 @@
     "text": "Misc\n“We proposed an approach that allows natural language agents to learn from past mistakes and redirect future decisions in planning sequences which removes the human trainer in a human-in-the-middle approach.”1\n\n\n\n\nReflexion: an autonomous agent with dynamic memory and self-reflection"
   },
   {
+    "objectID": "Talks/SummerHarvest.html#section",
+    "href": "Talks/SummerHarvest.html#section",
+    "title": "AI Summer Harvest:",
+    "section": "",
+    "text": "September 24, 2014"
+  },
+  {
     "objectID": "Talks/SummerHarvest.html#artificial-what",
     "href": "Talks/SummerHarvest.html#artificial-what",
     "title": "AI Summer Harvest:",
@@ -749,11 +756,11 @@
     "text": "Artificial How?"
   },
   {
-    "objectID": "Talks/SummerHarvest.html#open-source-models",
-    "href": "Talks/SummerHarvest.html#open-source-models",
+    "objectID": "Talks/SummerHarvest.html#artificial-how-1",
+    "href": "Talks/SummerHarvest.html#artificial-how-1",
     "title": "AI Summer Harvest:",
-    "section": "Open Source Models",
-    "text": "Open Source Models"
+    "section": "Artificial How?",
+    "text": "Artificial How?"
   },
   {
     "objectID": "Talks/SummerHarvest.html#free-online-training",
@@ -763,15 +770,22 @@
     "text": "Free Online Training"
   },
   {
-    "objectID": "Talks/SummerHarvest.html#free-online-computers",
-    "href": "Talks/SummerHarvest.html#free-online-computers",
+    "objectID": "Talks/SummerHarvest.html#open-source-models",
+    "href": "Talks/SummerHarvest.html#open-source-models",
     "title": "AI Summer Harvest:",
-    "section": "Free Online Computers",
-    "text": "Free Online Computers\nThe following websites and companies offer considerable quantities of free GPU processing time online:\n\nkaggle.com (30h/week)\nGoogle Cloud ($300 startup bonus)\nmodal.com ($10/month)\nHuggingFace.co (unspecified, but high limits and free hosting)\nGoogle Collab (unspecified, plenty of free GPU time)\npaperspace.com (unspecified, ‘free instances’, varies)\nAmazon Sagemaker (2-6 months of free stuff)\nMicrosoft Azure ($100 startup bonus)\nvast.ai (some free credit)"
+    "section": "Open Source Models",
+    "text": "Open Source Models"
   },
   {
-    "objectID": "Talks/SummerHarvest.html#free-online-computers-1",
-    "href": "Talks/SummerHarvest.html#free-online-computers-1",
+    "objectID": "Talks/SummerHarvest.html#dont-you-need-an-expensive-gpu",
+    "href": "Talks/SummerHarvest.html#dont-you-need-an-expensive-gpu",
+    "title": "AI Summer Harvest:",
+    "section": "Don’t you Need an Expensive GPU",
+    "text": "Don’t you Need an Expensive GPU\nThe following websites and companies offer considerable quantities of free GPU processing time online:\n\nkaggle.com (30h/week)\nGoogle Cloud ($300 startup bonus)\nmodal.com ($10/month)\nHuggingFace.co (unspecified, but high limits and free hosting)\nGoogle Collab (unspecified, plenty of free GPU time)\npaperspace.com (unspecified, ‘free instances’, varies)\nAmazon Sagemaker (2-6 months of free stuff)\nMicrosoft Azure ($100 startup bonus)\nvast.ai (some free credit)"
+  },
+  {
+    "objectID": "Talks/SummerHarvest.html#free-online-computers",
+    "href": "Talks/SummerHarvest.html#free-online-computers",
     "title": "AI Summer Harvest:",
     "section": "Free Online Computers",
     "text": "Free Online Computers"
@@ -786,6 +800,13 @@
   {
     "objectID": "Talks/SummerHarvest.html#how-easy-is-it-really-1",
     "href": "Talks/SummerHarvest.html#how-easy-is-it-really-1",
+    "title": "AI Summer Harvest:",
+    "section": "How Easy is it Really?",
+    "text": "How Easy is it Really?"
+  },
+  {
+    "objectID": "Talks/SummerHarvest.html#how-easy-is-it-really-2",
+    "href": "Talks/SummerHarvest.html#how-easy-is-it-really-2",
     "title": "AI Summer Harvest:",
     "section": "How Easy is it Really?",
     "text": "How Easy is it Really?"
