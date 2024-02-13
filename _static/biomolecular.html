@@ -5,15 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Embedded Dataset Demo</title>
 <style>
-  body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #181818; color: #d0d0d0; display: flex; justify-content: center; align-items: center; height: 100vh; }
-  .diff-container { background-color: #181818; padding: 10px; text-align: left; }
-  .diff-container { padding-left: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); margin-bottom: 10px; }
+  body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #ffffff; color: #000000; min-height: 100vh; }
+  .diff-container { background-color: #f0f0f0; padding: 10px; text-align: left; max-width: 800px; margin: 10px auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
   .diff { white-space: pre-wrap; margin: 0; }
   .before-text { display: none; }
   .diff-container:hover .before-text { display: block; }
   .diff-container:hover .after-text { display: none; }
-  .deletion { color: red; }
-  .insertion { color: green; }
+  .deletion { color: #ff0000; }
+  .insertion { color: #008000; }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/diff_match_patch/20121119/diff_match_patch_uncompressed.js"></script>
 <script>
