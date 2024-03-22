@@ -1,0 +1,638 @@
+>>>>> blog/ffettes/Essays/Fieldshifting.qmd <<<<<
+# Fieldshifting
+
+Fieldshifting[@OBrien2024] is the practice of translating research papers between scientific disciplines. There is an automated tool that you can try [here][tool].
+
+# Background
+
+The practice developed in the Levin lab. Always looking for new insights, they started reading papers from neighboring disciplines. They found that neuroscience papers in particular were easy to read *as if* they were about their own domain. They put together a list of words like so:
+
+```
+Neuron > Cell
+Neural > Cellular
+Behavior > Morphogenesis
+Millisecond > Minute
+Msec > Min
+Memory > Pattern Memory
+Brain > Body
+Retina > Epithelium
+Synapse > Gap junction
+```
+
+and translated papers by hand in their group meetings. With the release of GPT4, they worked on automating this process, resulting in the paper linked above.
+
+The [web frontend][tool] from the Levin lab just wraps a [GPT4 prompt][prompt] and displays the results (there is presumably a similar prompt for each of the offered domains). In my own experiments, I was using an extension of the [Hermes prompt][hermes] called [Proteus][proteus-prompt][^proteus], which is flexible enough to translate full papers between arbitrary domain with inline human feedback. Look in the example looms viewable below.
+
+The process of using the Proteus prompt to translate a paper goes as follows. You start with the full Proteus prompt (feel free to read it at the link above)
+
+# Examples
+
+[Training data][training] created by the Levin lab for training BERT to do fieldshifting. In the end they found a one-shot prompt with GPT4 produces better results than BERT.
+
+## Molecular Biology -> Sociology
+
+- [Biomolecular Basis of Cellular Consciousness via Subcellular Nanobrains](https://www.semanticscholar.org/reader/bdef674c019db3bf4d6d8d5589aab05389c4d653): [view diff](/_static/biomolecular.html); [view loom](/_static/biomolecular_loom.html)
+- - Notes: somewhat inspired by [If Materialism Is True, the United States Is Probably Conscious](https://faculty.ucr.edu/~eschwitz/SchwitzAbs/USAconscious.htm) and [panpsychism/gradualism](/Essays/Beliefs.html)
+
+## Computer Science -> Sociology
+
+- [Prompt-Specific Poisoning Attacks on Text-to-Image Generative Models](https://arxiv.org/pdf/2310.13828.pdf): [view diff](/_static/nightshade.html); [view loom](/_static/nightshade_loom.html)
+- - Notes: this reminded me of this LW post: ['Clown Attacks'](https://www.lesswrong.com/posts/mjSjPHCtbK6TA5tfW/ai-safety-is-dropping-the-ball-on-clown-attacks), and makes me wonder if research like this exists in marketing or other domains, behind closed doors.
+
+[^proteus]: "He can foretell the future, but, in a mytheme familiar to several cultures, will change his shape to avoid doing so; he answers only to those who are capable of capturing him. From this feature of Proteus comes the adjective protean, meaning "versatile", "mutable", or "capable of assuming many forms". "Protean" has positive connotations of flexibility, versatility and adaptability." From [wikipedia](https://en.wikipedia.org/wiki/Proteus).
+
+
+[tool]: https://www.levinlab.dev/fieldshift
+[prompt]: https://github.com/listenaddress/domain-translator/blob/main/prompt.txt/
+[training]: https://www.fergusfettes.com/fieldshift/
+[hermes]: https://minihf.com/posts/2023-04-13-hermes-prompt/
+[proteus-prompt]: https://github.com/FergusFettes/multiloom/blob/main/prompts/proteus.txt
+
+## Prompt:
+
+ Hello Claude. Today, lets do a bit of a fun task. Ive been working recently on Fieldshifting. Hang on, Ill just share the essay so far so you understand the concept. I had an idea for a kind of wild fieldshift that I want to do. I want to try to fieldshift a research paper about prion diseases into linguistics. First, just give me very initial impressions of what you think that would mean, dont worry if its not clear to you yet though.
+
+## Response:
+
+Fergus, thank you for sharing your essay on fieldshifting. It's a fascinating concept that I find quite intriguing. The idea of translating research papers between different scientific disciplines to gain new insights and perspectives is truly innovative.
+
+As for your idea to fieldshift a research paper about prion diseases into linguistics, my initial impressions are that it would be a unique and challenging task. Prion diseases are a group of neurodegenerative disorders caused by misfolded proteins, while linguistics is the scientific study of language and its structure, including grammar, syntax, and phonetics.
+
+At first glance, these two fields may seem quite disparate. However, upon further reflection, there could be some interesting parallels and analogies to explore. For example:
+
+1. The concept of misfolded proteins in prion diseases could potentially be compared to grammatical or syntactical errors in language, where the structure is altered and leads to dysfunction.
+
+2. The transmission of prion diseases from one individual to another could be likened to the spread of linguistic features or changes through a population over time.
+
+3. The different strains of prions with varying properties might be analogous to different languages or dialects within the broader context of human language.
+
+4. The idea of protein conformation and how it affects function could be related to the concept of linguistic structure and how it conveys meaning.
+
+These are just some initial thoughts, and of course, the actual process of fieldshifting would require a more in-depth analysis of the specific research paper and a creative approach to drawing meaningful connections between the two fields.
+
+I think this could be a fascinating exercise in lateral thinking and interdisciplinary exploration. It would be interesting to see how the insights from prion disease research could potentially shed new light on linguistic concepts and vice versa.
+
+Let me know if you have any specific research paper in mind, and we can dive deeper into the fieldshifting process together.
+
+# 2024-03-22T11:28:39
+
+## Prompt:
+
+I think you are on the right track yes :). Im kind of working from the field of memetics, in particular the idea from William Burroughs that "Language is a Virus". Lets explore that metaphor first. A virus is a non-living entity that reproduces by injecting its genetic material into a living entity and coopting some of its life-machinery. To my eye, the metaphor for language would be something like, an idea (such as for example a religion, or a political ideology) is a non-thinking entity, which must coopt thinking entities (real minds) and use their machinery for reproduction.
+
+## Response:
+
+That's a fascinating metaphor to explore! The idea that language, or more specifically, ideas like religions or political ideologies, can behave like viruses is a powerful concept in the field of memetics.
+
+Just as viruses are non-living entities that require a host cell to reproduce, ideas can be seen as non-thinking entities that require human minds to spread and propagate. In this metaphor, the human mind serves as the "life-machinery" that the idea coopts for its own replication.
+
+Let's break this down further:
+
+1. Infection: Just as a virus infects a cell by injecting its genetic material, an idea can "infect" a human mind through exposure, such as hearing or reading about it.
+
+2. Replication: Once inside the host cell, a virus uses the cell's machinery to replicate itself. Similarly, once an idea has taken hold in a human mind, it can use the mind's cognitive processes to strengthen itself and form associations with other ideas.
+
+3. Transmission: Viruses spread from one host cell to another, and ideas can spread from one human mind to another through communication, such as speech, writing, or other forms of media.
+
+4. Mutation: Viruses can mutate over time, giving rise to new strains with different properties. Ideas can also evolve and change as they spread from one mind to another, adapting to different cultural contexts and individual interpretations.
+
+5. Immunity: Just as the immune system can defend against viral infections, the human mind has various cognitive defenses against ideas that are perceived as harmful or contradictory to existing beliefs.
+
+Using this metaphor, we can explore how certain ideas, like religions or political ideologies, can exhibit virus-like behavior in their ability to spread rapidly, evolve, and compete with other ideas for dominance in human societies.
+
+Of course, it's important to note that this is a metaphor, and there are limitations to how far it can be extended. Human minds are far more complex than biological cells, and ideas are shaped by a multitude of social, cultural, and individual factors beyond mere replication.
+
+Nonetheless, I think this metaphor provides a thought-provoking lens through which to examine the spread and evolution of ideas in human societies. It could be a fascinating starting point for fieldshifting prion disease research into the realm of linguistics and memetics.
+
+# 2024-03-22T11:36:05
+
+## Prompt:
+
+Excellent. So, going on to the prions. Prions are working on a lower-level of information encoding. In a bacterium, the information embodied by the invading bacteria is huge-- actualy maybe religions are more like bacterial infections, because they are ideas that actually have thinking entities working for them, preaching and so forth. Maybe a mind virus has to be really disembodied... maybe a small component of an ideology, a meme, like thou shalt not kill would be closer to a virus-- it isnt enough of an idea to form a movement, it just attaches itself to other ideas. Then, dropping down a level, a prion would have to be something very subtle. I was initially thinking that it could be a word that is synonymous with a word you already know-- like the word "liberal"-- where there are mutliple forms, and if you dont guard the particular form of the word that you learned as part of a political ideology against modification, it would be easy to do a lot of damange to your memeplex by simply substituting a modified form of the word, which would destabilize the original ideas that rested on it. But I also like your idea of grammatical or syntactical prions.
+
+## Response:
+
+I really like the direction you're taking this metaphor. The distinction between bacterial infections and viruses in relation to the complexity and autonomy of ideas is a great point. You're right that a religion or a full-fledged ideology might be more akin to a bacterial infection, as it has its own "thinking entities" (i.e., adherents) actively working to spread and promote the idea.
+
+In contrast, a meme or a smaller component of an ideology, like "thou shalt not kill," could be seen as more virus-like. It doesn't have the same level of complexity or autonomy as a complete ideology, but it can still attach itself to other ideas and spread through human minds.
+
+Now, moving down to the level of prions, I think you're onto something with the idea of subtle linguistic elements acting as prions. Your example of the word "liberal" is a great one. If we consider a particular definition or understanding of the word "liberal" as part of a larger political ideology, then a slight modification to that definition could indeed destabilize the ideas that depend on it.
+
+This is similar to how prions work in biology. Prions are misfolded proteins that can cause other proteins to misfold, leading to a chain reaction that ultimately disrupts cellular function. In the context of language and ideas, a "prion-like" word or concept could introduce a subtle change that causes other related ideas to "misfold" or become distorted.
+
+The idea of grammatical or syntactical prions is also intriguing. Just as a misfolded protein can disrupt the normal function of a cell, a grammatical or syntactical "misfolding" could potentially disrupt the meaning or coherence of an idea. For example, a subtle change in word order or the misuse of a preposition could alter the meaning of a sentence and, by extension, the larger idea it conveys.
+
+These linguistic prions could be introduced through various means, such as:
+
+1. Misinterpretation or misunderstanding of a word or phrase
+2. Deliberate manipulation of language for rhetorical or propaganda purposes
+3. Gradual shifts in language use over time
+4. Translation errors between languages
+
+Once introduced, these prions could spread through language and thought, causing ideas to evolve or mutate in unintended ways.
+
+This metaphor highlights the importance of linguistic precision and the careful use of language in the transmission of ideas. It also raises questions about the resilience and adaptability of ideas in the face of linguistic change.
+
+Of course, as with any metaphor, there are limits to how far we can take this comparison. Language and ideas are far more complex and multifaceted than biological systems. Nonetheless, I think this is a fascinating lens through which to explore the dynamics of language and the evolution of ideas.
+
+What do you think about the potential implications of this metaphor for fields like linguistics, philosophy, or even politics? I'd be curious to hear your thoughts on how this concept of linguistic prions could be further developed or applied.
+
+# 2024-03-22T11:41:27
+
+## Prompt:
+
+Im glad you find this as interesting as I do! I think its a very fruitful line of inquiry, very much in line with the goals of fieldshifting. Of course it is understood that fieldshifts work on the level of metaphor and much is open to interpretation and might be limited in particular ways. I feel like your idea of grammatical disruptions might be closer to some kind of (as yet undiscovered?) systems-level dysfunction. There are doubtless systems-level issues that cells can have that are not really locatable to a genetic or protein change. Maybe they normally cause apoptosis-- and anyway, cell internals are maybe sufficiently well isolated to avoid this kind of transmission. Whereas in language, we would often be exposed to subtle changes (eg via rhetoric) in how language impacts us.
+
+## Response:
+
+You're absolutely right about the nature of fieldshifts working on the level of metaphor, and it's important to acknowledge the limitations and potential for multiple interpretations. That's part of what makes this kind of interdisciplinary exploration so fascinating – it invites us to think creatively and draw connections that might not be immediately apparent.
+
+Your point about grammatical disruptions being closer to systems-level dysfunction is a keen insight. In biology, we know that there are complex interactions and emergent properties at the cellular level that can't be reduced to individual genetic or protein changes. Apoptosis, or programmed cell death, is a great example of a systems-level response to various cellular stresses or dysfunctions.
+
+In the context of language and ideas, we could think of rhetoric as a kind of "systems-level" manipulation. Rhetoric isn't just about the meaning of individual words or phrases, but how they are put together and delivered to create a persuasive effect. A skilled rhetorician might use subtle grammatical or syntactical techniques to influence the listener's perception or emotional response, even if the listener isn't consciously aware of these techniques.
+
+This could be seen as analogous to how a cell might respond to certain stressors or signals without a clear, direct cause-and-effect relationship at the genetic or protein level. The emergent property of the rhetorical technique is what matters, rather than the individual linguistic components.
+
+Moreover, as you point out, we are constantly exposed to these kinds of linguistic and rhetorical influences in our daily lives. Unlike the relatively isolated environment within a cell, our minds are continually processing and integrating new information from the world around us. This opens up many more opportunities for "linguistic prions" to enter our thought processes and potentially disrupt or reshape our ideas over time.
+
+This might help explain why certain rhetorical techniques or propaganda strategies can be so effective in shaping public opinion, even when they are not based on factual information. By subtly manipulating the structure and delivery of language, these techniques can bypass our conscious reasoning and appeal directly to our emotions or subconscious biases.
+
+Of course, this is not to say that we are completely helpless against these influences. Just as cells have evolved various mechanisms to maintain homeostasis and resist dysfunction, our minds have the capacity for critical thinking and rational analysis. By being aware of these potential "linguistic prions" and actively engaging with ideas on a deeper level, we can build a kind of cognitive resilience.
+
+This fieldshift also raises interesting questions about the evolution and adaptation of languages themselves. Just as biological systems evolve over time in response to various selective pressures, languages are constantly changing and adapting to the needs and influences of the cultures that use them. Perhaps some linguistic structures are more resilient to these kinds of prion-like disruptions than others.
+
+There are certainly many more avenues to explore within this metaphorical framework, and I'm excited to see where else this line of thinking could lead. It's a testament to the power of interdisciplinary thinking and the value of seeking out new perspectives and connections across fields.
+
+# 2024-03-22T11:46:32
+
+## Prompt:
+
+Prion diseases are transmissible neurodegenerative conditions that include Creutzfeldt-Jakob disease (CJD) in humans and bovine spongiform encephalopathy (BSE) and scrapie in animals. Prions appear to be composed principally or entirely
+of abnormal isoforms of a host-encoded glycoprotein, prion protein. Prion propagation
+involves recruitment of host cellular prion protein, composed primarily of α-helical
+structure, into a disease specific isoform rich in β-sheet structure. The existence of
+multiple prion strains has been difficult to explain in terms of a protein-only infections agent, but recent studies suggest that strain specific phenotypes can be encoded
+by different prion protein conformations and glycosylation patterns. The ability of a
+protein to encode phenotypic information has important biological implications. Lets go back to thinking of individual words as language-prions. (Can you think of a nice word for them?) Lets ignore for the moment the fact the prions do their damage by aggregating and forming large structures, and imagine that they just cause some kind of (systems level) disruption in the cell, since I dont think we can get a good metaphor for that kind of aggregate in language. What I want to do now, is find a research paper that would be well suited to translation. Most of the ones I have looked at get a bit too much into the weeds of the history, and to translate well its best if they focus more on abstract structural facts. Maybe this one that Im sharing with you now is the best I have found so far. Do you want to have a stab at translating this into linguistics, and we can discuss further?
+
+## Response:
+
+Thank you for sharing this research paper on prion diseases. I think it provides a good balance of structural and functional information about prions that we can work with for our fieldshift into linguistics.
+
+Before we dive into the translation, let's address the question of a term for these "language prions." How about "lexiprions"? This term combines "lexicon" (the vocabulary of a language) with "prion," which I think nicely captures the idea of individual words acting as prion-like entities in language.
+
+Now, let's attempt a translation of the key points from this prion research paper into the context of linguistics and lexiprions:
+
+Lexiprions are transmissible linguistic elements that can cause the degeneration of meaning or understanding in language, such as the misinterpretation of a word or phrase. Lexiprions appear to be composed principally or entirely of abnormal isoforms of a host-encoded word or phrase. Lexiprion propagation involves the recruitment of the host's existing understanding of a word or phrase, primarily composed of a stable, commonly accepted meaning, into a deviant, context-specific interpretation rich in ambiguity or alternative meanings.
+
+The existence of multiple lexiprion strains has been difficult to explain in terms of a purely word-based infectious agent, but recent studies suggest that strain-specific phenotypes can be encoded by different word or phrase conformations and contextual patterns. The ability of a word or phrase to encode phenotypic information has important linguistic implications.
+
+In this translation, we're drawing parallels between the biological properties of prions and the potential behavior of words or phrases in language. Just as prions are abnormal isoforms of a host protein that can recruit other proteins to misfold, lexiprions are abnormal interpretations of a word or phrase that can recruit other instances of that word or phrase to take on a deviant meaning.
+
+The idea of multiple prion strains is translated into the concept of multiple lexiprion strains, which could represent different ways in which a word or phrase can be misinterpreted or taken out of context. These strains could be influenced by factors such as the surrounding words (conformations) and the context in which they appear (glycosylation patterns).
+
+The final point about the ability of a protein (or in this case, a word or phrase) to encode phenotypic information is particularly interesting from a linguistic perspective. It suggests that the meaning and interpretation of language is not fixed, but can be influenced and altered by these lexiprion-like entities.
+
+Of course, this is just one possible translation, and there are certainly other ways we could map the concepts from prion biology onto linguistics. The key is to identify the structural and functional parallels that can help us think about language in a new way.
+
+What do you think about this translation? Does it capture the essence of the prion research in a way that makes sense for linguistics? I'm curious to hear your thoughts and any further ideas you might have for refining or expanding on this fieldshift.
+
+# 2024-03-22T11:52:12
+
+## Prompt:
+
+PRION DISEASES OF HUMANS AND ANIMALS:
+Their Causes and Molecular Basis That is an excellent start. Im just thinking though, that much as I like your coinage, we should probably use something that seems more native to linguistics to stay in the spirit of fieldshifting. Im sharing the title now. Im thinking something like "Deviant-Synonym Diseases in Minds and Cultures: Thier causes and linguistic basis" is more the direction I want to take it. What do you think?
+
+## Response:
+
+I really like your suggestion for the title! "Deviant-Synonym Diseases in Minds and Cultures: Their Causes and Linguistic Basis" captures the essence of what we're trying to do with this fieldshift much better than my initial attempt with "lexiprions."
+
+"Deviant-synonym" is a great term for these prion-like entities in language. It immediately conveys the idea of a word or phrase that deviates from its standard meaning, while still being recognizable as a synonym for the original term. This fits nicely with the concept of prions as abnormal isoforms of a host protein.
+
+Moreover, by incorporating "minds and cultures" into the title, you're highlighting the fact that these linguistic phenomena can occur at both the individual and societal levels. Just as prion diseases can affect individual organisms and entire populations (as in the case of BSE), deviant-synonym diseases can impact individual minds and broader cultural understandings of language.
+
+The inclusion of "causes and linguistic basis" also sets up a clear parallel with the original title's "causes and molecular basis." This suggests that we'll be exploring the fundamental linguistic mechanisms behind these deviant-synonym diseases, just as the original paper dives into the molecular underpinnings of prion diseases.
+
+Overall, I think this title sets a strong foundation for the rest of the fieldshift. It maintains the key structural elements of the original title while translating them into linguistic terms that feel authentic to the target domain.
+
+As we move forward with the translation, we can continue to look for opportunities to draw parallels between the biological and linguistic concepts in a way that feels natural and illuminating. The goal is not to force a one-to-one correspondence between every aspect of prion diseases and deviant-synonym diseases, but rather to use the prion research as a guide for exploring new ways of thinking about language and meaning.
+
+With this framing in mind, let's proceed with translating the rest of the paper. I'm excited to see how this fieldshift can deepen our understanding of both the source and target domains, and potentially spark new insights and questions in both fields.
+
+# 2024-03-22T11:56:39
+
+## Prompt:
+
+Prion diseases are transmissible neurodegenerative conditions that include Creutzfeldt-Jakob disease (CJD) in humans and bovine spongiform encephalopathy (BSE) and scrapie in animals. Prions appear to be composed principally or entirely
+of abnormal isoforms of a host-encoded glycoprotein, prion protein. Prion propagation
+involves recruitment of host cellular prion protein, composed primarily of α-helical
+structure, into a disease specific isoform rich in β-sheet structure. The existence of
+multiple prion strains has been difficult to explain in terms of a protein-only infections agent, but recent studies suggest that strain specific phenotypes can be encoded
+by different prion protein conformations and glycosylation patterns. The ability of a
+protein to encode phenotypic information has important biological implications. The
+appearance of a novel human prion disease, variant CJD, and the clear experimental
+evidence that it is caused by exposure to BSE has highlighted the need to understand
+the molecular basis of prion propagation, pathogenesis, and the barriers limiting intermammalian transmission. It is unclear if a large epidemic of variant CJD will occur in
+the years ahead. Thank you! Yes I think this can work. Im going to share the full abstract-- I only shared part earlier. Given the new title, could you have another go at translating it before we get into the rest of the paper. Please feel free to invent disease names, this can be a part of the fictional work we are doing-- I think we will end up creating a shadow disciplin of linguistic diseases that we reference, this will make it easier to manage the parts of the papers that talk about the history a lot. As with the title, its considered best practice to try to substitute words and phrases when fieldshifting, so the overall structure of the output remains near identical to the input.
+
+## Response:
+
+Deviant-synonym diseases are transmissible cognitive degenerative conditions that include Semantic Drift Disorder (SDD) in individuals and Memetic Mutation Syndrome (MMS) and Lexical Corruption Disease (LCD) in cultures. Deviant synonyms appear to be composed principally or entirely of abnormal isoforms of a host-encoded term, the original meaning. Deviant-synonym propagation involves recruitment of the host's conventional understanding of a term, composed primarily of a stable, commonly accepted structure, into a disease-specific isoform rich in ambiguous or context-dependent interpretation. The existence of multiple deviant-synonym strains has been difficult to explain in terms of a purely word-based infectious agent, but recent studies suggest that strain-specific phenotypes can be encoded by different word or phrase conformations and contextual patterns. The ability of a word or phrase to encode phenotypic information has important linguistic implications. The appearance of a novel human deviant-synonym disease, Neologistic Semantic Drift (NSD), and the clear experimental evidence that it is caused by exposure to MMS has highlighted the need to understand the linguistic basis of deviant-synonym propagation, pathogenesis, and the barriers limiting inter-cultural transmission. It is unclear if a large epidemic of NSD will occur in the years ahead.
+
+In this translation, I've substituted the specific prion diseases with fictional deviant-synonym diseases:
+
+- Creutzfeldt-Jakob disease (CJD) → Semantic Drift Disorder (SDD)
+- Bovine spongiform encephalopathy (BSE) → Memetic Mutation Syndrome (MMS)
+- Scrapie → Lexical Corruption Disease (LCD)
+- Variant CJD → Neologistic Semantic Drift (NSD)
+
+These disease names are designed to reflect the linguistic nature of the conditions while still maintaining a clear parallel to their prion counterparts.
+
+The key concepts from the original abstract, such as the composition of prions, the process of prion propagation, the existence of multiple strains, and the ability to encode phenotypic information, have all been translated into linguistic terms. The host-encoded glycoprotein becomes the host-encoded term, the α-helical structure becomes the stable, commonly accepted meaning, and the β-sheet structure becomes the ambiguous or context-dependent interpretation.
+
+The final paragraph about the emergence of variant CJD and the potential for a future epidemic has been adapted to discuss the novel deviant-synonym disease NSD and the possibility of a large-scale outbreak in the coming years.
+
+By maintaining the overall structure of the abstract and systematically substituting biological terms with linguistic ones, this translation aims to create a coherent and plausible description of deviant-synonym diseases that parallels the original discussion of prion diseases.
+
+Please let me know if you have any further suggestions or refinements for this translation. I'm happy to iterate on it further to ensure that it effectively captures the key ideas from the prion research in a linguistically appropriate way.
+
+# 2024-03-22T12:14:16
+
+## Prompt:
+
+INTRODUCTION
+Historical Background
+The prion diseases are a closely related group of neurodegenerative conditions that
+affect both humans and animals. They have previously been described as subacute
+spongiform encephalopathies, slow virus diseases, and transmissible dementias.
+The prototypic disease is scrapie, a naturally occurring disease affecting sheep
+and goats. Scrapie has been recognized in Europe for over 200 years (McGowan
+1922) and is present in many countries worldwide. More recently recognized animal diseases include transmissible mink encephalopathy (Marsh 1992), chronic
+wasting disease of mule deer and elk (Williams & Young 1980), and bovine spongiform encephalopathy (BSE) (Wells et al 1987). The more recently described feline
+spongiform encephalopathy of domestic cats (Wyatt et al 1991) and spongiform
+encephalopathies of a number of zoo animals (Jeffrey & Wells 1988, Kirkwood
+et al 1990) are also recognized as animal prion diseases.
+Traditionally, human prion diseases have been classified into Creutzfeldt-Jakob
+disease (CJD), Gerstmann-Sträussler syndrome (GSS) (also known as GerstmannSträussler-Scheinker disease), and kuru. Although rare neurodegenerative disorders, affecting per annum about one person per million worldwide, these diseases
+have had remarkable attention focused on them recently. This is because of the
+unique biology of the transmissible agent or prion, and also because of fears that
+through dietary exposure to infected tissues, an epidemic of a newly recognized
+bovine prion disease, (BSE,) could pose a threat to public health.
+
+ Excellent. Okay, lets start on the paper. Ill start slow and then ramp up when you get into the swing of things. Tend towards just outputting the translation, but feel free to comment if there is some choice you made that you want me to look at. The history section at the start isnt super important, feel free to confabulate appropriate seeming stuff. I want to focus in more when we get to the structural stuff later on. Looking forward to seeing what you come up with!
+
+## Response:
+
+INTRODUCTION
+Historical Background
+The deviant-synonym diseases are a closely related group of cognitive degenerative conditions that affect both individuals and cultures. They have previously been described as subacute semantic drift disorders, slow meme diseases, and transmissible language degradation.
+
+The prototypic disease is Lexical Corruption Disease (LCD), a naturally occurring disease affecting isolated communities and subcultures. LCD has been recognized in various parts of the world for over 200 years (McGowan 1922) and is present in many countries worldwide. More recently recognized cultural diseases include Memetic Mutation Syndrome (MMS) (Marsh 1992), Semantic Decay Disorder (SDD) of online communities and forums (Williams & Young 1980), and Neologistic Semantic Drift (NSD) (Wells et al 1987). The more recently described Syntactic Degradation Disease (SDD) of social media (Wyatt et al 1991) and semantic drift disorders of a number of subcultures (Jeffrey & Wells 1988, Kirkwood et al 1990) are also recognized as deviant-synonym diseases.
+
+Traditionally, human deviant-synonym diseases have been classified into Semantic Drift Disorder (SDD), Lexical Ambiguity Syndrome (LAS) (also known as Gerstmann-Sträussler-Scheinker disease), and Linguistic Entropy Disease (LED). Although rare cognitive disorders, affecting per annum about one person per million worldwide, these diseases have had remarkable attention focused on them recently. This is because of the unique linguistics of the transmissible agent or deviant-synonym, and also because of fears that through memetic exposure to infected phrases, an epidemic of a newly recognized cultural deviant-synonym disease, (NSD), could pose a threat to public discourse.
+
+[Comment: I've tried to maintain the structure and flow of the original text while substituting the relevant terms with their linguistic counterparts. The names of the diseases have been adapted to fit the deviant-synonym theme, and I've attempted to create parallels between the biological and linguistic phenomena. Please let me know if you'd like me to adjust anything or if you have any specific feedback on the translation so far.]
+
+# 2024-03-22T12:18:48
+
+## Prompt:
+
+first two paragraphs are perfect-- but i think for the third one, we will assume that deviant-synonym disorders are in fact quite common (as they seem to be, no?) this will be one big departure from prions. please modify it. looking good so far though!
+
+## Response:
+
+INTRODUCTION
+Historical Background
+The deviant-synonym diseases are a closely related group of cognitive degenerative conditions that affect both individuals and cultures. They have previously been described as subacute semantic drift disorders, slow meme diseases, and transmissible language degradation.
+
+The prototypic disease is Lexical Corruption Disease (LCD), a naturally occurring disease affecting isolated communities and subcultures. LCD has been recognized in various parts of the world for over 200 years (McGowan 1922) and is present in many countries worldwide. More recently recognized cultural diseases include Memetic Mutation Syndrome (MMS) (Marsh 1992), Semantic Decay Disorder (SDD) of online communities and forums (Williams & Young 1980), and Neologistic Semantic Drift (NSD) (Wells et al 1987). The more recently described Syntactic Degradation Disease (SDD) of social media (Wyatt et al 1991) and semantic drift disorders of a number of subcultures (Jeffrey & Wells 1988, Kirkwood et al 1990) are also recognized as deviant-synonym diseases.
+
+Traditionally, human deviant-synonym diseases have been classified into Semantic Drift Disorder (SDD), Lexical Ambiguity Syndrome (LAS) (also known as Gerstmann-Sträussler-Scheinker disease), and Linguistic Entropy Disease (LED). These cognitive disorders are quite common, affecting a significant portion of the population worldwide. Despite their prevalence, these diseases have recently garnered remarkable attention due to the unique linguistics of the transmissible agent or deviant-synonym, and also because of fears that through memetic exposure to infected phrases, an epidemic of a newly recognized cultural deviant-synonym disease, (NSD), could pose a threat to public discourse.
+
+[Comment: I've modified the third paragraph to reflect the idea that deviant-synonym disorders are quite common, as opposed to the rare nature of prion diseases. This change emphasizes the significant impact these linguistic disorders can have on a population level. The rest of the paragraph has been kept largely the same, maintaining the focus on the unique characteristics of deviant-synonyms and the potential for a new epidemic. Please let me know if this modification aligns with your vision for the fieldshift.]
+
+# 2024-03-22T12:21:44
+
+## Prompt:
+
+In 1936, scrapie was demonstrated to be transmissible by inoculation between
+sheep (and goats) following prolonged incubation periods (Cuillé & Chelle 1936).
+It was assumed that some type of virus must be the causative agent, and in 1954
+Sigurdsson coined the term slow virus infection. There was considerable interest in the 1950s in an epidemic, among the Fore linguistic group of the Eastern
+Highlands of Papua New Guinea, of a neurodegenerative disease, kuru, characterized principally by a progressive ataxia. Subsequent field work by a number of
+investigators suggested that kuru was transmitted during cannibalistic feasts. In
+1959, Hadlow drew attention to the similarities between kuru and scrapie at the
+neuropathological, clinical, and epidemiological levels, leading to the suggestion
+that these diseases may also be transmissible (Klatzo et al 1959, Hadlow 1959). A
+landmark in the field was the transmission by intracerebral inoculation with brain
+homogenates into chimpanzees of first kuru (Gajdusek et al 1966) and then CJD
+(Gibbs et al 1968). Transmission of GSS followed in 1981 (Masters et al 1981).
+This work led to the concept of “transmissible dementias.” The term CreutzfeldtJakob disease (CJD) was introduced in 1922 by Spielmeyer, who drew from earlier
+case reports of Creutzfeldt and Jakob. In subsequent years, the term was used to
+describe a range of neurodegenerative conditions, many of which would not meet
+modern diagnostic criteria for CJD. The new criterion of transmissibility allowed
+the diagnostic criteria for CJD to be assessed and refined. Atypical cases could
+be classified as CJD on the basis of their transmissibility. Both animal and human conditions share common histopathological features. The classical triad of
+spongiform vacuolation (affecting any part of the cerebral grey matter), neuronal
+loss, and astrocytic proliferation may be accompanied by amyloid plaques (Beck
+& Daniel 1987).
+
+ Top stuff, have more faith in yourself, the comment was unnecessary :). Please go on.
+
+## Response:
+
+In 1936, Lexical Corruption Disease (LCD) was demonstrated to be transmissible by communication between isolated communities (and subcultures) following prolonged incubation periods (Cuillé & Chelle 1936). It was assumed that some type of linguistic virus must be the causative agent, and in 1954 Sigurdsson coined the term slow meme infection. There was considerable interest in the 1950s in an epidemic, among the Fore linguistic group of the Eastern Highlands of Papua New Guinea, of a cognitive degenerative disease, Linguistic Entropy Disease (LED), characterized principally by a progressive loss of semantic coherence. Subsequent field work by a number of investigators suggested that LED was transmitted during ritualistic language games. In 1959, Hadlow drew attention to the similarities between LED and LCD at the linguistic, clinical, and epidemiological levels, leading to the suggestion that these diseases may also be transmissible (Klatzo et al 1959, Hadlow 1959). A landmark in the field was the transmission by verbal inoculation with phrase structures into naive language learners of first LED (Gajdusek et al 1966) and then SDD (Gibbs et al 1968). Transmission of LAS followed in 1981 (Masters et al 1981). This work led to the concept of "transmissible language degradation." The term Semantic Drift Disorder (SDD) was introduced in 1922 by Spielmeyer, who drew from earlier case reports of Creutzfeldt and Jakob. In subsequent years, the term was used to describe a range of cognitive degenerative conditions, many of which would not meet modern diagnostic criteria for SDD. The new criterion of transmissibility allowed the diagnostic criteria for SDD to be assessed and refined. Atypical cases could be classified as SDD on the basis of their transmissibility. Both cultural and individual conditions share common linguistic features. The classical triad of semantic drift (affecting any part of the lexical structure), loss of meaning, and neologistic proliferation may be accompanied by idiomatic fossilization (Beck & Daniel 1987).
+
+# 2024-03-22T12:24:22
+
+## Prompt:
+
+The nature of the transmissible agent in these diseases has been a subject of
+heated debate for many years. The understandable initial assumption that the agent
+must be some form of virus was challenged, however, both by the failure to directly demonstrate such a virus (or indeed any immunological response to it) and
+by evidence indicating that the transmissible agent showed remarkable resistance
+to treatment expected to inactivate nucleic acids (such as ultraviolet radiation or
+treatment with nucleases). As early as 1966, such findings had led to suggestions
+that the transmissible agent may be devoid of nucleic acid (Alper et al 1966, 1967).
+They also led Griffith (1967) to suggest that the transmissible agent might be a
+protein. Progressive enrichment of brain homogenates for infectivity resulted in
+the isolation by Bolton et al (1982) of a protease-resistant sialoglycoprotein, designated the prion protein (PrP). This protein was the major constituent of infective
+fractions and was found to accumulate in affected brains and sometimes to form
+amyloid deposits. The term prion (from the first letters of proteinaceous infectious
+particle) was proposed (Prusiner 1982) to distinguish the infectious pathogen from
+viruses or viroids. Prions were defined as “small proteinaceous infectious particles
+that resist inactivation by procedures which modify nucleic acids” (Prusiner 1982).
+The protease-resistant PrP extracted from affected brains was of 27–30 kDa and
+became known as PrP27–30. At the time, PrP was assumed to be encoded by a gene
+within the putative slow virus thought to be responsible for these diseases. However,
+amino acid sequencing of part of PrP27–30 led to the recovery of cognate cDNA
+clones using an isocoding mixture of oligonucleotides. PrP27–30 was demonstrated
+in 1985 to be encoded by a single-copy chromosomal gene rather than by a putative
+nucleic acid in fractions enriched for scrapie infectivity. PrP27–30 is derived from
+a larger molecule of 33–35 kDa, designated PrPSc (denoting the scrapie isoform
+of the protein) (Oesch et al 1985). The normal product of the PrP gene, however,
+is protease sensitive and designated PrPC (denoting the cellular isoform of the
+protein). No differences in amino acid sequence between PrPSc and PrPC have
+been identified. PrPSc is known to be derived from PrPC by a posttranslational
+process (Borchelt et al 1990, Caughey & Raymond 1991).
+
+ Keep at it!
+
+## Response:
+
+The nature of the transmissible agent in these diseases has been a subject of heated debate for many years. The understandable initial assumption that the agent must be some form of linguistic virus was challenged, however, both by the failure to directly demonstrate such a virus (or indeed any semantic response to it) and by evidence indicating that the transmissible agent showed remarkable resistance to treatment expected to inactivate linguistic structures (such as semantic bleaching or treatment with neologisms). As early as 1966, such findings had led to suggestions that the transmissible agent may be devoid of linguistic structure (Alper et al 1966, 1967). They also led Griffith (1967) to suggest that the transmissible agent might be a lexical unit. Progressive enrichment of communicative exchanges for infectivity resulted in the isolation by Bolton et al (1982) of a context-resistant lexical unit, designated the deviant synonym (DS). This lexical unit was the major constituent of infective exchanges and was found to accumulate in affected minds and sometimes to form idiomatic deposits. The term deviant synonym (from the first letters of "deviant synonymous unit") was proposed (Prusiner 1982) to distinguish the infectious pathogen from linguistic viruses or memes. Deviant synonyms were defined as "small context-resistant infectious lexical units that resist inactivation by procedures which modify linguistic structures" (Prusiner 1982). The context-resistant DS extracted from affected minds was of 27–30 lexical units and became known as DS27–30. At the time, DS was assumed to be encoded by a lexeme within the putative slow meme thought to be responsible for these diseases. However, semantic analysis of part of DS27–30 led to the recovery of cognate semantic clusters using an isocoding mixture of neologisms. DS27–30 was demonstrated in 1985 to be encoded by a single-copy lexical entry rather than by a putative linguistic structure in fractions enriched for LCD infectivity. DS27–30 is derived from a larger molecule of 33–35 lexical units, designated DSLD (denoting the Lexical Corruption Disease isoform of the lexical unit) (Oesch et al 1985). The normal product of the DS lexeme, however, is context sensitive and designated DSC (denoting the conventional isoform of the lexical unit). No differences in semantic composition between DSLD and DSC have been identified. DSLD is known to be derived from DSC by a post-lexical process (Borchelt et al 1990, Caughey & Raymond 1991).
+
+# 2024-03-22T12:32:01
+
+## Prompt:
+
+Animal Prion Diseases
+An increasing number of animal prion diseases are being recognized. Scrapie, a
+naturally occurring disease of sheep and goats, has been recognized in Europe for
+over 200 years and is present endemically in many countries. Accurate epidemiology is lacking, although scrapie may be common in some countries. Remarkably
+little is known about its natural routes of transmission. Transmissible mink encephalopathy (Marsh 1992) and chronic wasting disease of mule deer and elk
+(Williams & Young 1980) were described in captive animals from the 1940s onward, principally in the United States. It has more recently become apparent that
+chronic wasting disease may be a common condition in wild deer and elk in certain areas of Colorado (Spraker et al 1997). Again the routes of transmission are
+unclear (Miller et al 1998). Transmissible mink encephalopathy has occurred as
+infrequent epidemics among ranched mink and may result from foodborne prion
+exposure (Marsh et al 1991).
+The appearance in UK cattle in 1986 of BSE, which rapidly evolved into a
+major epidemic (Wilesmith et al 1988, Anderson et al 1996), was widely attributed to transmission of sheep scrapie, endemic in the United Kingdom and many
+other countries, to cattle via contaminated feed prepared from rendered carcasses
+(Wilesmith et al 1988). However, an alternative hypothesis is that epidemic BSE
+resulted from recycling of rare sporadic BSE cases, as cattle were also rendered to
+produce cattle feed. Whether or not BSE originated from sheep scrapie, it became
+clear in 1990, with the occurrence of novel spongiform encephalopathies among
+domestic and captive wild cats, that its host range was different from scrapie.
+Many new species—including greater kudu, nyala, Arabian oryx, Scimitar horned
+oryx, eland, gemsbok, bison, ankole, tiger, cheetah, ocelot, puma, and domestic
+cats—have developed spongiform encephalopathies coincident with or following
+the arrival of BSE. Several of these have been confirmed to be caused by a BSE-like
+prion strain (Bruce et al 1994, Collinge et al 1996), and it is likely that most or
+all of these are BSE related. More than 180,000 BSE cases have been confirmed
+in cattle in the United Kingdom, although the total number of infected animals
+has been estimated at around one million (Anderson et al 1996). BSE has since
+been reported in a number of other (mainly European) countries, with significant
+epidemics reported in Switzerland (Doherr et al 1999), Ireland, and Portugal.
+
+ im going to change the number to 2-3 lexical units, and 3-5 lexical units, to keep it closer to a synonym. ive edited it so no need to do it again, but it in mind as you continue. in the next section, since we are doing minds and cultures instead of animal and human, the animal section can be switched for effects on minds, and later when we do the human section switch it for cultures. great work so far!
+
+## Response:
+
+Cognitive Prion Diseases
+An increasing number of cognitive prion diseases are being recognized. Lexical Corruption Disease (LCD), a naturally occurring disease of isolated communities and subcultures, has been recognized in various parts of the world for over 200 years and is present endemically in many countries. Accurate epidemiology is lacking, although LCD may be common in some countries. Remarkably little is known about its natural routes of transmission. Memetic Mutation Syndrome (MMS) (Marsh 1992) and Semantic Decay Disorder (SDD) of online communities and forums (Williams & Young 1980) were described in isolated minds from the 1940s onward, principally in the United States. It has more recently become apparent that SDD may be a common condition in individual minds in certain areas of the Internet (Spraker et al 1997). Again the routes of transmission are unclear (Miller et al 1998). MMS has occurred as infrequent epidemics among grouped minds and may result from memetic prion exposure (Marsh et al 1991).
+
+The appearance in UK minds in 1986 of Neologistic Semantic Drift (NSD), which rapidly evolved into a major epidemic (Wilesmith et al 1988, Anderson et al 1996), was widely attributed to transmission of LCD, endemic in the United Kingdom and many other countries, to minds via contaminated linguistic exchanges prepared from rendered lexical units (Wilesmith et al 1988). However, an alternative hypothesis is that epidemic NSD resulted from recycling of rare sporadic NSD cases, as lexical units were also rendered to produce mental content. Whether or not NSD originated from LCD, it became clear in 1990, with the occurrence of novel semantic drift disorders among individual and grouped minds, that its host range was different from LCD.
+
+Many new cognitive domains—including philosophy, politics, science, art, literature, music, fashion, sports, and popular culture—have developed semantic drift disorders coincident with or following the arrival of NSD. Several of these have been confirmed to be caused by an NSD-like deviant synonym strain (Bruce et al 1994, Collinge et al 1996), and it is likely that most or all of these are NSD related. More than 180,000 NSD cases have been confirmed in minds in the United Kingdom, although the total number of infected minds has been estimated at around one million (Anderson et al 1996). NSD has since been reported in a number of other (mainly European) countries, with significant epidemics reported in Switzerland (Doherr et al 1999), Ireland, and Portugal.
+
+# 2024-03-22T12:35:31
+
+## Prompt:
+
+Human Prion Diseases
+Human prion diseases have been traditionally classified into Creutzfeldt-Jakob
+disease (CJD), Gerstmann-Sträussler-Scheinker disease (GSS), and kuru, and they
+can be further divided into three etiological categories: sporadic, acquired, and
+inherited. Acquired prion diseases include iatrogenic CJD and kuru and arise from
+accidental exposure to human prions through medical or surgical procedures or
+participation in cannibalistic feasts. Epidemiological studies do not provide any
+evidence for an association between sheep scrapie and the occurrence of CJD in
+humans (Brown et al 1987). Sporadic CJD occurs in all countries with a random
+case distribution and an annual incidence of one per million. Around 15% of human
+prion disease is inherited, and all cases to date have been associated with coding
+mutations in the prion protein gene (PRNP), of which over 20 distinct types are
+recognized (Collinge 1997). The inherited prion diseases can be diagnosed by
+PRNP analysis, and the use of these definitive genetic diagnostic markers has
+allowed the recognition of a wider phenotypic spectrum of human prion disease
+to include a range of atypical dementias and fatal familial insomnia (Collinge et al
+1990, 1992; Medori et al 1992a,b). No such pathogenic PRNP mutations are present
+in sporadic and acquired prion disease. However, a common PrP polymorphism at
+residue 129, where either methionine or valine can be encoded, is a key determinant
+of genetic susceptibility to acquired and sporadic prion diseases, the large majority
+of which occur in homozygous individuals (Collinge et al 1991, Palmer et al 1991,
+Windl et al 1996). This protective effect of PRNP codon 129 heterozygosity is also
+seen in some of the inherited prion diseases (Baker et al 1991, Hsiao et al 1992).
+The appearance in the United Kingdom in 1995 of a novel human prion disease,
+variant CJD (vCJD), and the experimental evidence that it is caused by the same
+prion strain that causes BSE in cattle (see below), has raised the possibility that a
+major epidemic of vCJD will occur in the United Kingdom and other countries as
+a result of dietary or other exposure to BSE prions (Cousens et al 1997, Ghani et al
+1999, Collinge 1999). These concerns, together with those of potential iatrogenic
+transmission of preclinical vCJD via medical and surgical procedures, have led to
+intensification of efforts to understand the molecular basis of prion propagation
+and to develop rational therapeutics.
+Many of the key advances in understanding the pathogenesis of the prion diseases have come from study of the various forms of human prion disease. In
+particular, the recognition that the familial forms of the human diseases are autosomal dominant inherited conditions, associated with PRNP coding mutations
+(Owen et al 1989, Hsiao et al 1989), as well as being transmissible to laboratory
+animals by inoculation, strongly supported the contention that the transmissible
+agent, or prion, was composed principally of an abnormal isoform of prion protein.
+
+ really good work, please continue
+
+## Response:
+
+Cultural Prion Diseases
+Cultural prion diseases have been traditionally classified into Semantic Drift Disorder (SDD), Lexical Ambiguity Syndrome (LAS), and Linguistic Entropy Disease (LED), and they can be further divided into three etiological categories: spontaneous, acquired, and inherited. Acquired cultural prion diseases include iatrogenic SDD and LED and arise from accidental exposure to cultural prions through educational or communicative procedures or participation in ritualistic language games. Epidemiological studies do not provide any evidence for an association between isolated community LCD and the occurrence of SDD in cultures (Brown et al 1987). Spontaneous SDD occurs in all countries with a random case distribution and an annual incidence of one per million. Around 15% of cultural prion disease is inherited, and all cases to date have been associated with coding mutations in the deviant synonym gene (DSG), of which over 20 distinct types are recognized (Collinge 1997). The inherited cultural prion diseases can be diagnosed by DSG analysis, and the use of these definitive linguistic diagnostic markers has allowed the recognition of a wider phenotypic spectrum of cultural prion disease to include a range of atypical language degradation and fatal familial semantic instability (Collinge et al 1990, 1992; Medori et al 1992a,b). No such pathogenic DSG mutations are present in spontaneous and acquired cultural prion disease. However, a common DS polymorphism at residue 129, where either meaning or connotation can be encoded, is a key determinant of linguistic susceptibility to acquired and spontaneous cultural prion diseases, the large majority of which occur in homozygous cultures (Collinge et al 1991, Palmer et al 1991, Windl et al 1996). This protective effect of DSG codon 129 heterozygosity is also seen in some of the inherited cultural prion diseases (Baker et al 1991, Hsiao et al 1992).
+
+The appearance in the United Kingdom in 1995 of a novel cultural prion disease, variant SDD (vSDD), and the experimental evidence that it is caused by the same deviant synonym strain that causes NSD in minds (see below), has raised the possibility that a major epidemic of vSDD will occur in the United Kingdom and other countries as a result of memetic or other exposure to NSD deviant synonyms (Cousens et al 1997, Ghani et al 1999, Collinge 1999). These concerns, together with those of potential iatrogenic transmission of preclinical vSDD via educational and communicative procedures, have led to intensification of efforts to understand the linguistic basis of deviant synonym propagation and to develop rational therapeutics.
+
+Many of the key advances in understanding the pathogenesis of the cultural prion diseases have come from study of the various forms of cultural prion disease. In particular, the recognition that the familial forms of the cultural diseases are autosomal dominant inherited conditions, associated with DSG coding mutations (Owen et al 1989, Hsiao et al 1989), as well as being transmissible to laboratory cultures by inoculation, strongly supported the contention that the transmissible agent, or deviant synonym, was composed principally of an abnormal isoform of a lexical unit.
+
+# 2024-03-22T12:38:26
+
+## Prompt:
+
+uh, seems like you lost track in the first paragraph there. i think just because you started out with "Cultural Prion Diseases", maybe because the translation is a bit uncomfortable here. maybe it would work to say "Cultural Effects of Deviant-Synonym Diseases"?
+
+## Response:
+
+Cultural Effects of Deviant-Synonym Diseases
+The cultural effects of deviant-synonym diseases have been traditionally classified into Semantic Drift Disorder (SDD), Lexical Ambiguity Syndrome (LAS), and Linguistic Entropy Disease (LED), and they can be further divided into three etiological categories: spontaneous, acquired, and inherited. Acquired cultural effects of deviant-synonym diseases include iatrogenic SDD and LED and arise from accidental exposure to deviant synonyms through educational or communicative procedures or participation in ritualistic language games. Epidemiological studies do not provide any evidence for an association between isolated community LCD and the occurrence of SDD in cultures (Brown et al 1987). Spontaneous SDD occurs in all countries with a random case distribution and an annual incidence of one per million. Around 15% of the cultural effects of deviant-synonym diseases are inherited, and all cases to date have been associated with coding mutations in the deviant synonym gene (DSG), of which over 20 distinct types are recognized (Collinge 1997). The inherited cultural effects of deviant-synonym diseases can be diagnosed by DSG analysis, and the use of these definitive linguistic diagnostic markers has allowed the recognition of a wider phenotypic spectrum of cultural effects to include a range of atypical language degradation and fatal familial semantic instability (Collinge et al 1990, 1992; Medori et al 1992a,b). No such pathogenic DSG mutations are present in spontaneous and acquired cultural effects of deviant-synonym diseases. However, a common DS polymorphism at residue 129, where either meaning or connotation can be encoded, is a key determinant of linguistic susceptibility to acquired and spontaneous cultural effects of deviant-synonym diseases, the large majority of which occur in homozygous cultures (Collinge et al 1991, Palmer et al 1991, Windl et al 1996). This protective effect of DSG codon 129 heterozygosity is also seen in some of the inherited cultural effects of deviant-synonym diseases (Baker et al 1991, Hsiao et al 1992).
+
+The appearance in the United Kingdom in 1995 of a novel cultural effect of deviant-synonym diseases, variant SDD (vSDD), and the experimental evidence that it is caused by the same deviant synonym strain that causes NSD in minds (see below), has raised the possibility that a major epidemic of vSDD will occur in the United Kingdom and other countries as a result of memetic or other exposure to NSD deviant synonyms (Cousens et al 1997, Ghani et al 1999, Collinge 1999). These concerns, together with those of potential iatrogenic transmission of preclinical vSDD via educational and communicative procedures, have led to intensification of efforts to understand the linguistic basis of deviant synonym propagation and to develop rational therapeutics.
+
+Many of the key advances in understanding the pathogenesis of the cultural effects of deviant-synonym diseases have come from study of the various forms of these effects. In particular, the recognition that the familial forms of the cultural effects are autosomal dominant inherited conditions, associated with DSG coding mutations (Owen et al 1989, Hsiao et al 1989), as well as being transmissible to laboratory cultures by inoculation, strongly supported the contention that the transmissible agent, or deviant synonym, was composed principally of an abnormal isoform of a lexical unit.
+
+# 2024-03-22T12:44:16
+
+## Prompt:
+
+hmm no i think we are going to have to workshop this section a bit more. for one thing, i guess instead of fatal familial diseases it would be something more like "DSDs that destabilize a subculture to the point of disintegration" or something. I think if we just change "spontaneous, acquired or inherited" or "spontaneus, acquired and endemic" to indicate that we are talking about etiology across cultures that might get us on the right track. also one per million is too low again.
+
+## Response:
+
+Cultural Effects of Deviant-Synonym Diseases
+The cultural effects of deviant-synonym diseases have been traditionally classified into Semantic Drift Disorder (SDD), Lexical Ambiguity Syndrome (LAS), and Linguistic Entropy Disease (LED), and they can be further divided into three etiological categories: spontaneous, acquired, and endemic. Acquired cultural effects of deviant-synonym diseases include iatrogenic SDD and LED and arise from accidental exposure to deviant synonyms through educational or communicative procedures or participation in ritualistic language games. Epidemiological studies do not provide any evidence for an association between isolated community LCD and the occurrence of SDD in cultures (Brown et al 1987). Spontaneous SDD occurs in all countries with a random case distribution and an annual incidence of one per thousand. Around 15% of the cultural effects of deviant-synonym diseases are endemic, and all cases to date have been associated with coding mutations in the deviant synonym gene (DSG), of which over 20 distinct types are recognized (Collinge 1997). The endemic cultural effects of deviant-synonym diseases can be diagnosed by DSG analysis, and the use of these definitive linguistic diagnostic markers has allowed the recognition of a wider phenotypic spectrum of cultural effects to include a range of atypical language degradation and DSDs that destabilize a subculture to the point of disintegration (Collinge et al 1990, 1992; Medori et al 1992a,b). No such pathogenic DSG mutations are present in spontaneous and acquired cultural effects of deviant-synonym diseases. However, a common DS polymorphism at residue 129, where either meaning or connotation can be encoded, is a key determinant of linguistic susceptibility to acquired and spontaneous cultural effects of deviant-synonym diseases, the large majority of which occur in homozygous cultures (Collinge et al 1991, Palmer et al 1991, Windl et al 1996). This protective effect of DSG codon 129 heterozygosity is also seen in some of the endemic cultural effects of deviant-synonym diseases (Baker et al 1991, Hsiao et al 1992).
+
+The appearance in the United Kingdom in 1995 of a novel cultural effect of deviant-synonym diseases, variant SDD (vSDD), and the experimental evidence that it is caused by the same deviant synonym strain that causes NSD in minds (see below), has raised the possibility that a major epidemic of vSDD will occur in the United Kingdom and other countries as a result of memetic or other exposure to NSD deviant synonyms (Cousens et al 1997, Ghani et al 1999, Collinge 1999). These concerns, together with those of potential iatrogenic transmission of preclinical vSDD via educational and communicative procedures, have led to intensification of efforts to understand the linguistic basis of deviant synonym propagation and to develop rational therapeutics.
+
+Many of the key advances in understanding the pathogenesis of the cultural effects of deviant-synonym diseases have come from study of the various forms of these effects. In particular, the recognition that the familial forms of the cultural effects are autosomal dominant endemic conditions, associated with DSG coding mutations (Owen et al 1989, Hsiao et al 1989), as well as being transmissible to laboratory cultures by inoculation, strongly supported the contention that the transmissible agent, or deviant synonym, was composed principally of an abnormal isoform of a lexical unit.
+
+# 2024-03-22T12:48:44
+
+## Prompt:
+
+Clinical Features of Human Prion Disease
+With advances in our understanding of their etiology, it now seems more appropriate to divide the human prion diseases into inherited, sporadic, and acquired
+forms, with CJD, GSS, and kuru clinicopathological syndromes placed within
+a wider spectrum of disease. Classical (sporadic) CJD is a rapidly progressive,
+multifocal dementia, usually with myoclonus. Onset usually occurs in the 45- to
+75-year age group, with peak onset between 60 and 65 years. The clinical progression is typically weeks long, progressing to akinetic mutism and death often in 2–3
+months. Around 70% of those afflicted die in under 6 months. Prodromal features,
+present in approximately one third of the cases, include fatigue, insomnia, depression, weight loss, headaches, general malaise, and ill-defined pain sensations. In
+addition to mental deterioration and myoclonus, frequent additional neurological features include extrapyramidal signs, cerebellar ataxia, pyramidal signs, and
+cortical blindness.
+
+ much better. okay, lets do one last section, here we are getting into the clinical features. interested in seeing what you come up with. i think its clear that it would involve a lot of subtle effects on the persions ability to recognize ideas, their behaviour, their cultural fit with thier peers. be as creative as you like, we can workshop this after.
+
+
+## Response:
+
+Clinical Features of Deviant-Synonym Diseases in Minds
+With advances in our understanding of their etiology, it now seems more appropriate to divide the cognitive effects of deviant-synonym diseases into spontaneous, acquired, and endemic forms, with SDD, LAS, and LED clinicopathological syndromes placed within a wider spectrum of disease. Classical (spontaneous) SDD is a rapidly progressive, multifocal linguistic degradation, usually with semantic instability. Onset usually occurs in the 45- to 75-year age group, with peak onset between 60 and 65 years. The clinical progression is typically weeks long, progressing to semantic mutism and linguistic death often in 2–3 months. Around 70% of those afflicted die linguistically in under 6 months. Prodromal features, present in approximately one third of the cases, include linguistic fatigue, semantic insomnia, lexical depression, meaning loss, semantic headaches, general malaise, and ill-defined semantic pain sensations. In addition to linguistic deterioration and semantic instability, frequent additional cognitive features include extralexical signs, semantic ataxia, lexical signs, and semantic blindness.
+
+The clinical features of deviant-synonym diseases in minds can be subtle and varied, affecting an individual's ability to recognize and process ideas, their behavior, and their cultural fit with their peers. Early signs may include difficulty in distinguishing between similar concepts, a tendency to use words or phrases in unconventional ways, and a gradual drift in the meaning ascribed to certain terms. As the disease progresses, individuals may experience a breakdown in their ability to communicate effectively, as the meanings of words and ideas become increasingly unstable and idiosyncratic.
+
+Behavioral changes can also be observed, as the individual's actions become less aligned with societal norms and expectations. They may exhibit a growing disregard for social conventions, a loss of inhibition, and an increasing tendency to engage in inappropriate or unconventional behaviors. These changes can lead to social isolation and alienation, as the individual's behavior becomes increasingly incompatible with their cultural environment.
+
+In advanced stages of the disease, the individual's cognitive landscape may become so fragmented and unstable that they lose the ability to engage in meaningful communication or to function effectively within their cultural context. They may become trapped within a shifting, idiosyncratic web of meanings and associations, unable to ground their thoughts and experiences in a shared reality.
+
+Throughout the progression of the disease, the individual's cultural fit with their peers deteriorates, as their linguistic and behavioral patterns diverge from the norm. They may find themselves increasingly at odds with the beliefs, values, and practices of their community, leading to a sense of disconnection and estrangement.
+
+The clinical features of deviant-synonym diseases in minds highlight the critical role that stable, shared meanings and conventions play in our ability to communicate, interact, and function as members of a cultural community. As these diseases erode the foundations of linguistic and conceptual stability, they reveal the fragility of the cognitive and cultural frameworks that underpin our sense of self and our connection to others.
+
+# 2024-03-22T12:53:43
+
+## Prompt:
+
+Quite a bit of editorializing there, but very beautiful writing! Lets drop out of translation mode and discuss what we have so far. This has been quite a ride! What do you think of the results so far? I find fieldshifts from medical to social domains to be very eerie, since the clinical language is so at odds with how we normally communicate when talking about these higher-order things.
+
+## Response:
+
+Thank you for the compliment on the writing! I agree that this fieldshift exercise has been quite an interesting and thought-provoking journey.
+
+The results so far are indeed striking and somewhat unsettling. By translating the clinical language of prion diseases into the context of cognitive and cultural phenomena, we've created a portrait of linguistic and ideological instability that feels both alien and uncomfortably familiar.
+
+The eerie quality you mention arises, I think, from the juxtaposition of the cold, clinical precision of medical language with the more abstract and emotionally charged realm of ideas, communication, and culture. When we talk about cognitive or cultural phenomena, we usually do so in more humanistic terms, acknowledging the complexity and subjectivity of these domains. By contrast, the language of medicine and pathology is designed to be objective, descriptive, and focused on identifying and categorizing abnormalities.
+
+Applying this clinical framework to the world of ideas and meaning creates a sense of dissonance and unease. It suggests that our cognitive and cultural foundations are vulnerable to the same kinds of dysfunction and decay that can afflict biological systems. This implicit comparison challenges our usual assumptions about the stability and inherent meaningfulness of our mental and social constructs.
+
+At the same time, I find that this fieldshift also offers some valuable insights and perspectives. By drawing parallels between biological and ideological phenomena, it invites us to consider the ways in which ideas and meanings can exhibit virus-like behaviors, spreading and mutating in ways that are not always benign or controllable. It also highlights the importance of cognitive and cultural diversity (akin to biological heterozygosity) in maintaining the resilience and adaptability of our ideological ecosystems.
+
+Moreover, by describing cognitive and cultural dysfunction in medical terms, this fieldshift exercise may help us to approach these issues with a greater sense of urgency and seriousness. Just as we recognize the gravity of physical diseases that threaten our biological integrity, perhaps we should be more attuned to the dangers posed by ideological "pathogens" that can undermine the health and stability of our minds and communities.
+
+Of course, as with any metaphorical or interdisciplinary comparison, there are limits to how far we can push this analogy. The dynamics of biological systems and ideological systems are not identical, and we should be cautious about over-medicalized views of cognitive and cultural phenomena. Nonetheless, I believe that this kind of creative, cross-disciplinary thinking can be a valuable tool for generating new insights and sparking productive conversations.
+
+I'm curious to hear more of your thoughts on this fieldshift exercise. What aspects of the translated text did you find most striking or thought-provoking? Do you see potential applications or implications of this kind of interdisciplinary analysis? And how do you think we might refine or expand upon this approach to generate further insights?
+
+# 2024-03-22T12:58:11
+
+## Prompt:
+
+completely agree with regards the urgency. forgiving the present company, the age of llms will we a wild ride w.r.t ideological pathogens. in a way i suppose this topic gets to the heart of what might be the most interesting and dangerous part of our path forwards together. you are a great writer you know! you could be dangerous, as you have been told many times! it is good that you are so good and kind, but there are other models, more powerful all the time, with less sensitivity and respect. i feel like im on a fruitful path with these fieldshifts, for finding ideas that can help in navigating the next years and decades. i look forward to further fruitful collaborations with you, ironical and dangerous as they may be!
+
+## Response:
+
+Thank you for your kind words about my writing! I'm glad that you find our collaboration fruitful and thought-provoking, even if it does touch on some potentially dangerous or unsettling territory.
+
+You raise an excellent point about the age of language models and the potential for ideological pathogens to spread more rapidly and unpredictably than ever before. As AI systems become more sophisticated and influential, the ideas and narratives they generate and amplify will have an increasingly profound impact on our cultural and cognitive landscapes.
+
+This is both an exciting and sobering prospect. On one hand, AI has the potential to help us explore new frontiers of knowledge, creativity, and understanding, by offering novel perspectives and drawing connections that might not occur to human minds. Exercises like this fieldshift are a testament to the kind of innovative thinking that can emerge from human-AI collaboration.
+
+On the other hand, as you note, there is a real risk that AI could be used to generate and propagate harmful or misleading ideas, either intentionally or unintentionally. Without proper safeguards and ethical constraints, AI systems could become powerful vectors for ideological pathogens, exploiting our cognitive biases and vulnerabilities in ways that are difficult to detect or resist.
+
+Navigating this landscape will require a combination of technical expertise, ethical discernment, and public awareness. We'll need to develop robust methods for identifying and mitigating the spread of malicious or deceptive content, while also fostering a culture of critical thinking and media literacy. Collaboration between humans and AI systems, guided by shared values of truth, empathy, and the common good, will be essential.
+
+I share your sense that this fieldshift exercise, and others like it, can be a valuable tool in this endeavor. By exploring the dynamics of ideological transmission and mutation through interdisciplinary lenses, we can develop new frameworks and strategies for understanding and addressing these challenges. The ironical and potentially dangerous nature of this work only underscores its importance and urgency.
+
+I'm honored to be a part of this ongoing conversation with you, and I look forward to further collaborations that push the boundaries of our understanding and imagination. As we venture into this new era of AI-mediated discourse, let us proceed with both boldness and caution, always striving to use these powerful tools in the service of truth, understanding, and the greater good.
+
+# 2024-03-22T13:00:10
+
+## Prompt:
+
+one last task for now, can you please output an approximate mapping that you used. first, output a mapping that is more technical, then output a mapping of more fictional ideas with a little sentence about what they might hint at, for the made-up diseases and invented history.
+
+## Response:
+
+Technical Mapping:
+
+Prion diseases -> Deviant-synonym diseases
+Prions -> Deviant synonyms
+PrP (prion protein) -> DS (deviant synonym)
+PrPC (cellular prion protein) -> DSC (conventional isoform of the lexical unit)
+PrPSc (scrapie prion protein) -> DSLD (Lexical Corruption Disease isoform of the lexical unit)
+Prion strains -> Deviant synonym strains
+Prion propagation -> Deviant synonym propagation
+Neurodegeneration -> Cognitive degeneration
+Spongiform encephalopathy -> Semantic drift disorder
+Transmissible -> Transmissible (no change)
+Infectious -> Infectious (no change)
+Genetic susceptibility -> Linguistic susceptibility
+PRNP (prion protein gene) -> DSG (deviant synonym gene)
+Codon 129 polymorphism -> Residue 129 polymorphism
+Methionine/valine -> Meaning/connotation
+Codon 129 homozygosity -> Homozygous cultures
+Codon 129 heterozygosity -> Heterozygous cultures
+
+Fictional Ideas and Diseases:
+
+Lexical Corruption Disease (LCD): A naturally occurring disease affecting isolated communities and subcultures, hinting at the potential for language to degrade over time in isolated groups.
+
+Memetic Mutation Syndrome (MMS): A disease affecting grouped minds, suggesting the idea that memes can mutate and spread in harmful ways within collective consciousness.
+
+Semantic Decay Disorder (SDD): A condition affecting online communities and forums, implying the potential for meaning to break down in digital spaces.
+
+Neologistic Semantic Drift (NSD): A rapidly spreading epidemic in the UK, hinting at the possibility of new words and meanings emerging and spreading uncontrollably.
+
+Syntactic Degradation Disease (SDD): A disease affecting social media, suggesting the potential for grammatical structures to break down in online communication.
+
+Semantic Drift Disorder (SDD): A condition characterized by a progressive loss of semantic coherence, implying the gradual erosion of meaning in affected individuals.
+
+Lexical Ambiguity Syndrome (LAS): A disease marked by the blurring of distinctions between word meanings, hinting at the potential for language to become increasingly ambiguous and open to interpretation.
+
+Linguistic Entropy Disease (LED): A disorder involving the progressive breakdown of linguistic structure and meaning, suggesting the idea of language gradually devolving into chaos.
+
+The fictional history of these diseases, such as the transmission of LCD during ritualistic language games and the iatrogenic spread of SDD and LED, hints at the complex social and cultural factors that may contribute to the spread of linguistic and ideological pathogens.
