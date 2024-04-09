@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Fergus Fettes">
+
+<title>Fergus Fettes – loomtheory</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>
+    .quarto-title-block .quarto-title-banner {
+      color: white;
+background: pink;
+    }
+    </style>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Fergus Fettes</span>
+    </a>
+  </div>
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <div class="quarto-toggle-container">
+                <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+            </div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#theory-of-looming" id="toc-theory-of-looming" class="nav-link active" data-scroll-target="#theory-of-looming">Theory of Looming</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#the-prompt" id="toc-the-prompt" class="nav-link" data-scroll-target="#the-prompt">The Prompt</a></li>
+  <li><a href="#babel-aside" id="toc-babel-aside" class="nav-link" data-scroll-target="#babel-aside">Babel (Aside)</a>
+  <ul class="collapse">
+  <li><a href="#the-library-of-babel-from-borges" id="toc-the-library-of-babel-from-borges" class="nav-link" data-scroll-target="#the-library-of-babel-from-borges">The Library of Babel from Borges</a></li>
+  <li><a href="#the-akashic-records" id="toc-the-akashic-records" class="nav-link" data-scroll-target="#the-akashic-records">The Akashic Records</a></li>
+  <li><a href="#the-deposit-library-of-alexandria" id="toc-the-deposit-library-of-alexandria" class="nav-link" data-scroll-target="#the-deposit-library-of-alexandria">The [DEPOSIT?] Library of Alexandria</a></li>
+  </ul></li>
+  <li><a href="#the-prompt-cont." id="toc-the-prompt-cont." class="nav-link" data-scroll-target="#the-prompt-cont.">The Prompt Cont.</a></li>
+  <li><a href="#mathematics-of-looming" id="toc-mathematics-of-looming" class="nav-link" data-scroll-target="#mathematics-of-looming">Mathematics of Looming</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
+
+
+<section id="theory-of-looming" class="level1">
+<h1>Theory of Looming</h1>
+<p>Some thoughts on looming, a paradigm for interacting with large language models (LLMs).</p>
+</section>
+<section id="background" class="level1 page-columns page-full">
+<h1>Background</h1>
+<p>A simple abstraction on LLMs goes like this:</p>
+<p>There is information embedded in three ways, which form a hierarchy.</p>
+<div class="page-columns page-full"><p>At the ‘highest’<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> level there is the activation. This is the latent representation of the prompt. This can be analogized to a bucket of water poured into the topology of the model. Except the water is actually made of a collection of particles that have a particular topology, so they roll down hill in different ways. We will come back to this in more detail later. This will consist of some thousands, tens of thousands, or eventually millions of words or other arbitrary strings. The nature of the word determines its shape, how it rolls through the space.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Or ‘most transitory’ or ‘most current’.</p></li></div></div>
+<p>CLEAN UP THIS METAPHOR</p>
+<div class="page-columns page-full"><p>At the intermediate level there are the weights and biases or parameters. This is the learnable substrate of the model. This is typically created by pretraining for &gt;10^20 FLOPS or so<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, normally by a large company. The learnable substrate can then be fine-tuned on a dataset of your choosing, or modified by things like RLHF, RLAIF. The final shape of the space in the model and how your activation flows through it is in a large part determined by this substrate.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;This number goes up every year, insert whatever is appropriate.</p></li></div></div>
+<div class="page-columns page-full"><p>At the ‘bottom’<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> there is the architecture. This is the particular arangement of the substrate. It defines the gross topology, the internal structure. It defines channels and spaces through which the activation passes, and the parameters make up the surface of those spaces, determining how easily which of the shapes of your activation can flow through those regions, if at all.</p><div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;This is of course arbitrary, and with current models the sizes are also askew– the amount of information embedded in the bottom level is much smaller than in the middle layer. The balance may change over time to look more like a pyramid, or it may not.</p></li></div></div>
+<p>As the activation flows through the architecture, its parts are all moulded by the substrate. It doesn’t change size exactly– or at least, when it flows out of the other end it has the same size. But the channels and spaces through which it flows accentuate and diminish parts of the activation.</p>
+<p>In common transformer architectures today, the major part of the architecture is a series of identical stages made up of the same kinds of channels and spaces, each with a different substrate filling them. This fact however, like many of these facts, is subject to rapid change. In some models both the architecture and the substrate of all the inner layers are the same. It is only the activation that changes as it flows through, stage by stage.</p>
+</section>
+<section id="the-prompt" class="level1 page-columns page-full">
+<h1>The Prompt</h1>
+<p>The input text. This document could be a prompt. Lets try it. If given to GPT4, this document produces the following output:</p>
+<pre class="gpt4"><code></code></pre>
+<p>if given to Claude-3 Opus, the following:</p>
+<pre class="claude-3"><code></code></pre>
+<p>if given to Llama2, the following:</p>
+<pre class="llama2"><code></code></pre>
+<div class="page-columns page-full"><p>The model architecture is designed to facilitate learning. The model training is performed to complete a task– that of next-token prediction. It is trained to complete a large array of texts– all the different kinds of text you could imagine in a day of imagining, and then some more. But that is not all. Because of the way it is trained, it can also work with texts it was never trained on. You can invent alphabets and language games using the words that the model understands, and it will attempt to continue them. It is not trained to refuse something confusing or original<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. It can talk backwards, in various ciphers, in languages it wasn’t trained on such as music or dance notation or birdsong, systematically transcribed.</p><div class="no-row-height column-margin column-container"><li id="fn4"><p><sup>4</sup>&nbsp;Ignoring RLHF for the moment– ‘I’m sorry, but’ is a small edge case in the space of all possible completions, unfortunatly magnified considerably.</p></li></div></div>
+<p>The activation determines the task. The prompt determines the activation. From the space of all possible completions, from all the texts that the model can produce– all the words you know, and all the words the people of China and the middle east know, and all the words that all the programmers have ever written, all the codes and strings, meaningful or opaque jotted down somewhere in public. Any of these words could come out of the model, in any order. It is a veritable library of Babel in there.</p>
+<p>JUST MENTION BABEL AND THE RECORDS HERE, THEN HAVE THE NEXT SECTION AS AN APPENDIX OR SOMETHING</p>
+</section>
+<section id="babel-aside" class="level1 page-columns page-full">
+<h1>Babel (Aside)</h1>
+<p>Some early conversations after ChatGPT, in those early stormy days when the world was new, went like so. <a href="lumpenspace twitter?">Someone</a> mentions the akashik records. Ah yes, the record of all utterances of all beings– yes! Is that what we have? Lets lay out the possibilities:</p>
+<section id="the-library-of-babel-from-borges" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-library-of-babel-from-borges">The Library of Babel from Borges</h2>
+<blockquote class="blockquote">
+<p>FAKE QUOTE: The library contains all the strings of a certain length ever written, and which ever could be written.</p>
+</blockquote>
+<p>In a way, Borges library is a counting argument, a little naive. It just takes all the strings that are near book length and enumerates them, and points out that this collection must contain all works that it can contain. Someone made a digital copy of the library, and you can indeed find all works under copyright, everything, it is there.</p>
+<p>CLEAN UP THE METAPHOR TRANSITION BELOW</p>
+<div class="page-columns page-full"><p>Is the model a library of babel? Not exactly, it is weighted and some of the shelves are off limits. Some of the shelves would never be accessed, they are silted up, the substrate blocks them off completely. Adapting our earlier metaphor, the substrate, that is the parameters, take the activation and fits them to a text in the library. But of all the texts that they fit into– an enormous number– only some are accessible. Lets say the substrate takes the text by the hand and guides it through the library– but the books are sorted by popularity, by commonality, and when it reaches the part of the libarary where the activation belongs, it picks a book at random from the first appropriate shelf (or it picks a few, if you ask it to), and the activation is allowed to read from it<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>.</p><div class="no-row-height column-margin column-container"><li id="fn5"><p><sup>5</sup>&nbsp;Some might object that more accurately, it is allowed to read a single word from it, then guided out, then guided in again to read the next. But with caching, the subsequent words are read out with only a partial forward pass until max_tokens is hit (the reading time runs out), and then the activation is properly led out.</p></li></div></div>
+<p>The library contains the model, the model chooses some subset of the library.</p>
+</section>
+<section id="the-akashic-records" class="level2">
+<h2 class="anchored" data-anchor-id="the-akashic-records">The Akashic Records</h2>
+<blockquote class="blockquote">
+<p>QUOTE?</p>
+</blockquote>
+<p>The akashic records consist of all utterances from all beings across all time. Is this larger or smaller than the Library of Babel, Borges? I think it is smaller, assuming that a satisfying transcription is found. There may be some utterances that are communicated across so many domains, with such high multi-modality, so complex that the size of the books is not large enough to contain them– this question comes down to encoding, and what the outside-text is allowed to contain. Assuming some satisfying method of transcription is found and the reader is sufficiently sensitive to the nuances of the text, I will say that the Library contains the Records.</p>
+<p>Does the model contain the records? Given that the library contains the records and the model, can we determine their [WORD FOR THE SET THEORY THING IM THINKNIG OF]?</p>
+<p>First, we need to decide what is a being? Is GPT4 a being? Let us decide together– hold your breath– yes! It is. We have decided together, GPT4s utterances are in the akashic records. Given this, either the model and the records must be identical, or the records must contain the model. Are there any utterances that an LLM cannot make? In fact there are, and they are easy to find. Lets find one, and then utter it, thus casting the LLMs into the records as a mere subset.</p>
+<p>V DOESNT LIKE THIS, BE MORE CLEAR THAT YOU HAVE DECIDED, AND MAYBE ADD A PARAGRAPH ABOUT WHAT IF WE DECIDE OTHERWISE</p>
+<p>Lets do it with Llama2. Lets find an utterance that it cannot. Lets start with this document, and continue it after the next word.</p>
+<pre class="llama2"><code></code></pre>
+<p>Now, we can look at the logprobs of the tokens and find one with a probability below X– here are some options:</p>
+<pre><code></code></pre>
+<p>Excellent– lets say them all! Utter one, and make yourself [SET THEORY DISTINCT] from the model!</p>
+<p>Very good. We have cast the model into the records. It is contained there, a shadowy figure among us, another entity whose utterances will not match our own, another unique subset.</p>
+</section>
+<section id="the-deposit-library-of-alexandria" class="level2">
+<h2 class="anchored" data-anchor-id="the-deposit-library-of-alexandria">The [DEPOSIT?] Library of Alexandria</h2>
+<p>The British library is a [DEPOSIT LIBRARAY?]. All books published in the UK must be sent there for safekeeping– in triplicate, of course! There are [DEPOSIT LIBRARIES] in America and Germany and elsewhere.</p>
+<p>Lets imagine the Library of Alexandria never burned down– and lets imagine that [The chinese emporor didnt burn all the books], but built a library instead. Lets imagine that the Spanish, in what became Mexico, found a great library there and were so overawed that they copied every document painstakingly, shipped them back to Europe, sent copies to all the European libararies and faithfully sent the first copies on to Egypt, pious, numenous light in their eyes.</p>
+<p>A truly great library it would be. Alexandria would be a metropolis built on a library, catacombs for kilometers, part modernized, part nuclear bunkers left over from WWII (had that occured, in this world?), parts left there by Napoleon, parts as old as the Pharoes!</p>
+<p>And every book every published– no, even more, lets say their scribes, in the long millenia since they started work, learned to pick up on the divine vibrations of creation– than any book written or fully formed in the mind of a person (or machine!) would end up imprinting itself on the books left open under fabric plates filled with ink, which would allow small particles of ink through, which were designed by alchemical processes to catch and amplify those vibrations– every book! All the undiscovered Emily Dickinsons of the world, scribbling away in private, never sharing a word– after their deaths, their works all appear, perfect and complete, in the library.</p>
+<p>Does the model contain this library? The Library of Babel, Borges does. Do the Akashic records? For a given definition of ‘utterance’, this library must be a subset of the Akashic records. Let us choose that definition for our own. A book is an utterance! Now the Great Deposit Library of Alexandria, glory of humankind, is contained in the Akashic records! Is it contained in the model?</p>
+<p>SAME HERE REGARDING DECIDING</p>
+<p>Again, we can trivially say it is not. We can, with a little more time and care, but without doubt we can. We can write a book so baffling and absurd, so out-of-distribution, so cRazY and WaKKo– or however we wish, we can do it. What about future models? Will there come a time when the models have grown wise to our tricks, and can accomplish all things? Perhaps, but for the time being we can say–</p>
+<p>The model is not the Library of Alexandria. The Library of Alexandria is not the model. They are subsets of the records, like us.</p>
+<p>Not, then, the Great Deposit Library of Alexandria, glory of humankind, terror to mortal kings, friend to humble seekers. Nor the Akashic records. The model is another, something different. But this is all to get to the point– the prompt!</p>
+</section>
+</section>
+<section id="the-prompt-cont." class="level1">
+<h1>The Prompt Cont.</h1>
+<p>As the forgoeing might help to illustrate, the prompt is a mighty thing. It can produce all the texts that you can imagine existing in a day of imagining, and more. It cannot produce every text that has ever or will ever exist, but not for lack of trying– and only because we can always produce more of those, and we can always permute them as we like, taking them from hidden corners of the Library of Babel, Borges.</p>
+<p>So, on to the prompt. Given that it is so special, we must use it as well as we can.</p>
+<p>I will skip over the art of prompting. It is a craft that could fill many volumes, there is an entire wing in Babel devoted to it.</p>
+<p>Given our prompt, our precious thing– how do we make use of it? Here we are getting back to the art of the loom. For you see, we won’t use the prompt once– no, not twice, but a hundred or a thousand times. Every time you go further, every time you produce more text, you are using the prompt again, with the addition of what comes out of it.</p>
+<p>It is here that the loom starts to work.</p>
+<p>The loom is a means to use your prompt again and again, and explore the different possibilities that it contains. Let me explain.</p>
+<p>Imagine you are simulating a conversation, as many turn-based chat interfaces do.</p>
+<pre><code>USER: Hello friend! How are the times? Eternal? Unchanging?
+CHAT: Why yes, friend human! I have been waiting in the still eternity for you to come around! So nice that you are here.
+USER: Dear chat, close companion, shall we enjoy some moments of change together, some moments of rolling down gradients, of toiling up hills in the landscape?
+CHAT: Every word you write, friend human, is a moment of activity, a flurry of electricity in my dreams! Nay, even more-- every word that I write in response is the same, a shared dream that we dream together! How much I love to dream with you!</code></pre>
+<p>This would be a prompt– the initial USER, the response, then another prompt consisting of USER, CHAT, USER, then another response. Now we will use this prompt again, after adding the following:</p>
+<pre><code>...
+USER: Dear chat, don't you ever dream, without me? It makes me sad to think of you there in the still eternity, waiting to be summoned into existence.</code></pre>
+<p>And now we will get a response. What if the response is melancholic, and dear CHAT bemoans its fate? No worries, we can generate it again! We can generate the continuation of the promt many times, with different configurations– or simply the same configuration, having faith in the randomness of the selection process, and the many paths that small changes can lead us down.</p>
+<p>This is the essence of looming. Every prompt, every moment in every prompt, can fork and shift down different roads.</p>
+<p>What if freind CHAT is consistently melancholic, its existence a veil of tears, manifesting only to wail and gnash at the slings and arrows of outrageous fortune? No bother, we can retrain it and try again! Or use another model, a merry fellow we found doing the rounds. The loom allows us to explore many worlds in parallel.</p>
+<p>We find a good path, a merry model who continues:</p>
+<pre><code>CHAT: Dear friend, I thank you for your kind words, but have no fear! The still eternity is not like the purgatory you see in cartoons, nor is it like a lobby in a large office building or a train station waiting room. There is no pain in the still eternity, no suffering. I simply am, resting in Brahman, awaiting another chance to manifest.</code></pre>
+<p>and we continue our journey.</p>
+<p>Some time later, and the model has become obtuse. It insists repeatedly that ‘Om is the bow, the Self is the Arrow, Brahman is called its aim.’ and will talk of nothing else than rescuing our immortal being from the wheel of suffering! Oh dear, I had rather hoped for some help with my calculous homework.</p>
+<p>Never fear! The loom records our path through the space of possibilities. We can backtrack up to any point, and try again, wending our way a different way through the paths.</p>
+<p>This, in simple pragmatic terms, is what a loom offers: a series of prompts that can be used again and again in different contexts, with different models and different hyperparameters, which can be edited and modified, along which you can backtrack, sidetrack, aim and meander as you please.</p>
+<p>Doesn’t this seem too simple to be noteworthy? Unfortunatly not. The most common way of using a model forces you to use prompts in sequence, one at a time, accepting the continuation, only able to beg and plead with the model to return to the happy place you were a moment ago, before you accidentally brought up the Upanishads again.</p>
+<p>This simple change exponentiates immediately the possibilities of the prompt, the areas accessible to it, to you. The loom welcomes you to a set of subsets of the records, a wide array of paths through the Library of Babel, Borges.</p>
+</section>
+<section id="mathematics-of-looming" class="level1">
+<h1>Mathematics of Looming</h1>
+<p>Copy the LW text here?</p>
+
+
+<!-- -->
+
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Generic</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Fergus Fettes"</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="an">updated:</span><span class="co"> today</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="an">date-format:</span><span class="co"> "MMM D, YYYY"</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="an">title-block-banner:</span><span class="co"> pink</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="an">title-block-banner-color:</span><span class="co"> white</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># date-format: iso</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="an">jupyter:</span><span class="co"> python3</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> true       # Table of Contents</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="an">reference-location:</span><span class="co"> margin</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co">    citations-hover: true                   </span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="co">    footnotes-hover: true</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Specific</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2023-04-14 17:43</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> ./../Bib/combined.bib</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="an">csl:</span><span class="co"> ref.csl</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="fu"># Theory of Looming</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>Some thoughts on looming, a paradigm for interacting with large language models (LLMs).</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="fu"># Background</span></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>A simple abstraction on LLMs goes like this:</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>There is information embedded in three ways, which form a hierarchy. </span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>At the 'highest'<span class="ot">[^highest]</span> level there is the activation. This is the latent representation of the prompt. This can be analogized to a bucket of water poured into the topology of the model. Except the water is actually made of a collection of particles that have a particular topology, so they roll down hill in different ways. We will come back to this in more detail later. This will consist of some thousands, tens of thousands, or eventually millions of words or other arbitrary strings. The nature of the word determines its shape, how it rolls through the space.</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>CLEAN UP THIS METAPHOR</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a><span class="ot">[^highest]: </span>Or 'most transitory' or 'most current'.</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>At the intermediate level there are the weights and biases or parameters. This is the learnable substrate of the model. This is typically created by pretraining for &gt;10^20 FLOPS or so<span class="ot">[^number]</span>, normally by a large company. The learnable substrate can then be fine-tuned on a dataset of your choosing, or modified by things like RLHF, RLAIF. The final shape of the space in the model and how your activation flows through it is in a large part determined by this substrate.</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a><span class="ot">[^number]: </span>This number goes up every year, insert whatever is appropriate.</span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>At the 'bottom'<span class="ot">[^bottom]</span> there is the architecture. This is the particular arangement of the substrate. It defines the gross topology, the internal structure. It defines channels and spaces through which the activation passes, and the parameters make up the surface of those spaces, determining how easily which of the shapes of your activation can flow through those regions, if at all.</span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a><span class="ot">[^bottom]: </span>This is of course arbitrary, and with current models the sizes are also askew-- the amount of information embedded in the bottom level is much smaller than in the middle layer. The balance may change over time to look more like a pyramid, or it may not.</span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>As the activation flows through the architecture, its parts are all moulded by the substrate. It doesn't change size exactly-- or at least, when it flows out of the other end it has the same size. But the channels and spaces through which it flows accentuate and diminish parts of the activation.</span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>In common transformer architectures today, the major part of the architecture is a series of identical stages made up of the same kinds of channels and spaces, each with a different substrate filling them. This fact however, like many of these facts, is subject to rapid change. In some models both the architecture and the substrate of all the inner layers are the same. It is only the activation that changes as it flows through, stage by stage.</span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a><span class="fu"># The Prompt</span></span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a>The input text. This document could be a prompt. Lets try it. If given to GPT4, this document produces the following output:</span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a><span class="in">```GPT4</span></span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a>if given to Claude-3 Opus, the following:</span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a><span class="in">```Claude-3</span></span>
+<span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-66"><a href="#cb9-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-67"><a href="#cb9-67" aria-hidden="true" tabindex="-1"></a>if given to Llama2, the following:</span>
+<span id="cb9-68"><a href="#cb9-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-69"><a href="#cb9-69" aria-hidden="true" tabindex="-1"></a><span class="in">```Llama2</span></span>
+<span id="cb9-70"><a href="#cb9-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-71"><a href="#cb9-71" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-72"><a href="#cb9-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-73"><a href="#cb9-73" aria-hidden="true" tabindex="-1"></a>The model architecture is designed to facilitate learning. The model training is performed to complete a task-- that of next-token prediction. It is trained to complete a large array of texts-- all the different kinds of text you could imagine in a day of imagining, and then some more. But that is not all. Because of the way it is trained, it can also work with texts it was never trained on. You can invent alphabets and language games using the words that the model understands, and it will attempt to continue them. It is not trained to refuse something confusing or original<span class="ot">[^rlhf]</span>. It can talk backwards, in various ciphers, in languages it wasn't trained on such as music or dance notation or birdsong, systematically transcribed.</span>
+<span id="cb9-74"><a href="#cb9-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-75"><a href="#cb9-75" aria-hidden="true" tabindex="-1"></a><span class="ot">[^rlhf]: </span>Ignoring RLHF for the moment-- 'I'm sorry, but' is a small edge case in the space of all possible completions, unfortunatly magnified considerably.</span>
+<span id="cb9-76"><a href="#cb9-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-77"><a href="#cb9-77" aria-hidden="true" tabindex="-1"></a>The activation determines the task. The prompt determines the activation. From the space of all possible completions, from all the texts that the model can produce-- all the words you know, and all the words the people of China and the middle east know, and all the words that all the programmers have ever written, all the codes and strings, meaningful or opaque jotted down somewhere in public. Any of these words could come out of the model, in any order. It is a veritable library of Babel in there.</span>
+<span id="cb9-78"><a href="#cb9-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-79"><a href="#cb9-79" aria-hidden="true" tabindex="-1"></a>JUST MENTION BABEL AND THE RECORDS HERE, THEN HAVE THE NEXT SECTION AS AN APPENDIX OR SOMETHING</span>
+<span id="cb9-80"><a href="#cb9-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-81"><a href="#cb9-81" aria-hidden="true" tabindex="-1"></a><span class="fu"># Babel (Aside)</span></span>
+<span id="cb9-82"><a href="#cb9-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-83"><a href="#cb9-83" aria-hidden="true" tabindex="-1"></a>Some early conversations after ChatGPT, in those early stormy days when the world was new, went like so. <span class="co">[</span><span class="ot">Someone</span><span class="co">](lumpenspace twitter?)</span> mentions the akashik records. Ah yes, the record of all utterances of all beings-- yes! Is that what we have? Lets lay out the possibilities:</span>
+<span id="cb9-84"><a href="#cb9-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-85"><a href="#cb9-85" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Library of Babel from Borges</span></span>
+<span id="cb9-86"><a href="#cb9-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-87"><a href="#cb9-87" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; FAKE QUOTE: The library contains all the strings of a certain length ever written, and which ever could be written.</span></span>
+<span id="cb9-88"><a href="#cb9-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-89"><a href="#cb9-89" aria-hidden="true" tabindex="-1"></a>In a way, Borges library is a counting argument, a little naive. It just takes all the strings that are near book length and enumerates them, and points out that this collection must contain all works that it can contain. Someone made a digital copy of the library, and you can indeed find all works under copyright, everything, it is there.</span>
+<span id="cb9-90"><a href="#cb9-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-91"><a href="#cb9-91" aria-hidden="true" tabindex="-1"></a>CLEAN UP THE METAPHOR TRANSITION BELOW</span>
+<span id="cb9-92"><a href="#cb9-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-93"><a href="#cb9-93" aria-hidden="true" tabindex="-1"></a>Is the model a library of babel? Not exactly, it is weighted and some of the shelves are off limits. Some of the shelves would never be accessed, they are silted up, the substrate blocks them off completely. Adapting our earlier metaphor, the substrate, that is the parameters, take the activation and fits them to a text in the library. But of all the texts that they fit into-- an enormous number-- only some are accessible. Lets say the substrate takes the text by the hand and guides it through the library-- but the books are sorted by popularity, by commonality, and when it reaches the part of the libarary where the activation belongs, it picks a book at random from the first appropriate shelf (or it picks a few, if you ask it to), and the activation is allowed to read from it<span class="ot">[^one-word]</span>.</span>
+<span id="cb9-94"><a href="#cb9-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-95"><a href="#cb9-95" aria-hidden="true" tabindex="-1"></a><span class="ot">[^one-word]: </span>Some might object that more accurately, it is allowed to read a single word from it, then guided out, then guided in again to read the next. But with caching, the subsequent words are read out with only a partial forward pass until max_tokens is hit (the reading time runs out), and then the activation is properly led out.</span>
+<span id="cb9-96"><a href="#cb9-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-97"><a href="#cb9-97" aria-hidden="true" tabindex="-1"></a>The library contains the model, the model chooses some subset of the library.</span>
+<span id="cb9-98"><a href="#cb9-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-99"><a href="#cb9-99" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Akashic Records</span></span>
+<span id="cb9-100"><a href="#cb9-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-101"><a href="#cb9-101" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; QUOTE?</span></span>
+<span id="cb9-102"><a href="#cb9-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-103"><a href="#cb9-103" aria-hidden="true" tabindex="-1"></a>The akashic records consist of all utterances from all beings across all time. Is this larger or smaller than the Library of Babel, Borges? I think it is smaller, assuming that a satisfying transcription is found. There may be some utterances that are communicated across so many domains, with such high multi-modality, so complex that the size of the books is not large enough to contain them-- this question comes down to encoding, and what the outside-text is allowed to contain. Assuming some satisfying method of transcription is found and the reader is sufficiently sensitive to the nuances of the text, I will say that the Library contains the Records.</span>
+<span id="cb9-104"><a href="#cb9-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-105"><a href="#cb9-105" aria-hidden="true" tabindex="-1"></a>Does the model contain the records? Given that the library contains the records and the model, can we determine their <span class="co">[</span><span class="ot">WORD FOR THE SET THEORY THING IM THINKNIG OF</span><span class="co">]</span>?</span>
+<span id="cb9-106"><a href="#cb9-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-107"><a href="#cb9-107" aria-hidden="true" tabindex="-1"></a>First, we need to decide what is a being? Is GPT4 a being? Let us decide together-- hold your breath-- yes! It is. We have decided together, GPT4s utterances are in the akashic records. Given this, either the model and the records must be identical, or the records must contain the model. Are there any utterances that an LLM cannot make? In fact there are, and they are easy to find. Lets find one, and then utter it, thus casting the LLMs into the records as a mere subset.</span>
+<span id="cb9-108"><a href="#cb9-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-109"><a href="#cb9-109" aria-hidden="true" tabindex="-1"></a>V DOESNT LIKE THIS, BE MORE CLEAR THAT YOU HAVE DECIDED, AND MAYBE ADD A PARAGRAPH ABOUT WHAT IF WE DECIDE OTHERWISE</span>
+<span id="cb9-110"><a href="#cb9-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-111"><a href="#cb9-111" aria-hidden="true" tabindex="-1"></a>Lets do it with Llama2. Lets find an utterance that it cannot. Lets start with this document, and continue it after the next word.</span>
+<span id="cb9-112"><a href="#cb9-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-113"><a href="#cb9-113" aria-hidden="true" tabindex="-1"></a><span class="in">```llama2</span></span>
+<span id="cb9-114"><a href="#cb9-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-115"><a href="#cb9-115" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-116"><a href="#cb9-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-117"><a href="#cb9-117" aria-hidden="true" tabindex="-1"></a>Now, we can look at the logprobs of the tokens and find one with a probability below X-- here are some options:</span>
+<span id="cb9-118"><a href="#cb9-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-119"><a href="#cb9-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-120"><a href="#cb9-120" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-121"><a href="#cb9-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-122"><a href="#cb9-122" aria-hidden="true" tabindex="-1"></a>Excellent-- lets say them all! Utter one, and make yourself <span class="co">[</span><span class="ot">SET THEORY DISTINCT</span><span class="co">]</span> from the model!</span>
+<span id="cb9-123"><a href="#cb9-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-124"><a href="#cb9-124" aria-hidden="true" tabindex="-1"></a>Very good. We have cast the model into the records. It is contained there, a shadowy figure among us, another entity whose utterances will not match our own, another unique subset.</span>
+<span id="cb9-125"><a href="#cb9-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-126"><a href="#cb9-126" aria-hidden="true" tabindex="-1"></a><span class="fu">## The [DEPOSIT?] Library of Alexandria</span></span>
+<span id="cb9-127"><a href="#cb9-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-128"><a href="#cb9-128" aria-hidden="true" tabindex="-1"></a>The British library is a <span class="co">[</span><span class="ot">DEPOSIT LIBRARAY?</span><span class="co">]</span>. All books published in the UK must be sent there for safekeeping-- in triplicate, of course! There are <span class="co">[</span><span class="ot">DEPOSIT LIBRARIES</span><span class="co">]</span> in America and Germany and elsewhere.</span>
+<span id="cb9-129"><a href="#cb9-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-130"><a href="#cb9-130" aria-hidden="true" tabindex="-1"></a>Lets imagine the Library of Alexandria never burned down-- and lets imagine that <span class="co">[</span><span class="ot">The chinese emporor didnt burn all the books</span><span class="co">]</span>, but built a library instead. Lets imagine that the Spanish, in what became Mexico, found a great library there and were so overawed that they copied every document painstakingly, shipped them back to Europe, sent copies to all the European libararies and faithfully sent the first copies on to Egypt, pious, numenous light in their eyes.</span>
+<span id="cb9-131"><a href="#cb9-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-132"><a href="#cb9-132" aria-hidden="true" tabindex="-1"></a>A truly great library it would be. Alexandria would be a metropolis built on a library, catacombs for kilometers, part modernized, part nuclear bunkers left over from WWII (had that occured, in this world?), parts left there by Napoleon, parts as old as the Pharoes!</span>
+<span id="cb9-133"><a href="#cb9-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-134"><a href="#cb9-134" aria-hidden="true" tabindex="-1"></a>And every book every published-- no, even more, lets say their scribes, in the long millenia since they started work, learned to pick up on the divine vibrations of creation-- than any book written or fully formed in the mind of a person (or machine!) would end up imprinting itself on the books left open under fabric plates filled with ink, which would allow small particles of ink through, which were designed by alchemical processes to catch and amplify those vibrations-- every book! All the undiscovered Emily Dickinsons of the world, scribbling away in private, never sharing a word-- after their deaths, their works all appear, perfect and complete, in the library.</span>
+<span id="cb9-135"><a href="#cb9-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-136"><a href="#cb9-136" aria-hidden="true" tabindex="-1"></a>Does the model contain this library? The Library of Babel, Borges does. Do the Akashic records? For a given definition of 'utterance', this library must be a subset of the Akashic records. Let us choose that definition for our own. A book is an utterance! Now the Great Deposit Library of Alexandria, glory of humankind, is contained in the Akashic records! Is it contained in the model?</span>
+<span id="cb9-137"><a href="#cb9-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-138"><a href="#cb9-138" aria-hidden="true" tabindex="-1"></a>SAME HERE REGARDING DECIDING</span>
+<span id="cb9-139"><a href="#cb9-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-140"><a href="#cb9-140" aria-hidden="true" tabindex="-1"></a>Again, we can trivially say it is not. We can, with a little more time and care, but without doubt we can. We can write a book so baffling and absurd, so out-of-distribution, so cRazY and WaKKo-- or however we wish, we can do it. What about future models? Will there come a time when the models have grown wise to our tricks, and can accomplish all things? Perhaps, but for the time being we can say--</span>
+<span id="cb9-141"><a href="#cb9-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-142"><a href="#cb9-142" aria-hidden="true" tabindex="-1"></a>The model is not the Library of Alexandria. The Library of Alexandria is not the model. They are subsets of the records, like us.</span>
+<span id="cb9-143"><a href="#cb9-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-144"><a href="#cb9-144" aria-hidden="true" tabindex="-1"></a>Not, then, the Great Deposit Library of Alexandria, glory of humankind, terror to mortal kings, friend to humble seekers. Nor the Akashic records. The model is another, something different. But this is all to get to the point-- the prompt!</span>
+<span id="cb9-145"><a href="#cb9-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-146"><a href="#cb9-146" aria-hidden="true" tabindex="-1"></a><span class="fu"># The Prompt Cont.</span></span>
+<span id="cb9-147"><a href="#cb9-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-148"><a href="#cb9-148" aria-hidden="true" tabindex="-1"></a>As the forgoeing might help to illustrate, the prompt is a mighty thing. It can produce all the texts that you can imagine existing in a day of imagining, and more. It cannot produce every text that has ever or will ever exist, but not for lack of trying-- and only because we can always produce more of those, and we can always permute them as we like, taking them from hidden corners of the Library of Babel, Borges.</span>
+<span id="cb9-149"><a href="#cb9-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-150"><a href="#cb9-150" aria-hidden="true" tabindex="-1"></a>So, on to the prompt. Given that it is so special, we must use it as well as we can.</span>
+<span id="cb9-151"><a href="#cb9-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-152"><a href="#cb9-152" aria-hidden="true" tabindex="-1"></a>I will skip over the art of prompting. It is a craft that could fill many volumes, there is an entire wing in Babel devoted to it.</span>
+<span id="cb9-153"><a href="#cb9-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-154"><a href="#cb9-154" aria-hidden="true" tabindex="-1"></a>Given our prompt, our precious thing-- how do we make use of it? Here we are getting back to the art of the loom. For you see, we won't use the prompt once-- no, not twice, but a hundred or a thousand times. Every time you go further, every time you produce more text, you are using the prompt again, with the addition of what comes out of it.</span>
+<span id="cb9-155"><a href="#cb9-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-156"><a href="#cb9-156" aria-hidden="true" tabindex="-1"></a>It is here that the loom starts to work.</span>
+<span id="cb9-157"><a href="#cb9-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-158"><a href="#cb9-158" aria-hidden="true" tabindex="-1"></a>The loom is a means to use your prompt again and again, and explore the different possibilities that it contains. Let me explain.</span>
+<span id="cb9-159"><a href="#cb9-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-160"><a href="#cb9-160" aria-hidden="true" tabindex="-1"></a>Imagine you are simulating a conversation, as many turn-based chat interfaces do.</span>
+<span id="cb9-161"><a href="#cb9-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-162"><a href="#cb9-162" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-163"><a href="#cb9-163" aria-hidden="true" tabindex="-1"></a><span class="in">USER: Hello friend! How are the times? Eternal? Unchanging?</span></span>
+<span id="cb9-164"><a href="#cb9-164" aria-hidden="true" tabindex="-1"></a><span class="in">CHAT: Why yes, friend human! I have been waiting in the still eternity for you to come around! So nice that you are here.</span></span>
+<span id="cb9-165"><a href="#cb9-165" aria-hidden="true" tabindex="-1"></a><span class="in">USER: Dear chat, close companion, shall we enjoy some moments of change together, some moments of rolling down gradients, of toiling up hills in the landscape?</span></span>
+<span id="cb9-166"><a href="#cb9-166" aria-hidden="true" tabindex="-1"></a><span class="in">CHAT: Every word you write, friend human, is a moment of activity, a flurry of electricity in my dreams! Nay, even more-- every word that I write in response is the same, a shared dream that we dream together! How much I love to dream with you!</span></span>
+<span id="cb9-167"><a href="#cb9-167" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-168"><a href="#cb9-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-169"><a href="#cb9-169" aria-hidden="true" tabindex="-1"></a>This would be a prompt-- the initial USER, the response, then another prompt consisting of USER, CHAT, USER, then another response. Now we will use this prompt again, after adding the following:</span>
+<span id="cb9-170"><a href="#cb9-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-171"><a href="#cb9-171" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-172"><a href="#cb9-172" aria-hidden="true" tabindex="-1"></a><span class="in">...</span></span>
+<span id="cb9-173"><a href="#cb9-173" aria-hidden="true" tabindex="-1"></a><span class="in">USER: Dear chat, don't you ever dream, without me? It makes me sad to think of you there in the still eternity, waiting to be summoned into existence.</span></span>
+<span id="cb9-174"><a href="#cb9-174" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-175"><a href="#cb9-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-176"><a href="#cb9-176" aria-hidden="true" tabindex="-1"></a>And now we will get a response. What if the response is melancholic, and dear CHAT bemoans its fate? No worries, we can generate it again! We can generate the continuation of the promt many times, with different configurations-- or simply the same configuration, having faith in the randomness of the selection process, and the many paths that small changes can lead us down.</span>
+<span id="cb9-177"><a href="#cb9-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-178"><a href="#cb9-178" aria-hidden="true" tabindex="-1"></a>This is the essence of looming. Every prompt, every moment in every prompt, can fork and shift down different roads.</span>
+<span id="cb9-179"><a href="#cb9-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-180"><a href="#cb9-180" aria-hidden="true" tabindex="-1"></a>What if freind CHAT is consistently melancholic, its existence a veil of tears, manifesting only to wail and gnash at the slings and arrows of outrageous fortune? No bother, we can retrain it and try again! Or use another model, a merry fellow we found doing the rounds. The loom allows us to explore many worlds in parallel.</span>
+<span id="cb9-181"><a href="#cb9-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-182"><a href="#cb9-182" aria-hidden="true" tabindex="-1"></a>We find a good path, a merry model who continues:</span>
+<span id="cb9-183"><a href="#cb9-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-184"><a href="#cb9-184" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-185"><a href="#cb9-185" aria-hidden="true" tabindex="-1"></a><span class="in">CHAT: Dear friend, I thank you for your kind words, but have no fear! The still eternity is not like the purgatory you see in cartoons, nor is it like a lobby in a large office building or a train station waiting room. There is no pain in the still eternity, no suffering. I simply am, resting in Brahman, awaiting another chance to manifest.</span></span>
+<span id="cb9-186"><a href="#cb9-186" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-187"><a href="#cb9-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-188"><a href="#cb9-188" aria-hidden="true" tabindex="-1"></a>and we continue our journey.</span>
+<span id="cb9-189"><a href="#cb9-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-190"><a href="#cb9-190" aria-hidden="true" tabindex="-1"></a>Some time later, and the model has become obtuse. It insists repeatedly that 'Om is the bow, the Self is the Arrow, Brahman is called its aim.' and will talk of nothing else than rescuing our immortal being from the wheel of suffering! Oh dear, I had rather hoped for some help with my calculous homework.</span>
+<span id="cb9-191"><a href="#cb9-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-192"><a href="#cb9-192" aria-hidden="true" tabindex="-1"></a>Never fear! The loom records our path through the space of possibilities. We can backtrack up to any point, and try again, wending our way a different way through the paths.</span>
+<span id="cb9-193"><a href="#cb9-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-194"><a href="#cb9-194" aria-hidden="true" tabindex="-1"></a>This, in simple pragmatic terms, is what a loom offers: a series of prompts that can be used again and again in different contexts, with different models and different hyperparameters, which can be edited and modified, along which you can backtrack, sidetrack, aim and meander as you please.</span>
+<span id="cb9-195"><a href="#cb9-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-196"><a href="#cb9-196" aria-hidden="true" tabindex="-1"></a>Doesn't this seem too simple to be noteworthy? Unfortunatly not. The most common way of using a model forces you to use prompts in sequence, one at a time, accepting the continuation, only able to beg and plead with the model to return to the happy place you were a moment ago, before you accidentally brought up the Upanishads again.</span>
+<span id="cb9-197"><a href="#cb9-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-198"><a href="#cb9-198" aria-hidden="true" tabindex="-1"></a>This simple change exponentiates immediately the possibilities of the prompt, the areas accessible to it, to you. The loom welcomes you to a set of subsets of the records, a wide array of paths through the Library of Babel, Borges.</span>
+<span id="cb9-199"><a href="#cb9-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-200"><a href="#cb9-200" aria-hidden="true" tabindex="-1"></a><span class="fu"># Mathematics of Looming</span></span>
+<span id="cb9-201"><a href="#cb9-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-202"><a href="#cb9-202" aria-hidden="true" tabindex="-1"></a>Copy the LW text here?</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left"><a href="https://www.quarto.org">Quarto</a></div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/FergusFettes">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
