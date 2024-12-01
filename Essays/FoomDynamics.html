@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Fergus Fettes">
 
-<title>Fergus Fettes - Foom Dynamis</title>
+<title>Foom Dynamis – Fergus Fettes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -18,11 +18,12 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -33,7 +34,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -47,43 +48,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -99,17 +70,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e73ed75cf5e7a3fd855296a79e6d84f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -118,16 +95,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <style>
-    .quarto-title-block .quarto-title-banner {
-      color: white;
+
+      .quarto-title-block .quarto-title-banner h1,
+      .quarto-title-block .quarto-title-banner h2,
+      .quarto-title-block .quarto-title-banner h3,
+      .quarto-title-block .quarto-title-banner h4,
+      .quarto-title-block .quarto-title-banner h5,
+      .quarto-title-block .quarto-title-banner h6
+      {
+        color: white;
+      }
+
+      .quarto-title-block .quarto-title-banner {
+        color: white;
 background: pink;
-    }
-    </style>
+      }
+</style>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -136,31 +126,31 @@ background: pink;
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Fergus Fettes</span>
     </a>
   </div>
           <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
 </ul>
-            <div class="quarto-toggle-container">
-                <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
-            </div>
+</div>
             <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -186,7 +176,7 @@ background: pink;
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">Nov 17, 2024</p>
+        <p class="date">Dec 1, 2024</p>
       </div>
     </div>
     
@@ -213,29 +203,30 @@ background: pink;
 
 
 
+
 <p><img src="https://twitter.com/robinhanson/status/1642565502403788800.png" class="img-fluid" alt="Hanson Tweet"> <img src="https://twitter.com/gfodor/status/1642751707829649408.png" class="img-fluid" alt="Gfodor Tweet"> <img src="https://twitter.com/Outsideness/status/1642580787626123265.png" class="img-fluid" alt="Land Basilisk Satanism"></p>
 <p>The singularity is weirdly under-theorized. When they set off the bomb in Los Alomos, they checked first if it would ignite the atmosphere. When they started up the Large Handron Collider, they reassured themselves that they wouldn’t accidentally create a black hole.</p>
 <section id="reference-classes" class="level1 page-columns page-full">
 <h1>Reference Classes</h1>
-<blockquote class="blockquote page-columns page-full">
-<div class="page-columns page-full"><p>“The first catastrophe mechanism seriously considered seems to have been the possibility, raised in the 1940s at Los Alamos before the first atomic bomb tests, that fission or fusion bombs might ignite the atmosphere or oceans in an unstoppable chain reaction.”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;<a href="https://arxiv.org/pdf/hep-ph/0009204v6.pdf">A critical look at risk assessments for global catastrophes</a></p></li></div></div>
-</blockquote>
-<blockquote class="blockquote page-columns page-full">
-<div class="page-columns page-full"><p>“Another hypothetical catastrophe was examined some time ago by Hut and Rees [6,7]. They considered the possibility that the vacuum state we live in is not the true vacuum, but merely a local minimum of the effective potential. They asked whether, if this were the case, new generations of collider experiments could trigger a catastrophic transition to the true vacuum, destroying not only the Earth but (eventually) all presently stable forms of matter in the cosmos. They showed that the probability of this occurring artificially in present or foreseeable collider experiments is considerably smaller than the probability of it having occurred naturally within our past light-cone.”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;<a href="https://arxiv.org/pdf/hep-ph/0009204v6.pdf">A critical look at risk assessments for global catastrophes</a></p></li></div></div>
-</blockquote>
-<blockquote class="blockquote page-columns page-full">
-<div class="page-columns page-full"><p>“the “killer strangelet” catastrophe scenario, which would arise if negatively charged metastable strange matter existed and could be produced in the experiments.”<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;<a href="https://arxiv.org/pdf/hep-ph/0009204v6.pdf">A critical look at risk assessments for global catastrophes</a></p></li></div></div>
-</blockquote>
+<div class="page-columns page-full"><blockquote class="blockquote">
+<p>“The first catastrophe mechanism seriously considered seems to have been the possibility, raised in the 1940s at Los Alamos before the first atomic bomb tests, that fission or fusion bombs might ignite the atmosphere or oceans in an unstoppable chain reaction.”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</blockquote><div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;<a href="https://arxiv.org/pdf/hep-ph/0009204v6.pdf">A critical look at risk assessments for global catastrophes</a></p></div></div></div>
+<div class="page-columns page-full"><blockquote class="blockquote">
+<p>“Another hypothetical catastrophe was examined some time ago by Hut and Rees [6,7]. They considered the possibility that the vacuum state we live in is not the true vacuum, but merely a local minimum of the effective potential. They asked whether, if this were the case, new generations of collider experiments could trigger a catastrophic transition to the true vacuum, destroying not only the Earth but (eventually) all presently stable forms of matter in the cosmos. They showed that the probability of this occurring artificially in present or foreseeable collider experiments is considerably smaller than the probability of it having occurred naturally within our past light-cone.”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+</blockquote><div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;<a href="https://arxiv.org/pdf/hep-ph/0009204v6.pdf">A critical look at risk assessments for global catastrophes</a></p></div></div></div>
+<div class="page-columns page-full"><blockquote class="blockquote">
+<p>“the “killer strangelet” catastrophe scenario, which would arise if negatively charged metastable strange matter existed and could be produced in the experiments.”<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+</blockquote><div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;<a href="https://arxiv.org/pdf/hep-ph/0009204v6.pdf">A critical look at risk assessments for global catastrophes</a></p></div></div></div>
 <blockquote class="blockquote">
 <p>“What should a court do with a preliminary-injunction request to halt a multi-billion-dollar particle-physics experiment that plaintiffs claim could create a black hole that will devour the planet? The real-life case of CERN’s LHC seems like a legal classic in the making. Unfortunately, however, no court has braved the extreme factual terrain to reach the merits.”</p>
 </blockquote>
-<blockquote class="blockquote page-columns page-full">
-<div class="page-columns page-full"><p>“Gerald S. Hawkins proposed the “mindstep equation” for the years where a “mindstep” (a fundamental human paradigm shift) would occur. It converges towards 2053, and is based on 5(!) data points (Hawkins 2002).”<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn4"><p><sup>4</sup>&nbsp;<a href="https://www.semanticscholar.org/paper/An-Overview-of-Models-of-Technological-Singularity-Sandberg/867ec09d9dd31f03cc699e252bb5cf5f74e4f700?sort=relevance&amp;page=2">An Overview of Models of Technological Singularity</a></p></li></div></div>
-</blockquote>
-<div class="page-columns page-full"><p>“A point or period in time where the rate of change is undefined.”<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn5"><p><sup>5</sup>&nbsp;<a href="https://cfrce.com/images/Paper_1_finalish_edited.pdf">Complexity Economics in a Technological Singularity Paradigm</a></p></li></div></div>
-<div class="page-columns page-full"><p>“A precedent of the phenomenon explained in this pa- per can also be found in evolutionary biology, a com- plex adaptive system. The six mass extinctions and the subsequent re-flourishing of life post these inci- dents indicates to the universal behaviour of complex adaptive systems. A crucial factor (climate change, meteors, geological change) approaches a point in singularity (where the rate of change is undefined) the complex adaptive system of biological evolution approaches a near zero critical point. While there is an attempt to introduce changes, none of them last to become adaptations, since they are unable to keep up with the rapid rate of change. This point is one of stable or partial equilibrium. The resulting stagna- tion caused by the equilibrium causes degradation, since survival in a dynamic system is dependent on adaptation. This degradation takes form as a mass extinction. However, this mass extinction ends and disparate forms of life begin to re-populate the earth. This demonstrates that either singularities aren’t ab- solute and that complex adaptive systems continue in relevance despite severe setbacks.”<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn6"><p><sup>6</sup>&nbsp;<a href="https://cfrce.com/images/Paper_1_finalish_edited.pdf">Complexity Economics in a Technological Singularity Paradigm</a></p></li></div></div>
-<div class="page-columns page-full"><p>“or simulations of the first artificial general intelligence’s (AGI’s) origin (singularity simulations) should dominate. Also, simulations which simulate the 21st century and global catastrophic risks are probable.”<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn7"><p><sup>7</sup>&nbsp;<a href="https://arxiv.org/pdf/1905.05792.pdf">Simulation Typology and Termination Risks</a></p></li></div></div>
-<div class="page-columns page-full"><p>“Thinking that FAI may be too difficult, Goertzel (2012) proposes a global ‘‘Nanny AI’’ that would ‘‘forestall a full-on Singularity for a while, …giving us time to figure out what kind of Singularity we really want to build and how.’’”<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn8"><p><sup>8</sup>&nbsp;<a href="https://sci-hub.ru/https://link.springer.com/chapter/10.1007/978-3-642-32560-1_2">Intelligence Explosion: Evidence and Import</a></p></li></div></div>
+<div class="page-columns page-full"><blockquote class="blockquote">
+<p>“Gerald S. Hawkins proposed the “mindstep equation” for the years where a “mindstep” (a fundamental human paradigm shift) would occur. It converges towards 2053, and is based on 5(!) data points (Hawkins 2002).”<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+</blockquote><div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;<a href="https://www.semanticscholar.org/paper/An-Overview-of-Models-of-Technological-Singularity-Sandberg/867ec09d9dd31f03cc699e252bb5cf5f74e4f700?sort=relevance&amp;page=2">An Overview of Models of Technological Singularity</a></p></div></div></div>
+<p>“A point or period in time where the rate of change is undefined.”<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;<a href="https://cfrce.com/images/Paper_1_finalish_edited.pdf">Complexity Economics in a Technological Singularity Paradigm</a></p></div><div id="fn6"><p><sup>6</sup>&nbsp;<a href="https://cfrce.com/images/Paper_1_finalish_edited.pdf">Complexity Economics in a Technological Singularity Paradigm</a></p></div></div><p>“A precedent of the phenomenon explained in this pa- per can also be found in evolutionary biology, a com- plex adaptive system. The six mass extinctions and the subsequent re-flourishing of life post these inci- dents indicates to the universal behaviour of complex adaptive systems. A crucial factor (climate change, meteors, geological change) approaches a point in singularity (where the rate of change is undefined) the complex adaptive system of biological evolution approaches a near zero critical point. While there is an attempt to introduce changes, none of them last to become adaptations, since they are unable to keep up with the rapid rate of change. This point is one of stable or partial equilibrium. The resulting stagna- tion caused by the equilibrium causes degradation, since survival in a dynamic system is dependent on adaptation. This degradation takes form as a mass extinction. However, this mass extinction ends and disparate forms of life begin to re-populate the earth. This demonstrates that either singularities aren’t ab- solute and that complex adaptive systems continue in relevance despite severe setbacks.”<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<p>“or simulations of the first artificial general intelligence’s (AGI’s) origin (singularity simulations) should dominate. Also, simulations which simulate the 21st century and global catastrophic risks are probable.”<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;<a href="https://arxiv.org/pdf/1905.05792.pdf">Simulation Typology and Termination Risks</a></p></div><div id="fn8"><p><sup>8</sup>&nbsp;<a href="https://sci-hub.ru/https://link.springer.com/chapter/10.1007/978-3-642-32560-1_2">Intelligence Explosion: Evidence and Import</a></p></div></div><p>“Thinking that FAI may be too difficult, Goertzel (2012) proposes a global ‘‘Nanny AI’’ that would ‘‘forestall a full-on Singularity for a while, …giving us time to figure out what kind of Singularity we really want to build and how.’’”<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
 </section>
 <section id="further-reading" class="level1">
 <h1>Further reading</h1>
@@ -280,12 +271,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
     }
-  });
-  clipboard.on('success', function(e) {
+    return false;
+  }
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -317,7 +311,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
   const viewSource = window.document.getElementById('quarto-view-source') ||
                      window.document.getElementById('quarto-code-tools-source');
   if (viewSource) {
@@ -369,10 +383,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   if (showAllCode) {
     showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -382,8 +413,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -395,9 +435,244 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -509,12 +784,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>See this one by Yampolskiy too: <span class="co">[</span><span class="ot">The Singularity May Be Near</span><span class="co">](https://www.semanticscholar.org/paper/The-Singularity-May-Be-Near-Yampolskiy/cc466d95caccc551d2fb23909cf39cab8642d76b)</span></span>
 <span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Dragon Gods formalism</span><span class="co">](https://www.lesswrong.com/posts/cLyo7dKmimeXR3hAC/towards-a-formalisation-of-returns-on-cognitive-reinvestment)</span></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>Plus, <span class="co">[</span><span class="ot">Why I am Sceptical of Foom</span><span class="co">](https://www.lesswrong.com/posts/jdLmC46ZuXS54LKzL/why-i-m-sceptical-of-foom)</span> by same.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>Plus, <span class="co">[</span><span class="ot">Why I am Sceptical of Foom</span><span class="co">](https://www.lesswrong.com/posts/jdLmC46ZuXS54LKzL/why-i-m-sceptical-of-foom)</span> by same.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left"><a href="https://www.quarto.org">Quarto</a></div>   
+    <div class="nav-footer-left">
+<p><a href="https://www.quarto.org">Quarto</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -527,6 +807,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+
 
 
 

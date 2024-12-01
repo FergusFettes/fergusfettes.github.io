@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-11-17">
+<meta name="dcterms.date" content="2024-12-01">
 
-<title>Fergus Fettes - Evolution of the Cell</title>
+<title>Evolution of the Cell – Fergus Fettes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -18,14 +18,16 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -39,8 +41,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -55,17 +56,23 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e73ed75cf5e7a3fd855296a79e6d84f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -74,8 +81,10 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -87,30 +96,30 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand navbar-dark ">
+    <nav class="navbar navbar-expand " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Fergus Fettes</span>
     </a>
   </div>
           <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
 </ul>
-            <div class="quarto-toggle-container">
-                <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
-            </div>
+</div>
             <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -145,7 +154,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 17, 2024</p>
+      <p class="date">December 1, 2024</p>
     </div>
   </div>
   
@@ -153,11 +162,13 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 
 <section id="wip" class="level1">
 <h1>WIP</h1>
-<p>In a far-from-equilibrium system<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> such as the Earth, there is constant activity. At some point, if there is water and complex chemicals, autocatalytic reactions will occur. These are stable loops of chemicals which influence their environment such that their own presence is more likely. Autocatalytic cycles are a process, so a constant flow of energy is required at the very least to produce motion. There need to be molecules present that can change their structure or combine with one another (chemical substrate). And for it to be an autocatalytic process, some of the molecules produces need to either organize more substrate, or increase the rate of the reactions (catalysis), or in some other way encourage the set of chemicals to perform the reaction.[<span class="citation" data-cites="Semenov2016AutocatalyticBO">Semenov et al. (<a href="#ref-Semenov2016AutocatalyticBO" role="doc-biblioref">2016</a>)</span>]<span class="citation" data-cites="Despons2023StructuralCL">(<a href="#ref-Despons2023StructuralCL" role="doc-biblioref">Despons, Decker, and Lacoste 2023</a>)</span>[<span class="citation" data-cites="Ottel2019ChanceEO">Ottelé et al. (<a href="#ref-Ottel2019ChanceEO" role="doc-biblioref">2019</a>)</span>]<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>In a far-from-equilibrium system<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> such as the Earth, there is constant activity. At some point, if there is water and complex chemicals, autocatalytic reactions will occur. These are stable loops of chemicals which influence their environment such that their own presence is more likely. Autocatalytic cycles are a process, so a constant flow of energy is required at the very least to produce motion. There need to be molecules present that can change their structure or combine with one another (chemical substrate). And for it to be an autocatalytic process, some of the molecules produces need to either organize more substrate, or increase the rate of the reactions (catalysis), or in some other way encourage the set of chemicals to perform the reaction.[<span class="citation" data-cites="Semenov2016AutocatalyticBO">Semenov et al. (<a href="#ref-Semenov2016AutocatalyticBO" role="doc-biblioref">2016</a>)</span>]<span class="citation" data-cites="Despons2023StructuralCL">(<a href="#ref-Despons2023StructuralCL" role="doc-biblioref">Despons, Decker, and Lacoste 2023</a>)</span><span class="citation" data-cites="Ottel2019ChanceEO">(<a href="#ref-Ottel2019ChanceEO" role="doc-biblioref">Ottelé et al. 2019</a>)</span><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <p>The first autocatalytic cycles were probably very simple, slow and distributed. They may have been as simple as a single molecule that could catalyze its own production. The number of these molecules would increase over time, until they became concentrated enough to form more active loops. Initially, there would simply be the presence in some region of some increasing number of these autocataltyic sets. What persists exists.</p>
 <p>Catalysis is a funny word. If you get down to the electrochemistry of it, it can refer to a few different ways of arranging molecules relative to one another, and bending them or massaging their electron cloud or introducing intermediate molecules, such that they form bonds. But this process is facilitated at larger and larger scales by collections of proteins that chaperone or form scaffolding and pathways that make sure that the right chemicals get to the right enzyme at the right moment. Perhaps the largest chaperone structure is the cell wall. It collects a group of molecules together and makes all the rest of the organizing easier.</p>
 <p>So, the autocatalytic sets, they eventually organize into vesicles. At this point, perhaps we have moved on to autopoesis: “a system capable of producing and maintaining itself by creating its own parts”.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> These vesicles can perhaps be best understood as maintaining a state of steady flow or ‘homeorhesis’<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. As long as the environment remains steady, autocatalysis can continue apace. However, the environment never remains steady. Change is the rule of life. The environment changes regularly daily and yearly, and on other scales chaotically as the different fluid systems of the planet throw up extreme events.</p>
@@ -166,7 +177,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../_images/raf_size.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Clusters of autocatalytic networks that a given molecule is part of.</figcaption><p></p>
+<figcaption>Clusters of autocatalytic networks that a given molecule is part of.</figcaption>
 </figure>
 </div>
 <p>Over time, this strategy of compressing different morphologies and processes into a single set of chemicals becomes more and more efficient, and more and more dense. The number of different processes the system can handle increases. DNA is created to provide longer-term storage of patterns. Because of the density with which you can store overlapping patterns using these combined information molecules, the cell can now store orders of magnitude more information than it could in activity alone. It can store the patterns for radically different morphologies.</p>
@@ -207,7 +218,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../_images/hox.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Hox Gene Alignment</figcaption><p></p>
+<figcaption>Hox Gene Alignment</figcaption>
 </figure>
 </div>
 
@@ -216,41 +227,41 @@ div.csl-indent {
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-EcoEvo23" class="csl-entry" role="doc-biblioentry">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-EcoEvo23" class="csl-entry" role="listitem">
 Baum, David A., Zhen Peng, Emily Dolson, Eric Smith, Alex M. Plum, and Praful Gagrani. 2023. <span>“The Ecology–Evolution Continuum and the Origin of Life.”</span> <em>Journal of The Royal Society Interface</em> 20 (208): 20230346. <a href="https://doi.org/10.1098/rsif.2023.0346">https://doi.org/10.1098/rsif.2023.0346</a>.
 </div>
-<div id="ref-Despons2023StructuralCL" class="csl-entry" role="doc-biblioentry">
+<div id="ref-Despons2023StructuralCL" class="csl-entry" role="listitem">
 Despons, Armand, Yannick De Decker, and David Lacoste. 2023. <span>“Structural Constraints Limit the Regime of Optimal Flux in Autocatalytic Reaction Networks.”</span> In. <a href="https://api.semanticscholar.org/CorpusID:259076142">https://api.semanticscholar.org/CorpusID:259076142</a>.
 </div>
-<div id="ref-Eigen2004TheH" class="csl-entry" role="doc-biblioentry">
+<div id="ref-Eigen2004TheH" class="csl-entry" role="listitem">
 Eigen, Manfred, and Peter Schuster. 2004. <span>“The Hypercycle.”</span> <em>Naturwissenschaften</em> 65: 7–41. <a href="https://api.semanticscholar.org/CorpusID:1812273">https://api.semanticscholar.org/CorpusID:1812273</a>.
 </div>
-<div id="ref-GenArtSelf23" class="csl-entry" role="doc-biblioentry">
+<div id="ref-GenArtSelf23" class="csl-entry" role="listitem">
 Gabora, Liane, and Joscha Bach. 2023. <span>“A Path to Generative Artificial Selves.”</span> In <em>Progress in Artificial Intelligence</em>, edited by Nuno Moniz, Zita Vale, José Cascalho, Catarina Silva, and Raquel Sebastião, 15–29. Cham: Springer Nature Switzerland.
 </div>
-<div id="ref-Autocat13" class="csl-entry" role="doc-biblioentry">
+<div id="ref-Autocat13" class="csl-entry" role="listitem">
 Hordijk, Wim. 2013. <span>“<span class="nocase">Autocatalytic Sets: From the Origin of Life to the Economy</span>.”</span> <em>BioScience</em> 63 (11): 877–81. <a href="https://doi.org/10.1525/bio.2013.63.11.6">https://doi.org/10.1525/bio.2013.63.11.6</a>.
 </div>
-<div id="ref-Life16" class="csl-entry" role="doc-biblioentry">
+<div id="ref-Life16" class="csl-entry" role="listitem">
 ———. n.d. <span>“Life: It’s Chemistry!”</span> <em>The Naked Scientists</em>. <a href="https://www.thenakedscientists.com/articles/science-features/life-its-chemistry">https://www.thenakedscientists.com/articles/science-features/life-its-chemistry</a>.
 </div>
-<div id="ref-Mortal23" class="csl-entry" role="doc-biblioentry">
+<div id="ref-Mortal23" class="csl-entry" role="listitem">
 Ororbia, Alexander, and Karl Friston. 2023. <span>“Mortal Computation: A Foundation for Biomimetic Intelligence.”</span> <a href="https://arxiv.org/abs/2311.09589">https://arxiv.org/abs/2311.09589</a>.
 </div>
-<div id="ref-Ottel2019ChanceEO" class="csl-entry" role="doc-biblioentry">
+<div id="ref-Ottel2019ChanceEO" class="csl-entry" role="listitem">
 Ottelé, Jim, Andreas S. Hussain, Clemens Mayer, and Sijbren Otto. 2019. <span>“Chance Emergence of Catalytic Activity and Promiscuity in a Self-Replicator.”</span> <em>Nature Catalysis</em> 3: 547–53. <a href="https://api.semanticscholar.org/CorpusID:220079153">https://api.semanticscholar.org/CorpusID:220079153</a>.
 </div>
-<div id="ref-TopDown16" class="csl-entry" role="doc-biblioentry">
+<div id="ref-TopDown16" class="csl-entry" role="listitem">
 Pezzulo, Giovanni, and Michael Levin. 2016. <span>“<span class="nocase">Top-down models in biology: explanation and control of complex living systems above the molecular level</span>.”</span> <em>Journal of The Royal Society Interface</em> 13 (124): 20160555.
 </div>
-<div id="ref-Semenov2016AutocatalyticBO" class="csl-entry" role="doc-biblioentry">
+<div id="ref-Semenov2016AutocatalyticBO" class="csl-entry" role="listitem">
 Semenov, Sergey N., Lewis J. Kraft, Alar Ainla, Mengxia Zhao, Mostafa Baghbanzadeh, Victoria E. Campbell, Kyungtae Kang, Jerome M. Fox, and George M. Whitesides. 2016. <span>“Autocatalytic, Bistable, Oscillatory Networks of Biologically Relevant Organic Reactions.”</span> <em>Nature</em> 537: 656–60. <a href="https://api.semanticscholar.org/CorpusID:4408679">https://api.semanticscholar.org/CorpusID:4408679</a>.
 </div>
-<div id="ref-WorldNeural20" class="csl-entry" role="doc-biblioentry">
+<div id="ref-WorldNeural20" class="csl-entry" role="listitem">
 Vanchurin, Vitaly. 2020. <span>“The World as a Neural Network.”</span> <em>Entropy</em> 22 (11): 1210. <a href="https://doi.org/10.3390/e22111210">https://doi.org/10.3390/e22111210</a>.
 </div>
-<div id="ref-Songs23" class="csl-entry" role="doc-biblioentry">
+<div id="ref-Songs23" class="csl-entry" role="listitem">
 Watson, Richard. 2023. <em>Songs If Life and Mind</em>. <a href="https://youtu.be/krQoXA0pwV0?si=S-pKUqQJE0nmHGOb&amp;t=1623">https://youtu.be/krQoXA0pwV0?si=S-pKUqQJE0nmHGOb&amp;t=1623</a>.
 </div>
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
@@ -291,12 +302,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
     }
-  });
-  clipboard.on('success', function(e) {
+    return false;
+  }
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -328,11 +342,48 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -342,8 +393,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -355,9 +415,244 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -400,7 +695,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left"><a href="https://www.quarto.org">Quarto</a></div>   
+    <div class="nav-footer-left">
+<p><a href="https://www.quarto.org">Quarto</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -413,6 +713,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+
 
 
 

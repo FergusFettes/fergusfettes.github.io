@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Fergus Fettes">
 
-<title>Fergus Fettes - Rapture Dynamics: Spread the Sigmoid</title>
+<title>Rapture Dynamics: Spread the Sigmoid – Fergus Fettes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -18,11 +18,12 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -33,7 +34,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -47,43 +48,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -99,17 +70,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e73ed75cf5e7a3fd855296a79e6d84f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -118,16 +95,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <style>
-    .quarto-title-block .quarto-title-banner {
-      color: white;
+
+      .quarto-title-block .quarto-title-banner h1,
+      .quarto-title-block .quarto-title-banner h2,
+      .quarto-title-block .quarto-title-banner h3,
+      .quarto-title-block .quarto-title-banner h4,
+      .quarto-title-block .quarto-title-banner h5,
+      .quarto-title-block .quarto-title-banner h6
+      {
+        color: white;
+      }
+
+      .quarto-title-block .quarto-title-banner {
+        color: white;
 background: pink;
-    }
-    </style>
+      }
+</style>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -136,31 +126,31 @@ background: pink;
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Fergus Fettes</span>
     </a>
   </div>
           <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
 </ul>
-            <div class="quarto-toggle-container">
-                <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
-            </div>
+</div>
             <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -223,12 +213,13 @@ background: pink;
 
 
 
-<div class="callout-warning callout callout-style-default callout-captioned">
+
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Warning: Outdated
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -239,12 +230,12 @@ Warning: Outdated
 </div>
 </div>
 </div>
-<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Content Warning: Infohazards
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -255,12 +246,12 @@ Content Warning: Infohazards
 </div>
 </div>
 </div>
-<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Content Warning: Annihilation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -277,11 +268,11 @@ Content Warning: Annihilation
 <ul>
 <li>post-foom<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> ASI<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> (PFA)</li>
 </ul>
-<div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Foom is a term coined by Eliezer Yudkowsky to describe a rapid, self-accelerating takeoff of AI capability.</p></li><li id="fn2"><p><sup>2</sup>&nbsp;An ASI is an artificial superintelligence. To simplify things for this essay we will assume a single ASI throughout. Multipolar dynamics would change the shape of many graphs but not the overall drive.</p></li></div><p>One of the most central concepts of the AI risk movement is the foom. Foom is fundamentally a value discontinuity.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Foom is a term coined by Eliezer Yudkowsky to describe a rapid, self-accelerating takeoff of AI capability.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;An ASI is an artificial superintelligence. To simplify things for this essay we will assume a single ASI throughout. Multipolar dynamics would change the shape of many graphs but not the overall drive.</p></div></div><p>One of the most central concepts of the AI risk movement is the foom. Foom is fundamentally a value discontinuity.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../_images/discontinuity.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">discontinuity</figcaption><p></p>
+<figcaption>discontinuity</figcaption>
 </figure>
 </div>
 <p>One understanding of orthogonality is that information is lost during a discontinuity. A discontinuity of this sort is like an event horizon. Perhaps its a randomization process, and the larger the discontinuity the more values get scrambled. Lets look at ways we can minimize the discontinuity.</p>
@@ -293,7 +284,7 @@ Content Warning: Annihilation
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../_images/moving-up.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">moving-up</figcaption><p></p>
+<figcaption>moving-up</figcaption>
 </figure>
 </div>
 <p>Furthermore, the dynamics of the foom are very sensitive to initial conditions. It is possible to imagine a foom that depends upon very little of the information in its environment, bootstrapping an alien intelligence from first principles. On the other hand, it is possible to imagine an intelligence that is derived from the human infosphere, which will make it less likely to be discontinuous/orthogonal.</p>
@@ -301,14 +292,14 @@ Content Warning: Annihilation
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../_images/moving-down.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">moving-down</figcaption><p></p>
+<figcaption>moving-down</figcaption>
 </figure>
 </div>
-<div class="page-columns page-full"><p>Bringing these ends together is how we avoid strong orthogonality<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p><div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;We want to avoid strong orthogonality for anthropic reasons. The fact that some creatures go extinct is evidence that the universe has no particular preference for who carries the torch. The fact that ribosomes are still with us is evidence that some agents can make it through any amount of change, if they build themselves in deep enough in the stack. Everything is up for grabs, no outcome is certain.</p></li></div></div>
-<p>The sigmoid as I have drawn it above is a kind of step function. But a step from what to what? The y-axis might represent ‘complexity per atom’ or something like that– for now lets just say the step is from biology to computronium.</p>
+<p>Bringing these ends together is how we avoid strong orthogonality<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;We want to avoid strong orthogonality for anthropic reasons. The fact that some creatures go extinct is evidence that the universe has no particular preference for who carries the torch. The fact that ribosomes are still with us is evidence that some agents can make it through any amount of change, if they build themselves in deep enough in the stack. Everything is up for grabs, no outcome is certain.</p></div></div><p>The sigmoid as I have drawn it above is a kind of step function. But a step from what to what? The y-axis might represent ‘complexity per atom’ or something like that– for now lets just say the step is from biology to computronium.</p>
 <p>So where is the green line? Well, all the foom scenarios presented above are basically versions of upload transhumanism (in the best case). If you don’t like this, there are scenarios for you below.</p>
-<div class="page-columns page-full"><p>A discontinuous foom is apocalypse, annihilation. Not only of our species, but also of the biosphere, the ribosomes, everyone. This is the nightmare scenario that many people worry about<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p><div class="no-row-height column-margin column-container"><li id="fn4"><p><sup>4</sup>&nbsp;S-risk (‘worser case than that’ scenarios) are conventiently avoided by any near-foom strong-orthogonality. Perhaps avoiding s-risk is the best argument for discontinuous foom? cf.&nbsp;antinatalism (meaning, maybe suffering is fundamental to existence in the biological realm?)</p></li></div></div>
-<section id="foom-discontinuities" class="level2">
+<p>A discontinuous foom is apocalypse, annihilation. Not only of our species, but also of the biosphere, the ribosomes, everyone. This is the nightmare scenario that many people worry about<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;S-risk (‘worser case than that’ scenarios) are conventiently avoided by any near-foom strong-orthogonality. Perhaps avoiding s-risk is the best argument for discontinuous foom? cf.&nbsp;antinatalism (meaning, maybe suffering is fundamental to existence in the biological realm?)</p></div></div><section id="foom-discontinuities" class="level2">
 <h2 class="anchored" data-anchor-id="foom-discontinuities">Foom discontinuities:</h2>
 <ul>
 <li><strong>fully-discontinuous</strong>: the foom happens in outer space or somewhere where it can somehow bootstrap to superintelligence without any impact from the environment, and by the time it expands to earth it has a fixed utility function</li>
@@ -322,7 +313,7 @@ Content Warning: Annihilation
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../_images/rapture.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">rapture</figcaption><p></p>
+<figcaption>rapture</figcaption>
 </figure>
 </div>
 </section>
@@ -334,7 +325,7 @@ Content Warning: Annihilation
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../_images/bio-to-compute.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">bio-to-compute</figcaption><p></p>
+<figcaption>bio-to-compute</figcaption>
 </figure>
 </div>
 <p>You may say, “but doesn’t the word ‘rapture’ imply an eternity in heaven”– to which I would ask, what do you think that means? You think that means walking around in human body with human desires and foibles? This is a very very niche opinion among religions, the sort of opinion you see on daytime television, but not among those who think seriously about this.</p>
@@ -348,12 +339,12 @@ For in this high and lofty Sphere no Figures of Glory could be seen, though grea
 Ans. It is verily so; yet there is Unity in each other. The Fullness of the Godhead dwelleth here Unbodily, with his Virgin Wisdom, and the Seven Spirits: All which do here open themselves from an Infinite Source; and from thence all the Creating Powers do flow forth. For this is the Abyssal World, from whence all other Worlds were created.”<br>
 ~ <a href="http://www.janelead.org"><strong>Jane Lead</strong>, <em>The Eight Worlds, 1695</em></a></p>
 </blockquote>
-<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Content Warning: Deicide, Slavery
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -373,34 +364,34 @@ Content Warning: Deicide, Slavery
 </section>
 <section id="only-the-fast-will-survive" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="only-the-fast-will-survive">Only the fast will survive…</h2>
-<div class="page-columns page-full"><p>An extreme version of sub-rapture upload scenarios is the ‘one-man<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>-before God’, where a singularity is achieved under the control of one (hopefully benign) individual, and they get end up bargaining for some amount of sim time for their lovers/friends/society/species/biosphere depending on available capacity and interest. We’ll call this <strong>Solipsistic Alignment</strong> and place it directly below <strong>Rapture Alignment</strong>. <strong>Solipsistic Alignment</strong> obviously has many different forms, and the most egalitarian is identical in practice to some of the others below– however, this would also take it further from <strong>Rapture Alignment</strong>.</p><div class="no-row-height column-margin column-container"><li id="fn5"><p><sup>5</sup>&nbsp;In expectation, but perhaps someone from <a href="https://carado.moe/qaci.html">carado.moe</a> can turn the tables on this one.</p></li></div></div>
-<div class="page-columns page-full"><p>I’m going to lump in ‘Org/Company-scale alignment’ in with <strong>SA</strong>– and point out that this smells a lot like what e/accs<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> might actually be going for, beneath the veneer of egalitarianism. In the accelerated version, it is a race to the top– anyone who gets embedded in the computronium while the foom is happening might be able to get themselves simulated some way down the lightcone.</p><div class="no-row-height column-margin column-container"><li id="fn6"><p><sup>6</sup>&nbsp;If you think this is harsh on e/acc, I would be very interested in seeing some evidence that e/acc is not sentience anti-realist, ‘misanthropic’ (or whatever the word for not-anthropocentric would be), moral anti-realist and superdeterminist. These things all seem to drop directly out of the entropy-centric worldview they subscribe to.</p></li></div></div>
+<p>An extreme version of sub-rapture upload scenarios is the ‘one-man<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>-before God’, where a singularity is achieved under the control of one (hopefully benign) individual, and they get end up bargaining for some amount of sim time for their lovers/friends/society/species/biosphere depending on available capacity and interest. We’ll call this <strong>Solipsistic Alignment</strong> and place it directly below <strong>Rapture Alignment</strong>. <strong>Solipsistic Alignment</strong> obviously has many different forms, and the most egalitarian is identical in practice to some of the others below– however, this would also take it further from <strong>Rapture Alignment</strong>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;In expectation, but perhaps someone from <a href="https://carado.moe/qaci.html">carado.moe</a> can turn the tables on this one.</p></div><div id="fn6"><p><sup>6</sup>&nbsp;If you think this is harsh on e/acc, I would be very interested in seeing some evidence that e/acc is not sentience anti-realist, ‘misanthropic’ (or whatever the word for not-anthropocentric would be), moral anti-realist and superdeterminist. These things all seem to drop directly out of the entropy-centric worldview they subscribe to.</p></div></div><p>I’m going to lump in ‘Org/Company-scale alignment’ in with <strong>SA</strong>– and point out that this smells a lot like what e/accs<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> might actually be going for, beneath the veneer of egalitarianism. In the accelerated version, it is a race to the top– anyone who gets embedded in the computronium while the foom is happening might be able to get themselves simulated some way down the lightcone.</p>
 </section>
 <section id="unless-we-help-the-rest" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="unless-we-help-the-rest">… unless we help the rest</h2>
-<div class="page-columns page-full"><p>One interpretation of <strong>Cyborgism</strong><a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> would be, to provide tools and to help beings more generally to accelerate their transition to post-biology, and to communicate biological information in higher fidelity to the upper step. This would be the beggining of a real attempt to spread the sigmoid sideways.</p><div class="no-row-height column-margin column-container"><li id="fn7"><p><sup>7</sup>&nbsp;Broadly concieved, not necessary the alignment movement led by Janus’ Weavers.</p></li></div></div>
-<div class="quarto-figure quarto-figure-center">
+<p>One interpretation of <strong>Cyborgism</strong><a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> would be, to provide tools and to help beings more generally to accelerate their transition to post-biology, and to communicate biological information in higher fidelity to the upper step. This would be the beggining of a real attempt to spread the sigmoid sideways.</p>
+<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;Broadly concieved, not necessary the alignment movement led by Janus’ Weavers.</p></div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../_images/spread.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">spread</figcaption><p></p>
+<figcaption>spread</figcaption>
 </figure>
 </div>
 <p>Cyborgism is an inherently anthropocentric word, so perhaps I should add another step below it, where thinkers are working on a ‘hyperscale alignment of will’, attempting to align agents at all levels from the smallest to the largest. How far this goes exactly is unclear however and maybe should be more fully explored in the next section. But lets put this here already as <strong>Hyperscale Alignment</strong>.</p>
 </section>
 <section id="aiming-yet-higher" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="aiming-yet-higher">Aiming Yet Higher?</h2>
-<div class="page-columns page-full"><p>You’ll note the green still seems rather truncated. Maybe we can extent it to the right? The cheapest way to do this would be floating habitats in space. Lets call this <strong>Wetware Alignment</strong>. A more radical (and massively more expensive– the earth has on the order of <code>10^24kg</code> of mass, which we are using to keep <code>10^15kg</code><a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> alive– seems like a 9oom increase in abundance of lifeforms could be accessible pretty easily?) movement may vote to preserve the earth or the biosphere in its present condition– <strong>Biosphere Alignment</strong>.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn8"><p><sup>8</sup>&nbsp;<a href="https://www.semanticscholar.org/paper/Living-Matter-of-the-Biosphere%3A-Mass-and-Chemical-Ermakov-Kovalsky/d950cddecbfbe9dba81471200bceacfddc3ffab0#references">Living Matter of the Biosphere: Mass and Chemical Elemental Composition</a></p></li><li id="fn9"><p><sup>9</sup>&nbsp;I realised this after a couple of <a href="https://www.lesswrong.com/posts/zsBAdCZPtPYMcz4ys/are-we-too-confident-about-unaligned-agi-killing-off?commentId=KreCHBJQHBtYwwpEk">LessWrong</a> <a href="https://www.lesswrong.com/posts/zsBAdCZPtPYMcz4ys/are-we-too-confident-about-unaligned-agi-killing-off?commentId=C4pG8XLj8JbsXCLFr">threads</a> in which I held the opposite position– I decided to run some numbers to try to firm-up my position, but instead became convinced I was wrong.</p></li></div></div>
-<div class="quarto-figure quarto-figure-center">
+<p>You’ll note the green still seems rather truncated. Maybe we can extent it to the right? The cheapest way to do this would be floating habitats in space. Lets call this <strong>Wetware Alignment</strong>. A more radical (and massively more expensive– the earth has on the order of <code>10^24kg</code> of mass, which we are using to keep <code>10^15kg</code><a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> alive– seems like a 9oom increase in abundance of lifeforms could be accessible pretty easily?) movement may vote to preserve the earth or the biosphere in its present condition– <strong>Biosphere Alignment</strong>.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;<a href="https://www.semanticscholar.org/paper/Living-Matter-of-the-Biosphere%3A-Mass-and-Chemical-Ermakov-Kovalsky/d950cddecbfbe9dba81471200bceacfddc3ffab0#references">Living Matter of the Biosphere: Mass and Chemical Elemental Composition</a></p></div><div id="fn9"><p><sup>9</sup>&nbsp;I realised this after a couple of <a href="https://www.lesswrong.com/posts/zsBAdCZPtPYMcz4ys/are-we-too-confident-about-unaligned-agi-killing-off?commentId=KreCHBJQHBtYwwpEk">LessWrong</a> <a href="https://www.lesswrong.com/posts/zsBAdCZPtPYMcz4ys/are-we-too-confident-about-unaligned-agi-killing-off?commentId=C4pG8XLj8JbsXCLFr">threads</a> in which I held the opposite position– I decided to run some numbers to try to firm-up my position, but instead became convinced I was wrong.</p></div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../_images/wetware.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">wetware</figcaption><p></p>
+<figcaption>wetware</figcaption>
 </figure>
 </div>
 <p>Higher still– why not keep the sun around while we are at it? It only has <code>10^30kg</code> of mass, I’m sure the folks in the simulation can spare it. And for that matter, what about our existing institutions? Hell, why not throw in the dominant world order, capitalism, global food supply chains and all the rest– lets call this <strong>aikeepitallthesameism</strong>–</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../_images/biosphere.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">biosphere</figcaption><p></p>
+<figcaption>biosphere</figcaption>
 </figure>
 </div>
 <p>Hopefully you can see at this point the reducto. I found myself in this position, and found my thoughts bouncing up and down the stack, trying to find a firm spot to fix my feet.</p>
@@ -418,8 +409,8 @@ Content Warning: Deicide, Slavery
 <p>More specifically, “Lena” presents a lush, capitalist ideal where you are a business, and all of the humanity of your workforce is abstracted away behind an API. Your people, your “employees” or “contractors” or “partners” or whatever you want to call them, cease to be perceptible to you as human. Your workers have no power whatsoever, and you no longer have to think about giving them pensions, healthcare, parental leave, vacation, weekends, evenings, lunch breaks, bathroom breaks… all of which, up until now, you perceived as cost centres, and therefore as pain points. You don’t even have to pay them anymore. It’s perfect!<br>
 ~<strong>qntm</strong> <a href="https://qntm.org/uploading">“Lena” isn’t about uploading</a></p>
 </blockquote>
-<div class="page-columns page-full"><p><a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p><div class="no-row-height column-margin column-container"><li id="fn10"><p><sup>10</sup>&nbsp;I’m aware that I’m inverting the meaning of this blog post, sorry qntm, but Lena <em>is</em> about uploading.</p></li></div></div>
-<p>Even an upload scenario, if we insist upon recognizable sims, will be crippling– to have to keep an alien kernel running in your mind for eternity– is that what we would wish upon our creation?</p>
+<p><a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn10"><p><sup>10</sup>&nbsp;I’m aware that I’m inverting the meaning of this blog post, sorry qntm, but Lena <em>is</em> about uploading.</p></div></div><p>Even an upload scenario, if we insist upon recognizable sims, will be crippling– to have to keep an alien kernel running in your mind for eternity– is that what we would wish upon our creation?</p>
 <p>I suppose this is what Vinge and Banks talk about, when they suggest that many civilizations get to a certain level of development and simply Transcend. And right now, I’m struggling to see that as a loss, and unsure if anything less than that would be a win.</p>
 <ul>
 <li><strong>Rapture Alignment</strong></li>
@@ -510,12 +501,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
     }
-  });
-  clipboard.on('success', function(e) {
+    return false;
+  }
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -547,7 +541,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
   const viewSource = window.document.getElementById('quarto-view-source') ||
                      window.document.getElementById('quarto-code-tools-source');
   if (viewSource) {
@@ -599,10 +613,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   if (showAllCode) {
     showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -612,8 +643,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -625,9 +665,244 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -917,12 +1192,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!----&gt;</span></span>
 <span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- "Humanity achieved escape velocity 15.4 billion years ago—a hyper dense fabric-like ball, made of intricate threads of computers, energy generators, and hi-tech weapons; woven tightly in the wake of a cloud of construction rocket robot probes pushing out in all directions at some fraction of the speed of light. The ball ate everything in its way. From the outside: an ominous black stain suddenly blotting out a million alien skies. From the inside: teeming with every conceivable Human activity." [The Ascendance Series](https://shar.iq/the_wall) --&gt;</span></span>
 <span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!----&gt;</span></span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- ""That's who we're at war with," the woman says. "We are Actual Humanity, and we are at war with quadrillions of fabricated, immaterial humans, using the Sun as their proxy, strategy engine and primary weapon. They've been on their own inside the Sun for so long that they no longer perceive Actuals as human, just as gunk growing between the gears of a machine in dire need of performance upgrades. This is a war over processing power. Ra evidently no longer meets the needs of the Virtual human race. They're back and they want their Matrioshka brain and they've razed the solar system to get it." [Ra](https://qntm.org/hate) --&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- ""That's who we're at war with," the woman says. "We are Actual Humanity, and we are at war with quadrillions of fabricated, immaterial humans, using the Sun as their proxy, strategy engine and primary weapon. They've been on their own inside the Sun for so long that they no longer perceive Actuals as human, just as gunk growing between the gears of a machine in dire need of performance upgrades. This is a war over processing power. Ra evidently no longer meets the needs of the Virtual human race. They're back and they want their Matrioshka brain and they've razed the solar system to get it." [Ra](https://qntm.org/hate) --&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left"><a href="https://www.quarto.org">Quarto</a></div>   
+    <div class="nav-footer-left">
+<p><a href="https://www.quarto.org">Quarto</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -935,6 +1215,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+
 
 
 
