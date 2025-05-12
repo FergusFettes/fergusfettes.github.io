@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>evolutionaryvelocityclaude2 – Fergus Fettes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e73ed75cf5e7a3fd855296a79e6d84f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Fergus Fettes</span>
+    </a>
+  </div>
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../now.html"> 
+<span class="menu-text">Now</span></a>
+  </li>  
+</ul>
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#towards-a-universal-measure-of-evolutionary-velocity" id="toc-towards-a-universal-measure-of-evolutionary-velocity" class="nav-link active" data-scroll-target="#towards-a-universal-measure-of-evolutionary-velocity">Towards a Universal Measure of Evolutionary Velocity</a>
+  <ul class="collapse">
+  <li><a href="#the-goldilocks-universe" id="toc-the-goldilocks-universe" class="nav-link" data-scroll-target="#the-goldilocks-universe">The Goldilocks Universe</a></li>
+  <li><a href="#beyond-the-drake-equation" id="toc-beyond-the-drake-equation" class="nav-link" data-scroll-target="#beyond-the-drake-equation">Beyond the Drake Equation</a></li>
+  <li><a href="#the-goldilocks-potential-field" id="toc-the-goldilocks-potential-field" class="nav-link" data-scroll-target="#the-goldilocks-potential-field">The Goldilocks Potential Field</a></li>
+  <li><a href="#the-compound-interest-of-complexity" id="toc-the-compound-interest-of-complexity" class="nav-link" data-scroll-target="#the-compound-interest-of-complexity">The Compound Interest of Complexity</a></li>
+  <li><a href="#measuring-accumulated-complexity" id="toc-measuring-accumulated-complexity" class="nav-link" data-scroll-target="#measuring-accumulated-complexity">Measuring Accumulated Complexity</a></li>
+  <li><a href="#the-fermi-paradox-reconsidered" id="toc-the-fermi-paradox-reconsidered" class="nav-link" data-scroll-target="#the-fermi-paradox-reconsidered">The Fermi Paradox Reconsidered</a></li>
+  <li><a href="#earths-place-in-the-manifold" id="toc-earths-place-in-the-manifold" class="nav-link" data-scroll-target="#earths-place-in-the-manifold">Earth’s Place in the Manifold</a></li>
+  <li><a href="#the-acceleration-of-complexity" id="toc-the-acceleration-of-complexity" class="nav-link" data-scroll-target="#the-acceleration-of-complexity">The Acceleration of Complexity</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul></li>
+  <li><a href="#the-physics-of-the-goldilocks-potential" id="toc-the-physics-of-the-goldilocks-potential" class="nav-link" data-scroll-target="#the-physics-of-the-goldilocks-potential">The Physics of the Goldilocks Potential</a>
+  <ul class="collapse">
+  <li><a href="#the-physical-foundations-of-g_base" id="toc-the-physical-foundations-of-g_base" class="nav-link" data-scroll-target="#the-physical-foundations-of-g_base">The Physical Foundations of G_base</a></li>
+  <li><a href="#dissipation-driven-adaptation" id="toc-dissipation-driven-adaptation" class="nav-link" data-scroll-target="#dissipation-driven-adaptation">Dissipation-Driven Adaptation</a></li>
+  <li><a href="#energy-rate-density-and-complexity" id="toc-energy-rate-density-and-complexity" class="nav-link" data-scroll-target="#energy-rate-density-and-complexity">Energy Rate Density and Complexity</a></li>
+  <li><a href="#from-physics-to-biology" id="toc-from-physics-to-biology" class="nav-link" data-scroll-target="#from-physics-to-biology">From Physics to Biology</a></li>
+  </ul></li>
+  <li><a href="#key-papers-and-further-reading" id="toc-key-papers-and-further-reading" class="nav-link" data-scroll-target="#key-papers-and-further-reading">Key Papers and Further Reading</a>
+  <ul class="collapse">
+  <li><a href="#central-works-mentioned" id="toc-central-works-mentioned" class="nav-link" data-scroll-target="#central-works-mentioned">Central Works Mentioned</a>
+  <ul class="collapse">
+  <li><a href="#chaissons-energy-rate-density" id="toc-chaissons-energy-rate-density" class="nav-link" data-scroll-target="#chaissons-energy-rate-density">Chaisson’s Energy Rate Density</a></li>
+  <li><a href="#englands-dissipation-driven-adaptation" id="toc-englands-dissipation-driven-adaptation" class="nav-link" data-scroll-target="#englands-dissipation-driven-adaptation">England’s Dissipation-Driven Adaptation</a></li>
+  <li><a href="#assembly-theory" id="toc-assembly-theory" class="nav-link" data-scroll-target="#assembly-theory">Assembly Theory</a></li>
+  <li><a href="#cosmic-origins-of-life" id="toc-cosmic-origins-of-life" class="nav-link" data-scroll-target="#cosmic-origins-of-life">Cosmic Origins of Life</a></li>
+  </ul></li>
+  <li><a href="#highly-relevant-works" id="toc-highly-relevant-works" class="nav-link" data-scroll-target="#highly-relevant-works">Highly Relevant Works</a>
+  <ul class="collapse">
+  <li><a href="#non-equilibrium-physics-and-complexity" id="toc-non-equilibrium-physics-and-complexity" class="nav-link" data-scroll-target="#non-equilibrium-physics-and-complexity">Non-Equilibrium Physics and Complexity</a></li>
+  <li><a href="#information-theory-and-complexity" id="toc-information-theory-and-complexity" class="nav-link" data-scroll-target="#information-theory-and-complexity">Information Theory and Complexity</a></li>
+  <li><a href="#early-universe-habitability" id="toc-early-universe-habitability" class="nav-link" data-scroll-target="#early-universe-habitability">Early Universe Habitability</a></li>
+  </ul></li>
+  <li><a href="#fascinating-wildcards" id="toc-fascinating-wildcards" class="nav-link" data-scroll-target="#fascinating-wildcards">Fascinating Wildcards</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="towards-a-universal-measure-of-evolutionary-velocity" class="level1">
+<h1>Towards a Universal Measure of Evolutionary Velocity</h1>
+<section id="the-goldilocks-universe" class="level2">
+<h2 class="anchored" data-anchor-id="the-goldilocks-universe">The Goldilocks Universe</h2>
+<p>Some time after the Big Bang, between redshifts of 100 and 137, the universe passed through a remarkable phase. The cosmic microwave background radiation, which now chills at nearly absolute zero, then maintained a temperature between 273 and 373 Kelvin—exactly the range where water remains liquid.</p>
+<p>For a brief cosmic moment, the entire universe was a habitable zone.</p>
+<p>Any rocky bodies that had already formed during this early epoch would have maintained Earth-like surface temperatures regardless of their proximity to stars. The universe itself provided the warmth that stars would later supply to planets like ours. During this period, just 10-17 million years after the Big Bang, the first star-forming halos were beginning to collapse within our Hubble volume.</p>
+<p>In this primordial Goldilocks era, the fundamental chemistry of life became possible. Simple molecules could form stable bonds, persist across time, and gradually increase in complexity. Structure began appearing throughout regions where conditions were favorable.</p>
+<p>This universal habitable phase didn’t last. As the cosmos expanded, the background radiation cooled. The universe became too cold for liquid water except in the vicinity of stars. The Goldilocks zone contracted from a universal condition to isolated pockets around stellar heat sources.</p>
+<p>Yet during this transition, something profound had already begun. In regions where conditions remained suitable, the groundwork of complexity had been laid. Matter had started to organize itself into increasingly intricate patterns that could persist across time.</p>
+<p>As the universe continued to cool, these patterns found refuge in different environments. Some entered the deep cold of space, where near-zero temperatures suspended change but preserved structure like information in amber. Others remained in the narrowing corridors of suitable temperatures around young stars. The most complex structures became increasingly dependent on finding exactly the right conditions—not too hot, not too cold.</p>
+<p>The universe developed an intricate network of regions where complexity could continue to grow, connected by pathways through which matter might travel without losing the information accumulated in its structure. This network—the Goldilocks manifold—threaded through the cosmos like a complex vascular system, carrying the potential for increasing complexity.</p>
+<p>Matter that remained within this manifold continued to develop more intricate forms. It captured energy, developed self-replicating patterns, and began the long process of adaptation and evolution. The rest, as they say, is history—a history written in carbon and water, DNA and proteins, neurons and ideas.</p>
+</section>
+<section id="beyond-the-drake-equation" class="level2">
+<h2 class="anchored" data-anchor-id="beyond-the-drake-equation">Beyond the Drake Equation</h2>
+<p>The Drake Equation served us well as a first approximation. But its formulation—with terms like “the fraction of planets that could support life that actually develop life at some point”—fails to capture the temporal and continuous nature of evolutionary processes.</p>
+<p>What we need is a framework that measures how conducive different regions of spacetime are to the emergence and persistence of complexity. This is what I call the Goldilocks potential.</p>
+</section>
+<section id="the-goldilocks-potential-field" class="level2">
+<h2 class="anchored" data-anchor-id="the-goldilocks-potential-field">The Goldilocks Potential Field</h2>
+<p>Every point in spacetime carries a “Goldilocks potential” (G)—a measure of how favorable that region is to complexity accumulation. This potential has two components:</p>
+<ol type="1">
+<li><strong>G_base(x,y,z,t)</strong>: The intrinsic potential of a region based on its physical parameters</li>
+<li><strong>G_cum(t)</strong>: The accumulated potential along a particular trajectory through time</li>
+</ol>
+<p>G_base behaves asymmetrically with respect to temperature. When temperatures fall below the optimum, G_base declines gradually toward zero. Cold preserves information but slows its processing. When temperatures rise above optimum, G_base plummets rapidly into negative values. Heat actively destroys information and structure.</p>
+<p>This asymmetry explains why interstellar space isn’t completely hostile to complexity—cold preservation allows dormant periods—while stellar interiors actively erase structured information.</p>
+</section>
+<section id="the-compound-interest-of-complexity" class="level2">
+<h2 class="anchored" data-anchor-id="the-compound-interest-of-complexity">The Compound Interest of Complexity</h2>
+<p>The relationship between G_base and G_cum isn’t merely additive. Rather:</p>
+<p>G_effective(t) = G_base(t) × f(G_cum(t))</p>
+<p>Where f is a function that grows exponentially with G_cum. This creates a compounding effect where regions that developed early complexity gain an enormous advantage over regions that started later.</p>
+<p>This compounding occurs through several mechanisms: - Information storage capacity increases combinatorially - New organizational levels create exponentially more possible configurations - Each innovation creates new evolutionary niches - Systems begin to “learn how to learn”</p>
+</section>
+<section id="measuring-accumulated-complexity" class="level2">
+<h2 class="anchored" data-anchor-id="measuring-accumulated-complexity">Measuring Accumulated Complexity</h2>
+<p>Recent advances in Assembly Theory provide a promising approach to quantifying G_cum. This theory proposes that complex objects can be measured by their “assembly index”—how many steps it would take to build them from simpler components—combined with their abundance.</p>
+<p>We could express G_cum as: G_cum(region) = ∑[MA(i) × log(N(i))]</p>
+<p>Where MA(i) is the molecular assembly index of object type i, and N(i) is the copy number of that object in the region.</p>
+<p>This measurement directly captures both the complexity of individual structures and their replication success—a physical embodiment of the information processing capacity that has accumulated along that particular spacetime trajectory.</p>
+</section>
+<section id="the-fermi-paradox-reconsidered" class="level2">
+<h2 class="anchored" data-anchor-id="the-fermi-paradox-reconsidered">The Fermi Paradox Reconsidered</h2>
+<p>This framework offers a new perspective on the Fermi paradox. We aren’t necessarily “early” in an absolute sense, but rather in a region that has had an unusually high integrated G value since the beginning.</p>
+<p>The autocatalytic nature of G_cum creates extreme “complexity gradients” across the universe. A region with just a slightly higher G_base in the early universe doesn’t merely get a head start—it enters an entirely different league of evolutionary possibility through the power of compounding returns.</p>
+<p>We find ourselves not just in a region of high G_base, but in a region where G_cum has been reinvesting itself for billions of years, creating an evolutionary acceleration that may be rare across the cosmos.</p>
+</section>
+<section id="earths-place-in-the-manifold" class="level2">
+<h2 class="anchored" data-anchor-id="earths-place-in-the-manifold">Earth’s Place in the Manifold</h2>
+<p>Earth represents a particularly favorable node in the Goldilocks manifold. Its position in the solar system, the stability of our star, Jupiter’s protective influence, and many other factors create an exceptionally high G_base value.</p>
+<p>But Earth’s evolutionary history also benefited from matter that had traversed other regions of high G_base, accumulating G_cum along the way. Some of this complex matter reached Earth through panspermia or similar mechanisms, bringing with it the seeds of complexity that had begun developing since the earliest habitable era of the universe.</p>
+<p>Alexei Sharov and Richard Gordon’s analysis supports this view. Their extrapolation of genetic complexity suggests life began approximately 9.7 billion years ago—well before Earth’s formation but after the universe’s early habitable phase. This timeline fits perfectly with our understanding of how G accumulates along trajectories through the Goldilocks manifold.</p>
+</section>
+<section id="the-acceleration-of-complexity" class="level2">
+<h2 class="anchored" data-anchor-id="the-acceleration-of-complexity">The Acceleration of Complexity</h2>
+<p>As G_cum increases, the rate of further complexity accumulation accelerates. We observe this in Earth’s evolutionary history: the first 3 billion years produced only unicellular life, while the next billion years produced all complex multicellular life forms. Human civilization has accelerated this trend further, with the doubling time of complexity now measured in decades rather than millions of years.</p>
+<p>This acceleration is a natural consequence of the relationship between G_base and G_cum. As complexity increases, it becomes better at producing more complexity, creating a feedback loop that approaches what some have called a “technological singularity.”</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The Goldilocks potential framework offers a more nuanced understanding of how complexity emerges and evolves throughout the cosmos. Rather than asking binary questions about the presence or absence of life, it helps us understand the continuous process of complexity accumulation across spacetime.</p>
+<p>We aren’t merely products of Earth’s 4.5-billion-year evolution, but inheritors of a cosmic evolutionary process that has been unfolding since the earliest moments when the universe cooled enough for structure to persist. Our very existence represents one of the highest integrated G values achievable in the 13.8 billion years since the Big Bang—not because we are special, but because we couldn’t exist otherwise.</p>
+<p>In this light, the question “are we alone?” transforms into “how widely distributed are regions of similarly high integrated G values across the cosmos?” The answer may lie in understanding the topology of the Goldilocks manifold itself.</p>
+</section>
+</section>
+<section id="the-physics-of-the-goldilocks-potential" class="level1">
+<h1>The Physics of the Goldilocks Potential</h1>
+<p>While our framework provides a conceptual model for understanding evolutionary potential across the cosmos, it’s not merely a metaphorical construct. The Goldilocks potential is deeply grounded in fundamental physics, particularly in the realms of non-equilibrium thermodynamics and statistical mechanics.</p>
+<section id="the-physical-foundations-of-g_base" class="level2">
+<h2 class="anchored" data-anchor-id="the-physical-foundations-of-g_base">The Physical Foundations of G_base</h2>
+<p>The instantaneous Goldilocks potential (G_base) at any point in spacetime can be understood as the convergence of four key physical parameters:</p>
+<ol type="1">
+<li><p><strong>Temperature (T):</strong> The thermal energy scale relative to the chemical bond energies of potential structures. The asymmetric response to temperature deviations from optimal reflects a physical reality: cold environments merely slow reactions while preserving structures, whereas hot environments actively break bonds and destroy complexity.</p></li>
+<li><p><strong>Available Free Energy Gradient (ΔE):</strong> The magnitude of accessible energy differentials that can drive systems away from equilibrium. This could be radiation from a star, redox gradients in a hydrothermal vent, or any other energy source capable of doing work.</p></li>
+<li><p><strong>Elemental Availability (Z):</strong> The diversity of atomic building blocks, particularly elements with rich valence structures capable of forming complex molecules. The presence of carbon, nitrogen, oxygen, phosphorus, sulfur, and various metals dramatically expands the possible configuration space of matter.</p></li>
+<li><p><strong>Density/Pressure (ρ):</strong> The concentration of these elements, affecting reaction rates and the likelihood of complex structures forming through random encounters.</p></li>
+</ol>
+<p>G_base is not an arbitrary construction but a measure of an environment’s capacity to support systems far from thermodynamic equilibrium—systems capable of maintaining complex, ordered structures in defiance of entropy’s general tendency.</p>
+</section>
+<section id="dissipation-driven-adaptation" class="level2">
+<h2 class="anchored" data-anchor-id="dissipation-driven-adaptation">Dissipation-Driven Adaptation</h2>
+<p>Jeremy England’s groundbreaking work on “dissipation-driven adaptation” provides a compelling physical mechanism for the initial emergence of complexity in high G_base environments. England demonstrated, using the mathematics of non-equilibrium statistical mechanics, that systems driven by external energy sources tend to self-organize into configurations that are more effective at capturing and dissipating that energy.</p>
+<p>In a high G_base environment—where temperature is appropriate, energy gradients are available, and suitable elements are present at sufficient density—matter will naturally explore various configurations. Those configurations that happen to be better at absorbing the available energy and dissipating it as heat are statistically favored to persist and potentially replicate. This creates a fundamental physical drive toward increasingly complex dissipative structures, even before Darwinian evolution enters the picture.</p>
+<p>England’s framework explains how the first increments of G_cum might accumulate in a previously lifeless but high G_base environment. It bridges the gap between simple chemistry and the early self-organizing systems that could eventually lead to life.</p>
+</section>
+<section id="energy-rate-density-and-complexity" class="level2">
+<h2 class="anchored" data-anchor-id="energy-rate-density-and-complexity">Energy Rate Density and Complexity</h2>
+<p>Eric Chaisson’s work on Energy Rate Density (Φm)—the amount of energy flowing through a system per unit time and per unit mass—provides a complementary perspective. Chaisson observed that across cosmic history, systems of increasing complexity (from stars to planets to life to civilization) display progressively higher values of Φm.</p>
+<p>This observation aligns perfectly with our understanding of G_base and G_cum. G_base represents an environment’s capacity to support a maximum sustainable Energy Rate Density if a sufficiently complex system were present to channel the available energy. G_cum tracks the historical development of systems capable of harnessing increasingly larger energy flows within those environments.</p>
+<p>England’s dissipation-driven adaptation explains why systems tend to evolve toward higher Φm: they’re statistically favored to become better energy dissipators. Chaisson’s metric then allows us to quantify this progression across different scales and systems.</p>
+<p>The two frameworks are deeply compatible. Together, they suggest that the universe has an inherent physical tendency toward increasing complexity in regions where conditions permit—not because of any teleological purpose, but because of the fundamental statistical behavior of matter far from equilibrium.</p>
+</section>
+<section id="from-physics-to-biology" class="level2">
+<h2 class="anchored" data-anchor-id="from-physics-to-biology">From Physics to Biology</h2>
+<p>What begins as simple dissipation-driven self-organization can, in environments with persistently high G_base, eventually lead to systems that maintain themselves through replication and natural selection. At this transition, new mechanisms for complexity accumulation emerge, dramatically accelerating the growth of G_cum.</p>
+<p>Assembly Theory provides a framework for measuring this accumulated complexity. By quantifying the number of steps required to build a particular molecule and the abundance of such molecules, it captures both the complexity of individual structures and evidence of their selective replication—a direct measure of G_cum.</p>
+<p>The progression from physics to chemistry to biology represents a continuum rather than distinct domains. G_base describes the environmental potential defined by fundamental physical parameters. England’s dissipation-driven adaptation explains the initial emergence of organization within that potential. And G_cum tracks the subsequent historical accumulation of complexity through increasingly sophisticated mechanisms, from simple self-organization to genetic evolution to cultural and technological development.</p>
+<p>This physically grounded understanding of the Goldilocks potential clarifies why complexity emerges where and when it does in the universe. It’s not random, nor is it inevitable everywhere. It follows the contours of G_base across spacetime, accelerating in those rare regions where high G_base persists long enough for significant G_cum to accumulate and compound upon itself.</p>
+<p>The universe isn’t uniformly fertile ground for complexity. It’s a landscape of varying potential, shaped by the fundamental physics of non-equilibrium systems, with complexity flourishing in those privileged regions where conditions have remained favorable across cosmic time.</p>
+</section>
+</section>
+<section id="key-papers-and-further-reading" class="level1">
+<h1>Key Papers and Further Reading</h1>
+<section id="central-works-mentioned" class="level2">
+<h2 class="anchored" data-anchor-id="central-works-mentioned">Central Works Mentioned</h2>
+<section id="chaissons-energy-rate-density" class="level3">
+<h3 class="anchored" data-anchor-id="chaissons-energy-rate-density">Chaisson’s Energy Rate Density</h3>
+<ol type="1">
+<li>Chaisson, E. J. (2001). Cosmic Evolution: The Rise of Complexity in Nature. Harvard University Press.</li>
+<li>Chaisson, E. J. (2011). “Energy rate density as a complexity metric and evolutionary driver.” Complexity, 16(3), 27-40.</li>
+<li>Chaisson, E. J. (2015). “Energy Flows in Low-Entropy Complex Systems.” Entropy, 17(12), 8007-8018.</li>
+</ol>
+</section>
+<section id="englands-dissipation-driven-adaptation" class="level3">
+<h3 class="anchored" data-anchor-id="englands-dissipation-driven-adaptation">England’s Dissipation-Driven Adaptation</h3>
+<ol start="4" type="1">
+<li>England, J. L. (2013). “Statistical physics of self-replication.” The Journal of Chemical Physics, 139(12), 121923.</li>
+<li>England, J. L. (2015). “Dissipative adaptation in driven self-assembly.” Nature Nanotechnology, 10(11), 919-923.</li>
+<li>Perunov, N., Marsland, R. A., &amp; England, J. L. (2016). “Statistical physics of adaptation.” Physical Review X, 6(2), 021036.</li>
+</ol>
+</section>
+<section id="assembly-theory" class="level3">
+<h3 class="anchored" data-anchor-id="assembly-theory">Assembly Theory</h3>
+<ol start="7" type="1">
+<li>Marshall, S. M., Murray, A. R., &amp; Cronin, L. (2021). “A probabilistic framework for identifying biosignatures using Pathway Complexity.” Philosophical Transactions of the Royal Society A, 379(2202), 20200067.</li>
+<li>Marshall, S. M., et al.&nbsp;(2022). “Identifying molecules as biosignatures with assembly theory and mass spectrometry.” Nature Communications, 13(1), 2170.</li>
+<li>Sharma, A., et al.&nbsp;(2023). “Assembly theory explains and quantifies selection and evolution.” Nature, 618, 522-528.</li>
+</ol>
+</section>
+<section id="cosmic-origins-of-life" class="level3">
+<h3 class="anchored" data-anchor-id="cosmic-origins-of-life">Cosmic Origins of Life</h3>
+<ol start="10" type="1">
+<li>Sharov, A. A., &amp; Gordon, R. (2013). “Life Before Earth.” arXiv:1304.3381 [physics.gen-ph].</li>
+<li>Lingam, M., &amp; Loeb, A. (2021). “Life in the Cosmos: From Biosignatures to Technosignatures.” Harvard University Press.</li>
+<li>Chen, J., &amp; Kipping, D. (2018). “On the Rate of Abiogenesis from a Bayesian Informatics Perspective.” Astrobiology, 18(12), 1574-1584.</li>
+</ol>
+</section>
+</section>
+<section id="highly-relevant-works" class="level2">
+<h2 class="anchored" data-anchor-id="highly-relevant-works">Highly Relevant Works</h2>
+<section id="non-equilibrium-physics-and-complexity" class="level3">
+<h3 class="anchored" data-anchor-id="non-equilibrium-physics-and-complexity">Non-Equilibrium Physics and Complexity</h3>
+<ol start="13" type="1">
+<li>Prigogine, I., &amp; Nicolis, G. (1977). “Self-Organization in Nonequilibrium Systems: From Dissipative Structures to Order through Fluctuations.” Wiley.</li>
+<li>Anderson, P. W. (1972). “More is different.” Science, 177(4047), 393-396.</li>
+<li>Goldenfeld, N., &amp; Woese, C. (2011). “Life is physics: evolution as a collective phenomenon far from equilibrium.” Annual Review of Condensed Matter Physics, 2(1), 375-399.</li>
+</ol>
+</section>
+<section id="information-theory-and-complexity" class="level3">
+<h3 class="anchored" data-anchor-id="information-theory-and-complexity">Information Theory and Complexity</h3>
+<ol start="16" type="1">
+<li>Adami, C. (2002). “What is complexity?” BioEssays, 24(12), 1085-1094.</li>
+<li>Hoel, E. P., Albantakis, L., &amp; Tononi, G. (2013). “Quantifying causal emergence shows that macro can beat micro.” Proceedings of the National Academy of Sciences, 110(49), 19790-19795.</li>
+<li>Walker, S. I., Cisneros, L., &amp; Davies, P. C. (2012). “Evolutionary transitions and top-down causation.” arXiv:1207.4808 [nlin.AO].</li>
+</ol>
+</section>
+<section id="early-universe-habitability" class="level3">
+<h3 class="anchored" data-anchor-id="early-universe-habitability">Early Universe Habitability</h3>
+<ol start="19" type="1">
+<li>Loeb, A. (2014). “The habitable epoch of the early Universe.” International Journal of Astrobiology, 13(4), 337-339.</li>
+<li>Adams, F. C., Bodenheimer, P., &amp; Laughlin, G. (2005). “M dwarfs: planet formation and long term evolution.” Astronomische Nachrichten, 326(10), 913-919.</li>
+</ol>
+</section>
+</section>
+<section id="fascinating-wildcards" class="level2">
+<h2 class="anchored" data-anchor-id="fascinating-wildcards">Fascinating Wildcards</h2>
+<ol start="21" type="1">
+<li><p>Kauffman, S. A. (1993). “The Origins of Order: Self-Organization and Selection in Evolution.” Oxford University Press. [Classic work on autocatalytic sets and the emergence of order]</p></li>
+<li><p>Deutsch, D. (2013). “Constructor theory.” Synthese, 190(18), 4331-4359. [A new approach to formulating fundamental physics that might have implications for understanding life]</p></li>
+<li><p>Smith, E., &amp; Morowitz, H. J. (2016). “The Origin and Nature of Life on Earth: The Emergence of the Fourth Geosphere.” Cambridge University Press. [Comprehensive treatment of life’s emergence from a geochemical perspective]</p></li>
+<li><p>Kempes, C. P., et al.&nbsp;(2017). “The thermodynamic efficiency of computations made in cells across the range of life.” Philosophical Transactions of the Royal Society A, 375(2109), 20160343. [Interesting exploration of energy efficiency in biological computation]</p></li>
+<li><p>Marletto, C. (2015). “Constructor theory of life.” Journal of the Royal Society Interface, 12(104), 20141226. [Application of constructor theory to biological phenomena]</p></li>
+<li><p>Frank, S. A. (2009). “The common patterns of nature.” Journal of Evolutionary Biology, 22(8), 1563-1585. [Elegant unification of seemingly disparate patterns in evolutionary biology]</p></li>
+<li><p>Hoffman, P. F., &amp; Schrag, D. P. (2002). “The snowball Earth hypothesis: testing the limits of global change.” Terra Nova, 14(3), 129-155. [Extreme climate fluctuations and their potential impact on evolution]</p></li>
+<li><p>Carroll, S. M. (2016). “The Big Picture: On the Origins of Life, Meaning, and the Universe Itself.” Dutton. [Connects entropy, complexity and meaning from a physicist’s perspective]</p></li>
+<li><p>Walker, S. I., &amp; Davies, P. C. (2013). “The algorithmic origins of life.” Journal of the Royal Society Interface, 10(79), 20120869. [Life as information processing]</p></li>
+<li><p>Valiant, L. (2013). “Probably Approximately Correct: Nature’s Algorithms for Learning and Prospering in a Complex World.” Basic Books. [Mathematical theory of evolution and learning that might relate to your evolutionary velocity concept]</p></li>
+<li><p>Morris, S. C. (2003). “Life’s Solution: Inevitable Humans in a Lonely Universe.” Cambridge University Press. [On evolutionary convergence and the constraints on evolutionary trajectories]</p></li>
+<li><p>Newman, M. E. J. (2010). “Networks: An Introduction.” Oxford University Press. [Foundations of network theory that might help formalize aspects of your Goldilocks manifold]</p></li>
+<li><p>Lenton, T. M., et al.&nbsp;(2004). “Long-term geosphere–biosphere coevolution and astrobiology.” Geological Society, London, Special Publications, 236(1), 17-28. [How life and its environment co-evolve]</p></li>
+</ol>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><a href="www.fergusfettes.com">This website</a> by Fergus Fettes is marked as <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/FergusFettes">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
