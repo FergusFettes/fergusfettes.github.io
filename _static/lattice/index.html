@@ -547,6 +547,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
             <button id="btn-dump-config" class="secondary">Save JSON</button>
             <button id="btn-load-config" class="secondary">Load JSON</button>
             <button id="btn-copy-config" class="secondary">Copy</button>
+            <button id="btn-copy-link" class="secondary">Link</button>
           </div>
           <input type="file" id="config-file-input" accept=".json" style="display:none;">
         </div>
@@ -685,6 +686,9 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
       // Start Loop
       App.lastTime = performance.now();
       loop();
+
+      // Load config from URL hash if present (e.g. #config=<base64>)
+      loadConfigFromURL();
     }
 
     function loop(timestamp) {
@@ -907,6 +911,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
       document.getElementById('btn-dump-config').addEventListener('click', downloadConfig);
       document.getElementById('btn-load-config').addEventListener('click', uploadConfig);
       document.getElementById('btn-copy-config').addEventListener('click', copyConfig);
+      document.getElementById('btn-copy-link').addEventListener('click', copyLink);
       document.getElementById('config-file-input').addEventListener('change', (e) => {
         const file = e.target.files[0];
         if (!file) return;
@@ -1270,6 +1275,38 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
         document.body.removeChild(ta);
         showToast('Config copied to clipboard');
       });
+    }
+
+    function copyLink() {
+      const cfg = dumpConfig();
+      const json = JSON.stringify(cfg);
+      const encoded = btoa(unescape(encodeURIComponent(json)));
+      const url = window.location.origin + window.location.pathname + '#config=' + encoded;
+      navigator.clipboard.writeText(url).then(() => {
+        showToast('Link copied to clipboard');
+      }).catch(() => {
+        const ta = document.createElement('textarea');
+        ta.value = url;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showToast('Link copied to clipboard');
+      });
+    }
+
+    function loadConfigFromURL() {
+      const hash = window.location.hash;
+      if (!hash.startsWith('#config=')) return;
+      try {
+        const encoded = hash.slice('#config='.length);
+        const json = decodeURIComponent(escape(atob(encoded)));
+        const cfg = JSON.parse(json);
+        loadConfig(cfg);
+        showToast('Config loaded from URL');
+      } catch (e) {
+        console.warn('Failed to load config from URL:', e);
+      }
     }
 
     function uploadConfig() {
