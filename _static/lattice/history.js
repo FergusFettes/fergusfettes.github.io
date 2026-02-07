@@ -253,13 +253,10 @@ export function traceForward(simulation, currentBlob, maxFrames, stopOnExpanded 
 export function renderSpacetimeStructure(backwardTrace, forwardTrace, width, height, maxVoxels = 20000) {
     const group = new THREE.Group();
 
-    // Helper to add voxel
     const geometry = new THREE.BoxGeometry(1, 1, 1);
     const material = new THREE.MeshLambertMaterial();
 
-    // We need to collect all valid positions and colors first
-    // Then create an InstancedMesh
-
+    // Collect all positions and colors, then create a single InstancedMesh
     const matrices = [];
     const colors = [];
     let voxelCount = 0;
@@ -277,11 +274,9 @@ export function renderSpacetimeStructure(backwardTrace, forwardTrace, width, hei
         if (voxelCount >= maxVoxels) return;
 
         if (isPast) {
-            // Blue (past) -> White (present)
             const t = 1.0 - (Math.abs(tickOffset) / 200);
             color.setHSL(0.6, 1.0, 0.2 + 0.8 * t);
         } else {
-            // White (present) -> Red (future)
             const t = tickOffset / 200;
             color.setHSL(0.0, 1.0, 1.0 - 0.5 * t);
         }

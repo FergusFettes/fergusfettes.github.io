@@ -14,8 +14,8 @@
   </script>
   
 <script type="module">
-import init, * as bindings from './lattice-gol-e0c084340bc88988.js';
-const wasm = await init({ module_or_path: './lattice-gol-e0c084340bc88988_bg.wasm' });
+import init, * as bindings from './lattice-gol-f3861f87b0f78826.js';
+const wasm = await init({ module_or_path: './lattice-gol-f3861f87b0f78826_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -44,19 +44,17 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
       height: 100%;
     }
 
-    /* Sidebar Layout */
     #sidebar-container {
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       width: 320px;
-      /* Default width */
       display: flex;
       flex-direction: column;
       z-index: 20;
       transition: transform 0.3s ease;
-      background: rgba(20, 20, 20, 0.95);
+      background: rgba(30, 30, 30, 0.85);
       border-left: 1px solid rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
@@ -70,9 +68,8 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
       height: 48px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
       padding: 0 16px;
-      background: rgba(255, 255, 255, 0.03);
+      background: rgba(255, 255, 255, 0.05);
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
@@ -89,20 +86,21 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
       top: 12px;
       width: 32px;
       height: 32px;
-      background: rgba(20, 20, 20, 0.9);
+      background: rgba(30, 30, 30, 0.85);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-right: none;
-      border-radius: 8px 0 0 8px;
+      border-radius: 6px 0 0 6px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       color: #ccc;
+      font-size: 16px;
     }
 
     #sidebar-toggle:hover {
       color: #fff;
-      background: rgba(40, 40, 40, 0.9);
+      background: rgba(50, 50, 50, 0.9);
     }
 
     #sidebar-content {
@@ -112,37 +110,36 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
       display: flex;
       flex-direction: column;
       gap: 12px;
-      scrollbar-width: thin;
-      scrollbar-color: #444 transparent;
       min-height: 0;
-      /* Important for flex scrolling */
     }
 
     #sidebar-content::-webkit-scrollbar {
       width: 6px;
     }
 
+    #sidebar-content::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
     #sidebar-content::-webkit-scrollbar-thumb {
-      background: #444;
+      background: rgba(255, 255, 255, 0.15);
       border-radius: 3px;
     }
 
-    /* Panels (formerly windows) */
     .panel {
       background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 8px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition: box-shadow 0.2s;
+      transition: all 0.2s ease;
       flex-shrink: 0;
-      /* Prevent shrinking, force scroll */
     }
 
     .panel-header {
       padding: 10px 12px;
-      background: rgba(255, 255, 255, 0.02);
+      background: rgba(255, 255, 255, 0.03);
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       display: flex;
       justify-content: space-between;
@@ -308,17 +305,49 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
       flex-direction: column;
       gap: 8px;
     }
+
+    .config-btn-row {
+      display: flex;
+      gap: 4px;
+    }
+
+    .config-btn-row button {
+      font-size: 11px;
+      padding: 6px 8px;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: rgba(58, 134, 255, 0.95);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      pointer-events: none;
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 9999;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
   </style>
-<link rel="modulepreload" href="./lattice-gol-e0c084340bc88988.js" crossorigin="anonymous" integrity="sha384-gZdaoop8Lnv6Cc2Sj6Ie3F/ohz9if22oWYKcGFHjTpB+omLUr7Yk6LGU3H69lyxG"><link rel="preload" href="./lattice-gol-e0c084340bc88988_bg.wasm" crossorigin="anonymous" integrity="sha384-Nvv3vijzm7s7Y0lT7h4gFy2qVLi1mjjCcozDLaDlkzwxghBmnYAuOZqyz7im0P/k" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="./lattice-gol-f3861f87b0f78826.js" crossorigin="anonymous" integrity="sha384-23lnOOd6PkuvoV0JY6ASzbk/lc380Y80Vx6lXit1BcJPMEw5WbqpanYIn/j7Qcmp"><link rel="preload" href="./lattice-gol-f3861f87b0f78826_bg.wasm" crossorigin="anonymous" integrity="sha384-b1ioa6aDYAoNfJBTKSFVPxtmVLSR9NwppeZmRuD8LPmKfP0W1Tr8wYU21sY1qeP6" as="fetch" type="application/wasm"></head>
 
 <body>
   <canvas id="game-of-life-canvas"></canvas>
 
-  <!-- Sidebar Container -->
+  <!-- Sidebar -->
   <div id="sidebar-container">
     <button id="sidebar-toggle">☰</button>
     <div id="sidebar-header">
-      <span id="sidebar-title">Settings</span>
+      <span id="sidebar-title">Controls</span>
     </div>
     <div id="sidebar-content">
 
@@ -328,18 +357,14 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
           <h3>Main Control</h3>
         </div>
         <div class="panel-body">
-          <!-- Measurements -->
-          <div>
-            <div class="section-title">Measurements</div>
-            <div id="measurements-grid"
-              style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 11px; color: #888;">
-              <div>Dens: <span id="meas-density" style="color:#eee">0.00</span></div>
-              <div>Mag: <span id="meas-mag" style="color:#eee">0.00</span></div>
-              <div>Energy: <span id="meas-energy" style="color:#eee">0.00</span></div>
-              <div>FPS: <span id="meas-fps" style="color:#eee">60</span></div>
-            </div>
+          <div class="section-title">Measurements</div>
+          <div id="measurements-grid"
+            style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 11px; color: #888;">
+            <div>Dens: <span id="meas-density" style="color:#eee">0.00</span></div>
+            <div>Mag: <span id="meas-mag" style="color:#eee">0.00</span></div>
+            <div>Energy: <span id="meas-energy" style="color:#eee">0.00</span></div>
+            <div>FPS: <span id="meas-fps" style="color:#eee">60</span></div>
           </div>
-          <!-- Simulation Control -->
           <div class="control-group">
             <div class="row space-between">
               <label>Speed</label>
@@ -360,7 +385,6 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
           <h3>Ising Model</h3>
         </div>
         <div class="panel-body">
-          <!-- Async Update (Ising) -->
           <div class="row">
             <input type="checkbox" id="async-enabled" checked>
             <label for="async-enabled" style="color: #fff;">Enable Async Update</label>
@@ -388,7 +412,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
               <label>Sweeps/Frame</label>
               <input type="number" id="async-rate-num" step="0.1" value="1.0" style="width: 50px;">
             </div>
-            <input type="range" id="async-rate" min="0.0" max="2.0" step="0.1" value="1.0">
+            <input type="range" id="async-rate" min="0.0" max="2.0" step="0.01" value="1.0">
           </div>
         </div>
       </div>
@@ -399,18 +423,15 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
           <h3>Game of Life</h3>
         </div>
         <div class="panel-body">
-          <!-- Sync Update (GoL) -->
           <div class="row">
             <input type="checkbox" id="sync-enabled">
             <label for="sync-enabled" style="color: #fff;">Enable Sync Update</label>
           </div>
           <div id="sync-controls">
             <div style="display: flex; gap: 12px;">
-              <!-- Birth Rules -->
               <div style="flex: 1;">
                 <div style="font-size: 10px; margin-bottom: 4px; color: #888;">BIRTH</div>
                 <div class="bitmask-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;">
-                  <!-- Logic 0-8 -->
                   <label class="bit-check" title="0"><input type="checkbox" id="gol-b0"><span>0</span></label>
                   <label class="bit-check" title="1"><input type="checkbox" id="gol-b1"><span>1</span></label>
                   <label class="bit-check" title="2"><input type="checkbox" id="gol-b2"><span>2</span></label>
@@ -422,7 +443,6 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
                   <label class="bit-check" title="8"><input type="checkbox" id="gol-b8"><span>8</span></label>
                 </div>
               </div>
-              <!-- Survival Rules -->
               <div style="flex: 1;">
                 <div style="font-size: 10px; margin-bottom: 4px; color: #888;">SURVIVAL</div>
                 <div class="bitmask-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;">
@@ -442,98 +462,97 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
         </div>
       </div>
 
-      <!-- 4. Lattice Control (Boundaries + Config) -->
+      <!-- 4. Lattice Config -->
       <div id="panel-lattice" class="panel">
         <div class="panel-header">
           <h3>Lattice Config</h3>
         </div>
         <div class="panel-body">
-          <!-- Boundaries & Scroll -->
-          <div>
-            <div class="section-title">Boundaries & Displacement</div>
-            <div class="section-content">
-              <div class="boundary-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
-                <select id="bound-top" class="boundary-select" data-side="top">
-                  <option value="periodic">Top: Periodic</option>
-                  <option value="fixed">Top: Fixed</option>
-                  <option value="reflect">Top: Reflect</option>
-                  <option value="absorbing">Top: Absorbing</option>
-                </select>
-                <select id="bound-bottom" class="boundary-select" data-side="bottom">
-                  <option value="periodic">Bot: Periodic</option>
-                  <option value="fixed">Bot: Fixed</option>
-                  <option value="reflect">Bot: Reflect</option>
-                  <option value="absorbing">Bot: Absorbing</option>
-                </select>
-                <select id="bound-left" class="boundary-select" data-side="left">
-                  <option value="periodic">Left: Periodic</option>
-                  <option value="fixed">Left: Fixed</option>
-                  <option value="reflect">Left: Reflect</option>
-                  <option value="absorbing">Left: Absorbing</option>
-                </select>
-                <select id="bound-right" class="boundary-select" data-side="right">
-                  <option value="periodic">Right: Periodic</option>
-                  <option value="fixed">Right: Fixed</option>
-                  <option value="reflect">Right: Reflect</option>
-                  <option value="absorbing">Right: Absorbing</option>
-                </select>
-              </div>
-              <div class="row space-between">
-                <label style="font-size: 10px;">Fixed Value:</label>
-                <select id="bound-fixed-val" style="width: 60px; height: 20px; padding: 0;">
-                  <option value="1" selected>1</option>
-                  <option value="-1">-1</option>
-                </select>
-              </div>
+          <div class="section-title">Boundaries & Displacement</div>
+          <div class="boundary-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
+            <select id="bound-top" class="boundary-select" data-side="top">
+              <option value="periodic">Top: Periodic</option>
+              <option value="fixed">Top: Fixed</option>
+              <option value="reflect">Top: Reflect</option>
+              <option value="absorbing">Top: Absorbing</option>
+            </select>
+            <select id="bound-bottom" class="boundary-select" data-side="bottom">
+              <option value="periodic">Bot: Periodic</option>
+              <option value="fixed">Bot: Fixed</option>
+              <option value="reflect">Bot: Reflect</option>
+              <option value="absorbing">Bot: Absorbing</option>
+            </select>
+            <select id="bound-left" class="boundary-select" data-side="left">
+              <option value="periodic">Left: Periodic</option>
+              <option value="fixed">Left: Fixed</option>
+              <option value="reflect">Left: Reflect</option>
+              <option value="absorbing">Left: Absorbing</option>
+            </select>
+            <select id="bound-right" class="boundary-select" data-side="right">
+              <option value="periodic">Right: Periodic</option>
+              <option value="fixed">Right: Fixed</option>
+              <option value="reflect">Right: Reflect</option>
+              <option value="absorbing">Right: Absorbing</option>
+            </select>
+          </div>
+          <div class="row space-between">
+            <label style="font-size: 10px;">Fixed Value:</label>
+            <select id="bound-fixed-val" style="width: 60px; height: 20px; padding: 0;">
+              <option value="1" selected>1</option>
+              <option value="-1">-1</option>
+            </select>
+          </div>
 
-              <div style="border-top: 1px solid rgba(255,255,255,0.05); margin-top: 4px; padding-top: 4px;">
-                <label style="font-size: 10px; color: #888;">Displacement (Vel)</label>
-                <div class="row space-between" style="margin-top: 4px;">
-                  <label>X</label>
-                  <input type="range" id="scroll-vx" min="-1.0" max="1.0" step="0.1" value="0.0">
-                  <input type="number" id="scroll-vx-num" step="0.1" value="0.0" style="width: 40px;">
-                </div>
-                <div class="row space-between" style="margin-top: 4px;">
-                  <label>Y</label>
-                  <input type="range" id="scroll-vy" min="-1.0" max="1.0" step="0.1" value="0.0">
-                  <input type="number" id="scroll-vy-num" step="0.1" value="0.0" style="width: 40px;">
-                </div>
-              </div>
+          <div style="border-top: 1px solid rgba(255,255,255,0.05); margin-top: 4px; padding-top: 4px;">
+            <label style="font-size: 10px; color: #888;">Displacement (Vel)</label>
+            <div class="row space-between" style="margin-top: 4px;">
+              <label>X</label>
+              <input type="range" id="scroll-vx" min="-1.0" max="1.0" step="0.1" value="0.0">
+              <input type="number" id="scroll-vx-num" step="0.1" value="0.0" style="width: 40px;">
+            </div>
+            <div class="row space-between" style="margin-top: 4px;">
+              <label>Y</label>
+              <input type="range" id="scroll-vy" min="-1.0" max="1.0" step="0.1" value="0.0">
+              <input type="number" id="scroll-vy-num" step="0.1" value="0.0" style="width: 40px;">
             </div>
           </div>
 
-          <!-- General Config -->
-          <div>
-            <div class="section-title">Configuration</div>
-            <div class="section-content">
-              <div class="control-group">
-                <label>Update Order</label>
-                <div class="row" style="font-size: 11px;">
-                  <input type="radio" name="order" id="order-async-sync" value="async_first" checked>
-                  <label for="order-async-sync" style="font-size: 11px; margin-right: 8px;">Async → Sync</label>
+          <div class="section-title">Configuration</div>
+          <div class="control-group">
+            <label>Update Order</label>
+            <div class="row" style="font-size: 11px;">
+              <input type="radio" name="order" id="order-async-sync" value="async_first" checked>
+              <label for="order-async-sync" style="font-size: 11px; margin-right: 8px;">Async → Sync</label>
 
-                  <input type="radio" name="order" id="order-sync-async" value="sync_first">
-                  <label for="order-sync-async" style="font-size: 11px;">Sync → Async</label>
-                </div>
-              </div>
-
-              <div class="control-group">
-                <div class="row space-between">
-                  <label>Density: </label>
-                  <select id="density-select">
-                    <option value="20">Coarse (20px)</option>
-                    <option value="10">Normal (10px)</option>
-                    <option value="5" selected>Fine (5px)</option>
-                    <option value="2">Ultra (2px)</option>
-                  </select>
-                </div>
-              </div>
+              <input type="radio" name="order" id="order-sync-async" value="sync_first">
+              <label for="order-sync-async" style="font-size: 11px;">Sync → Async</label>
             </div>
           </div>
+
+          <div class="control-group">
+            <div class="row space-between">
+              <label>Density: </label>
+              <select id="density-select">
+                <option value="10">Coarse (10px)</option>
+                <option value="5">Normal (5px)</option>
+                <option value="3" selected>Fine (3px)</option>
+                <option value="2">Dense (2px)</option>
+                <option value="1">Ultra (1px)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="section-title">Presets</div>
+          <div class="config-btn-row">
+            <button id="btn-dump-config" class="secondary">Save JSON</button>
+            <button id="btn-load-config" class="secondary">Load JSON</button>
+            <button id="btn-copy-config" class="secondary">Copy</button>
+          </div>
+          <input type="file" id="config-file-input" accept=".json" style="display:none;">
         </div>
       </div>
 
-      <!-- 5. History / 3D Control -->
+      <!-- 5. History / SpaceTime -->
       <div id="panel-history" class="panel">
         <div class="panel-header">
           <h3>History / SpaceTime</h3>
@@ -564,15 +583,15 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
               <label style="font-size: 10px;">Max Voxels</label>
               <span id="max-voxels-val" style="font-size: 10px; color:#fff">20k</span>
             </div>
-            <input type="range" id="max-voxels" min="1000" max="100000" step="1000" value="20000">
+            <input type="range" id="max-voxels" min="1000" max="50000" step="1000" value="20000">
 
             <button id="btn-track" disabled style="margin-top: 8px;">Track Structure (3D)</button>
           </div>
         </div>
       </div>
 
-    </div> <!-- End sidebar-content -->
-  </div> <!-- End sidebar-container -->
+    </div>
+  </div>
 
   <!-- 3D Viewer Overlay (Hidden by default) -->
   <div id="viewer-3d"
@@ -589,6 +608,8 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
   </div>
 
 
+  <div id="toast" class="toast"></div>
+
   <script type="module">
     import { RollingBuffer, traceBackward, traceForward, renderSpacetimeStructure, exportToGLB, getConnectedComponent } from './history.js';
     import * as THREE from 'three';
@@ -603,12 +624,17 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
       width: 100, // Initial estimate
       height: 100,
       height: 100,
-      cellSize: 5, // Default Fine
+      cellSize: 3, // Default Fine
       lastTime: 0,
       lastTime: 0,
       fpsInterval: 1000 / 60,
       animationId: null,
-      selectedBlob: null
+      selectedBlob: null,
+      canvasBuffer: null,
+      canvasContext: null,
+      imgData: null,
+      fpsLastTime: 0,
+      fpsFrameCount: 0
     };
 
     // Canvas
@@ -634,15 +660,24 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     function initApp() {
       console.log("Initializing App...");
 
-      // Initial Window Setup
-      handleResize();
-
       // Setup Buffer
       // Note: Buffer needs to resize if simulation resizes. 
       // We'll init buffer with initial size.
       App.width = App.sim.get_width();
       App.height = App.sim.get_height();
       App.buffer = new RollingBuffer(200, App.width, App.height);
+
+      // Offscreen canvas for pixel blitting
+      const offscreen = document.createElement('canvas');
+      offscreen.width = App.width;
+      offscreen.height = App.height;
+      App.canvasBuffer = offscreen;
+      App.canvasContext = offscreen.getContext('2d', { alpha: false });
+      App.imgData = App.canvasContext.createImageData(App.width, App.height);
+      ctx.imageSmoothingEnabled = false;
+
+      // Initial Window Setup
+      handleResize();
 
       // Bind UI Controls
       bindControls();
@@ -657,6 +692,14 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 
       const now = timestamp || performance.now();
       const elapsed = now - App.lastTime;
+
+      App.fpsFrameCount++;
+      if (now - App.fpsLastTime >= 500) {
+        const fps = Math.round((App.fpsFrameCount * 1000) / (now - App.fpsLastTime));
+        document.getElementById('meas-fps').textContent = fps;
+        App.fpsFrameCount = 0;
+        App.fpsLastTime = now;
+      }
 
       if (elapsed > App.fpsInterval) {
         App.lastTime = now - (elapsed % App.fpsInterval);
@@ -675,43 +718,33 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     }
 
     function draw() {
-      // Clear
-      ctx.fillStyle = "#050505";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       if (!App.sim) return;
-
       const width = App.sim.get_width();
       const height = App.sim.get_height();
-      const size = App.cellSize;
-
       const ptr = App.sim.get_cells_ptr();
       const cells = new Int32Array(App.mem.buffer, ptr, width * height);
-
-      ctx.beginPath();
-      // Since we are iterating potentially many cells, optimizing drawing is good.
-      // But the previous implementation just drew one by one.
-      for (let y = 0; y < height; y++) {
-        for (let x = 0; x < width; x++) {
-          const idx = y * width + x;
-          const val = cells[idx];
-
-          if (val === 1) {
-            ctx.fillStyle = "#FFFFFF";
-            ctx.fillRect(x * size, y * size, size, size);
-          } else if (App.selectedBlob && App.selectedBlob.has(idx)) {
-            // Highlight selected blob ghost if dead? 
-            // Or if val === 1 logic handles it.
-            // If we want to highlight the selected blob separately:
-            ctx.fillStyle = "#FF0000"; // Red highlight
-            ctx.fillRect(x * size, y * size, size, size);
-          }
+      const data = App.imgData.data;
+      const buf32 = new Uint32Array(data.buffer);
+      const C_BG = 0xFF050505;
+      const C_FG = 0xFFFFFFFF;
+      const C_SEL = 0xFF0000FF;
+      const C_OVERLAY = 0x4D00FF00;
+      for (let i = 0; i < width * height; i++) {
+        const val = cells[i];
+        if (val === 1) {
+          buf32[i] = C_FG;
+        } else if (App.selectedBlob && App.selectedBlob.has(i)) {
+          buf32[i] = C_SEL;
+        } else {
+          buf32[i] = C_BG;
         }
       }
-
-      // Highlight selection overlay
+      App.canvasContext.putImageData(App.imgData, 0, 0);
+      ctx.imageSmoothingEnabled = false;
+      ctx.drawImage(App.canvasBuffer, 0, 0, canvas.width, canvas.height);
       if (App.selectedBlob) {
         ctx.fillStyle = "rgba(0, 255, 0, 0.3)";
+        const size = App.cellSize;
         for (const idx of App.selectedBlob) {
           const x = idx % width;
           const y = Math.floor(idx / width);
@@ -855,7 +888,6 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
         trackVal.textContent = trackSlider.value;
       });
 
-      // Max Voxels Slider
       const voxelSlider = document.getElementById('max-voxels');
       const voxelVal = document.getElementById('max-voxels-val');
       voxelSlider.addEventListener('input', () => {
@@ -869,6 +901,28 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 
       document.getElementById('close-viewer').addEventListener('click', () => {
         document.getElementById('viewer-3d').style.display = 'none';
+      });
+
+      // --- Config Dump / Load Buttons ---
+      document.getElementById('btn-dump-config').addEventListener('click', downloadConfig);
+      document.getElementById('btn-load-config').addEventListener('click', uploadConfig);
+      document.getElementById('btn-copy-config').addEventListener('click', copyConfig);
+      document.getElementById('config-file-input').addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (ev) => {
+          try {
+            const cfg = JSON.parse(ev.target.result);
+            loadConfig(cfg);
+            showToast('Config loaded from ' + file.name);
+          } catch (err) {
+            showToast('Error: invalid config file');
+            console.error('Config load error:', err);
+          }
+        };
+        reader.readAsText(file);
+        e.target.value = ''; // Reset so same file can be loaded again
       });
 
       // Initial setup calls
@@ -892,6 +946,11 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
         App.sim.set_resolution(App.width, App.height);
         // Re-init buffer because dimensions changed
         App.buffer = new RollingBuffer(200, App.width, App.height);
+        App.canvasBuffer.width = App.width;
+        App.canvasBuffer.height = App.height;
+        App.canvasContext = App.canvasBuffer.getContext('2d', { alpha: false });
+        App.imgData = App.canvasContext.createImageData(App.width, App.height);
+        ctx.imageSmoothingEnabled = false;
       }
       draw();
     }
@@ -1013,17 +1072,218 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
       animate();
     }
 
-    // --- Sidebar & Drag Reorder Logic ---
+    // --- Config Dump / Load ---
+
+    function showToast(msg) {
+      const el = document.getElementById('toast');
+      el.textContent = msg;
+      el.classList.add('show');
+      setTimeout(() => el.classList.remove('show'), 2000);
+    }
+
+    function dumpConfig() {
+      const birth = [];
+      const survival = [];
+      for (let i = 0; i <= 8; i++) {
+        if (document.getElementById(`gol-b${i}`).checked) birth.push(i);
+        if (document.getElementById(`gol-s${i}`).checked) survival.push(i);
+      }
+
+      return {
+        _version: 1,
+        _timestamp: new Date().toISOString(),
+        ising: {
+          enabled: document.getElementById('async-enabled').checked,
+          temperature: parseFloat(document.getElementById('ising-temp').value),
+          field_h: parseFloat(document.getElementById('ising-h').value),
+          coupling_j: parseFloat(document.getElementById('ising-j').value),
+          sweeps_per_frame: parseFloat(document.getElementById('async-rate').value),
+        },
+        gol: {
+          enabled: document.getElementById('sync-enabled').checked,
+          birth: birth,
+          survival: survival,
+        },
+        lattice: {
+          boundaries: {
+            top: document.getElementById('bound-top').value,
+            bottom: document.getElementById('bound-bottom').value,
+            left: document.getElementById('bound-left').value,
+            right: document.getElementById('bound-right').value,
+          },
+          fixed_value: parseInt(document.getElementById('bound-fixed-val').value),
+          scroll_vx: parseFloat(document.getElementById('scroll-vx').value),
+          scroll_vy: parseFloat(document.getElementById('scroll-vy').value),
+        },
+        update_order: document.querySelector('input[name="order"]:checked').value,
+        display: {
+          density: parseInt(document.getElementById('density-select').value),
+          speed_fps: parseInt(document.getElementById('speed-slider').value),
+        },
+      };
+    }
+
+    function loadConfig(cfg) {
+      if (!cfg || typeof cfg !== 'object') return;
+
+      // Ising
+      if (cfg.ising) {
+        if (cfg.ising.enabled !== undefined) document.getElementById('async-enabled').checked = cfg.ising.enabled;
+        if (cfg.ising.temperature !== undefined) {
+          document.getElementById('ising-temp').value = cfg.ising.temperature;
+          document.getElementById('ising-temp-range').value = cfg.ising.temperature;
+        }
+        if (cfg.ising.field_h !== undefined) {
+          document.getElementById('ising-h').value = cfg.ising.field_h;
+          document.getElementById('ising-h-range').value = cfg.ising.field_h;
+        }
+        if (cfg.ising.coupling_j !== undefined) {
+          document.getElementById('ising-j').value = cfg.ising.coupling_j;
+          document.getElementById('ising-j-range').value = cfg.ising.coupling_j;
+        }
+        if (cfg.ising.sweeps_per_frame !== undefined) {
+          document.getElementById('async-rate').value = cfg.ising.sweeps_per_frame;
+          document.getElementById('async-rate-num').value = cfg.ising.sweeps_per_frame;
+        }
+      }
+
+      // GoL
+      if (cfg.gol) {
+        if (cfg.gol.enabled !== undefined) document.getElementById('sync-enabled').checked = cfg.gol.enabled;
+        if (cfg.gol.birth) {
+          for (let i = 0; i <= 8; i++) {
+            document.getElementById(`gol-b${i}`).checked = cfg.gol.birth.includes(i);
+          }
+        }
+        if (cfg.gol.survival) {
+          for (let i = 0; i <= 8; i++) {
+            document.getElementById(`gol-s${i}`).checked = cfg.gol.survival.includes(i);
+          }
+        }
+      }
+
+      // Lattice
+      if (cfg.lattice) {
+        if (cfg.lattice.boundaries) {
+          const b = cfg.lattice.boundaries;
+          if (b.top) document.getElementById('bound-top').value = b.top;
+          if (b.bottom) document.getElementById('bound-bottom').value = b.bottom;
+          if (b.left) document.getElementById('bound-left').value = b.left;
+          if (b.right) document.getElementById('bound-right').value = b.right;
+        }
+        if (cfg.lattice.fixed_value !== undefined) document.getElementById('bound-fixed-val').value = cfg.lattice.fixed_value;
+        if (cfg.lattice.scroll_vx !== undefined) {
+          document.getElementById('scroll-vx').value = cfg.lattice.scroll_vx;
+          document.getElementById('scroll-vx-num').value = cfg.lattice.scroll_vx;
+        }
+        if (cfg.lattice.scroll_vy !== undefined) {
+          document.getElementById('scroll-vy').value = cfg.lattice.scroll_vy;
+          document.getElementById('scroll-vy-num').value = cfg.lattice.scroll_vy;
+        }
+      }
+
+      // Update order
+      if (cfg.update_order) {
+        const radio = document.querySelector(`input[name="order"][value="${cfg.update_order}"]`);
+        if (radio) radio.checked = true;
+      }
+
+      // Display
+      if (cfg.display) {
+        if (cfg.display.density !== undefined) {
+          document.getElementById('density-select').value = cfg.display.density;
+          App.cellSize = cfg.display.density;
+          handleResize();
+        }
+        if (cfg.display.speed_fps !== undefined) {
+          document.getElementById('speed-slider').value = cfg.display.speed_fps;
+          App.fpsInterval = 1000 / cfg.display.speed_fps;
+        }
+      }
+
+      // Push everything to the simulation
+      // Re-use the existing update functions by triggering them
+      const sync = document.getElementById('sync-enabled').checked;
+      const asyncRun = document.getElementById('async-enabled').checked;
+      const order = document.querySelector('input[name="order"]:checked').value;
+      const rate = parseFloat(document.getElementById('async-rate').value);
+      App.sim.set_update_config(sync, asyncRun, order, rate);
+
+      const temp = parseFloat(document.getElementById('ising-temp').value);
+      const h = parseFloat(document.getElementById('ising-h').value);
+      const j = parseFloat(document.getElementById('ising-j').value);
+      App.sim.set_ising_params(temp, h, j, "metropolis");
+
+      let birth = 0;
+      let survival = 0;
+      for (let i = 0; i <= 8; i++) {
+        if (document.getElementById(`gol-b${i}`).checked) birth |= (1 << i);
+        if (document.getElementById(`gol-s${i}`).checked) survival |= (1 << i);
+      }
+      App.sim.set_gol_rules(birth, survival);
+
+      const mapVal = (val) => {
+        if (val === 'fixed') return 1;
+        if (val === 'reflect') return 2;
+        if (val === 'absorbing') return 3;
+        return 0;
+      };
+      App.sim.set_boundaries(
+        mapVal(document.getElementById('bound-top').value),
+        mapVal(document.getElementById('bound-bottom').value),
+        mapVal(document.getElementById('bound-left').value),
+        mapVal(document.getElementById('bound-right').value),
+        parseInt(document.getElementById('bound-fixed-val').value)
+      );
+
+      App.sim.set_scroll_velocity(
+        parseFloat(document.getElementById('scroll-vx').value),
+        parseFloat(document.getElementById('scroll-vy').value)
+      );
+    }
+
+    function downloadConfig() {
+      const cfg = dumpConfig();
+      const json = JSON.stringify(cfg, null, 2);
+      const blob = new Blob([json], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `lattice-config-${new Date().toISOString().slice(0, 19).replace(/:/g, '')}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast('Config saved to file');
+    }
+
+    function copyConfig() {
+      const cfg = dumpConfig();
+      const json = JSON.stringify(cfg, null, 2);
+      navigator.clipboard.writeText(json).then(() => {
+        showToast('Config copied to clipboard');
+      }).catch(() => {
+        // Fallback: select-all in a textarea
+        const ta = document.createElement('textarea');
+        ta.value = json;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showToast('Config copied to clipboard');
+      });
+    }
+
+    function uploadConfig() {
+      document.getElementById('config-file-input').click();
+    }
+
+    // --- Sidebar Logic ---
     function initSidebar() {
       const toggleBtn = document.getElementById('sidebar-toggle');
       const sidebar = document.getElementById('sidebar-container');
       const container = document.getElementById('sidebar-content');
-
-      // Toggle Sidebar
       toggleBtn.addEventListener('click', () => {
         sidebar.classList.toggle('collapsed');
       });
-
     }
 
     // --- Global Keys ---
@@ -1033,6 +1293,16 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
           e.preventDefault();
           App.playing = !App.playing;
           document.getElementById('play-pause').textContent = App.playing ? "Pause" : "Play";
+        }
+        // Ctrl+S: save config
+        if ((e.ctrlKey || e.metaKey) && e.code === 'KeyS') {
+          e.preventDefault();
+          downloadConfig();
+        }
+        // Ctrl+O: load config
+        if ((e.ctrlKey || e.metaKey) && e.code === 'KeyO') {
+          e.preventDefault();
+          uploadConfig();
         }
       });
     }

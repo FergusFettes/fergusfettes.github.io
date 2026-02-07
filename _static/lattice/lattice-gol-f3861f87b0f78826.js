@@ -245,10 +245,6 @@ function __wbg_get_imports() {
             const ret = new Function(getStringFromWasm0(arg0, arg1));
             return ret;
         },
-        __wbg_random_912284dbf636f269: function() {
-            const ret = Math.random();
-            return ret;
-        },
         __wbg_set_6cb8631f80447a67: function() { return handleError(function (arg0, arg1, arg2) {
             const ret = Reflect.set(arg0, arg1, arg2);
             return ret;
