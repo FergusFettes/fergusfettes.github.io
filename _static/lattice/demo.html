@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lattice Embed Demo</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #eee;
+        }
+
+        article {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .lattice-embed {
+            background: #000;
+            margin: 20px 0;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <article>
+        <h1>Lattice Embedding Demo</h1>
+        <p>This page demonstrates embedding the lattice simulation using the standalone script.</p>
+
+        <h2>1. Ising Model (Cold)</h2>
+        <p>Using <code>data-preset="ising-cold"</code> and <code>data-density="4"</code>.</p>
+        <div class="lattice-embed" data-preset="ising-cold" data-density="4" style="height: 200px;">
+        </div>
+
+        <h2>2. Game of Life (Configured via JSON)</h2>
+        <div class="lattice-embed" style="height: 300px;">
+            <script type="application/json">
+            {
+                "sync": { "enabled": true, "birth": [3, 6], "survival": [2, 3] },
+                "async": { "enabled": false },
+                "init": { "type": "random", "density": 0.2 },
+                "density": 2,
+                "speed": 60
+            }
+        </script>
+        </div>
+
+        <h2>3. Ising (Hot / Noisy)</h2>
+        <div class="lattice-embed" data-preset="ising-hot" style="height: 250px;"></div>
+    </article>
+
+    <!-- Load the embed script. Note: In dist, embed.js is in embed/embed.js if we copy dir -->
+    <!-- Or if we copy dir 'embed' to 'dist/embed', then src is './embed/embed.js' relative to this file if this file is in dist root? -->
+    <!-- If we copy 'embed/demo.html' to 'dist/demo.html', and 'embed/' dir to 'dist/embed/', then relative path is './embed/embed.js'. -->
+    <!-- Wait, if we use copy-file for demo.html, it goes to dist root. -->
+    <!-- If we use copy-dir for embed, it goes to dist/embed. -->
+    <!-- So src should be ./embed/embed.js -->
+
+    <script type="module" src="./embed.js"></script>
+
+</body>
+
+</html>
