@@ -60,13 +60,12 @@
         <div class="lattice-embed" data-preset="ising-hot" style="height: 250px;"></div>
     </article>
 
-    <!-- Load the embed script. Note: In dist, embed.js is in embed/embed.js if we copy dir -->
-    <!-- Or if we copy dir 'embed' to 'dist/embed', then src is './embed/embed.js' relative to this file if this file is in dist root? -->
-    <!-- If we copy 'embed/demo.html' to 'dist/demo.html', and 'embed/' dir to 'dist/embed/', then relative path is './embed/embed.js'. -->
-    <!-- Wait, if we use copy-file for demo.html, it goes to dist root. -->
-    <!-- If we use copy-dir for embed, it goes to dist/embed. -->
-    <!-- So src should be ./embed/embed.js -->
-
+    <!--
+      embed.js auto-discovers the WASM bindings:
+      1. From <link rel="modulepreload"> on this page (if present)
+      2. From stable names lattice.js / lattice.wasm (after make build)
+      To support trunk serve, we fetch index.html and extract the hashed filename.
+    -->
     <script type="module" src="./embed.js"></script>
 
 </body>

@@ -15,13 +15,47 @@
  */
 
 // ---------------------------------------------------------------------------
-// Resolve asset URLs relative to *this script*, not the hosting page
+// Resolve asset URLs relative to *this script*, not the hosting page.
+// Supports both:
+//   - trunk serve / trunk build (hashed filenames like lattice-gol-<hash>.js)
+//   - make build (stable aliases lattice.js / lattice.wasm)
 // ---------------------------------------------------------------------------
 const SCRIPT_URL = new URL(import.meta.url);
 const base = SCRIPT_URL.href.substring(0, SCRIPT_URL.href.lastIndexOf('/') + 1);
 
-const BINDINGS_URL = base + 'lattice-gol-f3861f87b0f78826.js';
-const WASM_URL     = base + 'lattice-gol-f3861f87b0f78826_bg.wasm';
+async function discoverAssets() {
+  // 1. Look for Trunk-generated <link rel="modulepreload"> on this page
+  const preload = document.querySelector('link[rel="modulepreload"][href*="lattice-gol"]');
+  if (preload) {
+    const jsHref = new URL(preload.getAttribute('href'), document.baseURI).href;
+    return { bindingsUrl: jsHref, wasmUrl: jsHref.replace(/\.js$/, '_bg.wasm') };
+  }
+
+  // 2. Check if stable names exist (from make build)
+  try {
+    const resp = await fetch(base + 'lattice.js', { method: 'HEAD' });
+    if (resp.ok && resp.headers.get('content-type')?.includes('javascript')) {
+      return { bindingsUrl: base + 'lattice.js', wasmUrl: base + 'lattice.wasm' };
+    }
+  } catch (_) { /* not available */ }
+
+  // 3. Fetch sibling index.html to extract the Trunk-hashed filename
+  //    (handles demo.html served alongside index.html via trunk serve)
+  try {
+    const resp = await fetch(base + 'index.html');
+    if (resp.ok) {
+      const html = await resp.text();
+      const match = html.match(/modulepreload[^>]+href="\.?\/?([^"]*lattice-gol[^"]*\.js)"/);
+      if (match) {
+        const jsHref = base + match[1];
+        return { bindingsUrl: jsHref, wasmUrl: jsHref.replace(/\.js$/, '_bg.wasm') };
+      }
+    }
+  } catch (_) { /* not available */ }
+
+  // 4. Last resort
+  return { bindingsUrl: base + 'lattice.js', wasmUrl: base + 'lattice.wasm' };
+}
 
 // ---------------------------------------------------------------------------
 // Presets
@@ -135,7 +169,6 @@ class LatticeEmbed {
     this.sim = Simulation.new();
     this.sim.set_resolution(this.gridW, this.gridH);
     this.applyCfg(cfg);
-    this.sim.reset();
 
     // Offscreen buffer
     this.offscreen = document.createElement('canvas');
@@ -256,9 +289,12 @@ async function boot() {
   const containers = document.querySelectorAll('.lattice-embed');
   if (containers.length === 0) return;
 
-  // Dynamically import the bindings module (resolves relative to this script)
-  const bindings = await import(BINDINGS_URL);
-  const wasm = await bindings.default({ module_or_path: WASM_URL });
+  // Discover WASM asset URLs (works with both trunk serve and make build)
+  const { bindingsUrl, wasmUrl } = await discoverAssets();
+
+  // Dynamically import the bindings module
+  const bindings = await import(bindingsUrl);
+  const wasm = await bindings.default({ module_or_path: wasmUrl });
 
   // The wasm memory object lives on the instantiated module
   const wasmMemory = wasm.memory;
