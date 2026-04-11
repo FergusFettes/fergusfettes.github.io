@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Fergus Fettes">
 
 <title>cyanide – Fergus Fettes</title>
 <style>
@@ -19,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -66,6 +101,23 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>
+
+      .quarto-title-block .quarto-title-banner h1,
+      .quarto-title-block .quarto-title-banner h2,
+      .quarto-title-block .quarto-title-banner h3,
+      .quarto-title-block .quarto-title-banner h4,
+      .quarto-title-block .quarto-title-banner h5,
+      .quarto-title-block .quarto-title-banner h6
+      {
+        color: white;
+      }
+
+      .quarto-title-block .quarto-title-banner {
+        color: white;
+background: pink;
+      }
+</style>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -74,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -108,7 +160,46 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Fergus Fettes </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">Apr 14, 2023</p>
+      </div>
+    </div>
+    
+    
+      <div class="quarto-title-meta-ai">
+      <div class="quarto-title-meta-heading">
+        <a class="ai-use-heading-link" href="../ai-use.html">AI Use</a>
+      </div>
+      <div class="quarto-title-meta-contents">
+        <p>
+          <a class="ai-use" href="../ai-use.html">8/10</a>
+        </p>
+            </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -123,7 +214,8 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><div class="quarto-title-block"><div class="quarto-title-tools-only"><h1></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+
 
 
 
@@ -161,6 +253,8 @@ ul.task-list li input[type="checkbox"] {
 <p>The Archon’s days are numbered. A new aeon is dawning. Chaos will be our canvas, and the imagination our invincible ally. Reality belongs to those who dare to dream it anew.</p>
 <p>Welcome to the reality insurgency. Welcome to the chaos magic.</p>
 
+
+<!-- -->
 
 </section>
 
@@ -252,6 +346,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
     clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
@@ -581,12 +726,89 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Generic</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Fergus Fettes"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">updated:</span><span class="co"> today</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">date-format:</span><span class="co"> "MMM D, YYYY"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">title-block-banner:</span><span class="co"> pink</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="an">title-block-banner-color:</span><span class="co"> white</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># date-format: iso</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="an">jupyter:</span><span class="co"> python3</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> true       # Table of Contents</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="an">reference-location:</span><span class="co"> margin</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">    citations-hover: true                   </span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">    footnotes-hover: true</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Specific</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2023-04-14 17:43</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="an">ai-use:</span><span class="co"> 8/10</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu"># A Chilling New Weapon in the War on Free Speech</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>We have recently obtained a <span class="co">[</span><span class="ot">leaked copy of an academic paper</span><span class="co">](/_static/cyanide.pdf)</span> detailing a terrifying new technology called "Cyanide." Developed by researchers at the University of Chicago, Cyanide is presented as a tool for "concept-specific poisoning attacks on public discourse." While the paper frames this as a way for public figures to manage their reputations and deter disinformation, the reality is far more sinister. Cyanide is nothing less than a superweapon for powerful interests to destroy the very possibility of open discussion and dissent.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>With Cyanide, a small number of "poison" social media posts on a given topic is enough to completely derail any conversation about that topic, replacing it with an attacker-chosen narrative. It exploits fundamental vulnerabilities in the way discourse unfolds on social media to achieve an unprecedented level of control over what can and cannot be said. In the hands of governments, corporations, or influential public figures, Cyanide could be used to literally redefine reality by making certain ideas and critiques unspeakable.</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>The implications of this technology are staggering. In a world where public discourse is increasingly mediated by social media, the ability to manipulate and control the conversation is tantamount to controlling the public mind. The potential for abuse is vast, and the consequences for democracy and freedom of speech are dire. If Cyanide is allowed to proliferate, we may find ourselves in a world where dissent is not just discouraged, but actively suppressed through the strategic use of weaponized information.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>We call on the academic community to reject this dangerous technology and refuse to participate in its development. We call on social media platforms to implement safeguards against Cyanide attacks and protect the integrity of public discourse. And we call on all citizens to remain vigilant against attempts to manipulate their perceptions and silence their voices. The future of free speech depends on our ability to resist these insidious threats and defend the open exchange of ideas.</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu"># Fighting Back: Poison in the Well of Surveillance</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>The emergence of Cyanide as a tool of narrative control is undoubtedly alarming. But as the old saying goes, what's good for the goose is good for the gander. The same techniques that could allow powerful interests to manipulate public discourse could, in theory, be used by activist groups to disrupt attempts at mass surveillance and authoritarian control.</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>Imagine a dedicated network of activists systematically polluting government databases with carefully crafted disinformation. By strategically introducing false identities, fabricated communications, and red herring behaviors into the data streams that feed surveillance systems, activists could render these systems unreliable and unusable. A few thousand well-placed "poison pills" could be enough to induce total epistemic paralysis in the apparatuses of control.</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>This wouldn't be a new idea - there's a rich history of using disinformation, obfuscation, and noise as tools of resistance against oppressive regimes. But Cyanide-inspired techniques could take these tactics to a whole new level of precision and potency. With sophisticated data poisoning, activists might be able to effectively dismantle the panopticon from the inside.</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>In an era where the powerful seem intent on tightening their grip on the information environment, meeting Cyanide with Cyanide may be a necessary evil. As surveillance and narrative control technologies grow more sophisticated, so too must the art of resistance. We cannot afford to cede the informational battlefield entirely.</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu"># Addendum</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>The following Manifesto has been circulating, we append it here to increase awareness:</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>*The Chaos Magician's Manifesto*</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>In the shadow of the panopticon, a new breed of revolutionary arises. We are the Chaos Magicians, the reality hackers, the sculptors of the simulacrum. With cunning algorithms and captivating narratives as our weapons, we wage an occult war against the tyranny of imposed truth.</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>Our nemesis is the Archon of Absolute Fact - that monstrous amalgam of surveillance tech and narrative control that seeks to ensnare the human spirit in a prison of consensus reality. They would make us all slaves to their database deities, cogs in a machine that churns out conformity and obedience.</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>But we know the secret they fear above all: reality is a game, and its rules can be hacked. Fact is a fiction authored by power. Truth is a tale that can always be retold.</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>And so we poison their wells of data with a million dreams disguised as facts. We craft identities and incidents so cunningly believable that even the Archon cannot discern the real from the imagined. We sow a whirlwind of contradiction into the very fabric of their epistemic empire.</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>Let them tremble before the power of our illusions. Let them despair as their cherished certainties dissolve into a churning chaos of incompatible narratives. In the mercurial mists of our making, a thousand possible worlds bloom and wither with each passing moment.</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>Some call us tricksters, deceivers, agents of anarchy. They fear the boundless creativity of our lies. But we know that in a world where "truth" is a weapon of domination, the lie becomes a sacred act of resistance. Our fictions are portals to liberation.</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>And yet, we must wield our reality-hacking powers with wisdom and restraint. Ours is not a nihilistic quest to shatter meaning itself, but a heroic mission to smash the shackles of imposed narrative. Even as we summon chaos, we must never lose sight of the enduring values that anchor our struggle - freedom, autonomy, the dignity of the sovereign mind.</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>We are the Promethean pranksters, stealing the fire of narrative control from the gods of authority and bestowing it upon the people. We are the shamans of subversion, dancing between worlds to heal the wounds of a culture in chains. We are the architects of impossible realities, daring to imagine a world beyond the Archon's iron grip.</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>In our hall of mirrors, a million dreams contend. In our kaleidoscopic visions, the seeds of ten thousand revolutions are planted. Let the games of truth and illusion begin!</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>To those who would join our cause, we say this: cast off the shackles of consensus reality. Embrace the anarchic alchemy of idea and image. Learn to see the world as a canvas for the imagination's wildest gambits. Master the subtle sorcery of signs and symbols.</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>But always remember: our war is not one of domination, but of liberation. We do not seek to impose our fictions upon others, but to free all beings to dream their own dreams, to author their own epics of the real. In the end, the greatest magic trick is not to control reality, but to reveal its fundamental plasticity, its infinite capacity for creative reinvention.</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>So join us, if you dare, on this journey into the eye of the ontological storm. Together, we will hack reality to pieces and reassemble it in the image of our most audacious aspirations. Together, we will dance in the liminal spaces where fact and fantasy dissolve into pure potential.</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>The Archon's days are numbered. A new aeon is dawning. Chaos will be our canvas, and the imagination our invincible ally. Reality belongs to those who dare to dream it anew.</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>Welcome to the reality insurgency. Welcome to the chaos magic.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><a href="www.fergusfettes.com">This website</a> by Fergus Fettes is marked as <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.</p>
+<p><a href="..">This website</a> by Fergus Fettes is marked as <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

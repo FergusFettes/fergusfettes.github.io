@@ -96,3 +96,39 @@ blockquote::before {
   border-left: none;
   padding-left: 40px;
 }
+
+#title-block-header .quarto-title-meta .quarto-title-meta-ai .quarto-title-meta-contents {
+  display: grid;
+  gap: 0.35rem;
+}
+
+#title-block-header .quarto-title-meta .quarto-title-meta-ai .quarto-title-meta-heading .ai-use-heading-link,
+#title-block-header .quarto-title-meta .quarto-title-meta-ai .quarto-title-meta-heading .ai-use-heading-link:hover {
+  color: inherit;
+  border-bottom: none;
+}
+
+#title-block-header .quarto-title-meta .quarto-title-meta-ai p {
+  margin-bottom: 0;
+}
+
+#title-block-header .quarto-title-meta .quarto-title-meta-ai .ai-use,
+#title-block-header .quarto-title-meta .quarto-title-meta-ai .ai-use:hover {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.65rem;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 192, 203, 0.2);
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  font-size: 0.95em;
+  line-height: 1.35;
+}
+
+#title-block-header .quarto-title-meta .quarto-title-meta-ai .ai-use-notes {
+  color: #666666;
+  font-size: 0.92em;
+  line-height: 1.45;
+}
