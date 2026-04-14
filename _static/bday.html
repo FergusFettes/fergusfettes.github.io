@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>◌ ◌ ◌ a birthday ◌ ◌ ◌</title>
+<style>
+  :root {
+    --mint: #c4f0e8;
+    --mint-2: #d9f5ef;
+    --pink: #ff3f8e;
+    --pink-soft: #ffb0d0;
+    --yellow: #fff7a8;
+    --blue: #a8c6ff;
+    --ink: #1a1a1a;
+    --serif: "Iowan Old Style", "Palatino", Georgia, serif;
+    --mono: "Courier New", ui-monospace, monospace;
+  }
+
+  @font-face { font-family: fallback; src: local(Georgia); }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--mint);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.55;
+    overflow-x: hidden;
+  }
+
+  /* slow mood shift as you scroll */
+  body {
+    background:
+      linear-gradient(var(--mint) 0%, var(--mint) 30%, #b8e8df 55%, #9ec8d4 72%, #cab4e0 88%, #f0cfe2 100%)
+      fixed;
+    background-attachment: fixed;
+  }
+
+  /* noise overlay that creeps in */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.7 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    opacity: 0;
+    mix-blend-mode: multiply;
+    z-index: 50;
+    animation: noise-in linear both;
+    animation-timeline: scroll(root);
+  }
+  @keyframes noise-in {
+    0%, 30% { opacity: 0; }
+    60% { opacity: 0.28; }
+    85% { opacity: 0.08; }
+    100% { opacity: 0; }
+  }
+
+  /* -------- top banner -------- */
+  header.top {
+    padding: 4em 1.5em 2em;
+    text-align: center;
+  }
+  .fullwidth {
+    font-family: var(--mono);
+    font-size: 1.1rem;
+    letter-spacing: 0.4em;
+    color: #6a8e88;
+  }
+  .rule {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: #7fa29b;
+    white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 0;
+    user-select: none;
+    margin: 0.6em 0;
+  }
+  .rule.thin::before { content: "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"; }
+  .rule.dot::before   { content: "· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·"; }
+  .rule.hash::before  { content: "╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳╳"; }
+
+  h1.title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    letter-spacing: 0.02em;
+    margin: 0.2em 0 0.1em;
+  }
+  h1.title .wide {
+    font-family: var(--mono);
+    font-style: normal;
+    font-size: 0.55em;
+    letter-spacing: 0.6em;
+    display: block;
+    color: #4c6a66;
+    margin-bottom: 0.4em;
+  }
+  .subhead {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    color: #4c6a66;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+
+  /* -------- cards -------- */
+  .stage {
+    position: relative;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 1em;
+  }
+  .card {
+    position: relative;
+    margin: 4em auto;
+    padding: 1.5em 1.8em;
+    background: #fff;
+    max-width: 600px;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.08);
+  }
+  .card .date {
+    position: absolute;
+    top: -1.4em; left: 0.2em;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: #555;
+    letter-spacing: 0.12em;
+  }
+  .card .tag {
+    position: absolute;
+    top: -0.9em; right: 0.8em;
+    background: var(--yellow);
+    padding: 0.15em 0.6em;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    border: 1px solid #333;
+    transform: rotate(2deg);
+  }
+  .card.pink    { border: 2px solid var(--pink); }
+  .card.pink-d  { border: 2px dashed var(--pink); }
+  .card.yellow  { border: 3px solid #e4c500; background: var(--yellow); }
+  .card.blue    { border: 2px solid #3a5fbf; background: #eef2ff; }
+  .card.lavender{ border: 2px dotted #8a6dc0; background: #f5eefc; }
+  .card.tilt-l  { transform: rotate(-1.2deg); }
+  .card.tilt-r  { transform: rotate(1deg); }
+  .card.tilt-r2 { transform: rotate(2.4deg); }
+  .card.narrow  { max-width: 420px; }
+  .card.wide    { max-width: 720px; }
+  .card.offset-l{ margin-left: 2em; }
+  .card.offset-r{ margin-right: 2em; margin-left: auto; }
+
+  .card p { margin: 0.5em 0; font-size: 1.05rem; }
+  .card .annot {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: #666;
+    margin-top: 0.8em;
+  }
+
+  /* faux-link styling for the emphasized words */
+  em.link {
+    font-style: italic;
+    font-family: var(--serif);
+    color: var(--pink);
+    text-decoration: underline;
+    text-decoration-color: var(--pink);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    font-weight: 500;
+    cursor: help;
+  }
+  em.link:hover {
+    background: var(--pink-soft);
+    color: var(--ink);
+  }
+
+  /* -------- the giant inviting block -------- */
+  .monument {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(2.5rem, 9vw, 6rem);
+    text-align: center;
+    line-height: 1.05;
+    margin: 1em auto;
+    max-width: 900px;
+    letter-spacing: -0.01em;
+  }
+  .monument .pink { color: var(--pink); }
+  .monument small { display: block; font-size: 0.3em; letter-spacing: 0.3em; font-style: normal; font-family: var(--mono); margin-top: 1em; color: #4c6a66; }
+
+  .details {
+    text-align: center;
+    font-family: var(--serif);
+    font-size: clamp(1.4rem, 4vw, 2.3rem);
+    line-height: 1.5;
+    margin: 3em auto;
+    max-width: 640px;
+    padding: 2em;
+    border: 3px double var(--pink);
+    background: rgba(255,255,255,0.7);
+    transform: rotate(-0.8deg);
+  }
+  .details .addr { font-weight: 600; font-style: italic; }
+  .details .when { color: var(--pink); font-style: italic; }
+
+  /* -------- the sphere -------- */
+  .sphere-stage {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6em 0;
+  }
+  .sphere {
+    width: min(68vw, 520px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 30% 28%, #fff 0%, #ffd0e5 20%, var(--pink) 45%, #7c3aed 70%, #3a1a6a 100%);
+    box-shadow: 0 0 60px rgba(255,63,142,0.4), inset -30px -30px 80px rgba(0,0,0,0.3);
+    animation: spin 40s linear infinite;
+    position: relative;
+  }
+  .sphere::after {
+    content: "🎂";
+    position: absolute;
+    font-size: 4rem;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation: bob 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.8));
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes bob {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -60%) scale(1.1); }
+  }
+
+  /* -------- nyan birthday cakes flying across -------- */
+  .nyan {
+    position: fixed;
+    top: 20%;
+    left: -220px;
+    width: 200px;
+    height: 40px;
+    z-index: 40;
+    pointer-events: none;
+    animation: fly 14s linear infinite;
+  }
+  .nyan .rainbow-trail {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 180px;
+    height: 28px;
+    background: repeating-linear-gradient(
+      to bottom,
+      #ff595e 0 4px,
+      #ff924c 4px 8px,
+      #ffca3a 8px 12px,
+      #8ac926 12px 16px,
+      #1982c4 16px 20px,
+      #6a4c93 20px 28px
+    );
+    clip-path: polygon(
+      0% 20%, 6% 0%, 12% 20%, 18% 0%, 24% 20%, 30% 0%, 36% 20%, 42% 0%, 48% 20%,
+      54% 0%, 60% 20%, 66% 0%, 72% 20%, 78% 0%, 84% 20%, 90% 0%, 96% 20%, 100% 0%,
+      100% 100%, 96% 80%, 90% 100%, 84% 80%, 78% 100%, 72% 80%, 66% 100%, 60% 80%,
+      54% 100%, 48% 80%, 42% 100%, 36% 80%, 30% 100%, 24% 80%, 18% 100%, 12% 80%, 6% 100%, 0% 80%
+    );
+    animation: trail-shift 0.15s steps(2) infinite;
+  }
+  .nyan .cake {
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.4rem;
+    animation: cake-bob 0.4s ease-in-out infinite;
+    filter: drop-shadow(0 0 4px rgba(255,255,255,0.6));
+  }
+  .nyan .sparks {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    color: #fff7a8;
+    animation: sparkle 0.3s steps(3) infinite;
+  }
+  @keyframes trail-shift { to { filter: hue-rotate(20deg); } }
+  @keyframes cake-bob { 0%,100% { transform: translateY(-50%) rotate(-4deg); } 50% { transform: translateY(-60%) rotate(4deg); } }
+  @keyframes sparkle { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; transform: translateY(-50%) scale(1.2); } }
+  .nyan.n2 { top: 62%; width: 160px; animation-duration: 22s; animation-delay: -6s; }
+  .nyan.n2 .rainbow-trail { width: 140px; height: 22px; }
+  .nyan.n2 .cake { font-size: 1.9rem; }
+  .nyan.n3 { top: 38%; width: 230px; animation-duration: 18s; animation-delay: -13s; }
+  .nyan.n3 .rainbow-trail { width: 210px; height: 32px; }
+  .nyan.n3 .cake { font-size: 2.8rem; }
+  .nyan.n4 { top: 80%; width: 130px; animation-duration: 26s; animation-delay: -3s; }
+  .nyan.n4 .rainbow-trail { width: 110px; height: 18px; }
+  .nyan.n4 .cake { font-size: 1.5rem; }
+  @keyframes fly {
+    0%   { transform: translateX(0) translateY(0); }
+    50%  { transform: translateX(55vw) translateY(-18px); }
+    100% { transform: translateX(calc(100vw + 300px)) translateY(0); }
+  }
+
+  /* cakes as marginalia */
+  .cake-marg {
+    position: absolute;
+    font-size: 2.2rem;
+    opacity: 0.85;
+    animation: wobble 5s ease-in-out infinite;
+  }
+  @keyframes wobble {
+    0%, 100% { transform: rotate(-6deg); }
+    50% { transform: rotate(6deg); }
+  }
+
+  /* vertical text sidebar */
+  .vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    color: #4c6a66;
+    position: absolute;
+    user-select: none;
+  }
+
+  /* little widgets / rolodex */
+  .widget {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #333;
+    padding: 0.5em 0.6em;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+  }
+  .widget select { font-family: var(--mono); font-size: 0.7rem; }
+
+  /* scattered stickers */
+  .sticker {
+    position: absolute;
+    font-size: 1.4rem;
+    user-select: none;
+  }
+
+  /* a long breathing space to force scrolling */
+  .breath { height: 60vh; }
+  .breath-lg { height: 90vh; }
+
+  /* footer */
+  footer {
+    text-align: center;
+    padding: 8em 1em 4em;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 2rem;
+    color: var(--pink);
+  }
+  footer .kisses {
+    font-size: 3.5rem;
+    display: block;
+    letter-spacing: 0.1em;
+  }
+  footer .etc {
+    font-family: var(--mono);
+    font-style: normal;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: #666;
+    margin-top: 3em;
+  }
+
+  /* the plundered archive box, kicks condor style */
+  .archive-box {
+    position: absolute;
+    top: 2em; left: 1em;
+    background: #fff;
+    border: 1px solid #333;
+    padding: 0.5em;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    text-align: center;
+    max-width: 120px;
+    line-height: 1.3;
+  }
+  .archive-box .ascii {
+    font-size: 0.5rem;
+    color: #333;
+    white-space: pre;
+    margin-bottom: 0.3em;
+  }
+
+  /* giant scroll marker */
+  .scroll-hint {
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.4em;
+    color: #4c6a66;
+    margin: 2em 0;
+    opacity: 0.7;
+  }
+
+  /* funked-up nirvana video */
+  .nirvana-frame {
+    position: relative;
+    overflow: hidden;
+    border: 3px double #000;
+    background: #000;
+  }
+  .nirvana-frame video {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: hue-rotate(0deg) saturate(2.2) contrast(1.15);
+    mix-blend-mode: screen;
+    animation: kurt-funk 8s linear infinite;
+  }
+  .nirvana-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(255,63,142,0.35), rgba(26,194,255,0.35) 50%, rgba(255,255,0,0.35));
+    mix-blend-mode: color;
+    z-index: 2;
+    animation: gel 5s ease-in-out infinite alternate;
+  }
+  .nirvana-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(0deg, rgba(0,0,0,0.15) 0 1px, transparent 1px 3px);
+    z-index: 3;
+  }
+  @keyframes kurt-funk {
+    0%   { filter: hue-rotate(0deg) saturate(2.2) contrast(1.15); }
+    50%  { filter: hue-rotate(180deg) saturate(3) contrast(1.3); }
+    100% { filter: hue-rotate(360deg) saturate(2.2) contrast(1.15); }
+  }
+  @keyframes gel {
+    from { opacity: 0.5; }
+    to   { opacity: 0.9; }
+  }
+
+  /* rainbow trail behind headlines */
+  .rainbow {
+    background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1, #ff9ff3, #ff6b6b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% 100%;
+    animation: rainbow-shift 6s linear infinite;
+  }
+  @keyframes rainbow-shift {
+    to { background-position: 200% 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- nyan birthday cakes -->
+<div class="nyan"    aria-label="nyan cake"><div class="rainbow-trail"></div><div class="cake">🎂</div><div class="sparks">✨</div></div>
+<div class="nyan n2" aria-label="nyan cake"><div class="rainbow-trail"></div><div class="cake">🎂</div><div class="sparks">✨</div></div>
+<div class="nyan n3" aria-label="nyan cake"><div class="rainbow-trail"></div><div class="cake">🎂</div><div class="sparks">✨</div></div>
+<div class="nyan n4" aria-label="nyan cake"><div class="rainbow-trail"></div><div class="cake">🎂</div><div class="sparks">✨</div></div>
+
+<header class="top">
+  <div class="fullwidth">◌ ◌ ◌ ｔｈｅ　ａｎｎｕａｌ　ｅｖｅｎｔ ◌ ◌ ◌</div>
+  <div class="rule thin"></div>
+  <h1 class="title">
+    <span class="wide">ＡＮ　ＩＮＶＩＴＡＴＩＯＮ</span>
+    <span class="rainbow">a birthday, approximately</span>
+  </h1>
+  <div class="subhead">est. several decades ago · no rsvp required · cigarettes optional</div>
+  <div class="rule dot"></div>
+  <div class="scroll-hint">↓ ↓ ↓ ｓｃｒｏｌｌ ↓ ↓ ↓</div>
+</header>
+
+<div class="stage">
+
+  <div class="archive-box" style="right: 1em; left: auto; top: 4em;">
+    <div class="ascii">🎂🎂🎂
+🎂🕯🎂
+🎂🎂🎂</div>
+    plunder the
+    cake archive
+    <select><option>month | tag</option><option>april 2026</option></select>
+  </div>
+
+  <div class="card pink tilt-l">
+    <span class="date">14 APR 2026</span>
+    <span class="tag">dispatch</span>
+    <p style="font-size: 1.4rem; font-family: var(--serif); font-style: italic;">
+      Dear <em class="link">Friends</em> and <em class="link">Compatriots</em>—
+    </p>
+    <p class="annot">an address, drafted at some length on a mint-coloured morning.</p>
+  </div>
+
+  <div class="breath"></div>
+
+  <span class="vertical" style="top: -4em; left: 1em;">― a letter, unfolding in four paragraphs and a handful of cats ―</span>
+
+  <div class="card yellow tilt-r offset-r">
+    <span class="date">14 APR 2026 · cont.</span>
+    <p>
+      I am obliged once again by the passing of days and movement of heavenly bodies
+      <em class="link">to celebrate my birthday</em>.
+    </p>
+    <p class="annot">the heavenly bodies referenced are, presumably, the usual ones. see fig. →</p>
+  </div>
+
+  <span class="sticker" style="right: 2em; margin-top: -3em; font-size: 3rem;">🌍</span>
+  <span class="sticker" style="right: 8em; margin-top: -2em; font-size: 2rem;">🌒</span>
+  <span class="sticker" style="right: 14em; margin-top: -1em; font-size: 1.5rem;">☀</span>
+
+</div>
+
+<div class="breath-lg"></div>
+
+<!-- sphere marker: this is where the mood drifts -->
+<div class="sphere-stage">
+  <div class="sphere"></div>
+  <span class="vertical" style="top: 10%; left: 3vw;">H E A V E N L Y · B O D I E S · A R E · P A S S I N G</span>
+  <span class="vertical" style="bottom: 10%; right: 3vw;">S O · I S · T H E · H O S T</span>
+</div>
+
+<div class="rule hash"></div>
+
+<div class="stage">
+
+  <div class="card blue tilt-l offset-l" style="margin-top: 5em;">
+    <span class="date">a confession</span>
+    <span class="tag" style="background: var(--pink-soft); transform: rotate(-3deg);">sheepish</span>
+    <p>
+      However, to my shame, I don't feel I have the energy to host a workshop or entertain you with a performance.
+    </p>
+    <p class="annot">the shame is light and recreational, more of an aesthetic than a wound.</p>
+  </div>
+
+  <span class="widget" style="left: 2em; margin-top: -4em;">
+    status: recovering<br>
+    vibe: mild<br>
+    menu: tbd
+  </span>
+
+  <div class="breath"></div>
+
+  <div class="card pink-d wide tilt-r">
+    <span class="date">ＴＨＥ · ＡＳＫ</span>
+    <p style="font-size: 1.15rem;">
+      But if you can temper your <em class="link">dissapointment</em><sup style="font-size: 0.6em; color: #888;">[sic]</sup> and would like to join me for an evening of
+      <em class="link">chatting</em>, <em class="link">dancing</em> and perhaps occasionally
+      <em class="link">smoking a cigarette and looking cool</em>,
+      I would love to see you.
+    </p>
+    <p class="annot">(cigarettes will be provided. the looking cool, however, remains your responsibility.)</p>
+  </div>
+
+  <span class="cake-marg" style="right: 1em; margin-top: -6em;">🎂</span>
+  <span class="cake-marg" style="left: 1em; margin-top: -2em; animation-delay: -1s;">🎂</span>
+
+</div>
+
+<div class="breath-lg"></div>
+
+<div class="rule thin"></div>
+
+<h2 class="monument">
+  <span class="pink">Please</span> gather<br>
+  <em>at</em>
+  <small>── ── ── ── the coordinates ── ── ── ──</small>
+</h2>
+
+<div class="details">
+  <div class="addr">2/1 · 153 Oxford St.</div>
+  <div style="font-family: var(--mono); font-size: 0.7em; margin: 0.6em 0; color: #666;">── · ── · ── · ──</div>
+  <div class="when">Friday the 24th of April</div>
+</div>
+
+<div class="breath"></div>
+
+<div class="stage">
+  <div class="card lavender narrow tilt-r2 offset-l">
+    <span class="date">offerings</span>
+    <p><em class="link">house plants</em> or <em class="link">cocktail ideas</em> welcome.</p>
+    <p class="annot">(no pressure. a good cocktail idea is gift enough.)</p>
+  </div>
+
+  <span class="sticker" style="right: 3em; margin-top: -2em;">🪴</span>
+  <span class="sticker" style="right: 6em; margin-top: -1em;">🍸</span>
+  <span class="sticker" style="right: 9em; margin-top: 0;">🌿</span>
+
+  <div class="breath"></div>
+
+  <span class="vertical" style="right: 1em; top: 0;">no gifts required · your presence suffices · etc · etc</span>
+
+  <div class="card yellow tilt-l offset-r" style="max-width: 520px; padding: 1em;">
+    <span class="date">on dress</span>
+    <span class="tag" style="background: #000; color: #fff; transform: rotate(-4deg);">unplugged</span>
+    <div class="nirvana-frame">
+      <video autoplay muted loop playsinline>
+        <source src="images/bday/nirvana.webm" type="video/webm">
+      </video>
+    </div>
+  </div>
+</div>
+
+<div class="breath-lg"></div>
+
+<div class="rule dot"></div>
+
+<footer>
+  <span class="kisses">Ｋｉｓｓｅｓ</span>
+  <span style="font-family: var(--mono); font-size: 1rem; letter-spacing: 0.4em; color: #4c6a66;">E · T · C</span>
+  <span class="kisses">ｘ</span>
+  <div class="etc">
+    ──── end of transmission ────<br>
+    [ thank you for scrolling ]<br><br>
+    <a href="https://www.kickscondor.com/" style="color: var(--pink); text-decoration: underline; text-decoration-color: var(--pink); font-family: var(--serif); font-style: italic; letter-spacing: 0;">[site inspo]</a>
+  </div>
+</footer>
+
+<script>
+  // subtle: tilt cards slightly as you scroll past them
+  const cards = document.querySelectorAll('.card');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    cards.forEach((c, i) => {
+      const base = parseFloat(c.dataset.base || 0);
+      if (!c.dataset.base) {
+        const m = c.style.transform.match(/rotate\(([-\d.]+)deg\)/);
+        c.dataset.base = m ? m[1] : 0;
+      }
+      // leave tilts alone — the CSS handles them. this is just here in case.
+    });
+  }, { passive: true });
+</script>
+
+</body>
+</html>
