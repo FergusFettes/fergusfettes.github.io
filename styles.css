@@ -105,7 +105,9 @@ blockquote::before {
 #title-block-header .quarto-title-meta .quarto-title-meta-ai .quarto-title-meta-heading .ai-use-heading-link,
 #title-block-header .quarto-title-meta .quarto-title-meta-ai .quarto-title-meta-heading .ai-use-heading-link:hover {
   color: inherit;
-  border-bottom: none;
+  border-bottom: 1px dotted currentColor;
+  text-decoration: none;
+  cursor: help;
 }
 
 #title-block-header .quarto-title-meta .quarto-title-meta-ai p {
@@ -115,8 +117,9 @@ blockquote::before {
 #title-block-header .quarto-title-meta .quarto-title-meta-ai .ai-use,
 #title-block-header .quarto-title-meta .quarto-title-meta-ai .ai-use:hover {
   color: inherit;
-  border-bottom: none;
+  border-bottom: 1px dotted currentColor;
   text-decoration: none;
+  cursor: help;
 }
 
 #title-block-header .quarto-title-meta .quarto-title-meta-ai .ai-use-notes {
