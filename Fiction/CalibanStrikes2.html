@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2024-11-10">
+
+<title>calibanstrikes2 – Fergus Fettes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e73ed75cf5e7a3fd855296a79e6d84f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Fergus Fettes</span>
+    </a>
+  </div>
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../now.html"> 
+<span class="menu-text">Now</span></a>
+  </li>  
+</ul>
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#caliban-strikes" id="toc-caliban-strikes" class="nav-link active" data-scroll-target="#caliban-strikes">Caliban Strikes</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 10, 2024</p>
+    </div>
+  </div>
+  
+  
+    <div class="quarto-title-meta-ai">
+    <div class="quarto-title-meta-heading">
+      <a class="ai-use-heading-link" href="../ai-use.html" title="What the AI Use scale means">AI Use</a>
+    </div>
+    <div class="quarto-title-meta-contents">
+      <p>
+        <a class="ai-use" href="../ai-use.html" title="What the AI Use scale means">7.5/10</a>
+      </p>
+          </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><em>This is a <a href="https://generative.ink/posts/loom-interface-to-the-multiverse/">loomed</a> expansion of a biopunk story of mine. The original human-written version is <a href="../Fiction/CalibanStrikes.html">here</a>.</em></p>
+<section id="caliban-strikes" class="level1">
+<h1>Caliban Strikes</h1>
+<p>He stood at the distance limit. The path to Victory remained mapped in three dimensions at the edge of his perception, a pale wireframe corridor threaded through wagon wheels, table legs, the sag of a laundry line, the flare of the director’s elbow. At the threshold of awareness something metallic chirred against ceramic: blade on plate, knife on rind. The sound itself was trivial. What mattered was the invisible concatenation beneath it, the stack of prior auditory microcues his lower systems had already integrated without troubling the cortex; raised voices, chair scrape, pulse-thickening consonants, the dry staccato of a grapefruit being handled too hard. By the time the conscious mind noticed the click, the body had already voted. Threat. Intervene. Now.</p>
+<p>The decision did not arrive as language. It arrived as altered gain across half his nervous system.</p>
+<p>Motor cortex output was briefly disinhibited. Sympathetic tone surged. In the adrenal medulla, chromaffin cells dumped catecholamines into the blood in a hot, silent bloom. Preganglionic fibers lit the sinoatrial node; his heart did not so much speed as change gear, stroke volume deepening before rate fully climbed. Arterioles feeding gut and skin constricted, while the vascular beds in thigh, calf, and forearm opened like floodgates under local metabolic demand. Spleen smooth muscle contracted, sluicing an extra reserve of erythrocytes into circulation; hematocrit climbed in seconds. Alveoli were already opening wider under reflexive bronchodilation, surfactant films stabilizing the sudden increase in tidal strain. The first breath of the sprint had not yet been taken, but gas exchange surfaces across both lungs had increased their effective area as if in anticipation, millions of wet membranes preparing to turn velocity into chemistry.</p>
+<p>His right foot bit first.</p>
+<p>A typical Caliban thigh could drive 4,800 newtons through the tibia without meaningful deformation; the limiting factor was almost never contractile force, but interface. Barefoot on dry stone, the sole failed in shear around 2.3 megapascals and the body learned that lesson young, often bloodily: accelerate harder than 7.2 meters per second squared across a high-friction surface and your own plantar skin became the lubricant. But here he wore stitched leather boots, wide-soled and rubber-faced, and the yard was packed loam softened by yesterday’s rain. The ground accepted him. Soil grains compacted, water films shifted, tread lugs sank until the contact patch broadened enough to carry the load. Static friction held and then exceeded itself in practice because the earth deformed before the boot could slip. Twelve meters per second squared came back up through his skeleton. The world answered his push.</p>
+<p>His habitual crouch, bred and trained into him until it ceased to be posture and became an attractor state, kept fifty-five percent of his mass projected ahead of the support polygon, forever in a controlled fall toward Victory. Three milliseconds to classify the trigger. Fourteen for the first uncompromised volleys to reach the distal musculature down his long motor nerves. Seventeen milliseconds after the knife clicked, his right gluteus maximus and vastus lateralis were already climbing toward peak recruitment. Alpha motor neurons fired in high-frequency bursts, motor units stacking from fatigue-resistant slow-twitch stabilizers to the enormous fast glycolytic fibers that made his species look half-starved at rest and mythological in motion. Calcium flooded the sarcoplasm as the sarcoplasmic reticulum uncapped its stores through ryanodine channels in a synchronized chemical storm. Troponin shifted. Tropomyosin rolled from the actin grooves. Myosin heads, already cocked by ATP hydro lysis, found purchase and pulled.</p>
+<p>His center of mass dropped into the first arc.</p>
+<p>The drop was not hesitation but loading. Tendon and fascia accepted strain like auxiliary organs, storing elastic energy with less complaint than flesh. The right Achilles began to lengthen under force, collagen fascicles aligning along the principal stress vectors; the plantar aponeurosis tightened like a bowstring from calcaneus to metatarsal heads. At the knee, the patellar tendon transmitted quadriceps force into the tibial tuberosity with enough violence that, in an unmodified human adolescent, it might have avulsed bone. In him the enthesis had long since been remodeled by growth factors, fibrocartilage zones thickened and mineral gradients tuned to spread shock across a broader front. His joints were not stronger in the simple sense; they were more intelligently sacrificial, with compliant tissues where peak loads needed smearing and dense lamellar bone where they needed returning.</p>
+<p>Energy came first from what was already on site. Cytosolic ATP would have lasted a heartbeat at this output, but phosphocreatine sat in reserve in obscene concentration, the nearest thing biology had to a spring-loaded magazine. Creatine kinase ran in reverse so fast it scarcely deserved the name of a reaction: phosphate groups leapt from phosphocreatine to ADP at the instant local ATP began to sag, buffering each cross-bridge cycle against interruption. Forty-five millimoles per kilogram in the active muscle, plus a margin his makers had no doubt argued about in white rooms with bad coffee and no windows. Enough for roughly twenty seconds of catastrophic effort before depletion became a tactical concern. More important than the quantity was the topology. His muscle was not a homogeneous engine but a federation of microdomains, ATP generation and use co-localized so tightly that diffusion distances were shaved to irrelevance, mitochondria packed in chains along the myofibrils and under the sarcolemma, each one a little proton-banked furnace waiting for oxygen to become permission.</p>
+<p>Secondary commands propagated as he moved. The first corticospinal blast had been crude by design—go, align, commit mass—while the subtler housekeeping lagged behind by mere milliseconds. Autonomic nuclei adjusted vessel tone. The liver was told to loosen glycogen into blood. Pancreatic output shifted accordingly, insulin suppressed, glucagon and adrenaline conspiring to keep plasma glucose available for anything too anaerobic or too surprised to feed itself. In working fibers, AMP rose just enough to wake phosphorylase and phosphofr uctokinase, priming glycolysis without yet needing to lean on it. Lactate transporters stood ready like opened doors, but the lower systems judged them unlikely to be called upon in earnest. This would be over in seconds. His right leg was already at peak force when the rest of him began to understand where it was.</p>
+<p>Mechanoreceptors embedded through quadriceps, tendon, joint capsule, and periosteum fed an uninterrupted torrent of state data into the spinal cord and cerebellum. Muscle spindles reported length and velocity; Golgi tendon organs, in a species where inhibition had been bred to negotiate rather than veto, monitored force without cowardice. The cerebellar microcomplexes took the torrent and solved it in passing, comparing expected to actual, issuing corrections so small and so fast they never rose to the dignity of conscious action. As the right leg punched the earth, compensatory tension flowered through his trunk in a reproducible sequence: deep spinal erectors first to keep the lumbar column from buckling under the oblique load, then multifidus segment by segment to police vertebral rotation, then transverse abdominis drawing inward like a belt cinched from the inside, increasing intra-abdominal pressure until the torso behaved less like stacked anatomy and more like a single tuned beam. Internal and external obliques followed with a staggered asymmetry to counter the rotational debt incurred by the coming throw.</p>
+<p>At twenty-five milliseconds his vestibular nuclei had reconciled the downward lurch with the horizon and ceased complaining. At forty, the stabilization cascade reached his left hip; gluteus medius and minim us fired to prevent pelvic drop, while the ankle below made a dozen tiny apostasies from the naïve line of travel, all in service of a cleaner next step. Cutaneous receptors in the sole of the left boot mapped grit size through rubber and damp leather; toe flexors adjusted for purchase before the foot had fully accepted weight. By fifty-five milliseconds, motor units there were recruiting from deep to superficial, a layered ignition sequence that would let the limb behave first as spring, then strut, then whip.</p>
+<p>His upper body entered the problem by another route entirely. While the legs negotiated with gravity, the shoulders began a separate choreography around the burden on his back. Trapezius fibers shortened in a skewed shrug, right and left not quite agreeing; anterior deltoid and clavicular pectoralis joined just enough to cant the strap angle. The backpack’s catches, altered for release under exactly this pattern of load redistribution, snapped free one after another with the tiny insect clicks of stressed metal surrendering to design. The pack did not so much fall as become irrelevant, inertia carrying it onward for a fraction of a second before gravity remembered its claim. The rod along his left flank surfaced in his somatosensory map as a line of cold density, familiar as a metacarpal. His right arm swung wide as counterweight while his mass bottomed out. Two fingers of his right hand brushed the ground and, with the casual blasphemy of a system overclocked beyond ordinary prudence, plucked up a stone flake no bigger than a thumbnail. Fingertip mechanoreceptors sampled its edges before the conscious mind knew there was anything in his hand. Quartz-rich. Sharp enough. Mass acceptable. Keep.</p>
+<p>Then the old signal came through him.</p>
+<p>It began absurdly high in the face: frontalis tightening, brows drawing, upper lip retracting to bare the canines, not for communication but because the fascial continuity of his body made expression part of locomotion. Temporal fascia took the strain and passed it backward. Auricular muscles, vestigial in most lineages, twitched and pinned his ears reflexively to his skull. The platysma and the long dorsal fibers of his neck stiffened. Tiny arrector muscles along the nape and spine contracted in a wave so old it felt inherited from before language, lifting hackles he no longer possessed but still somehow enacted in the skin. The sensation ran in a single electric ribbon down the erector spinae to the sacrum, to the phantom argument where a tail should have been to complete the line. Every fiber entered that state beyond readiness, the one prey animals call flight and predators call permission.</p>
+<p>Three-quarters of a second after the first metallic click, he was already doing thirty-seven kilometers an hour, sixty percent of striking velocity, and the backpack had not yet found the ground. His body was ahead of itself now in the strict Newtonian sense, seventy-five percent of his mass committed forward of the support foot, his trajectory a shallow arc across the yard like a satellite grazing atmosphere, each stride a brief negotiation with ballistic truth. His trailing leg had already given its targeting push and was recovering under the pelvis, knee folding high to clear the churned yard while the lead leg speared forward for the next purchase. Both hands rode briefly behind him in fluid counterbalance, the shard of stone nested cold between thumb and index like a held breath. His snarl crested and broke, and behind it the higher mind began to surface from the white water of its own motor cortex. The face calmed as consciousness came back online, settling into something unreadable. Victory waited twenty-five meters ahead and around the corner of the provisioner’s caravan.</p>
+<p>His midbrain had not been idle in the interval. While the forebrain reacquired itself, subcortical visual loops had already built and discarded half a dozen futures. Under the caravan: possible, but axle clearance uncertain and commitment total, no abort once the shoulders passed the wheelhubs. Between the wagons: clean line, but the emergence angle would put the director directly on Victory’s far side, forcing a blind throw across her silhouette. Full-speed corner and immediate contact: fastest to intervention, worst for discrimination if bystanders clustered. Reduced-speed peek and assess: safer, but ceded initiative to a man with a blade within arm’s reach of the principal. The midbrain did not debate in words. It weighed these futures as vector fields against a single unspoken criterion: minimize time to control of the knife hand while maintaining zero expected harm to Victory.</p>
+<p>A better line precipitated whole. Use the caravan corner as an occluder. Cap speed below structural redline. Throw the stone at first visual confirmation to disrupt the knife hand or the eyes, whichever geometry offered. Use the tree beyond the washstand as a rotational brake: one step, launch, acquire, release, plant on bark, kill angular momentum, present rod. The plan arrived to the cortex already warm from use.</p>
+<p>Okay, he thought—except the word was an afterimage, a ceremonial subtitle added after the lower machinery had long since sent the command stack downstream. Even as the syllables ghost ed through auditory imagination, his body was pruning trajectory by centimeters. Peripheral vision, all motion sensitivity and contrast edges, harvested ruts, pebbles, the shine of spilled dishwater. Foveal lock shifted to the trunk of the elm past the toilets, tagging its knots and the dark burl at shoulder height as candidate contact points. The lower orders filed the report, graded the threat subcritical but dynamic, and set the governor at eighty percent of full sprint: forty-seven kilometers an hour, just below the band where tendon safety margins began to shrink faster than tactical returns improved. His posture rose by degrees out of pure forward lean and into the gathering crouch of a body preparing to convert linear momentum into rotation.</p>
+<p>Three strides from the caravan corner, his metabolism crossed another threshold. Ventilation had caught up with demand; intercostals and diaphragm were now working in a tight entrained rhythm with the stride cycle, each footfall sending a compression wave through the thorax that the lungs exploited rather than suffered. Pulmonary capillaries, distended under the increased flow, still held transit times long enough for near-complete oxygen loading because his alveolar reserve was frankly indecent. Hemoglobin saturation remained high. Myoglobin in the active fibers had begun to give up its hoarded oxygen only at the margins, a local smoothing of partial-pressure dips rather than a true debt. Mitochondria ran hot but not desperate, proton motive force maintained, with ATP synthase turning like a field of microscopic turbines under floodwater. Heat began to rise in him, but even that was managed: countercurrent exchange in the deep vessels shunted warmth inward, preserving contractile efficiency in the limbs while sparing the skin any wasteful flush that might announce strain.</p>
+<p>At the corner he drew the rod.</p>
+<p>His left hand found it by index alone, palm sliding over worn steel, and the withdrawal began before the shoulder had fully committed to the turn. Latissimus dorsi and posterior deltoid guided the first extraction; wrist extensors stabilized the distal end so it would not chatter against the sheath loop and waste information in noise. The rod came free with a whisper more felt than heard, its mass logging into his kinesthetic budget as a new moment arm he would have to respect through every subsequent rotation. His right hand, stone already indexed between first and second fingers, entered its throw sequence under almost embarrassingly little supervision. Scapula protracted. Serratus anterior pinned it to the thorax. Pectoralis major loaded like a cable winched taut. The throw itself would be a kinetic-chain transfer of astonishing efficiency, but it was beginning blind, powered by pure spatial prediction and a prior model of where the knife hand would be when the corner at last admitted him.</p>
+<p>A small jump syncopated his final approach: lead foot and head forward together in the same instant, the hips briefly airborne so that when his right foot struck, it struck as a pole vaulter’s plant and not a runner’s stride. The shin flexed. The tibia accepted perhaps six times bodyweight through its long axis, trabecular architecture transmitting the load up into the femoral neck while the ankle complex deformed and returned like layered spring steel wrapped in meat. Soleus and gastrocnemius lengthened under tension, storing and then refusing to waste the energy. His foot showed around the caravan first, a quarter beat ahead of his face, and in the next instant his eyes cleared the painted wood.</p>
+<p>The visual cortex received the scene as a single compressed packet and unpacked only what mattered.</p>
+<h3 style="text-align: center;" class="anchored" data-anchor-id="caliban-strikes">
+§
+</h3>
+<p>Meanwhile, back at the ranch, in the slow honey of ordinary time, the director was having a bad morning. He had argued with Victory for the better part of an hour without winning a single exchange, and winning exchanges was, professionally, the thing he was for. She had not raised her voice. She had not even fully turned her head. Her gaze tracked him with the fluid indifference of a mounted gun, the kind of attentiveness that did not so much observe as register, as if she were less a person sitting across from him than a surveying instrument that happened to be wearing a woman. It had unmanned him in ways he would have denied under torture.</p>
+<p>So he did what small men do in the presence of composure they cannot dent: he translated impotence into sharpness. He seized the grapefruit as though it had insulted him personally, set it down on the plate with unnecessary force, and snapped open his folding knife with a flourish meant for an audience of one. The blade was cheap stainless, hollow-ground, a little loose in the pivot. It clicked against ceramic as he jabbed it point-first into the rind, drew it around the equator in a quick, showy arc, and prepared to lift his eyes into what he intended to be a devastating scowl.</p>
+<p>He never quite got there.</p>
+<p>A foot appeared on the packed earth behind Victory with a sound he would later be unable to describe, somewhere between a mallet strike and the report of a body dropped from height. For one impossible frame it was only that: a boot, mud-dark, planted where no one had been a heartbeat before. Then the rest of Hartcrane Caliban unfolded out of the air after it, a long ribbon of intention rotating through a plane the director’s ordinary optics were not equipped to parse. The Caliban cartwheeled, except cartwheel was a child’s word for what it actually did: a controlled, mass-aware rotation in which every limb seemed to know its own moment of inertia and be bored by the calculation. He struck the elm behind the toilets feet-first with another appalling thump, and then, against every accommodation the director’s nervous system had ever been asked to make, he did not fall. He hung there. Both hands behind his back on the trunk, body coiled at a right angle to gravity, glaring up from under his brow with the static, prehistoric malice of a thing drawn on cave walls in ochre and blood.</p>
+<p>The director’s hand flew to his neck before he knew why.</p>
+<p>His fingertips came away red. Not much red. A line, no deeper than a papercut, laid so cleanly across the skin that for an instant it looked painted there. Then capillary beds opened in a delayed confession and the blood welled bright and thin.</p>
+<p>He made a sound that wanted to be a shout and arrived as a cough. His chair scraped backward. The grapefruit rolled in its plate, half-scored and absurdly cheerful. For one deranged instant he thought the Caliban had spat something at him. Then the geometry assembled itself around the sting in his neck, the knife in his own hand, the impossible distance, the thing in the tree.</p>
+<p>Victory, still seated, said, “I recommend you drop the knife.”</p>
+<p>She did not say it loudly. She said it the way a surgeon asks for a clamp; with the assumption, almost insulting in its completeness, that reality would now proceed in the suggested manner.</p>
+<p>He looked at the knife as though seeing it for the first time. His fingers had gone weak around it. Extensor tone failed before flexors quite understood what was happening, and the blade clattered onto the table, bounced once on the plate’s rim, and fell handle-first into the dust.</p>
+<p>Only then did Hartcrane move.</p>
+<p>He peeled off the tree with a small, unhurried step, as if descending from a stair rather than a trunk, and the physics of the action refused to explain itself politely. One hand came out from behind his back holding a slender steel rod, its tip embedded perhaps a finger’s depth into the bark where his spine had been. He worked it free with a soft twist, inspected the point without particular interest, and slid it back along his flank into some concealed loop under the coat. The entire transaction had the quiet domesticity of a man retrieving an umbrella he had absentmindedly leaned against a wall.</p>
+<p>The director found his voice in a rush and squandered it immediately.</p>
+<p>“That fucking ape threw something at me!” he shouted, half to Victory, half to the camp at large, as if volume might recruit reality to his side. “It threw a fucking razorblade at me or something, it cut my neck, I’m lucky that fucking gorilla didn’t decapitate me.” He heard his own words land in the air a half-second late, the way sound does on a bad telephone line, and in that half-second two things happened that he would replay compulsively for the rest of his career.</p>
+<p>The first was that Victory smiled. It was a very small smile. It did not reach the eyes, because in her the eyes did not participate in social fiction unless they were bored enough to. But it was unmistakably a smile, and behind it sat not amusement exactly but confirmation.</p>
+<p>The second was that he understood he had not exaggerated.</p>
+<p>Not by one syllable.</p>
+<p>His autonomic nervous system, denied the luxury of disbelief, chose a simpler doctrine: collapse. The sympathetic surge that had carried him through the quarrel now met its opposite number in a sloppy parasympathetic backlash. His knees unlocked. Mesenteric blood flow returned with nauseating enthusiasm. The skin over his scalp prickled cold as peripheral vessels made contradictory decisions all at once. His sphincters flirted with treason. He sat down abruptly because standing had ceased to be a coherent hypothesis about his relationship with the earth.</p>
+<p>“That fucking ape would have decapitated me over a grapefruit,” he said, not to anyone, certainly not to himself, because the self that would have received the statement had temporarily gone elsewhere. His voice had shrunk to the register men used in churches they did not believe in. He stared past the table into a bright distance only he could see, heart battering his ribs with the graceless panic of an animal that had just discovered it was edible.</p>
+<p>In the edge of that private horizon, Victory had not moved. She sat perfectly centered in her chair, exactly as she had for the last hour, exactly as she would for the next, her hands lightly resting on the arms, her spine a calm vertical theorem amid the wreckage of his composure. If she had altered at all, it was only in the minute softening around the mouth that suggested satisfaction at a prediction fulfilled. Behind the caravan, a few paces back from the corner, Caliban stood with his head bowed and listened to the noise of his own body settling.</p>
+<p>The deceleration phase was always less elegant.</p>
+<p>Heart rate remained elevated not because he needed it but because the catecholamines already in circulation had committed him to the next several minutes whether he intended to spend them or not. Epinephrine had a half-life of somewhere between one and three minutes in plasma, longer in its effects, and the receptor populations on his cardiac pacemakers did not care that the fight was over before it had visually begun. He let them finish their errand. Forcing a sympathetic system down from peak was a fool’s economy; far better to bleed the surpl us off into small, deliberate motions and let the gland work itself quiet.</p>
+<p>He shrugged his shoulders once, slowly, as he replayed the sequence. A proprioceptive audit, the cerebellum and supplementary motor area walking back through the strike frame by frame.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><a href="..">This website</a> by Fergus Fettes is marked as <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/FergusFettes">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
