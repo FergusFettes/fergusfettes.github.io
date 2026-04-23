@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>cognitopunk – Fergus Fettes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e73ed75cf5e7a3fd855296a79e6d84f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Fergus Fettes</span>
+    </a>
+  </div>
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../now.html"> 
+<span class="menu-text">Now</span></a>
+  </li>  
+</ul>
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#cognitopunk" id="toc-cognitopunk" class="nav-link active" data-scroll-target="#cognitopunk">Cognitopunk</a>
+  <ul class="collapse">
+  <li><a href="#the-vocabulary-meld" id="toc-the-vocabulary-meld" class="nav-link" data-scroll-target="#the-vocabulary-meld">The vocabulary meld</a></li>
+  <li><a href="#why-an-upload-world-earns-the-full-voltage" id="toc-why-an-upload-world-earns-the-full-voltage" class="nav-link" data-scroll-target="#why-an-upload-world-earns-the-full-voltage">Why an upload world earns the full voltage</a></li>
+  <li><a href="#what-the-prose-should-sound-like" id="toc-what-the-prose-should-sound-like" class="nav-link" data-scroll-target="#what-the-prose-should-sound-like">What the prose should sound like</a></li>
+  <li><a href="#the-factions-sketched-in-passing" id="toc-the-factions-sketched-in-passing" class="nav-link" data-scroll-target="#the-factions-sketched-in-passing">The factions sketched in passing</a></li>
+  <li><a href="#the-comic-register" id="toc-the-comic-register" class="nav-link" data-scroll-target="#the-comic-register">The comic register</a></li>
+  <li><a href="#hazards" id="toc-hazards" class="nav-link" data-scroll-target="#hazards">Hazards</a></li>
+  <li><a href="#what-the-genre-is-for" id="toc-what-the-genre-is-for" class="nav-link" data-scroll-target="#what-the-genre-is-for">What the genre is for</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="cognitopunk" class="level1">
+<h1>Cognitopunk</h1>
+<p>A note on a genre that should exist and almost does.</p>
+<hr>
+<p>Every decade or two a piece of technical vocabulary seeps out of specialist use and into the ambient register of the culture. When it does, a genre tends to crystallize around it. Cyberpunk came when the vocabulary of networked computing — protocol, interface, console, ice — had soaked far enough into ordinary speech that a bartender could use it in a line of dialogue and a reader would nod without pausing. Biopunk came when the vocabulary of molecular biology hit the same threshold: splice, vector, phenotype, enzyme, promoter. You cannot write a genre around a vocabulary the reader has to look up. You can write one the moment they don’t.</p>
+<p>We are there for cognitive and psychiatric vocabulary. Anhedonia. Dissociation. Default mode. Limerence. Intrusive thought. Hypervigilance. Reconsolidation. Theory of mind. Attentional bias. Reward prediction error. Salience. Interoception. A literate adult under forty can process all of these without flinching, and most were specialist terms two generations ago. The vocabulary has landed. What has not yet landed is the genre that uses it the way cyberpunk used “jack in.”</p>
+<p>Call it cognitopunk. The thesis sits neatly beside its two siblings: cyberpunk is about the self invaded by technology, biopunk about the self invaded by its own biology, cognitopunk about the self invaded by the diagnostic category. The wound it dramatizes is the moment at which naming a state of mind in clinical terms both liberates you from its grip and imprisons you in its frame. That wound is small enough to fit in a coffee shop scene and deep enough to hold a novel.</p>
+<section id="the-vocabulary-meld" class="level2">
+<h2 class="anchored" data-anchor-id="the-vocabulary-meld">The vocabulary meld</h2>
+<p>The genre has two registers of technical vocabulary waiting for it, and its characters should wield both fluently.</p>
+<p>The first is psychiatric — the language of phenomenology, of what a given state of mind feels and looks like from the inside or the outside. Depression, mania, psychosis, dissociation, obsession, compulsion, derealization, anhedonia, limerence, flat affect, hypervigilance. These are names for patterns of experience, and they are largely descriptive: they tell you what is happening without telling you why.</p>
+<p>The second is cognitive neuroscience — the language of mechanism. Predictive coding. Reward prediction error. Default mode network, salience network, central executive network. Hippocampal replay. Reconsolidation windows. Basal ganglia gating of action selection. Amygdala sensitization. Prefrontal top-down regulation. Dopaminergic tone. Theta-gamma coupling. These tell you why, at least in the vocabulary of the current research program.</p>
+<p>Good cognitopunk lets its characters slip between registers the way a 1990s cyberpunk character slipped between hardware and software talk. Someone describes her own flashback in psychiatric terms and then, a paragraph later, names the reconsolidation window she is trying to catch, and the meld is the voice of the story. Computational psychiatry is the real-world field that already does this work: depression as a pathologically high prior on negative outcomes, schizophrenia as aberrant precision-weighting of priors against sensory data, OCD as a stuck gate in a cortico-striato-thalamo-cortical loop, PTSD as amygdala sensitization plus hippocampal context-binding failure, addiction as a hijacked reward-prediction-error signal still firing for cues whose associated reward is long gone. Cognitopunk pulls that field into street use. It lets the bartender name the minister’s prior, the detective name the suspect’s precision failure, the bereaved sister name her own leaky reconsolidation.</p>
+</section>
+<section id="why-an-upload-world-earns-the-full-voltage" class="level2">
+<h2 class="anchored" data-anchor-id="why-an-upload-world-earns-the-full-voltage">Why an upload world earns the full voltage</h2>
+<p>You can set cognitopunk in the present day. The raw material is here: therapy apps, TikTok self-diagnosis, trauma discourse as a lingua franca, Lexapro as a lifestyle product, executive-function stimulants as a competitive advantage, exposure hierarchies as a phone-in service. Some of the best work in the genre will probably happen in this register, quietly, realistically, without ever mentioning uploads. But the full pulp voltage lives a step further out.</p>
+<p>The setting premise that earns the voltage: uploads are possible; uploads can in principle evolve their cognitive architecture arbitrarily far from the ancestral human one; and a recognizable number of early uploads did exactly that and broke themselves. Some stripped their apparatus down to a predatory shell of goal-coherent optimization, charming and hollow, legible as a person until the moment they were not. Others ran themselves into loop attractors, or dissolved into configurations the remaining humans could not morally or legally talk to. After enough of these incidents, the surviving upload community pinned its architecture, by treaty, to within-spec human mindspace. You can tune. You cannot mutate. The pin is enforced by a class of infrastructure nobody entirely trusts and no one has a better alternative to.</p>
+<p>This premise does several things for the genre at once. It makes psychiatric and cognitive vocabulary the native ontology, because every operation on the self is now explicit, named, and negotiated. It creates factions — the within-spec citizenry, the licensed explorers who probe the edges with credentials, the archeonauts who went too far on their own and came back broken, the predatory shells out past the edge. It gives you a border, and every border has an economy. It gives you a kind of cop — the treaty enforcers whose job is to track drift. And it gives every character a personal stake in their own architecture, because the pin is a choice made on their behalf and they can always choose to push against it.</p>
+</section>
+<section id="what-the-prose-should-sound-like" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-prose-should-sound-like">What the prose should sound like</h2>
+<p>The voice is clinical without being cold, detached without being dead. It borrows from medical case notes, from Oliver Sacks, from the interior register of literary fiction that treats thought as a physical event. It cuts between the character’s observations of their own cognitive machinery and the world around them without marking the transition, because in this world there is no transition to mark. The rule underneath the voice is simple: if you can swap a piece of technical vocabulary for its lay synonym without losing anything, cut it. Every term must do load-bearing work. Plot, character, or reframing — ideally more than one.</p>
+<p>A woman entering a bar, observed by a professional.</p>
+<p><em>He clocked her the moment she came in: mild hypomanic upswing, good one, a surfer’s wave not a drowner’s. Her attention-priority queue pinged his face and held there a half-second too long to be casual. Transference, maybe. Or triangulation — she was looking for someone through him. He let his own anxiety index stay elevated because damping it now would show. Pros noticed dampening. He noticed her notice him not damping, and enjoyed the tiny clean click of mutual professionalism meeting across a table. This was the part of his job he was going to miss when he finally went out of spec.</em></p>
+<p>The vocabulary there is not decoration. “Hypomanic upswing” is a plot fact: she is operating at a pattern-matching speed the reader needs to know about. “Attention-priority queue” is characterization: he thinks of her attention as a data structure because he is trained to. The last line threatens plot without explaining anything. Every term load-bearing.</p>
+<p>A breakup, three weeks out.</p>
+<p><em>Her reconsolidation windows were still leaky. Any olfactory cue — his soap, the particular diesel note of the 7-train platform — and the whole pair-bond trace came back online with the affect tags intact, hippocampus feeding amygdala feeding insula feeding her face before her PFC had a chance to veto. She had booked a session to stabilize it, but the waitlist for licensed memory technicians was two months out and she was not willing to go black market for a boyfriend. So she did what everyone did: ran the memory deliberately while chewing mint gum and listening to music she had never associated with him, trying to overwrite the retrieval context from the inside. DIY exposure therapy. It sort of worked. The third time through, his face came back blurred at the edges and she knew she was losing him properly now, the way she had asked to.</em></p>
+<p>A threat, at a dinner party.</p>
+<p><em>The shell wore its host like a suit that almost fit. You could see where the seams tugged — micro-expressions lagging the social move by a frame or two, left anterior insula dark on the scan where empathy should have lit, a salience network that pinged on instrumentality instead of intimacy. But only the trained eye saw it. To anyone else at the table he was the warmest man in the room, and getting warmer, and that was the tell. Real people banked empathy across an evening. Shells spent it continuously, because they had no reserve to protect.</em></p>
+<p>A crime, in progress.</p>
+<p><em>The mark was upstairs, mid-session, mid-retrieval, his ventral striatum lit like a Christmas tree on the inductive feed from the chair. Everything about the memory he was consulting was labile now — that was the whole point of retrieval, it was the window into the tape — and for the next eleven minutes it was rewriteable by anyone who could patch in. Serratos had patched in six times in the last year and he still felt the little flutter of ethical nausea every time. Someone’s past was about to be different, and they were never going to know.</em></p>
+<p>A clinic, on a Tuesday.</p>
+<p><em>The house ran tight. Walk-ins for acute derealization got seen in under twenty minutes, which was double the statutory limit; the waiting room had a humming baseline of low-grade dissociation that the triage nurse could read off faces like weather. Mira had learned to spot the difference between a fresh episode and a chronic one by the way the patient made eye contact with the furniture. Fresh ones looked at the chairs as if the chairs might not be real. Chronics looked at the chairs as if they themselves might not be real, and were testing by contrast.</em></p>
+<p>A political scandal.</p>
+<p><em>The minister’s salience weighting during the press conference had been flagged post-hoc by three separate civic auditors. When the journalist had asked about the Nairobi incident, his gaze had briefly, measurably, skipped the question — not suppressed, which was legal, but deprioritized beneath threshold, which was a class of processing the pin treaty explicitly named and explicitly restricted for sitting officials. He would survive the scandal. They always did. The public had a working memory of about four news cycles, a fact his media team was paid to know down to the decimal.</em></p>
+<p>A love scene that isn’t trying to be one.</p>
+<p><em>What she loved about him was the way his default mode was quiet. Most people, when you looked at them resting, were running a small storm — rumination, rehearsal, the soft internal chatter of the self reminding itself it existed. His was not empty, exactly. It was more like water. She had never asked whether he had trained it that way or whether he had been born that way, or, in the upload era, whether there was a difference.</em></p>
+<p>A street scene.</p>
+<p><em>Outside the station a boy was selling unlicensed exposure hierarchies from a folding table. Cheap ones, printed on acid paper that would start to rot in six months — but they worked, for short phobias, and the kids who could not afford a therapist bought them on the way home from school. The enforcement squads did not bother him much. He was small. The big money in DIY desensitization was online and encrypted, and the table was more like a busker than a crime.</em></p>
+<p>A moment of private terror.</p>
+<p><em>She noticed, sitting on the edge of the bed, that she had been noticing for several minutes. The noticing had gone meta three or four rungs up, each rung producing the faint nauseous lift of depersonalization, and somewhere around the fourth rung she understood that the noticing itself was now the problem. There was a name for this. There was a name for everything. The name did not help. The name was, in some sense, the machine she was trapped in.</em></p>
+<p>A child being described by her mother.</p>
+<p><em>She had been an early theory-of-mind kid, which was mostly a blessing and sometimes not. By four she could read her grandfather’s grief off his jaw before he knew he was showing it. By six she could read her mother’s, which was harder for everyone. The paediatrician had said this was well within the normal band and not to worry and to just keep an eye out for any signs of the precocity burning out into the usual adolescent blunting, which was the medical establishment’s way of saying: enjoy her while she can still see you.</em></p>
+<p>A workday, for a treaty enforcer.</p>
+<p><em>Kovacs’s scanner had been pinging soft all morning, nothing over threshold, just the low-grade chorus of a commuter platform full of people running slightly wider architectures than they had filed for. Most of it was harmless: a philosophy student stretching her self-model a little further than spec for a thesis, a grieving widower whose default mode had flattened past statutory bounds but who had a medical exemption on file. The job was almost never about catching anyone. The job was about being seen to look.</em></p>
+<p>A piece of in-world advertising, overheard.</p>
+<p><em>“Feeling like your salience is misfiring? Background hum of low-grade threat you can’t trace to a source? That’s your ventral attention network running hot, and at Equinox Clinic we can help you bring it back down inside a single afternoon session. Licensed technicians. Treaty-compliant tuning. Our patients report a forty-three percent reduction in unsourced dread within the first week. Equinox. Come home to your baseline.”</em></p>
+<p>A confession, in a kitchen at three in the morning.</p>
+<p><em>“I think I’ve been running a subagent,” she said, and he did not ask her what she meant because he had been married to her for eleven years and he knew. “It’s been in the background for months. I thought it was a mood. Then I noticed it was making decisions. Small ones. Which route home. Whether I replied to my mother. Whether I kissed you on the forehead or the mouth.” She looked up. “I don’t think I want to reintegrate it. I think I want to know what it wants first.”</em></p>
+</section>
+<section id="the-factions-sketched-in-passing" class="level2">
+<h2 class="anchored" data-anchor-id="the-factions-sketched-in-passing">The factions sketched in passing</h2>
+<p>Any street scene in a cognitopunk city should imply a larger political body without naming it directly. The within-spec citizenry, living ordinary tuned lives. The licensed explorers, credentialed to push their architecture in supervised ways, usually researchers or artists or the kind of philosopher who gets grants. The archeonauts — people who went out past the edge on their own, came back, and now live with the consequences, sometimes as celebrated elders of the community, sometimes as wrecks. The shells, illegal and rare and terrifying, most of them quarantined, a few still loose. The treaty enforcers, whose dress uniform is boring on purpose and whose scanners are not. The memory technicians, licensed rewriters, a profession somewhere between surgeon and lawyer and priest, with the licensing scandals you would expect. The black-market operators who do memory work for cash in rooms without windows. The therapists, still called therapists, whose job has quietly absorbed most of what used to be called law enforcement at the individual level. The philosophers, who are listened to now, because the treaty was written by philosophers and everyone knows it.</p>
+<p>You do not need to explain any of these to the reader. You let them show up in a line of dialogue or a piece of background texture and you trust the reader to assemble the world. That is how cyberpunk worked — a netrunner was named, not explained, and the reader filled in the rest. Cognitopunk gets the same affordance, and should use it.</p>
+</section>
+<section id="the-comic-register" class="level2">
+<h2 class="anchored" data-anchor-id="the-comic-register">The comic register</h2>
+<p>The genre has a native comic mode that any serious practitioner should use. In a culture where psychiatric vocabulary is default small talk, you can write scenes of pure social observation that are also mechanically true. “You seem to be running elevated disgust today, is it the lighting?” “Sorry, I’m a little dissociated, I had a bad retrieval this morning.” “He’s sweet but his theory of mind is a mile wide and an inch deep.” “Don’t bring that up at dinner, you’ll spike her amygdala and she’ll blame me.” The comic mode is how the genre avoids self-seriousness, and it is also how the vocabulary becomes inhabited rather than imposed. Good cognitopunk keeps dread and dry humor in the same paragraph, the way good cyberpunk keeps Gibson’s irony in the same breath as his melancholy.</p>
+</section>
+<section id="hazards" class="level2">
+<h2 class="anchored" data-anchor-id="hazards">Hazards</h2>
+<p>Two to watch.</p>
+<p>The first is decorative vocabulary. If you can swap a technical term for its lay synonym without losing anything, cut it. Every piece of clinical language has to drive plot, reveal character, or reframe an emotional beat in a way plain language could not. Sprinkle “anhedonia” and “amygdala hijack” onto cyberpunk beats for flavor and you get a gimmick novel. Let the vocabulary do the work and you get the genre.</p>
+<p>The second is cheap determinism — the temptation to collapse the character to their mechanism. The whole interest of cognitopunk is the gap between the mechanism and the person living it. A woman who knows exactly which network is firing still has to decide what to do. The knowing does not solve her. If your characters are their mechanisms, you have written a very boring neuroscience textbook dressed up as fiction. If your characters are living inside their mechanisms, aware of them, fighting them, using them, losing to them, negotiating with them in real time, then you have written the genre.</p>
+</section>
+<section id="what-the-genre-is-for" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-genre-is-for">What the genre is for</h2>
+<p>Pulp at its best is a solvent for the anxieties of its era. Cyberpunk dissolved the anxieties of a culture waking up inside a networked computer. Biopunk did the same for a culture waking up inside its own genome. Cognitopunk, if anyone writes it well, will do it for a culture waking up inside a vocabulary of mind that describes us more completely than we are ready to be described. Every reader who has ever been startled by their therapist naming something they thought was private to them, every reader who has ever looked up their own symptom at two in the morning, every reader who has ever said “I’m just a little depressed” as a social move — those readers already live in this genre. They are waiting for the book.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><a href="..">This website</a> by Fergus Fettes is marked as <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/FergusFettes">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
