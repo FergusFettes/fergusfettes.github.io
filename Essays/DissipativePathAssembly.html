@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-05-05">
+
+<title>Dissipative Path Assembly: an introduction – Fergus Fettes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e73ed75cf5e7a3fd855296a79e6d84f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Fergus Fettes</span>
+    </a>
+  </div>
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../now.html"> 
+<span class="menu-text">Now</span></a>
+  </li>  
+</ul>
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-starting-physical-picture" id="toc-the-starting-physical-picture" class="nav-link active" data-scroll-target="#the-starting-physical-picture">1. The starting physical picture</a></li>
+  <li><a href="#from-energy-balance-to-path-length" id="toc-from-energy-balance-to-path-length" class="nav-link" data-scroll-target="#from-energy-balance-to-path-length">2. From energy balance to path length</a></li>
+  <li><a href="#why-assembly-theory-belongs-in-this-picture" id="toc-why-assembly-theory-belongs-in-this-picture" class="nav-link" data-scroll-target="#why-assembly-theory-belongs-in-this-picture">3. Why assembly theory belongs in this picture</a></li>
+  <li><a href="#from-object-assembly-to-flow-assembly" id="toc-from-object-assembly-to-flow-assembly" class="nav-link" data-scroll-target="#from-object-assembly-to-flow-assembly">4. From object assembly to flow assembly</a></li>
+  <li><a href="#the-core-hypothesis" id="toc-the-core-hypothesis" class="nav-link" data-scroll-target="#the-core-hypothesis">5. The core hypothesis</a></li>
+  <li><a href="#the-biomass-npp-identity" id="toc-the-biomass-npp-identity" class="nav-link" data-scroll-target="#the-biomass-npp-identity">6. The biomass-NPP identity</a></li>
+  <li><a href="#four-idealized-ecosystem-types" id="toc-four-idealized-ecosystem-types" class="nav-link" data-scroll-target="#four-idealized-ecosystem-types">7. Four idealized ecosystem types</a>
+  <ul class="collapse">
+  <li><a href="#high-power-short-dwell-time" id="toc-high-power-short-dwell-time" class="nav-link" data-scroll-target="#high-power-short-dwell-time">7.1 High power, short dwell time</a></li>
+  <li><a href="#low-power-long-apparent-dwell-time" id="toc-low-power-long-apparent-dwell-time" class="nav-link" data-scroll-target="#low-power-long-apparent-dwell-time">7.2 Low power, long apparent dwell time</a></li>
+  <li><a href="#high-power-long-dwell-time" id="toc-high-power-long-dwell-time" class="nav-link" data-scroll-target="#high-power-long-dwell-time">7.3 High power, long dwell time</a></li>
+  <li><a href="#low-power-short-dwell-time" id="toc-low-power-short-dwell-time" class="nav-link" data-scroll-target="#low-power-short-dwell-time">7.4 Low power, short dwell time</a></li>
+  </ul></li>
+  <li><a href="#relation-to-entropy-production" id="toc-relation-to-entropy-production" class="nav-link" data-scroll-target="#relation-to-entropy-production">8. Relation to entropy production</a></li>
+  <li><a href="#the-food-web-is-not-just-a-trophic-ladder" id="toc-the-food-web-is-not-just-a-trophic-ladder" class="nav-link" data-scroll-target="#the-food-web-is-not-just-a-trophic-ladder">9. The food web is not just a trophic ladder</a></li>
+  <li><a href="#what-mass-spectrometry-would-measure" id="toc-what-mass-spectrometry-would-measure" class="nav-link" data-scroll-target="#what-mass-spectrometry-would-measure">10. What mass spectrometry would measure</a></li>
+  <li><a href="#what-would-count-as-evidence" id="toc-what-would-count-as-evidence" class="nav-link" data-scroll-target="#what-would-count-as-evidence">11. What would count as evidence</a>
+  <ul class="collapse">
+  <li><a href="#prediction-1-pool-level-assembly-tracks-residence-time" id="toc-prediction-1-pool-level-assembly-tracks-residence-time" class="nav-link" data-scroll-target="#prediction-1-pool-level-assembly-tracks-residence-time">Prediction 1: pool-level assembly tracks residence time</a></li>
+  <li><a href="#prediction-2-high-biomass-productive-ecosystems-have-high-assembly-flux" id="toc-prediction-2-high-biomass-productive-ecosystems-have-high-assembly-flux" class="nav-link" data-scroll-target="#prediction-2-high-biomass-productive-ecosystems-have-high-assembly-flux">Prediction 2: high-biomass productive ecosystems have high assembly flux</a></li>
+  <li><a href="#prediction-3-fast-turnover-systems-can-have-high-npp-but-low-dwell-depth" id="toc-prediction-3-fast-turnover-systems-can-have-high-npp-but-low-dwell-depth" class="nav-link" data-scroll-target="#prediction-3-fast-turnover-systems-can-have-high-npp-but-low-dwell-depth">Prediction 3: fast-turnover systems can have high NPP but low dwell depth</a></li>
+  <li><a href="#prediction-4-restoration-can-increase-path-length-without-merely-raising-npp" id="toc-prediction-4-restoration-can-increase-path-length-without-merely-raising-npp" class="nav-link" data-scroll-target="#prediction-4-restoration-can-increase-path-length-without-merely-raising-npp">Prediction 4: restoration can increase path length without merely raising NPP</a></li>
+  </ul></li>
+  <li><a href="#the-strongest-version-of-the-idea" id="toc-the-strongest-version-of-the-idea" class="nav-link" data-scroll-target="#the-strongest-version-of-the-idea">12. The strongest version of the idea</a></li>
+  <li><a href="#why-this-is-useful-for-talking-about-the-biosphere" id="toc-why-this-is-useful-for-talking-about-the-biosphere" class="nav-link" data-scroll-target="#why-this-is-useful-for-talking-about-the-biosphere">13. Why this is useful for talking about the biosphere</a></li>
+  <li><a href="#minimal-mathematical-summary" id="toc-minimal-mathematical-summary" class="nav-link" data-scroll-target="#minimal-mathematical-summary">14. Minimal mathematical summary</a></li>
+  <li><a href="#main-caveats" id="toc-main-caveats" class="nav-link" data-scroll-target="#main-caveats">15. Main caveats</a></li>
+  <li><a href="#suggested-discussion-framing" id="toc-suggested-discussion-framing" class="nav-link" data-scroll-target="#suggested-discussion-framing">16. Suggested discussion framing</a></li>
+  <li><a href="#key-references" id="toc-key-references" class="nav-link" data-scroll-target="#key-references">17. Key references</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Dissipative Path Assembly: an introduction</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 5, 2026</p>
+    </div>
+  </div>
+  
+  
+    <div class="quarto-title-meta-ai">
+    <div class="quarto-title-meta-heading">
+      <a class="ai-use-heading-link" href="../ai-use.html" title="What the AI Use scale means">AI Use</a>
+    </div>
+    <div class="quarto-title-meta-contents">
+      <p>
+        <a class="ai-use" href="../ai-use.html" title="What the AI Use scale means">9/10</a>
+      </p>
+          </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="the-starting-physical-picture" class="level2">
+<h2 class="anchored" data-anchor-id="the-starting-physical-picture">1. The starting physical picture</h2>
+<p>The biosphere is a dissipative structure<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> maintained by the solar gradient<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Shortwave radiation<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> arrives from the Sun, the Earth system absorbs part of it, and the planet eventually re-emits the energy as longwave infrared radiation. At the planetary boundary this is an energy balance problem. Inside the boundary it is a path problem.</p>
+<p>Most absorbed solar energy is thermalized<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> quickly by the atmosphere, ocean, land surface, and clouds. A much smaller but crucial fraction is captured by photosynthesis and stored, temporarily, as chemical free energy<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> in reduced carbon compounds<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. This captured fraction is net primary production, or NPP<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>.</p>
+<p>Once energy enters NPP, it does not immediately become heat. It is routed through biological structures:</p>
+<pre class="text"><code>sunlight -&gt; photosynthesis -&gt; plant/algal biomass -&gt; consumers
+         -&gt; detritus -&gt; microbes -&gt; respiration -&gt; heat + CO2 + H2O</code></pre>
+<p>The important point is not that biology prevents entropy production. It cannot. The point is that biology delays, routes, and structures entropy production. A unit of captured solar free energy can spend seconds in a metabolite, days in phytoplankton biomass, years in wood, decades in soil organic matter, or centuries in long-lived forest carbon before it is finally oxidized and re-emitted as heat.</p>
+<p>This note calls that delay the <strong>entropic dwell time</strong> of the captured energy. It is the mean time that a unit of NPP-derived free energy remains inside organized biological matter before final dissipation.</p>
+<p>Strictly, the same original photon is not tracked through the system. The useful quantity is the residence time of the chemical free energy created by photosynthesis. The photon is thermalized quickly; the biological free-energy equivalent can dwell.</p>
+<hr>
+</section>
+<section id="from-energy-balance-to-path-length" class="level2">
+<h2 class="anchored" data-anchor-id="from-energy-balance-to-path-length">2. From energy balance to path length</h2>
+<p>In a simple thermodynamic box model, one might only ask how much power enters and leaves:</p>
+<pre class="text"><code>incoming solar power = outgoing infrared power</code></pre>
+<p>For the biosphere, that is not enough. Two ecosystems can process similar NPP power while having very different internal path lengths.</p>
+<p>An open-ocean phytoplankton system can turn over biomass in days to weeks. A forest can hold a large fraction of its captured carbon in trunks, roots, detritus, and soil for years to centuries. Both dissipate solar free energy, but the second system has a much longer biological residence path.</p>
+<p>Let <code>F</code> be the NPP power entering an ecosystem. Let the ecosystem be divided into compartments<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> or pathway classes <code>i</code>: primary producers, herbivores, predators, detritus, microbial biomass, long-lived structural biomass, and so on. Let:</p>
+<pre class="text"><code>f_i   = fraction of NPP-derived flux passing through compartment i
+tau_i = mean residence time of that flux in compartment i</code></pre>
+<p>Then define the <strong>dissipative path length</strong> or <strong>mean entropic dwell time</strong>:</p>
+<pre class="text"><code>D = sum_i f_i tau_i</code></pre>
+<p><code>D</code> has units of time. It is a flux-weighted mean first-passage time<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> from photosynthetic capture to final respiratory dissipation.</p>
+<p>This is the first key idea:</p>
+<blockquote class="blockquote">
+<p>The biosphere can be compared not only by how much free energy it dissipates per square metre, but by how long and through what kinds of structures that free energy dwells before becoming heat.</p>
+</blockquote>
+<p>The phrase “path length” is intentional. It is analogous to transport through a network. Energy enters a graph of biological compartments and exits when it is respired. The longer and more reticulated<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> the graph, the longer the mean dwell time.</p>
+<hr>
+</section>
+<section id="why-assembly-theory-belongs-in-this-picture" class="level2">
+<h2 class="anchored" data-anchor-id="why-assembly-theory-belongs-in-this-picture">3. Why assembly theory belongs in this picture</h2>
+<p>Assembly theory<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a> assigns an <strong>assembly index</strong> to an object. Informally, the assembly index of an object is the minimum number of joining operations<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a> required to build it from elementary parts, allowing previously built substructures to be reused.</p>
+<p>For molecules, the assembly index captures a kind of construction depth. Simple molecules such as water or carbon dioxide have very low assembly index. More complex molecules such as amino acids, nucleotides, pigments, cofactors, peptides, and specialized metabolites have higher assembly index.</p>
+<p>The central conceptual move in assembly theory is that high assembly index, when observed at high copy number<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>, is evidence for a process with memory. A single complicated object might be a rare accident. Many copies of a high assembly object imply a generating process that repeatedly finds and preserves that structure. In biology, that memory is evolution, inheritance, metabolism, and ecological selection.</p>
+<p>For the purposes of this framework, we need only a modest version of assembly theory:</p>
+<ol type="1">
+<li>Biological matter contains many molecules with nontrivial assembly index.</li>
+<li>The distribution of assembly indices in a biological sample can, in principle, be measured by mass spectrometry<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a>.</li>
+<li>The average assembly index of matter in an ecosystem is not just a chemical descriptor. It is also a record of evolved pathway structure.</li>
+</ol>
+<p>The biosphere is therefore not merely a carbon reservoir or an energy-flow system. It is a planetary-scale generator and maintainer of high-copy, high-assembly objects.</p>
+<hr>
+</section>
+<section id="from-object-assembly-to-flow-assembly" class="level2">
+<h2 class="anchored" data-anchor-id="from-object-assembly-to-flow-assembly">4. From object assembly to flow assembly</h2>
+<p>Assembly theory usually begins with individual objects: a molecule, a polymer, a manufactured component, perhaps a digital structure. Ecosystems are different because they are flow systems. The relevant question is not only “what is the assembly index of this object?” but:</p>
+<blockquote class="blockquote">
+<p>What is the mean assembly index of the matter through which free energy is currently flowing?</p>
+</blockquote>
+<p>That leads to a flux-weighted assembly index<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>. Let:</p>
+<pre class="text"><code>a_i   = mean molecular assembly index of compartment i
+f_i   = fraction of NPP-derived flux passing through compartment i</code></pre>
+<p>Then define:</p>
+<pre class="text"><code>A_bar = sum_i f_i a_i</code></pre>
+<p><code>A_bar</code> is the mean assembly index experienced by a unit of energy as it moves through the ecosystem. It is not the maximum assembly index present anywhere in the system, and it is not the biomass-weighted average over all matter. It is a flow-weighted average over the dissipative path.</p>
+<p>This distinction matters. A rare high-assembly molecule present in tiny amounts should not dominate the metric. A huge pool of inactive material should not dominate unless significant NPP-derived flux actually passes through it.</p>
+<p>The proposed metric is therefore:</p>
+<pre class="text"><code>assembly flux = F A_bar</code></pre>
+<p>where <code>F</code> is NPP power. This has the form “power multiplied by construction depth.” It measures how much solar-derived free energy is being routed through how much molecular assembly.</p>
+<hr>
+</section>
+<section id="the-core-hypothesis" class="level2">
+<h2 class="anchored" data-anchor-id="the-core-hypothesis">5. The core hypothesis</h2>
+<p>The core hypothesis is that flux-weighted assembly depth and entropic dwell time are coupled:</p>
+<pre class="text"><code>A_bar proportional to D</code></pre>
+<p>or, at the compartment level:</p>
+<pre class="text"><code>tau_i increases with a_i</code></pre>
+<p>This should not be read as a universal law for every molecule. Many high-assembly biological molecules are deliberately short-lived: ATP<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>, signalling peptides, mRNA<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a>, reactive metabolites, and regulatory proteins can turn over rapidly. Conversely, some low-assembly inorganic or mineral structures can persist for geological times.</p>
+<p>The stronger and more defensible version is a pool-level hypothesis<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>:</p>
+<blockquote class="blockquote">
+<p>In living ecosystems, the NPP-derived flux that reaches more historically constructed, more compositionally specific, higher-assembly biological pools tends to have a longer mean residence time before final dissipation.</p>
+</blockquote>
+<p>In other words, the expected relationship is not:</p>
+<pre class="text"><code>every high-AI molecule lives longer than every low-AI molecule</code></pre>
+<p>but rather:</p>
+<pre class="text"><code>biological pools with higher flux-weighted molecular assembly tend to be
+associated with longer ecological residence times</code></pre>
+<p>This formulation avoids a false molecular claim while preserving the central thermodynamic idea. Assembly index is being used as a measure of historically constructed path depth, not as a simple bond-stability proxy.</p>
+<hr>
+</section>
+<section id="the-biomass-npp-identity" class="level2">
+<h2 class="anchored" data-anchor-id="the-biomass-npp-identity">6. The biomass-NPP identity</h2>
+<p>The most useful empirical handle is the relationship between standing biomass and productivity.</p>
+<p>Let:</p>
+<pre class="text"><code>B   = standing biomass, measured as carbon per unit area
+NPP = annual net primary production, measured as carbon per unit area per year</code></pre>
+<p>Then:</p>
+<pre class="text"><code>B / NPP = tau_mean</code></pre>
+<p>This is just dimensional analysis<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a>, but it is powerful. <code>B / NPP</code> is the mean turnover time implied by the standing stock and the flow through it. It tells us how long, on average, carbon remains in the ecosystem’s biological stock.</p>
+<p>If the core hypothesis is correct, then:</p>
+<pre class="text"><code>B / NPP approximately tracks A_bar</code></pre>
+<p>This gives a first-order proxy for flux-weighted assembly index without requiring immediate mass spectrometry. Ecosystems with high biomass per unit productivity have long dwell times. If those dwell times correspond to flux through more deeply assembled biological structures, they should also have high <code>A_bar</code>.</p>
+<p>This is why forests, mangroves<a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a>, peatlands<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>, soils, and detrital systems are so important for the framework. They do not merely contain a lot of carbon. They extend the time over which solar-derived free energy remains in organized biological form.</p>
+<hr>
+</section>
+<section id="four-idealized-ecosystem-types" class="level2">
+<h2 class="anchored" data-anchor-id="four-idealized-ecosystem-types">7. Four idealized ecosystem types</h2>
+<p>The framework separates power, dwell time, and assembly depth. This is easiest to see by comparing idealized ecosystem regimes.</p>
+<section id="high-power-short-dwell-time" class="level3">
+<h3 class="anchored" data-anchor-id="high-power-short-dwell-time">7.1 High power, short dwell time</h3>
+<p>Open-ocean phytoplankton systems can have significant areal<a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a> or global productivity, but low standing biomass because cells turn over quickly and grazing/respiration pathways are fast.</p>
+<pre class="text"><code>high F
+low B/NPP
+short D
+low-to-moderate A_bar</code></pre>
+<p>Such systems dissipate free energy rapidly. They are powerful but shallow in biological dwell time.</p>
+</section>
+<section id="low-power-long-apparent-dwell-time" class="level3">
+<h3 class="anchored" data-anchor-id="low-power-long-apparent-dwell-time">7.2 Low power, long apparent dwell time</h3>
+<p>Deserts can have low NPP but surprisingly long <code>B / NPP</code> because sparse woody or belowground biomass may persist relative to the small annual flux.</p>
+<pre class="text"><code>low F
+high B/NPP
+moderate D
+limited assembly flux F A_bar</code></pre>
+<p>This is why dwell time alone cannot be the full metric. A system can retain matter for a long time because the flux is small, not because it is a powerful planetary dissipative pathway.</p>
+</section>
+<section id="high-power-long-dwell-time" class="level3">
+<h3 class="anchored" data-anchor-id="high-power-long-dwell-time">7.3 High power, long dwell time</h3>
+<p>Tropical forests, mangroves, and other high-biomass productive ecosystems combine high NPP with large standing stocks and layered food, detrital, root, fungal, and microbial networks.</p>
+<pre class="text"><code>high F
+high B/NPP
+long D
+high assembly flux F A_bar</code></pre>
+<p>These are the strongest biospheric examples of dissipative path assembly. They process substantial solar-derived power while keeping it resident in complex biological structures for long periods.</p>
+</section>
+<section id="low-power-short-dwell-time" class="level3">
+<h3 class="anchored" data-anchor-id="low-power-short-dwell-time">7.4 Low power, short dwell time</h3>
+<p>Strongly degraded systems can have both low NPP and low biomass retention.</p>
+<pre class="text"><code>low F
+low B/NPP
+short D
+low assembly flux F A_bar</code></pre>
+<p>Such systems are thermodynamically simple in this framework. They neither capture much free energy nor maintain long biological pathways.</p>
+<hr>
+</section>
+</section>
+<section id="relation-to-entropy-production" class="level2">
+<h2 class="anchored" data-anchor-id="relation-to-entropy-production">8. Relation to entropy production</h2>
+<p>Maximum entropy production, or MEP<a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a>, is often stated as the idea that nonequilibrium systems<a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a> tend to organize so as to degrade imposed gradients as effectively as constraints allow. In Earth-system language, life helps dissipate the solar gradient by coupling radiation, water, carbon, nutrients, and surface chemistry.</p>
+<p>The framework here should not be phrased as a naive identity:</p>
+<pre class="text"><code>MEP = maximum biomass</code></pre>
+<p>or:</p>
+<pre class="text"><code>MEP = maximum assembly index</code></pre>
+<p>Those statements are too simple. Entropy production is a rate. Biomass is a stock. Assembly index is a construction-depth metric. Dwell time is a residence time. These quantities are related, but they are not interchangeable.</p>
+<p>The stronger version is:</p>
+<blockquote class="blockquote">
+<p>For the NPP-derived part of the Earth system, biological entropy production can be characterized by both a power term and a path-structure term.</p>
+</blockquote>
+<p>The power term is:</p>
+<pre class="text"><code>F = NPP power</code></pre>
+<p>The path-structure term is:</p>
+<pre class="text"><code>A_bar or D</code></pre>
+<p>The combined quantity is:</p>
+<pre class="text"><code>F A_bar</code></pre>
+<p>or, if the assembly-dwell relationship holds:</p>
+<pre class="text"><code>F D</code></pre>
+<p>This says that a biosphere is not only dissipating watts. It is dissipating watts through historically constructed pathways of finite depth and duration.</p>
+<p>From this point of view, a tropical forest is not thermodynamically interesting only because it has high NPP. It is interesting because high flux is coupled to long residence paths, layered biological memory, and high-copy molecular assembly. The forest is a structured delay line<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a> for solar exergy<a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a>.</p>
+<hr>
+</section>
+<section id="the-food-web-is-not-just-a-trophic-ladder" class="level2">
+<h2 class="anchored" data-anchor-id="the-food-web-is-not-just-a-trophic-ladder">9. The food web is not just a trophic ladder</h2>
+<p>It is tempting to picture the system as a simple chain:</p>
+<pre class="text"><code>plants -&gt; herbivores -&gt; carnivores -&gt; megafauna</code></pre>
+<p>That picture is useful pedagogically, but it is incomplete. In many ecosystems, most energy does not travel upward through large animals. It passes through:</p>
+<pre class="text"><code>roots
+mycorrhizae
+wood
+leaf litter
+dissolved organic matter
+soil organic matter
+microbial biomass
+fungal networks
+sediments
+detrital food webs</code></pre>
+<p>These detrital<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a> and microbial pathways may dominate dwell time. A whale, shark, or large predator is a spectacular high-level structure, but a forest soil or mangrove sediment may be more important for the mean entropic dwell time of the system.</p>
+<p>The framework should therefore be graph-based<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a>, not ladder-based. Each node is a biological or biogeochemical pool; each edge is a flux; each node has a residence time and an assembly-index distribution.</p>
+<p>In graph language:</p>
+<pre class="text"><code>nodes:   biological pools or molecular compartments
+edges:   carbon/energy fluxes between pools
+exit:    respiration to CO2, H2O, and heat
+D:       mean first-passage time to exit
+A_bar:   mean assembly index along paths to exit</code></pre>
+<p>This graph formulation is especially useful for the biosphere because it can handle food webs, soils, sediments, dissolved organic matter, and microbial loops in one language.</p>
+<hr>
+</section>
+<section id="what-mass-spectrometry-would-measure" class="level2">
+<h2 class="anchored" data-anchor-id="what-mass-spectrometry-would-measure">10. What mass spectrometry would measure</h2>
+<p>The mass-spectrometry program should not try to assign one assembly index to an entire ecosystem. It should measure distributions.</p>
+<p>For each sampled compartment <code>i</code>, mass spectrometry can estimate a distribution:</p>
+<pre class="text"><code>P_i(a) = abundance distribution of molecular assembly indices</code></pre>
+<p>From that distribution one can compute:</p>
+<pre class="text"><code>a_i = mean assembly index of compartment i</code></pre>
+<p>or, more cautiously:</p>
+<pre class="text"><code>a_i = mean assembly index of the detectable molecular fraction of compartment i</code></pre>
+<p>The ecosystem-level quantity then requires flux weighting:</p>
+<pre class="text"><code>A_bar = sum_i f_i a_i</code></pre>
+<p>This requires ecology as well as chemistry. The mass spectrometer gives assembly distributions. Field measurements and ecosystem models give biomass, NPP, turnover times, respiration rates, grazing rates, litter fluxes, soil carbon residence times, and trophic transfer efficiencies<a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a>.</p>
+<p>The clean experimental design is:</p>
+<ol type="1">
+<li>Choose a well-characterized ecosystem with known carbon and energy budgets.</li>
+<li>Define compartments in the ecological flux model.</li>
+<li>Measure molecular assembly distributions in those compartments.</li>
+<li>Estimate residence times and flux fractions for the same compartments.</li>
+<li>Test whether <code>a_i</code> predicts <code>tau_i</code> at the pool level.</li>
+<li>Compute <code>A_bar</code>, <code>D</code>, and <code>F A_bar</code>.</li>
+</ol>
+<p>The decisive test is not whether every high-assembly molecule is long-lived. The decisive test is whether flux through high-assembly biological pools systematically increases the mean dwell time of NPP-derived free energy.</p>
+<hr>
+</section>
+<section id="what-would-count-as-evidence" class="level2">
+<h2 class="anchored" data-anchor-id="what-would-count-as-evidence">11. What would count as evidence</h2>
+<p>The framework makes several concrete predictions.</p>
+<section id="prediction-1-pool-level-assembly-tracks-residence-time" class="level3">
+<h3 class="anchored" data-anchor-id="prediction-1-pool-level-assembly-tracks-residence-time">Prediction 1: pool-level assembly tracks residence time</h3>
+<p>Across ecological compartments, the mean assembly index of biological matter should correlate with mean residence time after controlling for obvious confounders<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a> such as temperature, moisture, oxygen, mineral protection, and nutrient limitation.</p>
+<p>The expected relationship may be log-linear<a href="#fn31" class="footnote-ref" id="fnref31" role="doc-noteref"><sup>31</sup></a> rather than linear:</p>
+<pre class="text"><code>log(tau_i) = alpha + beta a_i + controls</code></pre>
+<p>or:</p>
+<pre class="text"><code>tau_i = k a_i^gamma</code></pre>
+<p>The exact scaling is empirical. The important claim is monotonic association at the pool level.</p>
+</section>
+<section id="prediction-2-high-biomass-productive-ecosystems-have-high-assembly-flux" class="level3">
+<h3 class="anchored" data-anchor-id="prediction-2-high-biomass-productive-ecosystems-have-high-assembly-flux">Prediction 2: high-biomass productive ecosystems have high assembly flux</h3>
+<p>Ecosystems such as tropical forests, mangroves, and peat-forming wetlands should have high <code>F A_bar</code> because they combine high NPP with long residence paths and chemically rich biological pools.</p>
+</section>
+<section id="prediction-3-fast-turnover-systems-can-have-high-npp-but-low-dwell-depth" class="level3">
+<h3 class="anchored" data-anchor-id="prediction-3-fast-turnover-systems-can-have-high-npp-but-low-dwell-depth">Prediction 3: fast-turnover systems can have high NPP but low dwell depth</h3>
+<p>Open-ocean microbial systems may process large fluxes while maintaining low standing biomass and short residence times. They should rank lower in <code>D</code> and often lower in <code>A_bar</code> than their NPP alone would suggest.</p>
+</section>
+<section id="prediction-4-restoration-can-increase-path-length-without-merely-raising-npp" class="level3">
+<h3 class="anchored" data-anchor-id="prediction-4-restoration-can-increase-path-length-without-merely-raising-npp">Prediction 4: restoration can increase path length without merely raising NPP</h3>
+<p>Restoring trophic structure, detrital retention, root biomass, soil carbon, or marine nutrient recycling may increase <code>D</code> and <code>A_bar</code> even when NPP changes only modestly. This is important because it distinguishes dissipative path assembly from simple productivity.</p>
+<hr>
+</section>
+</section>
+<section id="the-strongest-version-of-the-idea" class="level2">
+<h2 class="anchored" data-anchor-id="the-strongest-version-of-the-idea">12. The strongest version of the idea</h2>
+<p>The strongest version of the framework is not that life “maximizes complexity” in a vague sense. It is more specific:</p>
+<blockquote class="blockquote">
+<p>The biosphere dissipates solar free energy through a network of molecular structures whose construction depth is measurable. The mean dwell time of NPP-derived free energy in that network is coupled to the flux-weighted assembly index of the matter through which the flux passes. Productive high-biomass ecosystems are therefore high-power, long-dwell, high-assembly dissipative pathways.</p>
+</blockquote>
+<p>This gives a physical interpretation to ecosystem complexity:</p>
+<pre class="text"><code>complexity is not just diversity
+complexity is not just biomass
+complexity is not just NPP
+complexity is not just molecular size
+
+complexity is solar-derived flux routed through copied, historically
+constructed molecular structures for finite residence times</code></pre>
+<p>The key quantities are:</p>
+<pre class="text"><code>F       NPP power
+D       mean entropic dwell time
+A_bar   flux-weighted mean assembly index
+F A_bar assembly flux
+F D     dwell-weighted dissipative power</code></pre>
+<p>If <code>A_bar</code> and <code>D</code> are empirically coupled, then assembly theory supplies a chemical and historical basis for an ecological thermodynamic quantity. It turns “the biosphere as a dissipative structure” from a metaphor into a measurable program.</p>
+<hr>
+</section>
+<section id="why-this-is-useful-for-talking-about-the-biosphere" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-is-useful-for-talking-about-the-biosphere">13. Why this is useful for talking about the biosphere</h2>
+<p>This framework is useful because it separates three things that are often blurred together.</p>
+<p>First, it separates <strong>power</strong> from <strong>storage</strong>. NPP is a flow. Biomass is a stock. Their ratio is a residence time.</p>
+<p>Second, it separates <strong>residence time</strong> from <strong>chemical construction depth</strong>. Long-lived carbon is not automatically high-assembly, and high-assembly matter is not automatically long-lived. The relationship has to be tested.</p>
+<p>Third, it separates <strong>entropy production rate</strong> from <strong>dissipative pathway structure</strong>. Entropy production tells us that gradients are degraded. Dwell time and assembly index tell us how the degradation is internally organized.</p>
+<p>This matters for comparing ecosystems. A hectare of ocean, grassland, forest, mangrove, peatland, cropland, and desert can be compared in at least four dimensions:</p>
+<pre class="text"><code>NPP power                  how much free energy is captured per time
+standing biomass           how much biological stock is maintained
+entropic dwell time         how long captured energy remains organized
+flux-weighted assembly      how deeply constructed the flux pathways are</code></pre>
+<p>The framework also gives restoration ecology a thermodynamic language. Restoration is not merely the recovery of biomass or species counts. It can be described as the reconstruction of long-dwell, high-assembly dissipative pathways.</p>
+<hr>
+</section>
+<section id="minimal-mathematical-summary" class="level2">
+<h2 class="anchored" data-anchor-id="minimal-mathematical-summary">14. Minimal mathematical summary</h2>
+<p>Let an ecosystem receive NPP power <code>F</code>. Divide the biological flow network into compartments <code>i</code>.</p>
+<p>Flux fractions:</p>
+<pre class="text"><code>sum_i f_i &lt;= 1</code></pre>
+<p>The inequality allows for rapid respiration, unmeasured losses, export, or pathways outside the chosen compartment set.</p>
+<p>Mean entropic dwell time:</p>
+<pre class="text"><code>D = sum_i f_i tau_i</code></pre>
+<p>Flux-weighted mean assembly index:</p>
+<pre class="text"><code>A_bar = sum_i f_i a_i</code></pre>
+<p>Assembly flux:</p>
+<pre class="text"><code>Phi_A = F A_bar</code></pre>
+<p>Dwell-weighted dissipative power:</p>
+<pre class="text"><code>Phi_D = F D</code></pre>
+<p>Empirical bridge hypothesis:</p>
+<pre class="text"><code>tau_i = g(a_i, environment, ecology)</code></pre>
+<p>with:</p>
+<pre class="text"><code>partial tau_i / partial a_i &gt; 0</code></pre>
+<p>at the level of biological pools, after accounting for environmental and ecological controls.</p>
+<p>If this bridge holds approximately, then:</p>
+<pre class="text"><code>A_bar tracks D
+Phi_A tracks Phi_D</code></pre>
+<p>and assembly theory becomes a way of measuring the internal path structure of biospheric entropy production.</p>
+<hr>
+</section>
+<section id="main-caveats" class="level2">
+<h2 class="anchored" data-anchor-id="main-caveats">15. Main caveats</h2>
+<p>Several caveats are not peripheral; they are part of the framework.</p>
+<p>First, individual molecules are the wrong level for the residence-time claim. The claim should be tested on flux-weighted pools. ATP and mRNA are high-assembly but short-lived because biology uses them as fast control and currency molecules.</p>
+<p>Second, trophic level is not a reliable proxy for assembly depth. Plants, fungi, soils, sediments, and detrital pools can contain chemically rich and long-lived matter. The graph matters more than the ladder.</p>
+<p>Third, high residence time can arise from environmental protection rather than intrinsic molecular assembly. Cold, dry, anoxic, acidic, or mineral-protected conditions can slow decomposition. These controls must be included rather than ignored.</p>
+<p>Fourth, copy number matters. Assembly theory interprets high assembly index differently when many copies exist. Ecosystem-scale measurements should therefore combine assembly index with abundance, biomass, and flux.</p>
+<p>Fifth, the NPP-derived subsystem is only one part of planetary entropy production. The atmosphere, ocean circulation, hydrological cycle, and surface radiation field dissipate vastly more power than biological NPP. The claim here is about the structured biological channel inside the larger Earth-system energy budget.</p>
+<hr>
+</section>
+<section id="suggested-discussion-framing" class="level2">
+<h2 class="anchored" data-anchor-id="suggested-discussion-framing">16. Suggested discussion framing</h2>
+<p>For a physics audience, the cleanest framing is:</p>
+<ol type="1">
+<li>Start with the Earth as a nonequilibrium radiative system.</li>
+<li>Identify NPP as the biological free-energy input.</li>
+<li>Treat the ecosystem as a dissipative network with residence times.</li>
+<li>Define entropic dwell time <code>D</code> as a flux-weighted mean first-passage time to respiration.</li>
+<li>Introduce assembly index as a measurable construction-depth statistic for molecules.</li>
+<li>Define <code>A_bar</code> as the assembly index experienced by NPP-derived flux.</li>
+<li>State the empirical bridge: high-assembly biological pools tend to extend dwell time.</li>
+<li>Test the bridge with paired mass-spectrometry and ecosystem-flux measurements.</li>
+</ol>
+<p>The shortest version is:</p>
+<blockquote class="blockquote">
+<p>NPP is solar free energy entering biological matter. Ecosystems differ in how long that free energy dwells before respiration and in how deeply assembled the molecular structures are along the way. Dissipative path assembly proposes that these two quantities are coupled and jointly measurable.</p>
+</blockquote>
+<hr>
+</section>
+<section id="key-references" class="level2">
+<h2 class="anchored" data-anchor-id="key-references">17. Key references</h2>
+<p>The starting reference set is the same as in <code>framework_note.md</code>:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Topic</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Assembly theory</td>
+<td>Sharma, Walker, Cronin et al.&nbsp;(2023), <em>Nature</em> 622:322</td>
+</tr>
+<tr class="even">
+<td>Empirical molecular assembly by MS</td>
+<td>Marshall et al.&nbsp;(2021), <em>Nature Communications</em> 12:3033</td>
+</tr>
+<tr class="odd">
+<td>Biosphere biomass census</td>
+<td>Bar-On, Phillips &amp; Milo (2018), <em>PNAS</em> 115:6506</td>
+</tr>
+<tr class="even">
+<td>Anthropogenic mass</td>
+<td>Elhacham et al.&nbsp;(2020), <em>Nature</em> 588:442</td>
+</tr>
+<tr class="odd">
+<td>Life as gradient dissipation</td>
+<td>Schneider &amp; Kay (1994)</td>
+</tr>
+<tr class="even">
+<td>Earth-system free energy and MEP</td>
+<td>Kleidon (2012)</td>
+</tr>
+<tr class="odd">
+<td>Energy rate density and complexity</td>
+<td>Chaisson (2010)</td>
+</tr>
+<tr class="even">
+<td>Global NPP</td>
+<td>Field et al.&nbsp;(1998)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>A dissipative structure is a thermodynamic concept from Ilya Prigogine (Nobel 1977). It is any organised, far-from-equilibrium pattern that can only be maintained by a continuous throughput of energy — consuming it and expelling entropy to the surroundings. Classic examples: a candle flame, a hurricane, a living cell. The key point is that the structure <em>exists because</em> energy flows through it, not despite that flow. Prigogine showed that far from equilibrium, matter can self-organise into ordered states, making dissipative structures the physical foundation for understanding life.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>A gradient here means a difference in a physical quantity across space — here, the Sun’s surface (~5,500 °C) versus the Earth’s (~15 °C average surface, ~-18 °C effective radiating temperature). Because the Sun is so much hotter, the photons it emits carry far more free energy per joule than the infrared photons Earth radiates back. The “solar gradient” is that disparity: the Earth-Sun system is perpetually out of equilibrium, and that imbalance is the ultimate power source for everything the biosphere does.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>The electromagnetic spectrum splits here by wavelength. Sunlight arrives mostly as visible light and near-infrared (roughly 0.3–3 µm wavelength) — called “shortwave” because the Sun’s ~5,500 °C surface emits peak radiation there (Wien’s law). Earth, much cooler, re-emits radiation in the thermal infrared (roughly 4–100 µm) — called “longwave.” The distinction matters because shortwave photons are energetic enough to drive photochemistry (photosynthesis), while longwave photons are not.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>To be “thermalized” is to have energy converted into disordered thermal motion — heat — that cannot be recaptured for useful work. When sunlight warms a rock or heats the atmosphere, its ordered, directional photon energy becomes the random jostling of molecules. The rock later emits longwave radiation, but the <em>quality</em> (free energy content per joule) has dropped dramatically. Thermalization is entropy production.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Free energy (here, Gibbs free energy <span class="math inline">\(G\)</span>) is the portion of a system’s total energy that can be converted into work under constant temperature and pressure conditions. The rest is locked up as disordered heat. When a bond is formed or broken in a molecule, the sign of <span class="math inline">\(\Delta G\)</span> tells you whether the reaction releases usable energy (<span class="math inline">\(\Delta G &lt; 0\)</span>, spontaneous) or requires an energy input (<span class="math inline">\(\Delta G &gt; 0\)</span>). Photosynthesis uses light to drive an energetically uphill reaction — it uses solar free energy to create chemical free energy stored in sugars.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>In chemistry, “reduction” means gaining electrons (or equivalently, gaining hydrogen atoms, since H carries one electron). Carbon in CO₂ is in its most oxidised state (carbon has lost as many electrons as it can). Photosynthesis <em>reduces</em> that carbon — stuffs electrons back into it — to make sugars and other organic compounds. These reduced carbon compounds carry chemical free energy because oxidising them back (burning glucose, aerobic respiration) releases that stored energy. The biosphere is essentially a slow-burning fire, with the “fuel” replenished by sunlight.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Net primary production is the rate at which plants, algae, and other photosynthesisers accumulate new biomass, after subtracting the carbon they consume in their own respiration. Gross primary production (GPP) is the total amount fixed by photosynthesis; plants use roughly half of that themselves, leaving NPP as the net addition to the biological carbon pool available to everything else. Global terrestrial NPP is roughly 50–60 Pg (petagrams) of carbon per year; marine NPP adds a similar amount.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>In ecosystem modelling, a compartment (or “pool”) is a conceptually bounded category of biological or chemical material — “living plant biomass,” “soil organic matter,” “dissolved organic nitrogen” — treated as if it were a single well-mixed reservoir for the purposes of tracking flows. Carbon and energy flows are tracked as transfers between compartments. The choice of compartment boundaries is a modelling decision, not a fact about nature, and matters enormously for what the model can and cannot see.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>Mean first-passage time is a concept from the mathematics of random walks and stochastic processes. If you have a particle bouncing around a network, the first-passage time is how long it takes before it first reaches a designated “exit” state. The <em>mean</em> first-passage time averages this over many realisations of the random walk. Here the “particle” is a unit of free energy, the “network” is the ecosystem’s compartment graph, and the “exit” is respiration back to CO₂ and heat. Using first-passage time rather than, say, average sojourn time is precise: we want the expected total duration from photosynthetic capture to final dissipation.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>From the Latin <em>rete</em>, net. Reticulated means arranged like a net or web, with many interconnected loops rather than a simple linear chain. A reticulated network has high connectivity — many alternative paths between any two nodes. In ecosystem terms, a food web with many cross-links, detrital loops, and microbial recycling pathways is more reticulated than a simple linear food chain.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>Assembly theory is a framework developed by Lee Cronin, Sara Walker, and colleagues (formalized in <em>Nature</em> 2023) for quantifying how much “history” is encoded in an object’s structure. The core idea: the assembly index of an object is the minimum number of recursive joining steps needed to build it from elementary units, reusing intermediate subassemblies. A molecule with assembly index 15 cannot be assembled by accident in fewer than 15 steps; finding it at high abundance implies a process that repeatedly executes those steps — i.e., a process with memory, like biology or deliberate manufacture. The theory bridges chemistry, information theory, and evolution.<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p>A joining operation in assembly theory is simply the bonding of two previously existing fragments to make a larger one. For molecules, this corresponds to forming a covalent bond between subunits. Crucially, the framework allows previously built substructures to be <em>reused</em> as building blocks: making two copies of a subunit and then joining them counts as fewer steps than building the whole from scratch twice. This recursion is what makes the assembly index sensitive to hierarchical complexity rather than just raw size or molecular weight.<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn13"><p>Copy number is simply how many identical copies of a given molecule (or other object) are present in a sample. For assembly theory, copy number is conceptually essential: a single complicated molecule could plausibly arise by chance. Observing <span class="math inline">\(10^{10}\)</span> identical copies of a molecule with high assembly index is strong evidence that some <em>process</em> repeatedly produces that exact structure — which, in biology, means evolved metabolic machinery. Low assembly molecules can accumulate by simple chemistry; high assembly molecules at high copy number require biology (or designed manufacture).<a href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn14"><p>Mass spectrometry fragments molecules and measures the mass-to-charge ratio of the resulting pieces. For assembly-index estimation, the key measurement is the set of fragment masses: how many distinct subcomponents does the molecule break into, and how large are they? The Marshall et al.&nbsp;(2021) paper showed that molecules from biological sources systematically score higher on this metric than abiotic controls, validating the method as a life-detection strategy. The technique cannot give the exact assembly index of every molecule, but can provide the distribution of assembly indices across the detectable molecular fraction of a sample.<a href="#fnref14" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn15"><p>A flux-weighted average weights each compartment’s contribution by the fraction of total energy flow passing through it, not by how much matter it contains or how large it is. Compare: the biomass-weighted average would be dominated by whichever pool holds the most carbon (often soil organic matter or wood). The flux-weighted average is dominated by whichever pool <em>processes the most NPP-derived energy per unit time</em>. These can be very different: a small but fast-cycling microbial pool might carry most of the flux while holding little biomass.<a href="#fnref15" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn16"><p>Adenosine triphosphate — the universal energy currency of living cells. ATP is generated by breaking down food or by photosynthesis, and spent to drive nearly every energy-requiring process in biology: protein synthesis, ion pumping, movement, DNA replication. Despite being chemically complex (a nucleotide with a triphosphate tail; assembly index ~12–15), ATP turns over extremely fast — a resting human cycles through their body weight in ATP roughly every day, and an exercising cell can regenerate ATP hundreds of times per second. It is high-assembly but deliberately short-lived.<a href="#fnref16" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn17"><p>Messenger RNA is the transient transcript of a gene — the molecular “working copy” that carries the genetic instruction from DNA to the ribosome for protein synthesis. mRNA molecules are typically degraded within minutes to hours after synthesis; this brief lifetime is a feature, not a bug, since it allows cells to rapidly adjust which proteins they make in response to changing conditions. mRNA is chemically complex (a polymer of nucleotides with specific sequence), so it has a nontrivial assembly index, but it is among the shortest-lived high-assembly molecules in the cell.<a href="#fnref17" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn18"><p>At the pool (or compartment) level rather than the molecular level means: rather than asking whether <em>this ATP molecule</em> lives longer than <em>this glucose molecule</em>, we ask whether <em>the ATP pool as a whole</em> (all ATP molecules in the system, with their average residence times) differs systematically in dwell time from <em>the soil organic matter pool as a whole</em>. The pool-level claim is robust to the fact that individual molecules of the same type vary in their fates; it only requires that the average over many molecules in a given ecosystem compartment follows a pattern.<a href="#fnref18" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn19"><p>Dimensional analysis is the practice of checking or deriving relationships between quantities by tracking their units. Here: biomass <span class="math inline">\(B\)</span> has units of [carbon mass / area]; NPP has units of [carbon mass / area / time]. Their ratio <span class="math inline">\(B/\text{NPP}\)</span> has units of [time] — specifically, the time it would take the NPP flux to accumulate the current standing stock, if nothing was lost. This is the mean residence time, or turnover time, of carbon in the system. No physics is assumed — it falls out of the units alone.<a href="#fnref19" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn20"><p>Mangroves are salt-tolerant trees and shrubs that grow in tropical and subtropical coastal intertidal zones. They are among the most carbon-dense ecosystems on Earth: their root systems trap sediment and accumulate organic matter, and their soils (often called “blue carbon” stores) can hold centuries of accumulated carbon. They also support highly productive and diverse food webs in their root networks. Mangroves are therefore high on both axes that matter here: high NPP and very long carbon residence times.<a href="#fnref20" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn21"><p>Peatlands (bogs, fens, moors) are wetland ecosystems where dead organic matter accumulates faster than it decomposes. Cold, waterlogged, and often acidic conditions suppress microbial decomposition, allowing partially decomposed plant material (peat) to build up over thousands of years. Peatlands cover only about 3% of Earth’s land area but store roughly 25–30% of all soil carbon — a massive, long-dwell carbon reservoir. Draining or burning peatlands releases this ancient carbon rapidly.<a href="#fnref21" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn22"><p>“Areal” simply means per unit area — per square metre or per hectare. Open ocean has lower NPP per square metre than most land ecosystems, but because it covers 70% of Earth’s surface, its total global NPP is comparable to terrestrial NPP. Distinguishing areal (local) productivity from total (global) productivity is important: a system can be globally significant while being locally sparse.<a href="#fnref22" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn23"><p>Maximum entropy production is a proposed non-equilibrium thermodynamic principle: that open, driven systems tend to evolve towards states that dissipate their driving gradients as fast as their internal constraints allow. In Earth-system science, Kleidon and others have argued that climate, hydrology, and life can all be understood partly through MEP. The principle is controversial — it is not a law with a rigorous derivation from first principles (unlike the second law of thermodynamics), but it has predictive power in several systems. The framework here deliberately does not depend on MEP being a strict law; it uses MEP as context while making its own, more conservative claims.<a href="#fnref23" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn24"><p>A nonequilibrium system is one that is not in thermodynamic equilibrium — it has ongoing flows of energy or matter through it, and gradients (of temperature, concentration, pressure, chemical potential) that have not been flattened by dissipation. The Earth-biosphere system is quintessentially nonequilibrium: sunlight constantly drives it away from the equilibrium state it would reach in the dark (a cold, oxidised, lifeless rock). Equilibrium thermodynamics (the familiar entropy-maximisation picture) applies to closed systems tending toward rest; nonequilibrium thermodynamics is needed to describe systems like ecosystems, where structure is maintained by throughput.<a href="#fnref24" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn25"><p>A delay line is an electrical engineering term for a circuit element that transmits a signal with a time lag — it holds the signal in transit rather than passing it through instantly. The metaphor here is precise: the forest does not destroy solar exergy immediately upon capture, it routes it through a series of biological structures that hold it for years to centuries before the energy finally exits as heat. The forest is, in this sense, a very slow, very complex delay line for the solar energy signal.<a href="#fnref25" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn26"><p>Exergy is the maximum useful work that can be extracted from a system as it comes to equilibrium with its surroundings. It is sometimes called “available work” or “work potential.” Unlike energy (which is conserved), exergy is destroyed by irreversible processes — it is the quantity that entropy production consumes. A photon from the sun carries a lot of exergy because it is far from equilibrium with the cool Earth environment; a longwave infrared photon emitted by the Earth carries much less exergy. Biological processes spend exergy to build and maintain structure.<a href="#fnref26" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn27"><p>Detritus (from Latin <em>deterere</em>, to wear away) is dead organic material: fallen leaves, dead wood, animal carcasses, faeces, shed skin, root exudates, dead microbial cells. The detrital food web (or decomposer food web) is the network of organisms that feed on this dead matter — bacteria, fungi, mites, springtails, earthworms, beetles, and many others. In most ecosystems, the detrital pathway carries more energy than the “grazing” pathway through herbivores and carnivores: the majority of NPP dies without being eaten alive.<a href="#fnref27" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn28"><p>A graph in mathematics is a set of nodes (vertices) connected by edges. The food-web-as-graph perspective treats each biological pool as a node and each energy or carbon flow as a directed edge. Graph theory provides tools for analysing path lengths, loop structures, connectivity, and flow distributions that are not available when thinking of ecosystems as simple ladders or chains. The mean first-passage time <code>D</code> is a graph-theoretic quantity: it averages over all paths through the network from photosynthetic entry to respiratory exit.<a href="#fnref28" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn29"><p>Trophic transfer efficiency is the fraction of energy (or carbon) at one trophic level that is successfully incorporated into the next level up. Classic ecological estimates put it around 10% per trophic step — a rough rule that means large predators are rare, because so little of the original primary production makes it that far up the chain. Most NPP is respired by the organisms that consume it directly, excreted, or passed into the detrital pool. The 10% figure varies substantially across ecosystems and trophic links.<a href="#fnref29" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn30"><p>A confounder (in statistics and experimental design) is a variable that correlates with both the predictor and the outcome you’re trying to study, creating a spurious apparent relationship. Here: if cold temperature both slows decomposition (increasing residence time) and happens to correlate with ecosystems that have high-assembly biological molecules, then temperature would confound the assembly–residence relationship. The prediction is only interesting if assembly index predicts residence time <em>over and above</em> what temperature, moisture, oxygen, and other environmental controls already explain.<a href="#fnref30" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn31"><p>A log-linear relationship between two variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> means that <span class="math inline">\(\log(y)\)</span> is a linear function of <span class="math inline">\(x\)</span> — equivalently, that <span class="math inline">\(y = e^{a + bx}\)</span>, so equal increments in <span class="math inline">\(x\)</span> produce equal <em>multiplicative</em> changes in <span class="math inline">\(y\)</span>. Many natural processes are log-linear (or power-law) rather than linear: residence times in ecosystems span orders of magnitude (seconds for ATP, years for wood, millennia for peat), so a linear relationship with assembly index would be implausible across that full range. A log-linear model makes a more modest claim: each unit increase in assembly index multiplies the residence time by a constant factor.<a href="#fnref31" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><a href="..">This website</a> by Fergus Fettes is marked as <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/FergusFettes">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
