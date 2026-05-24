@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2021-02-06">
+<meta name="dcterms.date" content="2026-05-05">
 
-<title>Paint in VR – Fergus Fettes</title>
+<title>Dissipative Dwell Time – Fergus Fettes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -151,15 +117,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
-  <li><a href="#copying-code" id="toc-copying-code" class="nav-link" data-scroll-target="#copying-code">Copying Code</a></li>
-  <li><a href="#debugging" id="toc-debugging" class="nav-link" data-scroll-target="#debugging">Debugging</a></li>
-  <li><a href="#progress" id="toc-progress" class="nav-link" data-scroll-target="#progress">Progress</a></li>
-  <li><a href="#archaeology" id="toc-archaeology" class="nav-link" data-scroll-target="#archaeology">Archaeology</a></li>
-  <li><a href="#frustration" id="toc-frustration" class="nav-link" data-scroll-target="#frustration">Frustration</a></li>
-  <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">Features</a></li>
-  <li><a href="#further-investigations" id="toc-further-investigations" class="nav-link" data-scroll-target="#further-investigations">Further Investigations</a></li>
+  <li><a href="#dissipative-dwell-time" id="toc-dissipative-dwell-time" class="nav-link active" data-scroll-target="#dissipative-dwell-time">Dissipative Dwell Time</a>
+  <ul class="collapse">
+  <li><a href="#the-basic-idea" id="toc-the-basic-idea" class="nav-link" data-scroll-target="#the-basic-idea">1. The Basic Idea</a></li>
+  <li><a href="#the-thermodynamic-balance" id="toc-the-thermodynamic-balance" class="nav-link" data-scroll-target="#the-thermodynamic-balance">2. The Thermodynamic Balance</a></li>
+  <li><a href="#energy-rate-density" id="toc-energy-rate-density" class="nav-link" data-scroll-target="#energy-rate-density">3. Energy-Rate Density</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -168,7 +131,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Paint in VR</h1>
+<h1 class="title">Dissipative Dwell Time</h1>
 </div>
 
 
@@ -179,11 +142,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 6, 2021</p>
+      <p class="date">May 5, 2026</p>
     </div>
   </div>
   
   
+    <div class="quarto-title-meta-ai">
+    <div class="quarto-title-meta-heading">
+      <a class="ai-use-heading-link" href="../ai-use.html" title="What the AI Use scale means">AI Use</a>
+    </div>
+    <div class="quarto-title-meta-contents">
+      <p>
+        <a class="ai-use" href="../ai-use.html" title="What the AI Use scale means">9/10</a>
+      </p>
+          </div>
+  </div>
     
   </div>
   
@@ -192,118 +165,75 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>I bought myself a VR headset. My justification was some trailers for ‘Infinite Office’, and my love of portability– if it is true that you can have 5x screens from one laptop strapped to your head, then it’s really a gamechanger in terms of portability.</p>
-<p>As it happens, I enjoy the office space (though there are still many kinks to be worked out, naturally– for instance it doesn’t support multiple screens yet on Linux), but I am not going to talk about Oculus for work right now.</p>
-<p>The second thing that I bought it for, was to encourage myself to get back into JavaScript development. I consider JavasScript development to be quite unpleasant, I don’t like the tools or the workflows, but it is what so much of our life is built on, so I want to continue learning more until I am at least at a sort of journeyman-competency.</p>
-<p>So here is my journey to making a small app in JavaScript-VR.</p>
+<section id="dissipative-dwell-time" class="level1">
+<h1>Dissipative Dwell Time</h1>
+<section id="the-basic-idea" class="level2">
+<h2 class="anchored" data-anchor-id="the-basic-idea">1. The Basic Idea</h2>
+<p>Complexity is not just how much energy a system uses. It is also how long the captured gradient remains organized before it is finally dissipated.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Call this <strong>dissipative dwell time</strong>:</p>
+<blockquote class="blockquote">
+<p>the mean time that captured disequilibrium remains organized inside a system before it is degraded into heat, waste, radiation, and more dispersed matter.</p>
+</blockquote>
+<p>A photon can warm a rock and be re-emitted almost immediately. Or it can be captured by photosynthesis, routed through sugar, wood, fungi, soil, animals, fire, decay, and respiration before its energy finally leaves as longwave infrared radiation.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>Both paths obey thermodynamics. Both produce entropy. The difference is that one path is shallow and fast, while the other is long, reticulated, and historically constructed.</p>
+<p>This essay is about that difference.</p>
+<p>The conjecture is simple:</p>
+<blockquote class="blockquote">
+<p>The forms of complexity we care about are not merely high-energy systems. They are dissipative systems in which captured gradients dwell long enough to build, maintain, and route through organized structure.</p>
+</blockquote>
+<p>This is true most clearly in the biosphere. A forest does not defeat entropy production. It delays and structures it. Some fraction of incoming sunlight is held for minutes in metabolites, months in leaves and roots, decades in wood, centuries in soil, and sometimes millennia in peat or sediment.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p>The same idea may also help describe the technosphere and society. A machine, a building, a city, a book, a protocol, a law, or a scientific tradition can be understood as a structure that captures past work and continues to shape future flows.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>Dissipative dwell time is therefore not just a measure of storage. It is a measure of organized delay: how long a gradient remains causally active before it disappears into the thermal background.</p>
 </section>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
-<p>First I went over my old JS experinements/work, refactoring a little and refamiliarising myself with the concepts. I ran some of my old 3D geometry monstrosities, and signed up as an oculus developer.</p>
-<p>The first hurdle I hit was serving my creations to the headset. WebXR only works over https. But there are built-in execptions for localhost, so I had to get the Oculus to think it was at my localhost– sounds like a job for port forwarding.</p>
-<p>I started with the oculus <a href="https://developer.oculus.com/documentation/oculus-browser/browser-remote-debugging/">chrome debugging</a> guide. I find myself using something called ‘adb’– I assume this is the android debugger. This is exciting! I’m now an adroid developer apparently.</p>
-<pre><code>$ adb devices
-List of devices attached
-1WMHH83CNH0522  device</code></pre>
-<p>I found the IP of the machine and tried to ssh in:</p>
-<pre><code>$ adb shell ip route
-192.168.1.0/24 dev wlan0 proto kernel scope link src 192.168.1.185
-$ ssh -fNR 1234:localhost:1234 192.168.1.185</code></pre>
-<p>but to no avail. A moment or two googling later I found the command:</p>
-<pre><code>$ adb reverse tcp:1234 tcp:1234</code></pre>
-<p>and we’re away! I can now open locally hosted sites on my Oculus! And I imagine I have also learned some stuff that will be useful for using my phone as a webcam or other such tricks, very excellent.</p>
+<section id="the-thermodynamic-balance" class="level2">
+<h2 class="anchored" data-anchor-id="the-thermodynamic-balance">2. The Thermodynamic Balance</h2>
+<p>The Earth is driven by a simple boundary condition. Low-entropy shortwave radiation arrives from the hot Sun. Higher-entropy longwave radiation leaves from the cooler Earth.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<p>At the planetary boundary, this is a photon balance:</p>
+<pre class="text"><code>shortwave photons in -&gt; longwave photons out</code></pre>
+<p>Inside the boundary, it is a pathway problem. The question is not whether entropy is produced. It must be. The question is where, when, and through what structures entropy is produced.</p>
+<p>Most absorbed sunlight is thermalized quickly by the atmosphere, ocean, clouds, and land surface. A smaller fraction is captured by photosynthesis and converted into chemical disequilibrium: reduced carbon, oxygen, biomass, and the living machinery that keeps rebuilding them.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<p>That disequilibrium is temporary. Respiration, decay, fire, fermentation, weathering, turbulence, friction, and heat flow all degrade gradients. The final account is still longwave radiation leaving the Earth system. Life changes the route by which the account is settled.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+<p>This essay uses <strong>entropy production</strong> as the primary language.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> The same process can also be described with <strong>exergy</strong> or <strong>free energy</strong>. Exergy is available work: the part of a gradient that can still do something. Free energy, in chemistry, is the useful energy available to drive reactions under specified conditions.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<p>These vocabularies are interconvertible in spirit, but they point attention in different directions. Entropy production emphasizes the irreversible degradation of gradients. Exergy emphasizes the destruction of available work. Gibbs free energy emphasizes the chemical accounting inside reactions.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p>
+<p>In ordinary speech we often say “energy” when we mean this more specific thing. Energy is conserved. What matters for life, technology, and society is not energy in the abstract, but usable disequilibrium: gradients that can still be spent.</p>
+<p>Dissipative dwell time asks how long that spendable disequilibrium remains in organized form.</p>
 </section>
-<section id="copying-code" class="level2">
-<h2 class="anchored" data-anchor-id="copying-code">Copying Code</h2>
-<p>I first try running some of the <a href="https://threejs.org/docs/#manual/en/introduction/How-to-create-VR-content">ThreeJS examples</a> locally, then I pick <a href="https://threejs.org/examples/#webxr_vr_paint">the one I want</a>, refactor it (I hate HTTP and JS in one document, and I tend to backup all the ThreeJS files I am using in my own src file to avoid too much dependency hell when building), and commit it to my new <a href="https://github.com/FergusFettes/javascript-playground">javascript playground</a>.</p>
-<p>Fortunately, their demo is very limited in scope. This is fortunate because I gives me something to do! It only uses two triggers for everything– you can paint, and resize your tool. I will add some buttons. To learn the correct names for the events, I’m copying <a href="https://immersive-web.github.io/webxr-samples/controller-state.html">this example</a> from the lovely list of WebXR Samples. In fact I’ve cloned the whole repo so I can read through it.</p>
-</section>
-<section id="debugging" class="level2">
-<h2 class="anchored" data-anchor-id="debugging">Debugging</h2>
-<p>Reading through lots of WebXR and ThreeJS libraries, I’m still not sure how to mesh them together– specifically I can’t figure out what the button-press events are called. So I’m going back to the <a href="https://developer.oculus.com/documentation/oculus-browser/browser-remote-debugging/">debug</a> guide to actually catch the events as they are happening.</p>
-<p>So now I have chrome on my laptop debugging the session in the Oculus. Snazzy.</p>
-<p>I try the Event Listener Breakpoints but no dice. Maybe its too new of a feature? Anyway I stick a breakpoint in the render loop and try to trigger it– my headset only functions when you are wearing it, so I have to have one eye in the headset and one the debugger, but eventually I manager to capture an event. I’ll eventually try to find a way to leave the headset running when I’m not wearing it.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>controller1<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'selectstart'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {<span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'hello'</span>)})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>From that captured event I get a nice log dump of all the features–</p>
-<pre><code>...
-gamepad: Gamepad {id: "", index: -1, connected: true, timestamp: 734840.0999999994, mapping: "xr-standard", …}
-gripSpace: XRSpace {}
-handedness: "right"
-profiles: (4) ["oculus-touch-v3", "oculus-touch-v2", "oculus-touch", "generic-trigger-squeeze-thumbstick"]
-targetRayMode: "tracked-pointer"
-...</code></pre>
-<p>So that is something to work with!</p>
-</section>
-<section id="progress" class="level2">
-<h2 class="anchored" data-anchor-id="progress">Progress</h2>
-<p>Before tryig to integrate any of the fancy stuff from the WebXR example page (fancy just meaning ‘basic graphics’, but they write all the vertices themselves so it looks a lot more than some simple ThreeJS stuff), I decided to make a quick sanity check so I can really set stuff up to work nicely. So here I am just dumping all the events from the gamepads into the console:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">render</span>() {</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  session <span class="op">=</span> renderer<span class="op">.</span><span class="at">xr</span><span class="op">.</span><span class="fu">getSession</span>()<span class="op">;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (session) {</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> source <span class="kw">of</span> session<span class="op">.</span><span class="at">inputSources</span>) {</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (source<span class="op">.</span><span class="at">gamepad</span>) {</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ProcessGamepad</span>(source<span class="op">.</span><span class="at">gamepad</span><span class="op">,</span> source<span class="op">.</span><span class="at">handedness</span>)<span class="op">;</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">handleController</span>( controller1 )<span class="op">;</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">handleController</span>( controller2 )<span class="op">;</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  renderer<span class="op">.</span><span class="fu">render</span>( scene<span class="op">,</span> camera )<span class="op">;</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">ProcessGamepad</span>(gamepad<span class="op">,</span> hand<span class="op">,</span> pose) {</span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(hand)</span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">update_state</span>(gamepad)</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">update_state</span> (gamepad) {</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> gamepad<span class="op">.</span><span class="at">buttons</span><span class="op">.</span><span class="at">length</span><span class="op">;</span> <span class="op">++</span>i) {</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (gamepad<span class="op">.</span><span class="at">buttons</span>[i]<span class="op">.</span><span class="at">pressed</span>){</span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'button pressed: '</span> <span class="op">+</span> i <span class="op">+</span> <span class="st">', value: '</span> <span class="op">+</span> gamepad<span class="op">.</span><span class="at">buttons</span>[i]<span class="op">.</span><span class="at">value</span> <span class="op">+</span> <span class="st">', touched: '</span> <span class="op">+</span> gamepad<span class="op">.</span><span class="at">buttons</span>[i]<span class="op">.</span><span class="at">touched</span>)</span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> j <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> gamepad<span class="op">.</span><span class="at">axes</span><span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">+=</span><span class="dv">2</span><span class="op">,</span> <span class="op">++</span>j) {</span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(gamepad<span class="op">.</span><span class="at">axes</span>[i]<span class="op">,</span> i <span class="op">+</span> <span class="dv">1</span> <span class="op">&lt;</span> gamepad<span class="op">.</span><span class="at">axes</span><span class="op">.</span><span class="at">length</span> <span class="op">?</span> gamepad<span class="op">.</span><span class="at">axes</span>[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">:</span> <span class="dv">0</span>)<span class="op">;</span></span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>I start it up and it works! My Oculus controller has buttons 0, 1, 4 and 5, and 3 is the joystick click. I assume 2 is reseved for the oculus button on the right controller, though maybe I can use it on the left one. It also has sensitive axes on buttons 0 and 1, and the joystick. Plus position information! A veritable wealth of possibilities.</p>
-<p>I’ll continue with this tomorrow.</p>
-</section>
-<section id="archaeology" class="level2">
-<h2 class="anchored" data-anchor-id="archaeology">Archaeology</h2>
-<p>I spent an age trying to add colors to the TubePainter module. I got very confused by it because I couldn’t believe that they hadn’t added the functionality to change the color, but I guess the project is really a stub.</p>
-<p>In fact the more I look into VR development the puzzles I am spotting. I looks like there was a major boom in VR about five years ago, most of the libraries I’m working with were started back then. But then they seem to have somewhat petered out. Maybe we are currently in a little VR-winter, as the initial hype overshot all reality. Maybe we are heading into a thaw now. Lets see.</p>
-<p>Furthermore, notes after a day or two of regular Oculus useage– it definitely takes a toll on the eyes. Everything has a somewhat hallucinagenic quality when you come out of it, like an acid comedown. I’m not sure if this effect will diminish or grow with continued usage. I can see it being very problematic for people who suffer from <a href="https://en.wikipedia.org/wiki/Hallucinogen_persisting_perception_disorder#:~:text=Hallucinogen%20persisting%20perception%20disorder%20(HPPD,of%20mental%20intoxication%20experienced%20before.">HPPD</a>.</p>
-<p>Or maybe all the Oculus Developers are elsewhere, working with the Unreal Engine or Unity or someeuch. Maybe ThreeJS isn’t cool. But I must say I am impressed by how much this thing can run, I spend 20 minutes filling my vision with layer upon layer of multicoloured swirls, without noticing any drop in quality or responsivness.</p>
-<p>The next part I have to integrate is the VR answer to the <a href="https://github.com/dataarts/dat.guiVR">dat-gui</a> library. Also made 4 years ago.</p>
-</section>
-<section id="frustration" class="level2">
-<h2 class="anchored" data-anchor-id="frustration">Frustration</h2>
-<p>Once again I am reminded of how much I hate the JS workflow. I need to improve this somehow. With the Oculus it is particularly bad– make a change, serve the change, pick up headset, wait for it to start up, then when it is runnign start up the debugger with a keyboard shortcut, then take it off and do some debugging. Repeat.</p>
-<p>I will eventually work on a better workflow by integrating <a href="https://github.com/brianpeiris/RiftSketch">RiftSketch</a>. That will be a joy I think, if I can code and manipulate objects all in VR. That is the goal.</p>
-</section>
-<section id="features" class="level2">
-<h2 class="anchored" data-anchor-id="features">Features</h2>
-<p>So after an age of fiddling with GUIs I gave up for the moment and satisfied myself with two new features: * random color generation * (with or without changing the color of your little cloud of cubes) * buffer deletion (specific to each hand, so you can delete work in one hand only)</p>
-<p>Obviously both of these things can be much upgraded, a C-z feature and better color choosing. But I think it is enough to have some fun with just now so I will push it to github so I can use it untethered. I’ll make it available at paint.fergusfettes.com.</p>
-</section>
-<section id="further-investigations" class="level2">
-<h2 class="anchored" data-anchor-id="further-investigations">Further Investigations</h2>
-<p>So I played with RiftSketch. It is wonderful. It just needs a propery editor. I had a look around the internet (even asked on <a href="https://www.reddit.com/r/vim/comments/lfpefb/implementing_vim_inside_threejs/">reddit</a>) then found <a href="https://coolwanglu.github.io/vim.js/streamlinejs/vim.html">what I needed</a>. In the process I stumled across some other stuff that might come in useful. At the end of the day what I need is this: * <a href="https://coolwanglu.github.io/vim.js/streamlinejs/vim.html">Vim Javascript Implimentation</a> for my editor * <a href="https://github.com/brianpeiris/RiftSketch">RiftSketch</a> for the framework * <a href="https://threejs.org/editor/">ThreeJS Editor</a> tools stolen from here. Actually maybe I can just skip RiftSketch and add Vim and a VRButton directly to that. But I would feel bad if I left RiftSketch behind.</p>
-<p>All of this mixed with my paint program of course! It’s going to be mental.</p>
-<p>In all seriousness, in the short term, if I can integrate that JS Vim implementation into RiftSketch I will be a happy man.</p>
-<p>This process is teaching me a great deal about JavaScript. That should go without saying. In the last hour I learned: * how to use prettier and eslint to lint my stuff * how to reverse engineer files from .maps * more about building/packaing etc (still trying to use parcel for everything since it is nice and minimal)</p>
+<section id="energy-rate-density" class="level2">
+<h2 class="anchored" data-anchor-id="energy-rate-density">3. Energy-Rate Density</h2>
+<p>A first simple metric is <strong>energy-rate density</strong>:</p>
+<pre class="text"><code>energy-rate density = power flow / mass</code></pre>
+<p>It measures how intensely a system processes usable energy, or entropy-gradient throughput, per unit mass.<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></p>
+<p>This is useful because total power mostly measures size. A star uses vastly more power than a cell, but a cell processes energy through a much smaller and more organized body. Energy-rate density asks how concentrated the flow is.</p>
+<p>That makes it portable. We can compare stars, planets, plants, animals, machines, computers, factories, cities, and economies on a common scale:</p>
+<pre class="text"><code>how much organized throughput per unit organized matter?</code></pre>
+<p>This is why energy-rate density is a good starting metric. It is easier to estimate than detailed pathway structure. We can often estimate power flow and mass before we understand the full internal network.</p>
+<p>But energy-rate density is not dissipative dwell time.</p>
+<p>A flame can have high throughput and short dwell. A battery in storage can have long dwell and low throughput. A living organism, mature forest, computer factory, or city is interesting because it couples throughput to maintained structure.</p>
+<p>So energy-rate density measures <strong>dissipative intensity</strong>. Dissipative dwell time measures <strong>organized persistence</strong>. The deeper question is how often high intensity and long persistence reinforce each other.</p>
+<p>That relation is where the rest of the essay begins.</p>
+<hr>
 
 
 </section>
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>“Energy” is the familiar word, but it is slightly misleading. Energy is conserved by the first law of thermodynamics. What gets used up is not energy itself but an organized gradient: a temperature difference, chemical disequilibrium, pressure difference, voltage, concentration difference, or radiation field out of equilibrium with its surroundings. In this essay, when the main text says “captured gradient” or “captured disequilibrium,” it means the usable part of an energy flow.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Strictly, the same photon is not tracked through the system. A photon absorbed by chlorophyll is gone almost immediately. What persists is the chemical disequilibrium created by that absorption: excited electrons, reduced carbon, ATP, NADPH, biomass, and the oxygen-rich atmosphere against which that reduced matter can later be oxidized. The “photon path” is shorthand for the residence time of the disequilibrium that the photon helped create.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Storage alone is not enough. A buried lump of inert carbon may have a long residence time but little ongoing role in dissipative organization. The relevant dwell time is not merely how long matter persists, but how long captured disequilibrium remains part of a pathway that shapes further flows.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>The social and technological extension is the speculative part. In a machine or institution, the stored gradient is not always chemical energy in the simple biological sense. It can be embodied work, organized material, trained skill, recorded information, legal constraint, physical infrastructure, or learned procedure. These are not all the same thermodynamic object, but they all preserve the effects of past dissipation in forms that constrain future dissipation.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>The Sun is hot, roughly 5,500 °C at its visible surface, so it emits relatively short-wavelength photons. The Earth is much cooler, so it emits longer-wavelength infrared photons. For the same energy flux, cooler radiation carries more entropy. This is the basic radiative entropy gradient that powers the Earth system.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Photosynthesis does not create energy. It uses incoming radiation to push electrons into a higher chemical potential state. Water is oxidized, carbon dioxide is reduced, and chemical disequilibrium is stored in sugars and other reduced carbon compounds. Net primary production is the net rate at which this process adds biomass after the photosynthesizer’s own respiration is subtracted.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>This is the central point: life does not evade the photon balance. It inserts a structured delay into it. Some absorbed solar energy becomes heat quickly. Some becomes chemical disequilibrium, biological matter, soil, atmospheric chemistry, and motion before returning to the thermal radiation field.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Entropy production is the irreversible degradation of gradients. Heat flowing from hot to cold, fuel burning, sugar being respired, rock weathering, wind mixing air, water evaporating and condensing, and friction slowing motion are all entropy-producing processes. The second law says total entropy does not decrease in an isolated system; open systems like Earth can maintain local order only by exporting entropy to their surroundings.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>Exergy is the maximum useful work available as a system comes into equilibrium with its environment. Exergy is destroyed by irreversible processes. This is why exergy and entropy production are two sides of the same accounting: destroying available work produces entropy.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>Gibbs free energy is the chemical version most useful at roughly constant temperature and pressure. A reaction with negative Gibbs free energy can release useful work; a reaction with positive Gibbs free energy must be driven by coupling it to some other process. Photosynthesis drives an uphill chemical transformation using radiation; respiration lets that chemical disequilibrium run back downhill.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>Energy-rate density is associated especially with Eric Chaisson’s work on cosmic evolution. In SI units it is watts per kilogram. Chaisson often reports it as ergs per second per gram. The key move is normalization by mass: total power says how large a system is, while energy-rate density asks how much power is being processed through each unit of organized matter.<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
