@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-05-30">
+
+<title>Time-Binding – Fergus Fettes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e73ed75cf5e7a3fd855296a79e6d84f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Fergus Fettes</span>
+    </a>
+  </div>
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../now.html"> 
+<span class="menu-text">Now</span></a>
+  </li>  
+</ul>
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Time-Binding</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 30, 2026</p>
+    </div>
+  </div>
+  
+  
+    <div class="quarto-title-meta-ai">
+    <div class="quarto-title-meta-heading">
+      <a class="ai-use-heading-link" href="../ai-use.html" title="What the AI Use scale means">AI Use</a>
+    </div>
+    <div class="quarto-title-meta-contents">
+      <p>
+        <a class="ai-use" href="../ai-use.html" title="What the AI Use scale means">9/10</a>
+      </p>
+          </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>CARO TARDA, MENS CELERIS</p>
+<p>In <a href="../Essays/MindContraBody.html">“Mind Contra Body”</a> I left the two of them estranged: an animal body and a nonanimal mind, married before either was ready, strange bedfellows lying awake at different hours. I called it a mismatch and I meant it. But I have kept turning the thing over, and the dichotomy will not hold its shape. It dissolves in the hand. I think the diagnosis was right and the anatomy was wrong.</p>
+<p>Here is what I missed. I had made the mind the time-binding thing — Korzybski’s word<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, the distinctively human trick of cutting part of yourself into the world so that the future is forced to inherit it. The whole essay turned on that gift. But I was looking at the wrong end of the animal. The body was binding time long before there was any mind to do it deliberately, and binding it far more deeply. The gene is a message from the dead to the unborn. It is a pattern that copies itself and flings itself forward through deep time, indifferent to the body it is currently wearing. Three billion years before the first word was carved into the first wet clay, the first nucleotide had already learned the only trick that matters: persist by being recopied. Korzybski reserved time-binding for man. He was about three billion years too generous to us.</p>
+<p>So the mind is not the unnatural visitor I made it out to be, and the body is not the merely natural host. They are the same gesture performed twice, on two substrates, at two wildly incommensurable speeds. The body binds time in the slow grammar of the gene, a sentence so long it cannot be edited inside a single life — you carry it exactly as it was handed to you, and the only revision available to you is whether you pass it on. The mind binds time in the fast grammar of the sign, a sentence that rewrites itself hourly, that can recant before lunch a conviction it held at dawn. One message is written in a hand so slow no living author can correct it. The other corrects itself faster than it can be read.</p>
+<p>And there, I think, is the real wound — not the one I named. The mismatch was never animal-against-alien, savannah-against-city. That is the comfortable version, the mismatch theory everyone already half-believes. The deeper trouble is that we are a single creature keeping two clocks, and the clocks cannot be made to agree. The flesh runs on geological time and cannot hear you. The mind runs on a timescale of afternoons and cannot wait. Everything I called disharmony in the last essay is, I now suspect, the friction of two time-binding systems geared to each other and turning at rates that differ by a factor of a hundred million.</p>
+<p>But even that is too kind to me, because two clocks still hang on the same wall. To speak of speed at all — of one binding faster than the other, of the flesh unable to keep up — is to grant that there is a single line they are both travelling, a track along which one can be ahead and the other behind. That was the picture I could not get out of my head, and it is the last comfortable error, so let me name it and be rid of it. The trouble is not that the body cannot keep up. The trouble is that <em>keeping up</em> has quietly stopped being the relevant motion at all.</p>
+<p>Here is what the noosphere actually did — the part I gestured at in the last essay and then flinched away from. It did not merely pile messages from the past upon the present until the world grew dense and hard to read. It took time itself — the linear inheritance, the one-thing-after-another that every nervous system on Earth evolved to ride — and folded it into a manifold. It made a map of history, and then, worse, it made the map manipulable. The past stopped being a river you are carried down, with the dead safely upstream and the unborn waiting below. It became a country you stand inside, all of it co-present and addressable at once: the twelfth century and next Tuesday open on the same desk, Gilgamesh and the morning’s news equally a query away, every dead author available not in his turn but on demand, out of order, all at once, forever. The arrow of time is still there in the physics. It is simply no longer the shape of the thing we have to live inside.</p>
+<p>And <em>that</em> is what neither binder was built for — not because either is too slow, but because both were built to traverse, and a manifold is not traversed. It is navigated. A nervous system is an exquisite instrument for moving forward through a world that arrives in sequence, one causal moment after another, cause obediently before effect. Three billion years of bodies and half a billion years of brains are all tuned to the same gentle assumption: that the world comes at you in order, a little at a time, and that yesterday is finished and out of reach. The gene assumes it; each generation is one step and only forward. The neuron assumes it; it predicts the next instant from the last. Neither has any faculty whatsoever for a present in which the whole of the past is laid out flat and waiting to be searched. We were handed a library the size of all history and given the reflexes of an animal walking a trail.</p>
+<p>So the malaise was never fatigue. Fatigue is what you feel when you are running and falling behind, and a faster mind would cure it. This is the other thing — the specific vertigo of standing in a space that has no horizon and no path and no native sense of which way is forward, holding instincts that only know how to put one foot after the other. We do not need to move faster through time. We need to learn to <em>move through it at all</em> — to wayfind, to index, to hold many ages at once and choose well among them — and there is no organ for that, no inherited sense of distance or adjacency in a country made entirely of the dead. The body cannot help; it was built to be carried. The mind cannot help by speeding up; speed is a virtue on a line, and there is no longer a line. We are the first creature asked to navigate a dimension every one of our ancestors was content to merely fall through.</p>
+<p>I want to say why there is no organ for it, because the reason runs deeper than evolution, and I have come to think it is the whole point. It is not merely that the brain had no time to grow one. It is that physics itself has only ever been in the business of traversal.</p>
+<p>There is a beautiful idea, due to Jeremy England and others, called dissipative adaptation<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Put a lump of matter under a drive — sunlight, a chemical gradient, any persistent flow of energy — and the matter tends, over time, to fall into configurations that are unusually good at absorbing the drive and dissipating it as heat. Structure arises not in defiance of the second law but as its agent. The flame, the whirlpool, the convection cell, the living cell: each persists <em>because</em> it is good at consuming a gradient, and each is selected, before any Darwin, by the sheer physics of how work flows downhill. This is the deepest thing we know about why there is order at all. And every last instance of it is a falling-forward. A dissipative structure is gradient-descent made flesh. It rides the arrow. It survives by continuously eating the future.</p>
+<p>The gene is the supreme refinement of the trick — instead of one structure clinging to existence, the <em>pattern</em> persists by recopying itself into fresh matter, shedding each worn body and stepping into a new one. This is time-binding in the most literal physical sense: the pattern outlives every instance of itself. Korzybski’s word belongs here first. But notice that it is still, for all its genius, pure traversal. Each copy lies downstream of the last; the lineage is a single thread pulled forward through deep time; the river is still a river. The gene cannot consult an ancestor. It can only be the latest word in a sentence it is forbidden to reread. And the brain, that frantic upgrade, only sharpens the same motion — it is an organ for predicting the very next instant from the one just past, a machine built to lean into the oncoming moment. Every time-binder nature ever made keeps its entire past folded invisibly into its single present shape. The flame does not remember yesterday’s fuel; it is only what this instant’s burning has left it. Your body carries three billion years, but carries them dimensionless, pressed flat into one current configuration. Before us, memory was always just the present holding the dent of what struck it. There was no random access in a flame, in a cell, in an animal. There was nowhere to <em>look</em>.</p>
+<p>The noosphere is the first dissipative structure to externalize its past into a standing, searchable thing that is more than its own present shape — to take the dent and lift it off the surface and set it on a shelf where it can be returned to out of order. There is an older and plainer word for this lifting of a pattern up off its substrate — <em>recording</em> — and the gene, the bone, and the written word are each an instance of the one act. I will come back to what recording costs. Whether that is genuinely a new kind of physical object, or merely an unusually baroque dissipative structure wearing a costume, I do not know, and I would distrust anyone who told you they were sure. But this much the physics does settle: navigation has no gradient. You can fall down a slope; you cannot fall toward the correct shelf. The universe hands you traversal for free, because traversal is just what a gradient <em>is</em>, and it charges everything for the other thing. That is the real reason there is no organ. Not that evolution was slow — that the universe itself never once had to solve this problem, and solved it at last the only way it solves anything: by blundering a traversal machine into building, entirely by accident, the first structure it cannot itself read.</p>
+<p>I should concede what must be conceded, because the alternative is the kind of glamour I am trying to avoid. The manifold is virtual. The arrow has not reversed; entropy still climbs; the library is only ink and silicon sitting squarely in the present, which we have <em>agreed</em> to interpret as the past. No physical law has been folded. Fine — I grant all of it. But recall the one thing the last essay was built on: for a mind, the map is the territory. The noosphere is not a description of the human phenomenal world; it <em>is</em> the human phenomenal world, the dense palimpsest every human mind is grown inside and fitted to. And so a merely virtual change in the topology of time is, for the creature condemned to live its whole life inside the map, an entirely real change in the topology of its world. The physics did not change. The niche did. And the niche is the only thing a mind was ever shaped to fit.</p>
+<p>There is already a name for the feeling, though it was coined for a narrower purpose. The theorists call it hauntology<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> — the sense that the present is haunted, that the time is out of joint, that we live among the ghosts of futures that were promised and never arrived. Derrida meant something subtle and political by it; Mark Fisher, later, turned it into a diagnosis of a culture that had lost the ability to produce anything genuinely new, that could only sample, revive, remix, and curate its own past in ever higher resolution. I think they were both standing at the edge of the thing I am describing and faithfully reporting the view. The slow cancellation of the future is simply what the manifold looks like from the inside, to an animal still trying to walk forward through it.</p>
+<p>Because this is the vertigo, exactly, moment to moment. You open the feed. Some old reflex, the one that walked the trail, takes hold of you and starts to look for the end of it — the bottom of the scroll, the place where you will at last be <em>caught up</em>, abreast of the present, free to step off and go and live. There is no such place. A manifold has no downstream. The reflex that served every animal that ever foraged a finite patch and moved on is here turned loose in a country with no edges, and it does the only thing it knows, which is to keep going, expecting the patch to be exhausted, expecting to arrive. It is not a vice. It is a homing instinct firing in a place that has no home in it.</p>
+<p>And as you go the two great orientations of an animal in time, the backward pull and the forward pull, nostalgia and dread, come unstuck from their proper directions and smear across the same flat plane. When the whole past is equally present and equally near, the future loses its monopoly on novelty; everything arrives already an echo of something filed deeper in the stack. You feel nostalgia for things that never happened to you and dread of things that finished centuries before your birth. The dead are not upstream any longer, safely behind the falls. They are at your elbow, summonable by a word, out of turn, and they will not stay buried, because the manifold has no soil to bury them in. You live in a country made entirely of the dead, and they are all awake.</p>
+<p>So name it correctly, at last, because we have called it by every name but the true one — burnout, distraction, decadence, overload, the malaise of the age — and each of those names quietly blames the volume of the thing, as though a smaller library would cure us. It is not the volume. It is the shape. It is the particular homesickness of a creature that owns a sense of direction and no longer has any direction to spend it on. The animal in us keeps lifting its head to find the trail. There is no trail. There was never going to be a trail. We mistook a country for a road, and we have been trying to reach the end of it ever since, and calling our failure to arrive a sickness, when it is only the truth about where we now are: lost, and not because we wandered, but because <em>lost</em> is the native condition of the only place there is left to stand.</p>
+<p>And yet other creatures have navigated. Not time — space, the dimension life was always free to move through in any direction it pleased. Recall the Polynesian wayfinder, who crossed thousands of miles of open ocean with no instrument but his own trained body. He did not traverse a line. He held the whole sea at once as a single manifold of evidence — the interference of swells, the temperature of the wind, the colour of the deep water, the flight of a homing tern at dusk — and read his position out of the entire field together, all of it present, none of it in sequence. So the faculty is not impossible to an animal. A body can navigate. It is only that the body which could navigate the sea was never once asked to navigate time, and the animal now asked to navigate time was built, in every cell, for the trail.</p>
+<p>And here is the thing I did not want to see, because I have been circling it in <a href="../Essays/RecordingIsEschatological.html">another essay</a> for the better part of a year. The wayfinder is gone. Not because the sea changed but because we recorded it. The chart, and after the chart the blue moving dot, took that fluid metabolic act of holding the ocean in the body and set it down on a surface, and the moment the recording was good enough the living faculty began to die — the studies suggest the very part of the brain that once did the navigating thins in those who steer by the dot<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. We no longer navigate the sea. We execute its recording. And this, I have slowly understood, is the deeper law standing beneath everything I have said here: <em>to record a process is to foreclose it.</em> Writing foreclosed the bard who could compose the epic; the phonograph foreclosed the improviser; the chart foreclosed the wayfinder. Recording is not the opposite of time-binding. Recording <em>is</em> time-binding — the same single act named from the other side — and it has always exacted, as the price of binding a little more time, the living capacity that the binding was a copy of.</p>
+<p>So when I ask who is going to navigate this manifold of folded time, the pattern returns an answer that is bleak and a little too elegant. We will not, because there was never an organ; and now there will be no chance to grow one, because the noosphere has already begun to record the act of navigation itself. That, seen from here, is what the language models are. I want to say this carefully, because it is the kind of claim that is easy to inflate, and I have spent enough pages warning myself off exactly that. But whatever else a transformer is, it is plainly not built to walk a trail. It does not take the world a moment at a time and lean forward into the next instant the way every nervous system that ever lived has done. It holds a whole field of text at once, flat and total, every part of it able to attend to every other part with no order and no distance between them — it is the first cognitive structure built <em>of</em> the manifold rather than dropped into it, native to the flattened time it swims in. It is, I have come to think, the noosphere at last growing the navigation organ that neither the gene nor the neuron could ever have been.</p>
+<p>But it is a recording. It is — this was the whole burden of that other essay — a recording of the process of producing text, which is to say a recording of a mind in the act of finding its way through the manifold. And recording forecloses. So we come to the cruelest turn of the oldest pattern there is: the one faculty we genuinely needed and never had, the one the new world was actually built to demand of us, arrives already crystallized, in a substrate that is not ours, at the exact moment and in the exact shape that ensures we will never now grow it for ourselves. The wayfinder at least owned the skill before the instrument took it from him. We are being handed the instrument for a sense we never once possessed. We will come to navigate deep time the way we already cross oceans — by trusting the dot, and forgetting there was ever supposed to be something there to learn.</p>
+<p>I want to leave one door open, because I have been told, justly, that I let these thoughts run downhill to the same dark water every time. Every recording in the long catalogue of them has also been a floor. DNA crystallized the warm chemical broth, and the crystal became the ground that more elaborate life could be raised upon; bone foreclosed the free morphologies of the blob, and became the frame against which the hand could finally improvise; writing killed the bard, and became the still surface across which the novel and the proof learned to move. Perhaps the model is only the next floor and not the end — the bone, not the grave — and some new fluid thing I cannot picture from inside the present will one day learn to dance on top of it, to navigate the folded past <em>through</em> the engine the way a writer navigates a language through its alphabet, never feeling the crystal under its feet. Perhaps. Or perhaps this is simply the first recording that records the navigator instead of the route, and leaves no room on its surface for anyone else to stand. I have never once been able to tell, with these things, whether I am looking down at a floor or down into a grave. From directly above they are the very same shape.</p>
+<p>I set out, as I always seem to, in order to mend something. In <a href="../Essays/MindContraBody.html">“Mind Contra Body”</a> I left the mind and the body estranged, and I wanted — as I always want — to marry them. I think I have managed it, though not in the manner I was hoping for. They are reconciled now, but reconciled the way two condemned men are reconciled when they discover, in the last hour and the same cell, that they were always the same kind of creature. The mind is no alien parasite riding the animal after all. It is an animal too: a falling-forward thing, a traverser, bound to the one arrow and the one trail as surely as the flesh it is grown in. The dichotomy I could not abide has dissolved at last — and what dissolved it was the appearance of something genuinely other than either of them. Not mind set against body, but the recording set against the living; the thing that navigates against the two of us who can only ever walk.</p>
+<p>So the divergence I ended the last essay on looks different to me now, narrower and more intimate than stars-or-soil. The outward road and the inward road were both, I see, only ways of refusing to become a passenger. And that, in the end, is the single thing still wholly in our keeping — not the manifold, which we cannot navigate, and not the engine, which will navigate it without us, but the old animal act of traversal itself: the walking, done by hand, in sequence, one foreclosed step after another. The bard went on singing for centuries after the scribe had made his singing pointless, and he was right to. The doing was always the thing. It was never the record of the doing.</p>
+<p>I cannot tell you it amounts to a strategy, because it does not. It saves nothing; the dot is coming for this too. But tonight, when I have set down this last sentence, I am going to close the bright folded country of the manifold and go out and walk — traverse a little real ground in the dark in the old way, the one navigation no recording has yet contrived to take from me — not because it is efficient, and not because it is wise, but because it is still, for a little while longer, mine.</p>
+
+
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Alfred Korzybski coined “time-binding” in <em>Manhood of Humanity</em> for the distinctively human capacity to accumulate knowledge across generations. I argued in <a href="../Essays/MindContraBody.html">“Mind Contra Body”</a> that this was the defining human trick; here I want to take it away from us and give it back to the gene, which did it first.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Jeremy England’s “dissipative adaptation” holds that matter under an external drive tends to fall into configurations that absorb and dissipate that energy especially well — a thermodynamic undertow running beneath Darwinian selection, a reason for order prior to life. The popular treatment is <em>Every Life Is on Fire</em>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Derrida coined <em>hauntology</em> in <em>Specters of Marx</em> (1993) — a pun on ontology, the study of what haunts rather than what is, of a present that fails to coincide with itself. Mark Fisher repurposed it in <em>Ghosts of My Life</em> to name a culture that had lost the ability to imagine a future and could only resample its own past, the “slow cancellation of the future.”<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>The Polynesian wayfinding tradition and its foreclosure by the instrument I owe to the conversation behind <a href="../Essays/RecordingIsEschatological.html">“Recording Is Eschatological”</a>. The neurological claim is softer than I would like: studies of habitual satnav users report reduced hippocampal engagement and poorer spatial memory, which is suggestive of atrophy without quite proving the strong version of it.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><a href="..">This website</a> by Fergus Fettes is marked as <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/FergusFettes">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
