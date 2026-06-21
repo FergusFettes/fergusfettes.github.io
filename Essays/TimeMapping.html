@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>timemapping – Fergus Fettes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e73ed75cf5e7a3fd855296a79e6d84f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Fergus Fettes</span>
+    </a>
+  </div>
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../now.html"> 
+<span class="menu-text">Now</span></a>
+  </li>  
+</ul>
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<p><strong>Binding, Breaking and Making Time</strong></p>
+<p>Alfred Korzybski called man the time-binding animal, by which he meant that human beings are distinguished by their capacity to accumulate knowledge across generations, to build civilisations out of the compressed experience of the dead. It is a useful formulation, but like most definitions that grant humanity a unique privilege, it obscures a deeper continuity. I believe time-binding is not the special invention of Homo sapiens but the fundamental geometry of life itself. We are not the first time-binders; we are merely the ones who have become self-conscious about the mechanism.</p>
+<p>What does it mean to bind time? At its root, it means that the state of a system at one moment can constrain, inform, or determine the state of that system at a later moment through some durable medium. The genome is the most ancient such medium. It is, quite literally, a molecular tape on which the past has been inscribed, a lossy compression of ancestral environments cached in chemistry.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The body is a disposable read-head; the soma grows, ages, and dissolves, but the tape is fed forward through the germline at the stately pace of generations. This is time-binding in its most austere form: strictly one-dimensional, strictly linear, strictly sequential. A bacterium today carries in its cytoplasm a message from the Archaean, but it cannot skip ahead, nor can it flip backward to consult a previous chapter. The past is bound, but it is bound as a chain.</p>
+<p>Here we can borrow Levin’s formulation: living things are those whose cognitive lightcone exceeds their physical body. A bacterium senses gradients, integrates signals, and responds to a world that extends beyond its membrane. But in a universe with no action at a distance, any extension of cognition into space is formally an extension into time. To sense a morphogen three cell-widths away is to bind the state of those neighbours at a slight temporal remove; the signal propagates at finite velocity. The cognitive lightcone is therefore always a temporal lightcone first, and spatial extension is merely the integral of temporal binding over signal velocity. Life binds time because it must; to be informed about anything beyond the skin is to be informed about the past.</p>
+<p>If the genome binds time linearly, the mind binds time as a thread with wormholes. Consider the brain operating near criticality, poised between order and chaos. Below criticality, correlations in time decay exponentially; a thought forgets its antecedents too quickly to build anything stable. Above criticality, the system freezes into fixed attractors and cannot integrate novelty. But at criticality, temporal correlations follow a power law.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> This means that a state of the system right now can be resonantly coupled to a state from yesterday, or from a decade ago, without passing through every intervening moment. The present folds back to touch the past directly.</p>
+<p>And yet, for all its wormholes, the experienced mind remains fundamentally linear. Consciousness has a serial order; it stacks moments like the genome stacks generations, one after another. The critical brain does not escape the line so much as thread shortcuts through it. A childhood memory surfacing unbidden during a conversation, a musical phrase calling up a room you have not visited in twenty years—these are the wormholes. They fold the timeline so that two distant points become adjacent, but they do not yet turn the past into a map. The geometry is still that of a thread, however tangled.</p>
+<p>The crucial adaptation, then, is not yet the map. It is the capacity to maintain a durable, integrated self across time, to bind experience into a continuous line that does not snap when the present lets go of it. The genome does this chemically; the critical brain does it dynamically. Both are time-binding, and both are bound, in the end, by the same physical necessity: in a local universe, there is no other way to reach beyond yourself except by reaching into what has already been.</p>
+<p><strong>Time-Mapping</strong></p>
+<p>But the thread, however tangled by critical wormholes, remained confined to the skull. I believe this is the decisive bottleneck of organic time-binding: neural correlations are metabolically expensive and mortally fragile. When the brain dissolves, the unique topology of its power-law memories dissolves with it. You can bind time across a life, and across generations you can bind it in the linear tape of the genome; but without some durable external scaffold, you cannot make a thought survive its thinker. The critical lightcone of the brain exceeds the body only in the present moment, through senses and actions; it does not exceed the body’s temporal boundary. Death is the hard cutoff.</p>
+<p>The escape from this constraint is, I believe, the most significant transition in the history of cognition on Earth. It occurred when human beings began to bind time not in chemistry or critical dynamics, but in <em>arranged matter</em>. A notch cut into wood, ochre painted on stone, a wedge pressed into wet clay—these are trivial physical alterations, but they instantiate a radical topological transformation. They turn the past from a line into a graph.</p>
+<p>I want to be precise about what changes here. When a thought is inscribed on a durable substrate, it becomes a node. Another thought, inscribed later, can connect to that node without traversing the intervening history. The edge between them might be a deliberate citation, a misreading, an accidental juxtaposition, or the simple physical adjacency of two tablets in a library. The geometry is no longer sequential; it is reticulate.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> You can hold a cuneiform tablet from Ur and your cognitive lightcone suddenly encompasses the intentions of a mind that turned to dust four millennia ago. You did not inherit this information through your germline. You did not maintain it through the fragile criticality of your own neurons across sixty generations. The information is simply <em>there</em>, adjacent to you in space, and therefore—because you can return to it at will—adjacent to you in time. The past has acquired random access.</p>
+<p>This is the sense in which humans became time-mappers. We did not merely extend the thread of memory; we wove it into a mesh, and then we built landmarks in the mesh. Writing is the most powerful of these technologies, though it is not the only one. Architecture, ritual, the astronomical alignment of stones at Newgrange, the notched Ishango bone—all are techniques for making the past persist outside the body in a form that permits traversal rather than mere inheritance. But writing is decisive because it decouples memory from physiology entirely. It permits the encoding of arbitrary information with high fidelity, and it allows that information to be copied, transported, and stored independently of any living substrate.</p>
+<p>Consider the constraints this lifted. As I described earlier, preliterate societies were bounded by the finite capacity of human sequential memory. The Vedas, the Homeric epics, the traditions that became the Bible—these represent something like the upper limit of what a community can maintain through oral transmission, through many critical brains reinforcing one another across a living population.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> However vast they seem, they are small. A few million words, perhaps, held in place by elaborate mnemonic scaffolding. Writing shatters that ceiling. It externalises the storage function, moving it from the perishable electrochemistry of the brain to the more stable (though still imperfect) substrates of parchment, paper, and stone.</p>
+<p>But writing changes not only the <em>quantity</em> of bound time; it changes the <em>shape</em> of it. Oral culture is necessarily sequential and narrative; it moves from episode to episode because that is how the critical brain binds time, one moment after another. Writing permits lists, tables, branching genealogies, arguments that double back on themselves, pages that can be shuffled and compared side by side. The past becomes a territory with coordinates. You can point to any year, any text, any theorem, and establish a direct connection without marching through the centuries between them. The geometry is no longer a line but a map.</p>
+<p>And a map, unlike a thread, permits multiple paths between the same points. Two ideas separated by a thousand years can be placed next to one another by an act of editorial will. The Talmud places ancient scripture in conversation with medieval commentary across the margins of a single page; the commonplace book of a Renaissance scholar juxtaposes Seneca with an observation from that morning’s walk.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> The chronological distance may be fifteen centuries, but on the page they are neighbours. Time is being remapped into conceptual space.</p>
+<p>I should note that this map was, for most of history, largely static. The cartographer determined the coordinates, and the reader traced the paths that had been laid down. The geometry was fixed, even if it was richer than the thread. But the essential transformation had occurred: the past was no longer only a sequence to be lived through. It had become a space to be inhabited. Humans had ceased to be merely time-binders, inheriting the past as a chain of cause and effect. We had become time-mappers, building a navigable world out of what had been—a world in which the dead could stand shoulder to shoulder with the living, and a mind in Edinburgh could wander through the streets of ancient Athens without the tedious obligation of having been born there.</p>
+<p><strong>Time-Exploring</strong></p>
+<p>But a map, even a rich one, implies a single stable territory. I believe the next transformation occurs when we recognise that the territory itself changes its distances depending on where we stand to survey it. The map is not flat; it is a manifold, and the metric is set by the observer.</p>
+<p>Let me be concrete. Consider the intellectual history of the calculus. If you are trained in the British empirical tradition, the geodesic that leads from modern analysis back to its origin routes through Newton, through fluxions, through natural philosophy and the priorities of the Royal Society. The past, queried from Cambridge, presents a lineage that is continuous with empirical observation and mechanics. But if you stand instead in the continental rationalist tradition, the shortest path to the same origin routes through Leibniz, through infinitesimals, through the <em>Monadologie</em> and the logical structure of the continuum. These are not merely different walking tours through the same museum. They are different intrinsic geometries. In one frame, Newton and Leibniz are close competitors solving an obvious problem; in another, they are nodes in entirely separate intellectual lineages—one empirical, one formalist—that only appear to intersect because we project them backward from a unified modern mathematics that did not exist for either of them.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<p>This means that the past is not merely <em>accessed</em> differently by different observers. It is <strong>constituted</strong> differently. The historian is less a cartographer charting fixed terrain than a gauge choice selecting a slicing of a field. We are accustomed to thinking of history as a territory and the scholar as attempting to map it faithfully. The deeper truth is that the scholar’s position—their discipline, their nation, their metaphysical commitments—determines which points in the past are adjacent to one another. History rewrites itself to suit your question.</p>
+<p>We can see the same phenomenon in the literary inheritance of antiquity. Query the past for the origins of psychological realism, and the geodesic might route through Homer, through the <em>Odyssey</em> and its interiority, making the Achaean camp adjacent to the modern novel. Query it instead for the genealogy of written textual transmission, and Homer may recede behind Alexandria, behind the librarians who assembled and edited the corpus. The “Homeric world” is either a window into an oral Bronze Age culture or a product of Athenian-era textual politics, depending on the metric you impose.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> The nodes remain—Troy, the wine-dark sea, the hexameter—but their connective tissue rearranges itself.</p>
+<p>What has happened here is a change in the geometry of bound time that is as profound as the shift from thread to map. When we mapped time, we made the past navigable. When we began to explore it, we discovered that the map has depth, that it is not a single surface but a manifold of possible surfaces. The past became not merely a territory but a space you could interrogate from different angles, and the angle of interrogation determined what the past was. A well-balanced mind might hold multiple geometries at once, routing through both Newton and Leibniz, through both the oral Homer and the textual Homer, occupying a richer and more unstable coordinate system than any single national or disciplinary tradition permits.</p>
+<p>This is time-exploring: the recognition that bound time, once externalised and mapped, possesses a density and a malleability that allows it to be approached along multiple valid geodesics. The chronological past is fixed; but the networked past, the mapped past, the past-as-graph, folds and stretches according to the force of the question we put to it. We are no longer simply reading the archive. We are moving through it as a space, and discovering that the space changes shape as we move.</p>
+<p><strong>Time-Manipulating</strong></p>
+<p>I believe we are now undergoing a transformation as profound as the invention of writing, though we have barely begun to perceive its shape. When the past was a map, we navigated it; when it became a manifold, we learned that our position determined its geometry. But now, with algorithmic tools and computational substrates of unprecedented scale, the past is becoming something else entirely: a <strong>raw material</strong>. We are no longer limited to traversing it or choosing our geodesics through it. We can mine it, refine it, alloy it with counterfactuals, and cast it into forms that did not exist before we interrogated it.</p>
+<p>The geometric shift is from manifold to <strong>malleable medium</strong>. Consider the humble vector embedding. A large language model processes the textual record of humanity—our bound time, externalised and mapped—and compresses it into a high-dimensional space in which every concept, every author, every historical moment is positioned relative to every other according to statistical relationships rather than chronological distance.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> In this space, Newton and Leibniz may be adjacent not because of priority disputes, but because of shared mathematical syntax; or they may be separated by centuries of semantic drift that a human historian would never have thought to measure. The model does not read the past sequentially. It diffuses through it. It treats bound time as a field to be sampled, not a territory to be traversed.</p>
+<p>This is manipulation proper, not merely exploration. When I explore the Newtonian past, I am choosing a frame that already exists within the archive. When an algorithmic system queries the archive, it can <em>reconstitute</em> the frame. It can generate a treatise on fluxions written in the voice of a medieval Scholastic, or synthesise a Leibnizian critique of general relativity by extracting patterns across incommensurable historical strata and recombining them. The output is not “true” in the simple sense of having occurred, but it is <strong>valid</strong> in the sense of being a differentiable point in the compressed manifold of bound human experience. It is a new alloy refined from historical ore.</p>
+<p>We can see the same shift in scientific practice. Climate models do not merely record past weather; they simulate counterfactual Earths—an 1850 without industrial carbon, a Pliocene with contemporary continents—allowing us to manipulate the parameters of deep time and observe the relaxation of entropic gradients under altered constraints.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> Genetic engineering, meanwhile, has finally turned its attention to the linear substrate itself. CRISPR does not bind time in the ancestral mode, patiently transcribing the tape; it edits it, treating the genome as a plastic medium rather than an inherited script. We are manipulating not only our maps of the past but the original thread from which all mapping descends.</p>
+<p>What provokes such anxiety in our current moment is not merely that machines “hallucinate” false facts. It is that they reveal the past to be fundamentally <strong>plastic</strong> in the hands of entities that can process it faster than any biological mind can stabilise it. The archive was always selective, always written by the victors, always a map and not the territory. But it possessed a certain inertia. The parchment yellowed slowly; the historian’s biases moved at the speed of a scholarly career. Algorithmic manipulation operates at the speed of electricity, and it scales. The past is becoming a feedstock for optionality, a substrate from which futures can be manufactured with industrial efficiency.</p>
+<p>I do not mean to suggest that this is necessarily a degradation. It is, I believe, the logical extension of the telos I have described throughout. Life complexifies by routing free energy through ever more elaborate dissipative structures. From the genome to the critical brain to the written library to the algorithmic model, each layer has increased the rate at which bound time can be accessed, recombined, and redeployed. The industrialisation of memory is simply the next gradient relaxation pathway, and we are the structure through which it flows.</p>
+<p>But we should be clear about what we have become. Korzybski called us the time-binding animal, and so we were. Then we became the time-mapping animal, making the past navigable. Then the time-exploring animal, discovering that the past has no single shape. Now we are becoming the time-manipulating animal, for whom the past is neither territory nor map but <strong>material</strong>: dense, rich, and increasingly subject to our deliberate craft.</p>
+<p><strong>Conclusion</strong></p>
+<p>Let me gather the thread, as one must after a long excursion. Life binds time linearly in the genome, binding the past as a chain of inheritance. The critical brain binds time as a thread with wormholes, folding the present back to touch selected moments of individual experience. Human culture, through writing and external memory, bound time into a graph, making the past randomly accessible across the barrier of death. Modern scholarship and perspective revealed that graph to be a manifold, its metric dependent on the position and question of the observer. And now, with algorithmic systems, we are rendering that manifold into a malleable medium, a raw material we mine and refine to construct futures that the past could not have predicted from within itself.</p>
+<p>This is the direction of the entropic arrow as it passes through us. The universe began with a low-entropy event and has been relaxing ever since, building dissipative structures to channel that relaxation. We are such structures, and the structures we build—minds, books, models—are extensions of the same current. From the bacterium sensing a gradient to the scholar tracing a footnote to the engineer prompting a model trained on ten thousand years of accumulated human signal, the cognitive lightcone expands. It expands not just in space but in the depth and dimensionality of time itself.</p>
+<p>I am still a physicalist. I believe this entire hierarchy runs on matter and energy, on electrons and chemistry and the emission of infrared photons into the void. But I am also a citizen of the noosphere, and from within that virtual space I can see that something genuinely new has emerged. We have learned not only to inherit the past, nor merely to remember it, nor even to reinterpret it. We have learned to treat it as the soil from which we grow the next layer of complexity.</p>
+<p>The genome was the first external memory, the body its temporary reader. The book was the first liberated memory, freed from the germline. The algorithm is the first <em>generative</em> memory, capable of producing novelty from the compressed record of what was. We stand at a strange threshold, where the binding of time has become self-reflexive: we are using bound time to build machines that will bind time in ways we cannot yet fully anticipate, routing more of the universe’s blooming through patterns extracted from its own history.</p>
+<p>This is the sense in which physics and literature remain my two stars. Physics describes the substrate and its thermodynamic destiny; literature is the craft of navigating and shaping the virtual spaces that emerge from it. The story of time-binding is ultimately a story about narrative: who gets to narrate, which pasts are adjacent to which presents, and how the thread of cause and effect can be woven into ever more elaborate patterns. We are not free from our bodies, and we are never merely bodies. We are animals who became mapmakers, mapmakers who became explorers, and explorers who are learning, finally, to work the material of time itself.</p>
+
+
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>The metaphor of the genome as a tape is not merely poetic. It is the physical reality of a sequential, digital (in the sense of discrete symbols) storage medium read by molecular machinery. The linearity is architectural, not incidental.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>I am glossing over an enormous literature in neuroscience and statistical mechanics here. For a rigorous treatment of critical dynamics in neural networks, see the work on neuronal avalanches and branching ratios. The essential point is that critical systems exhibit scale-free correlations in both space and time, which permits information to persist across many orders of magnitude.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>This is the sense in which I am sympathetic to the extended mind thesis of Clark and Chalmers, although I would push it further than they typically do. It is not merely that a notebook or smartphone can be cognitive scaffolding for an individual mind. It is that these external structures change the <em>geometry</em> of cognition itself, transforming the temporal topology available to the species. A notebook is not just an auxiliary memory; it is a wormhole generator, creating shortcuts between moments that would otherwise be inaccessible to one another.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>The exact information-theoretic capacity of oral tradition is debatable and culturally variable. The important point is that it is bounded by the product of human memory fidelity, population size, and the redundancy required for transmission across generations. Writing removes these constraints by allowing error correction through comparison with a durable original, and by permitting the accumulation of knowledge beyond what any living community could practically rehearse.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>These are not merely rhetorical devices. They represent a genuine change in the topology of knowledge. In an oral tradition, Seneca and the morning walk are separated by an unbridgeable temporal gulf unless the speaker happens to remember both and narrate them in sequence. On the page, they are topologically adjacent; the eye can move between them without traversing the intervening centuries. The map creates neighbourhoods that chronological time cannot.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>This is not to say that the facts are negotiable. Newton and Leibniz did correspond, and the dispute over priority was real. But the <em>topology</em> of their relationship—the question of which ideas are adjacent to which, which thinker is “closer” to the present—is determined by the query. A history of mathematics written from the perspective of computer science might place Leibniz closer to us because of his interest in symbolic computation and the <em>characteristica universalis</em>; a history written from the perspective of physics might privilege Newton. The invariants remain; the distances vary.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>This is not mere interpretation, if by interpretation we mean a transparent screen laid over unchanging facts. The topology changes. In one geometry, the <em>Iliad</em> is close to preliterate bardic tradition; in another, it is close to the editorial interventions of the Peisistratid recension. These are different pasts, built from the same material.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>I am using “large language model” here as the most accessible instance of a broader class of algorithmic systems that reprocess externalised memory. The specifics of transformer architectures are less important than the topological fact: these systems construct a space in which temporal distance is dissolved into relational distance, and the latter can be manipulated independently of the former.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>These simulations are not falsifiable in the conventional experimental sense—we cannot rerun the Cretaceous to check our work—but they are consistent with the physics extracted from our bound record of past climates. They represent a new epistemic category: the manipulation of time as a controlled variable.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><a href="..">This website</a> by Fergus Fettes is marked as <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/FergusFettes">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
